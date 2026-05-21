@@ -44,6 +44,8 @@ document.addEventListener('DOMContentLoaded', function() {
             blockBodyScroll();
         }
         
+        forceScrollToTop();
+        
         // Footer only on homepage
         const footer = document.querySelector('.telegram-cta');
         if (footer) footer.style.display = page === 'home' ? 'block' : 'none';
@@ -72,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.style.position = '';
         document.body.style.width = '';
         document.body.style.height = '';
+        forceScrollToTop();
     }
     
     function forceScrollToTop() {
@@ -4081,10 +4084,12 @@ print(result)  # Output: 8
     let currentQuestionIndex = 0;
     let answers = {};
     let timerInterval;
+    let instructionCountdownTimer;
     let timeRemaining = 1200;
     let initialTime = 1200;
     let isReviewMode = false;
     let selectedQuestionCount = 'all';
+    let selectedTimerMinutes = 20;
     let currentExamQuestions = [];
     let isExamActive = false;
 
@@ -4127,6 +4132,7 @@ print(result)  # Output: 8
         
         document.getElementById('topicPage').style.display = 'none';
         document.getElementById('questionCountPage').style.display = 'block';
+        forceScrollToTop();
     }
     
     async function loadQuestionBank(courseTitle) {
@@ -4154,9 +4160,12 @@ print(result)  # Output: 8
         answers = {};
         isReviewMode = false;
         isExamActive = true;
+        window.setExamTimer(selectedTimerMinutes);
         
-        const scienceCourses = ["BIO 102", "CHM 102", "PHY 102"];
-        initialTime = scienceCourses.includes(currentCourse) ? 1800 : 1200;
+        // apply accelerated timer mapping
+        const effective = getEffectiveMinutes(selectedTimerMinutes);
+        const baseSeconds = Math.round(effective * 60);
+        initialTime = baseSeconds;
         timeRemaining = initialTime;
         
         let questions = [...currentQuestions];
@@ -4164,11 +4173,10 @@ print(result)  # Output: 8
         const total = count === 'all' ? questions.length : Math.min(parseInt(count), questions.length);
         currentExamQuestions = questions.slice(0, total);
         
-        // Show instructions page
+        // Start exam immediately (skip instructions) when user picks question count
         document.getElementById('questionCountPage').style.display = 'none';
-        document.getElementById('examInstructionsPage').style.display = 'block';
-        document.getElementById('instructionsCourse').innerText = currentCourse;
-        restoreBodyScroll();
+        // prepare loading and start
+        window.startExamFromInstructions();
     };
     
     window.startExamFromInstructions = function() {
@@ -4206,6 +4214,20 @@ print(result)  # Output: 8
         if (progressBar) progressBar.style.width = percentage + '%';
     }
     
+    window.setExamTimer = function(minutes) {
+        selectedTimerMinutes = minutes;
+        document.querySelectorAll('.timer-btn').forEach(btn => {
+            const buttonMinutes = parseInt(btn.dataset.minutes, 10);
+            btn.classList.toggle('active', buttonMinutes === minutes);
+        });
+    };
+
+    function getEffectiveMinutes(minutes) {
+        // accelerated mapping: chosen -> effective (fast) minutes
+        const map = {5: 2.5, 10: 8, 20: 16, 30: 25};
+        return map[minutes] || minutes;
+    }
+    
     function shuffleArray(arr) { const array = [...arr]; for (let i = array.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [array[i], array[j]] = [array[j], array[i]]; } return array; }
     
     function getTotalQuestions() { return currentExamQuestions?.length || 0; }
@@ -4236,9 +4258,45 @@ print(result)  # Output: 8
         }, 1000);
     }
     
+    document.addEventListener('keydown', function(event) {
+        const examPage = document.getElementById('examPage');
+        if (!examPage || examPage.style.display !== 'block') return;
+        if (event.ctrlKey || event.altKey || event.metaKey) return;
+        const key = event.key.toLowerCase();
+        if (['a', 'b', 'c', 'd'].includes(key)) {
+            selectOptionLetter(key.toUpperCase());
+            event.preventDefault();
+            return;
+        }
+        if (key === 'n') {
+            nextQuestion(event);
+            event.preventDefault();
+            return;
+        }
+        if (key === 'p') {
+            prevQuestion(event);
+            event.preventDefault();
+            return;
+        }
+        if (key === 's') {
+            submitExam();
+            event.preventDefault();
+            return;
+        }
+    });
+    
     function saveAnswer() { 
         const selected = document.querySelector('input[name="answer"]:checked'); 
         if (selected) answers[currentQuestionIndex + 1] = selected.value;
+        updateProgressBar();
+    }
+    
+    function selectOptionLetter(letter) {
+        if (isReviewMode) return;
+        const option = document.querySelector(`#optionsContainer input[name="answer"][value="${letter}"]`);
+        if (!option) return;
+        option.checked = true;
+        answers[currentQuestionIndex + 1] = letter;
         updateProgressBar();
     }
     
@@ -4439,6 +4497,15 @@ print(result)  # Output: 8
         });
     });
     
+    const backToTopicsBtn = document.getElementById('backToTopics');
+    if (backToTopicsBtn) {
+        backToTopicsBtn.addEventListener('click', () => {
+            document.getElementById('questionCountPage').style.display = 'none';
+            document.getElementById('topicPage').style.display = 'block';
+            forceScrollToTop();
+        });
+    }
+    
     window.showCorrections = function() {
         isReviewMode = true;
         document.getElementById('resultPage').style.display = 'none';
@@ -4455,6 +4522,21 @@ print(result)  # Output: 8
             backBtn.innerHTML = '<span>←</span><span>Back to Courses</span>';
             document.querySelector('.exam-stats').appendChild(backBtn);
         } else backBtn.style.display = 'block';
+
+        let homeBtn = document.getElementById('reviewHomeBtn');
+        if (!homeBtn) {
+            homeBtn = document.createElement('button');
+            homeBtn.id = 'reviewHomeBtn';
+            homeBtn.className = 'submit-btn';
+            homeBtn.onclick = () => {
+                isReviewMode = false;
+                isExamActive = false;
+                document.getElementById('examPage').style.display = 'none';
+                showPage('home');
+            };
+            homeBtn.innerHTML = '<span>⌂</span><span>Home</span>';
+            document.querySelector('.exam-stats').appendChild(homeBtn);
+        } else homeBtn.style.display = 'block';
         currentQuestionIndex = 0;
         blockBodyScroll();
         loadQuestion();
@@ -4513,29 +4595,7 @@ print(result)  # Output: 8
     }
     
     // ==================== EXAM INSTRUCTIONS PAGE ====================
-    const instrProceedBtn = document.getElementById('instrProceedBtn');
-    const instrCancelBtn = document.getElementById('instrCancelBtn');
-    const backToTopicsFromInstructions = document.getElementById('backToTopicsFromInstructions');
-    
-    if (instrProceedBtn) {
-        instrProceedBtn.onclick = window.startExamFromInstructions;
-    }
-    
-    if (instrCancelBtn) {
-        instrCancelBtn.onclick = () => {
-            document.getElementById('examInstructionsPage').style.display = 'none';
-            document.getElementById('questionCountPage').style.display = 'block';
-            restoreBodyScroll();
-        };
-    }
-    
-    if (backToTopicsFromInstructions) {
-        backToTopicsFromInstructions.onclick = () => {
-            document.getElementById('examInstructionsPage').style.display = 'none';
-            document.getElementById('topicPage').style.display = 'block';
-            restoreBodyScroll();
-        };
-    }
+    // No manual proceed buttons required; exam starts automatically after countdown.
     
     // ==================== RESOURCES SEMESTER TOGGLE ====================
     function initResourcesToggle() {
