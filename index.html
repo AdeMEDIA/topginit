@@ -105,51 +105,22 @@
 
         <!-- ==================== EXAM INSTRUCTIONS PAGE ==================== -->
         <div class="exam-instructions-page" id="examInstructionsPage" style="display:none">
-            <button class="back-btn" id="backToTopicsFromInstructions">← Back</button>
             <div class="instructions-container">
                 <div class="instructions-header">
-                    <h2>Exam Instructions</h2>
+                    <h2>Ready for your exam?</h2>
                     <p class="course-badge" id="instructionsCourse">BIO 102</p>
+                    <p class="instructions-note">The exam will begin automatically in <span id="instructionCountdown">5</span> seconds.</p>
                 </div>
                 <div class="instructions-content">
                     <div class="instruction-section">
-                        <h3>Before You Start</h3>
+                        <h3>Quick exam guide</h3>
                         <ul>
-                            <li>Ensure you have a stable internet connection</li>
-                            <li>You cannot pause the exam once started</li>
-                            <li>The timer will continue counting down</li>
-                            <li>Do not navigate away from the exam page</li>
+                            <li>Answer each question carefully.</li>
+                            <li>The timer starts when the exam begins.</li>
+                            <li>Use the navigator to move between questions.</li>
+                            <li>Submit when you are ready.</li>
                         </ul>
                     </div>
-                    <div class="instruction-section">
-                        <h3>During the Exam</h3>
-                        <ul>
-                            <li>Read each question carefully</li>
-                            <li>Select one answer per question</li>
-                            <li>You can review your answers before submitting</li>
-                            <li>Use the question navigator to jump between questions</li>
-                        </ul>
-                    </div>
-                    <div class="instruction-section">
-                        <h3>Scoring</h3>
-                        <ul>
-                            <li><strong>Correct Answer:</strong> Full marks awarded</li>
-                            <li><strong>Wrong/Unanswered:</strong> No marks awarded</li>
-                            <li>Final score shows percentage and detailed breakdown</li>
-                        </ul>
-                    </div>
-                    <div class="instruction-section">
-                        <h3>After Submission</h3>
-                        <ul>
-                            <li>View your results immediately</li>
-                            <li>Review explanations for all questions</li>
-                            <li>Track your progress in the dashboard</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="instructions-actions">
-                    <button class="btn secondary" id="instrCancelBtn">Cancel</button>
-                    <button class="btn primary" id="instrProceedBtn">I Understand, Proceed</button>
                 </div>
             </div>
         </div>
@@ -162,7 +133,16 @@
                 <h2 id="selectedCourseName">BIO 102</h2>
                 <p id="selectedTopicInfo" style="color:#64748b; margin-bottom: 15px;">Selected: All Topics</p>
                 <h3>Select Number of Questions</h3>
-                <p class="count-info">Choose how many questions you want to attempt</p>
+                <p class="count-info">Choose how many questions you want to attempt and pick the timer.</p>
+                <div class="timer-selection">
+                    <h4>Choose exam duration</h4>
+                    <div class="timer-options" id="timerOptions">
+                        <button class="timer-btn" data-minutes="5" onclick="setExamTimer(5)">5 mins</button>
+                        <button class="timer-btn" data-minutes="10" onclick="setExamTimer(10)">10 mins</button>
+                        <button class="timer-btn active" data-minutes="20" onclick="setExamTimer(20)">20 mins</button>
+                        <button class="timer-btn" data-minutes="30" onclick="setExamTimer(30)">30 mins</button>
+                    </div>
+                </div>
                 <div class="count-options">
                     <button class="count-btn" onclick="setQuestionCount(10)"><span class="count-number">10</span><span class="count-label">Questions</span></button>
                     <button class="count-btn" onclick="setQuestionCount(20)"><span class="count-number">20</span><span class="count-label">Questions</span></button>
@@ -184,11 +164,8 @@
                     <div class="exam-progress-bar" id="examProgressBar" style="width: 0%"></div>
                 </div>
                 <div class="exam-controls">
-                    <div class="stats-timer-wrapper">
-                        <div class="timer-container" id="timerContainer"><span>Timer:</span><span id="timer" class="timer-display">00:00</span></div>
-                    </div>
-                    <div class="exam-stats">
-                        <div class="stat"><span>Score</span><span id="scoreDisplay">0/0</span></div>
+                    <div class="timer-submit-row">
+                        <div class="timer-container" id="timerContainer"><span>⏱</span><span id="timer" class="timer-display">00:00</span></div>
                         <button class="submit-btn" onclick="submitExam()"><span>Submit</span></button>
                     </div>
                 </div>
