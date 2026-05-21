@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+    <title>TOPG CBT Exam | FUOYE Semester System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="TOPG CBT Exam – Topic-Based Learning">
+    <meta property="og:description" content="Master courses by topic with progress tracking and simplified notes!">
+    <meta property="og:image" content="test.jpeg">
+    <meta property="og:url" content="https://topginit.vercel.app/">
+    <meta property="og:type" content="website">
+</head>
+<body>
+    <!-- Top Header with Logo -->
+    <header class="app-header">
+        <div class="header-logo">
+            <span class="logo-text">TopG INIT</span>
+        </div>
+    </header>
+
+    <!-- Bottom Tab Bar -->
+    <div class="bottom-tab-bar">
+        <div class="tab-item active" data-page="home">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </div>
+        <div class="tab-item" data-page="notes">
+            <i class="fas fa-book-open"></i>
+            <span>Notes</span>
+        </div>
+        <div class="tab-item" data-page="resources">
+            <i class="fas fa-folder-open"></i>
+            <span>Resources</span>
+        </div>
+        <div class="tab-item" data-page="library">
+            <i class="fas fa-lock"></i>
+            <span>Library</span>
+        </div>
+        <div class="tab-item" data-page="about">
+            <i class="fas fa-user"></i>
+            <span>About</span>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- ==================== COURSE SELECTION PAGE (HOME) ==================== -->
+        <div class="course-selection modern" id="coursePage">
+            <div class="hero-section">
+                <h1 class="hero-title">CBT Revision <span class="active-semester-label" id="activeSemesterBadge">2nd Semester</span></h1>
+                <p class="hero-subtitle">Study smart with structured topic review and clean progress tracking.</p>
+                <div class="level-filter">
+                    <div class="level-chip active" data-level="100">100L</div>
+                    <div class="level-chip" data-level="200">200L</div>
+                    <div class="level-chip" data-level="300">300L</div>
+                    <div class="level-chip notes-btn" onclick="showPage('notes')">View Notes</div>
+                </div>
+            </div>
+            
+            <div class="semester-toggle-section">
+                <div class="semester-switch" id="semesterSwitch">
+                    <div class="semester-option" data-semester="first">
+                        First Semester
+                        <span class="semester-badge">Coming Soon</span>
+                    </div>
+                    <div class="semester-option active" data-semester="second">
+                        Second Semester
+                        <span class="semester-badge">Active</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="courses-header">
+                <h2><span id="semesterTitle">Second Semester</span> Courses</h2>
+                <p class="courses-count" id="coursesCountInfo">11 courses available</p>
+            </div>
+            
+            <div class="courses-grid" id="coursesGrid"></div>
+        </div>
+
+        <!-- ==================== TOPIC SELECTION PAGE ==================== -->
+        <div class="topic-selection-page" id="topicPage" style="display:none">
+            <button class="back-btn" id="backToCoursesFromTopic">← Back to Courses</button>
+            
+            <div class="topic-header">
+                <h2>
+                    <span id="topicCourseName">BIO 102</span>
+                </h2>
+                <div class="topic-stats">
+                    <div><span id="totalQuestionsStat">0</span> total questions</div>
+                    <div><span id="completedTopicsStat">0</span>/<span id="totalTopicsStat">0</span> topics mastered</div>
+                </div>
+            </div>
+            
+            <div class="topics-grid" id="topicsGrid"></div>
+            
+            <div class="topic-actions">
+                <button class="topic-btn topic-btn-secondary" id="selectAllTopics">Select All Topics</button>
+                <button class="topic-btn topic-btn-primary" id="startWithSelectedTopics">Start Exam</button>
+            </div>
+        </div>
+
+        <!-- ==================== EXAM INSTRUCTIONS PAGE ==================== -->
+        <div class="exam-instructions-page" id="examInstructionsPage" style="display:none">
+            <button class="back-btn" id="backToTopicsFromInstructions">← Back</button>
+            <div class="instructions-container">
+                <div class="instructions-header">
+                    <h2>Exam Instructions</h2>
+                    <p class="course-badge" id="instructionsCourse">BIO 102</p>
+                </div>
+                <div class="instructions-content">
+                    <div class="instruction-section">
+                        <h3>Before You Start</h3>
+                        <ul>
+                            <li>Ensure you have a stable internet connection</li>
+                            <li>You cannot pause the exam once started</li>
+                            <li>The timer will continue counting down</li>
+                            <li>Do not navigate away from the exam page</li>
+                        </ul>
+                    </div>
+                    <div class="instruction-section">
+                        <h3>During the Exam</h3>
+                        <ul>
+                            <li>Read each question carefully</li>
+                            <li>Select one answer per question</li>
+                            <li>You can review your answers before submitting</li>
+                            <li>Use the question navigator to jump between questions</li>
+                        </ul>
+                    </div>
+                    <div class="instruction-section">
+                        <h3>Scoring</h3>
+                        <ul>
+                            <li><strong>Correct Answer:</strong> Full marks awarded</li>
+                            <li><strong>Wrong/Unanswered:</strong> No marks awarded</li>
+                            <li>Final score shows percentage and detailed breakdown</li>
+                        </ul>
+                    </div>
+                    <div class="instruction-section">
+                        <h3>After Submission</h3>
+                        <ul>
+                            <li>View your results immediately</li>
+                            <li>Review explanations for all questions</li>
+                            <li>Track your progress in the dashboard</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="instructions-actions">
+                    <button class="btn secondary" id="instrCancelBtn">Cancel</button>
+                    <button class="btn primary" id="instrProceedBtn">I Understand, Proceed</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== QUESTION COUNT SELECTION PAGE ==================== -->
+        <div class="question-count-selection" id="questionCountPage" style="display:none">
+            <button class="back-btn" id="backToTopics">← Back to Topics</button>
+            <div class="count-selection-card">
+                <div class="course-icon-large" id="selectedCourseIcon">Course</div>
+                <h2 id="selectedCourseName">BIO 102</h2>
+                <p id="selectedTopicInfo" style="color:#64748b; margin-bottom: 15px;">Selected: All Topics</p>
+                <h3>Select Number of Questions</h3>
+                <p class="count-info">Choose how many questions you want to attempt</p>
+                <div class="count-options">
+                    <button class="count-btn" onclick="setQuestionCount(10)"><span class="count-number">10</span><span class="count-label">Questions</span></button>
+                    <button class="count-btn" onclick="setQuestionCount(20)"><span class="count-number">20</span><span class="count-label">Questions</span></button>
+                    <button class="count-btn" onclick="setQuestionCount(30)"><span class="count-number">30</span><span class="count-label">Questions</span></button>
+                    <button class="count-btn" onclick="setQuestionCount(40)"><span class="count-number">40</span><span class="count-label">Questions</span></button>
+                    <button class="count-btn" onclick="setQuestionCount(60)"><span class="count-number">60</span><span class="count-label">Questions</span></button>
+                    <button class="count-btn" onclick="setQuestionCount(100)"><span class="count-number">100</span><span class="count-label">Questions</span></button>
+                    <button class="count-btn count-btn-full" onclick="setQuestionCount('all')"><span class="count-number">ALL</span><span class="count-label">Available Questions</span></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== EXAM PAGE ==================== -->
+        <div class="exam-container" id="examPage" style="display:none">
+            <div class="exam-header">
+                <h2 class="exam-title" id="examTitle">BIO 102</h2>
+                <p class="exam-subtitle">Question <span id="currentQ">1</span> of <span id="totalQuestionsDisplay">0</span></p>
+                <div class="exam-progress-bar-wrapper">
+                    <div class="exam-progress-bar" id="examProgressBar" style="width: 0%"></div>
+                </div>
+                <div class="exam-controls">
+                    <div class="stats-timer-wrapper">
+                        <div class="timer-container" id="timerContainer"><span>Timer:</span><span id="timer" class="timer-display">00:00</span></div>
+                    </div>
+                    <div class="exam-stats">
+                        <div class="stat"><span>Score</span><span id="scoreDisplay">0/0</span></div>
+                        <button class="submit-btn" onclick="submitExam()"><span>Submit</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="exam-body">
+                <h3 class="question-title">Question <span id="qNum">1</span></h3>
+                <p class="question-text" id="questionText">Loading...</p>
+                <div class="options" id="optionsContainer"></div>
+                <div class="explanation-box" id="explanationBox" style="display:none;">
+                    <div class="explanation-header">Explanation</div>
+                    <div class="explanation-content" id="explanationContent"></div>
+                </div>
+                <div class="navigation">
+                    <p class="nav-info" id="navInfo">Page 1 of 1</p>
+                    <div class="page-arrows">
+                        <button class="page-arrow" id="prevPage" onclick="previousPage(event)">←</button>
+                        <button class="page-arrow" id="nextPage" onclick="nextPage(event)">→</button>
+                    </div>
+                    <div class="question-grid" id="questionGrid"></div>
+                    <div class="nav-buttons">
+                        <button class="nav-btn" onclick="prevQuestion(event)">← Previous</button>
+                        <button class="nav-btn" onclick="nextQuestion(event)">Next →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== SUBMIT MODAL ==================== -->
+        <div id="submitModal" style="display:none">
+            <div id="submitModalContent">
+                <h2>Confirm Submission</h2>
+                <p id="submitModalMessage"></p>
+                <button id="confirmSubmit">Yes, Submit</button>
+                <button id="cancelSubmit">Cancel</button>
+            </div>
+        </div>
+
+        <!-- ==================== EXAM NAVIGATION WARNING MODAL ==================== -->
+        <div id="examNavModal" style="display:none">
+            <div id="examNavModalContent">
+                <h2>Exam in progress</h2>
+                <p id="examNavModalMessage">You are currently in the middle of an exam.</p>
+                <button id="examResumeBtn">Resume Exam</button>
+                <button id="examLeaveBtn">Back to Home</button>
+            </div>
+        </div>
+        
+        <!-- ==================== RESULT PAGE ==================== -->
+        <div class="result-container modern" id="resultPage" style="display:none">
+            <div class="result-header">
+                <div class="trophy"></div>
+                <h2>Exam Completed</h2>
+                <p class="course-name" id="resultCourse">TOPG CBT Exam</p>
+            </div>
+            <div class="score-section">
+                <div class="percentage" id="finalScore">0%</div>
+                <p class="score-text">Final assessment results</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card correct"><span class="stat-value" id="correctCount">0</span><span class="stat-label">Correct</span></div>
+                <div class="stat-card wrong"><span class="stat-value" id="wrongCount">0</span><span class="stat-label">Wrong</span></div>
+                <div class="stat-card total"><span class="stat-value" id="totalCount">0</span><span class="stat-label">Total</span></div>
+                <div class="stat-card time"><span class="stat-value" id="timeTaken">0:00</span><span class="stat-label">Time</span></div>
+            </div>
+            <div class="feedback-card"><p class="result-message"></p></div>
+            <div class="result-actions">
+                <button class="btn secondary" id="resultBackToCourses">Back to Courses</button>
+                <button id="reviewBtn" class="btn primary" onclick="showCorrections()">Review Corrections</button>
+            </div>
+        </div>
+        
+        <!-- ==================== NOTES PAGE ==================== -->
+        <div class="notes-page" id="notesPage" style="display:none">
+            <div class="course-selector-notes" id="courseSelectorNotes"></div>
+        </div>
+        
+        <!-- ==================== RESOURCES PAGE ==================== -->
+        <div id="resourcesPage" style="display:none">
+            <div class="resources-container">
+                <div class="resources-hero">
+                    <h1>Course Outlines</h1>
+                    <p>Complete syllabus and topics for 100 Level courses</p>
+                </div>
+
+                <div class="resources-semester-toggle">
+                    <div class="resources-switch">
+                        <div class="resources-option active" data-res-semester="first">
+                            <i>📘</i> First Semester
+                        </div>
+                        <div class="resources-option" data-res-semester="second">
+                            <i>⚡</i> Second Semester
+                        </div>
+                    </div>
+                </div>
+
+                <div id="firstSemesterResources" class="resources-content active">
+                    <div class="courses-grid">
+                        <!-- BIO 101 -->
+                        <div class="course-outline-card">
+                            <div class="course-header">
+                                <span class="course-icon">🧬</span>
+                                <h2>GENERAL BIOLOGY I (BIO101)</h2>
+                            </div>
+                            <ul class="outline-list">
+                                <li>Introduction to Biology</li>
+                                <li>Diversity, Classification of Living Organisms</li>
+                                <li>Cytology</li>
+                                <li>Reproduction</li>
+                                <li>Interrelationship of Organisms</li>
+                                <li>Heredity</li>
+                                <li>Evolution</li>
+                                <li>Ecology</li>
+                            </ul>
+                        </div>
+
+                        <!-- CHM 101 -->
+                        <div class="course-outline-card">
+                            <div class="course-header">
+                                <span class="course-icon">⚗️</span>
+                                <h2>GENERAL CHEMISTRY I (CHM101)</h2>
+                            </div>
+                            <ul class="outline-list">
+                                <li>Physical Quantities and Error Treatments</li>
+                                <li>Structure of the Atom</li>
+                                <li>States of Matter</li>
+                                <li>Mole Concept and Avogadro's Number</li>
+                                <li>Stoichiometry and Chemical Equations</li>
+                                <li>Acids, Bases, and Salts</li>
+                                <li>Chemical Bonding</li>
+                                <li>Chemical Equilibrium and Thermodynamics</li>
+                            </ul>
+                        </div>
+
+                        <!-- CSC 101 -->
+                        <div class="course-outline-card">
+                            <div class="course-header">
+                                <span class="course-icon">💻</span>
+                                <h2>INTRO TO COMPUTER SCIENCE (CSC101)</h2>
+                            </div>
+                            <ul class="outline-list">
+                                <li>Introduction to Computer</li>
+                                <li>Components of Computer System</li>
+                                <li>Application Areas of Computing</li>
+                                <li>Introduction to Networking</li>
+                                <li>Operating Systems (CLI & GUI)</li>
+                                <li>Microsoft Word, Excel, PowerPoint</li>
+                                <li>Introduction to Internet Technologies</li>
+                            </ul>
+                        </div>
+
+                        <!-- MTH 101 -->
+                        <div class="course-outline-card">
+                            <div class="course-header">
+                                <span class="course-icon">📐</span>
+                                <h2>ELEMENTARY MATHEMATICS I (MTH101)</h2>
+                            </div>
+                            <ul class="outline-list">
+                                <li>Set Theory</li>
+                                <li>Real Numbers and Real Line</li>
+                                <li>Mathematical Induction</li>
+                                <li>Sequences and Series</li>
+                                <li>Polynomials</li>
+                                <li>Binomial Theorem</li>
+                                <li>Matrices and Determinants</li>
+                                <li>Complex Numbers</li>
+                            </ul>
+                        </div>
+
+                        <!-- PHY 101 -->
+                        <div class="course-outline-card">
+                            <div class="course-header">
+                                <span class="course-icon">⚛️</span>
+                                <h2>GENERAL PHYSICS I (PHY101)</h2>
+                            </div>
+                            <ul class="outline-list">
+                                <li>Dimensions, Units, and Conversions</li>
+                                <li>Kinematics and Motion</li>
+                                <li>Vectors and Laws of Mechanics</li>
+                                <li>Newton's Laws of Motion</li>
+                                <li>Conservation Laws</li>
+                                <li>Work and Energy</li>
+                                <li>Universal Gravitation</li>
+                            </ul>
+                        </div>
+
+                        <!-- GST 101 -->
+                        <div class="course-outline-card">
+                            <div class="course-header">
+                                <span class="course-icon">✍️</span>
+                                <h2>COMMUNICATION IN ENGLISH (GST101)</h2>
+                            </div>
+                            <ul class="outline-list">
+                                <li>Morpheme and Speech Sounds</li>
+                                <li>Suprasegmental Features</li>
+                                <li>Essay Writing</li>
+                                <li>Grammatical Concord</li>
+                                <li>Note Taking and Note Making</li>
+                                <li>Reading and Comprehension</li>
+                                <li>Direct and Reported Speech</li>
+                            </ul>
+                        </div>
+
+                        <!-- GST 103 -->
+                        <div class="course-outline-card">
+                            <div class="course-header">
+                                <span class="course-icon">📖</span>
+                                <h2>USE OF LIBRARY AND ICT (GST103)</h2>
+                            </div>
+                            <ul class="outline-list">
+                                <li>Use of Library</li>
+                                <li>Reference Sources and Services</li>
+                                <li>Intellectual Property Rights</li>
+                                <li>Bibliographic Citation and Referencing</li>
+                                <li>Electronic Databases in Libraries</li>
+                                <li>Online Searching Strategies</li>
+                            </ul>
+                        </div>
+
+                        <!-- ENT 101 -->
+                        <div class="course-outline-card">
+                            <div class="course-header">
+                                <span class="course-icon">💼</span>
+                                <h2>INTRO TO ENTREPRENEURSHIP (ENT101)</h2>
+                            </div>
+                            <ul class="outline-list">
+                                <li>Definition of Entrepreneurship</li>
+                                <li>Social Entrepreneurship</li>
+                                <li>Business Plan</li>
+                                <li>Characteristics of Entrepreneurs</li>
+                                <li>Starting and Managing a Business</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="secondSemesterResources" class="resources-content" style="display:none">
+                    <div class="courses-grid">
+                        <!-- BIO 102 -->
+                        <div class="course-outline-card">
+                            <div class="course-header">
+                                <span class="course-icon">🔬</span>
+                                <h2>GENERAL BIOLOGY II (BIO102)</h2>
+                            </div>
+                            <ul class="outline-list">
+                                <li>Viruses: Structure, Replication, Diseases</li>
+                                <li>Bacteria: Classification, Structure, Reproduction</li>
+                                <li>Fungi: Types, Reproduction, Importance</li>
+                                <li>Plant Kingdom: Bryophytes to Angiosperms</li>
+                                <li>Animal Kingdom: Invertebrates & Vertebrates</li>
+                                <li>Ecological Adaptations</li>
+                                <li>Physiology: Nutrition, Respiration, Excretion</li>
+                            </ul>
+                        </div>
+
+                        <!-- CHM 102 -->
+                        <div class="course-outline-card">
+                            <div class="course-header">
+                                <span class="course-icon">🧪</span>
+                                <h2>GENERAL CHEMISTRY II (CHM102)</h2>
+                            </div>
+                            <ul class="outline-list">
+                                <li>History of Organic Chemistry</li>
+                                <li>Fullerenes and Nanochemistry</li>
+                                <li>Electronic Theory in Organic Chemistry</li>
+                                <li>Purification and Structure Determination</li>
+                                <li>IUPAC Nomenclature</li>
+                                <li>Alkanes, Alkenes, Alkynes</li>
+                                <li>Reaction Mechanisms (SN1, SN2)</li>
+                                <li>Alcohols, Ethers, Amines</li>
+                            </ul>
+                        </div>
+
+                        <!-- PHY 102 -->
+                        <div class="course-outline-card">
+                            <div class="course-header">
+                                <span class="course-icon">⚡</span>
+                                <h2>GENERAL PHYSICS II (PHY102)</h2>
+                            </div>
+                            <ul class="outline-list">
+                                <li>Electrostatics: Coulomb's Law, Electric Field</li>
+                                <li>Gauss's Law and Capacitance</li>
+                                <li>DC Circuits: Ohm's Law, Kirchhoff's Laws</li>
+                                <li>Magnetic Fields: Lorentz Force, Biot-Savart</li>
+                                <li>Electromagnetic Induction: Faraday's Law</li>
+                                <li>Inductance and Transformers</li>
+                                <li>AC Circuits and EM Waves</li>
+                            </ul>
+                        </div>
+
+                        <!-- MTH 102 -->
+                        <div class="course-outline-card">
+                            <div class="course-header">
+                                <span class="course-icon">📐</span>
+                                <h2>ELEMENTARY MATHEMATICS II (MTH102)</h2>
+                            </div>
+                            <ul class="outline-list">
+                                <li>Functions and Graphs</li>
+                                <li>Limits and Continuity</li>
+                                <li>Differentiation: Rules and Applications</li>
+                                <li>Integration: Indefinite and Definite</li>
+                                <li>Area and Volume Calculations</li>
+                                <li>Trapezoidal and Simpson's Rules</li>
+                                <li>Sequences and Series</li>
+                            </ul>
+                        </div>
+
+                        <!-- COS 102 -->
+                        <div class="course-outline-card">
+                            <div class="course-header">
+                                <span class="course-icon">💻</span>
+                                <h2>PROBLEM SOLVING (COS102)</h2>
+                            </div>
+                            <ul class="outline-list">
+                                <li>Introduction to Computing</li>
+                                <li>Solvable and Unsolvable Problems</li>
+                                <li>Problem Solving Techniques</li>
+                                <li>Algorithmic Techniques</li>
+                                <li>Flowcharts and Pseudocode</li>
+                                <li>Programming Basics (Python/C)</li>
+                            </ul>
+                        </div>
+
+                        <!-- GST 112 -->
+                        <div class="course-outline-card">
+                            <div class="course-header">
+                                <span class="course-icon">🇳🇬</span>
+                                <h2>NIGERIAN PEOPLE AND CULTURE (GST112)</h2>
+                            </div>
+                            <ul class="outline-list">
+                                <li>Pre-Colonial Nigeria</li>
+                                <li>Colonial Nigeria</li>
+                                <li>Nationalism and Independence</li>
+                                <li>Civil War and Military Rule</li>
+                                <li>Trade and Self-Reliance</li>
+                                <li>Norms, Values, and Social Vices</li>
+                                <li>Judiciary and Fundamental Rights</li>
+                            </ul>
+                        </div>
+
+                        <!-- MLS 102 -->
+                        <div class="course-outline-card">
+                            <div class="course-header">
+                                <span class="course-icon">📜</span>
+                                <h2>HISTORY OF MLS (MLS102)</h2>
+                            </div>
+                            <ul class="outline-list">
+                                <li>Evolution of MLS Practice</li>
+                                <li>Legislations Governing MLS</li>
+                                <li>Nomenclature and Certification</li>
+                                <li>Training Rules and Regulations</li>
+                                <li>Accreditation Process</li>
+                                <li>Professional Bodies</li>
+                            </ul>
+                        </div>
+
+                        <!-- MLS 104 -->
+                        <div class="course-outline-card">
+                            <div class="course-header">
+                                <span class="course-icon">🦠</span>
+                                <h2>BIOLOGY OF DISEASES (MLS104)</h2>
+                            </div>
+                            <ul class="outline-list">
+                                <li>Basic Concepts of Disease</li>
+                                <li>Cell Injury and Disorders</li>
+                                <li>Infectious Diseases</li>
+                                <li>Immune System and Disorders</li>
+                                <li>Pathophysiology of Infections</li>
+                                <li>Laboratory Diagnosis</li>
+                                <li>Prevention and Control</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-section">
+                    <div class="cta-card">
+                        <h2>Join TopG INIT Community</h2>
+                        <p>Get access to comprehensive study materials</p>
+                        <div class="cta-benefits">
+                            <div class="benefit-item"><span>Lecture Notes</span></div>
+                            <div class="benefit-item"><span>Course Manuals</span></div>
+                            <div class="benefit-item"><span>Past Questions</span></div>
+                            <div class="benefit-item"><span>Exam Materials</span></div>
+                        </div>
+                        <a href="https://t.me/topGINIT" class="cta-button" target="_blank">DOWNLOAD EXAM MATERIALS HERE!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ==================== ABOUT PAGE ==================== -->
+        <div id="libraryPage" style="display:none">
+            <div class="library-lock-page">
+                <div class="library-locked-card">
+                    <h2>Library Access</h2>
+                    <p>The library is currently locked and will be available in a future update.</p>
+                    <button class="btn secondary" onclick="showPage('home')">Return to Home</button>
+                </div>
+            </div>
+        </div>
+        <div id="aboutPage" style="display:none">
+            <div class="about-page-wrapper">
+                <div class="about-container">
+                    <div class="profile-pic-container">
+                        <img src="ade.jpeg" alt="Adepoju Abdullahi" class="profile-pic">
+                    </div>
+                    <div class="about-content">
+                        <p class="greeting">Hello, I'm</p>
+                        <h1 class="main-name">Adepoju Abdullahi</h1>
+                        <h2 class="sub-title">Medical Lab Student @ FUOYE</h2>
+                        <div class="about-btns">
+                            <button class="btn btn-outline" onclick="downloadCV()">Download CV</button>
+                            <button class="btn btn-dark" onclick="scrollToContact()">Contact Info</button>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://x.com/Adenoton" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="https://github.com/AdeMEDIA" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="contact" class="contact-section">
+                    <p class="section-text-p1">Get In Touch</p>
+                    <h1 class="title">Contact Me</h1>
+                    <div class="contact-info-upper-container">
+                        <div class="contact-info-container">
+                            <i class="fa-solid fa-envelope contact-icon"></i>
+                            <p><a href="mailto:adepojuabdullah7@gmail.com">Email Me</a></p>
+                        </div>
+                        <div class="contact-info-container">
+                            <i class="fa-brands fa-whatsapp contact-icon"></i>
+                            <p><a href="https://wa.me/234XXXXXXXXXX" target="_blank">WhatsApp Me</a></p>
+                        </div>
+                        <div class="contact-info-container">
+                            <i class="fa-brands fa-telegram contact-icon"></i>
+                            <p><a href="https://t.me/topGINIT" target="_blank">Join Telegram</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ==================== FOOTER ==================== -->
+        <div class="telegram-cta" id="telegramFooter">
+            <div class="footer-inside">
+                <div class="footer-logo">TOPG CBT Practice App</div>
+                <div class="footer-disclaimer"><strong>Note:</strong> Created by a student for educational study support.</div>
+                <div class="footer-links">
+                    <a href="#" onclick="showPage('home')">Home</a>
+                    <a href="#" onclick="showPage('notes')">Notes</a>
+                    <a href="#" onclick="showPage('library')">Library</a>
+                    <a href="#" onclick="showPage('resources')">Resources</a>
+                    <a href="#" onclick="showPage('about')">About</a>
+                </div>
+                <div class="footer-copyright">© 2024 FUOYE CBT Practice. All content for educational use.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== LOADING SCREEN ==================== -->
+    <div id="loadingScreen" style="display:none">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <h2>Starting Exam</h2>
+            <p id="loadingMessage"></p>
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+    <script>
+        // Bottom Tab Navigation
+        document.querySelectorAll('.tab-item').forEach(tab => {
+            tab.addEventListener('click', () => {
+                const page = tab.getAttribute('data-page');
+                showPage(page);
+                document.querySelectorAll('.tab-item').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+            });
+        });
+
+        // Resources Semester Toggle
+        function initResourcesToggle() {
+            const firstOption = document.querySelector('.resources-option[data-res-semester="first"]');
+            const secondOption = document.querySelector('.resources-option[data-res-semester="second"]');
+            const firstContent = document.getElementById('firstSemesterResources');
+            const secondContent = document.getElementById('secondSemesterResources');
+
+            if (!firstOption || !secondOption) return;
+
+            firstOption.addEventListener('click', () => {
+                firstOption.classList.add('active');
+                secondOption.classList.remove('active');
+                firstContent.style.display = 'block';
+                secondContent.style.display = 'none';
+            });
+
+            secondOption.addEventListener('click', () => {
+                secondOption.classList.add('active');
+                firstOption.classList.remove('active');
+                firstContent.style.display = 'none';
+                secondContent.style.display = 'block';
+            });
+        }
+
+        function downloadCV() {
+            const cvContent = `Adepoju Abdullahi\nMedical Laboratory Science Student\nFUOYE\n\nEducation: BMLS (in view)\nSkills: Laboratory Techniques, Research, Leadership\nContact: adepojuabdullah7@gmail.com`;
+            const blob = new Blob([cvContent], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Adepoju_Abdullahi_CV.txt';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        function scrollToContact() {
+            const contactSection = document.querySelector('#aboutPage #contact');
+            if (contactSection) contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        document.addEventListener('DOMContentLoaded', initResourcesToggle);
+    </script>
+</body>
+</html>
