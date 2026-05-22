@@ -1764,6 +1764,8 @@ html, body {
     height: calc(100vh - 100px);
     padding: 20px 20px 100px;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
 }
 
 /* HEADER WITH SIDE-BY-SIDE LAYOUT */
@@ -2149,6 +2151,7 @@ html, body {
     display: flex;
     gap: 10px;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .nav-btn {
@@ -2163,6 +2166,7 @@ html, body {
     transition: all 0.3s;
     flex: 1;
     max-width: 160px;
+    min-width: 120px;
 }
 
 .nav-btn:hover {
