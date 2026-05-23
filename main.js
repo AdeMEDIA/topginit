@@ -63,17 +63,37 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // ==================== SCROLL FIX FUNCTIONS ====================
     function blockBodyScroll() {
+        // Lock both body and html to prevent background page scroll on all browsers including iOS
         document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
         document.body.style.position = '';
         document.body.style.width = '';
         document.body.style.height = '';
+        // Explicitly make the exam container scrollable so Previous/Next buttons are reachable
+        const examPage = document.getElementById('examPage');
+        if (examPage) {
+            const headerEl = document.querySelector('.app-header');
+            const headerHeight = headerEl ? headerEl.offsetHeight : 60;
+            examPage.style.overflowY = 'scroll';
+            examPage.style.webkitOverflowScrolling = 'touch';
+            examPage.style.height = (window.innerHeight - headerHeight) + 'px';
+            examPage.style.paddingBottom = '80px';
+        }
     }
-    
+
     function restoreBodyScroll() {
         document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
         document.body.style.position = '';
         document.body.style.width = '';
         document.body.style.height = '';
+        const examPage = document.getElementById('examPage');
+        if (examPage) {
+            examPage.style.overflowY = '';
+            examPage.style.webkitOverflowScrolling = '';
+            examPage.style.height = '';
+            examPage.style.paddingBottom = '';
+        }
         forceScrollToTop();
     }
     
@@ -4303,30 +4323,37 @@ print(result)  # Output: 8
     function loadQuestion() {
         const questions = currentExamQuestions;
         if (!questions || currentQuestionIndex >= questions.length) { finalizeExam(); return; }
-        
+
+        // Scroll exam container back to top whenever a new question loads
+        const examPageEl = document.getElementById('examPage');
+        if (examPageEl) examPageEl.scrollTop = 0;
+
         const q = questions[currentQuestionIndex];
         document.getElementById('currentQ').innerText = currentQuestionIndex + 1;
         document.getElementById('qNum').innerText = currentQuestionIndex + 1;
         document.getElementById('questionText').innerHTML = q.question;
-        
+
         const container = document.getElementById('optionsContainer');
         container.innerHTML = '';
         const letters = ['A', 'B', 'C', 'D'];
-        
+
+        // Normalise answer: support legacy integer format (0→A, 1→B, 2→C, 3→D)
+        const correctAnswer = (typeof q.answer === 'number') ? letters[q.answer] : q.answer;
+
         q.options.forEach((opt, idx) => {
             const letter = letters[idx];
             const userAns = answers[currentQuestionIndex + 1];
             const lbl = document.createElement('label');
             lbl.className = 'option';
             if (isReviewMode) {
-                if (letter === q.answer) lbl.classList.add('correct');
-                if (userAns === letter && userAns !== q.answer) lbl.classList.add('wrong');
+                if (letter === correctAnswer) lbl.classList.add('correct');
+                if (userAns === letter && userAns !== correctAnswer) lbl.classList.add('wrong');
                 if (userAns === letter) lbl.classList.add('user-selected');
             }
             lbl.innerHTML = `<input type="radio" name="answer" value="${letter}" ${isReviewMode ? 'disabled' : ''} ${userAns === letter ? 'checked' : ''}><span>${letter}. ${opt}</span>`;
             container.appendChild(lbl);
         });
-        
+
         const expBox = document.getElementById('explanationBox');
         const expContent = document.getElementById('explanationContent');
         if (isReviewMode && q.explanation) {
@@ -4334,12 +4361,12 @@ print(result)  # Output: 8
             expContent.innerText = q.explanation;
             const userAns = answers[currentQuestionIndex + 1];
             expBox.classList.remove('correct', 'wrong');
-            if (userAns === q.answer) expBox.classList.add('correct');
+            if (userAns === correctAnswer) expBox.classList.add('correct');
             else expBox.classList.add('wrong');
         } else {
             expBox.style.display = 'none';
         }
-        
+
         updateQuestionGrid();
     }
     
@@ -4402,9 +4429,15 @@ print(result)  # Output: 8
         clearInterval(timerInterval);
         const questions = currentExamQuestions;
         const total = getTotalQuestions();
+        const letters = ['A', 'B', 'C', 'D'];
         let correct = 0;
         for (let i = 1; i <= total; i++) {
-            if (answers[i] && questions[i - 1] && answers[i] === questions[i - 1].answer) correct++;
+            if (!answers[i] || !questions[i - 1]) continue;
+            // Normalise answer: support legacy integer format (0→A, 1→B, 2→C, 3→D)
+            const correctAnswer = (typeof questions[i - 1].answer === 'number')
+                ? letters[questions[i - 1].answer]
+                : questions[i - 1].answer;
+            if (answers[i] === correctAnswer) correct++;
         }
         
         // Save progress for each topic
