@@ -4218,6 +4218,8 @@ print(result)  # Output: 8
             
             const reviewBackBtn = document.getElementById('reviewBackBtn');
             if (reviewBackBtn) reviewBackBtn.style.display = 'none';
+            const reviewHeaderHomeBtn = document.getElementById('reviewHeaderHomeBtn');
+            if (reviewHeaderHomeBtn) reviewHeaderHomeBtn.style.display = 'none';
             
             blockBodyScroll();
             loadQuestion();
@@ -4546,30 +4548,29 @@ print(result)  # Output: 8
         document.getElementById('timer').innerText = "Review Mode";
         const submitBtn = document.querySelector('button[onclick="submitExam()"]');
         if (submitBtn) submitBtn.style.display = 'none';
-        let backBtn = document.getElementById('reviewBackBtn');
-        if (!backBtn) {
-            backBtn = document.createElement('button');
-            backBtn.id = 'reviewBackBtn';
-            backBtn.className = 'submit-btn';
-            backBtn.onclick = () => { window.location.reload(); };
-            backBtn.innerHTML = '<span>←</span><span>Back to Courses</span>';
-            document.querySelector('.exam-stats').appendChild(backBtn);
-        } else backBtn.style.display = 'block';
 
-        let homeBtn = document.getElementById('reviewHomeBtn');
-        if (!homeBtn) {
-            homeBtn = document.createElement('button');
-            homeBtn.id = 'reviewHomeBtn';
-            homeBtn.className = 'submit-btn';
-            homeBtn.onclick = () => {
+        // Inject Home button beside "Review Mode" text in the timer-submit-row
+        let headerHomeBtn = document.getElementById('reviewHeaderHomeBtn');
+        if (!headerHomeBtn) {
+            headerHomeBtn = document.createElement('button');
+            headerHomeBtn.id = 'reviewHeaderHomeBtn';
+            headerHomeBtn.className = 'submit-btn';
+            headerHomeBtn.style.cssText = 'margin-left:8px;padding:6px 12px;font-size:0.85rem;';
+            headerHomeBtn.onclick = () => {
                 isReviewMode = false;
                 isExamActive = false;
+                headerHomeBtn.style.display = 'none';
                 document.getElementById('examPage').style.display = 'none';
+                restoreBodyScroll();
                 showPage('home');
             };
-            homeBtn.innerHTML = '<span>⌂</span><span>Home</span>';
-            document.querySelector('.exam-stats').appendChild(homeBtn);
-        } else homeBtn.style.display = 'block';
+            headerHomeBtn.innerHTML = '<span>⌂</span><span> Home</span>';
+            const timerSubmitRow = document.querySelector('.timer-submit-row');
+            if (timerSubmitRow) timerSubmitRow.appendChild(headerHomeBtn);
+        } else {
+            headerHomeBtn.style.display = '';
+        }
+
         currentQuestionIndex = 0;
         blockBodyScroll();
         loadQuestion();
