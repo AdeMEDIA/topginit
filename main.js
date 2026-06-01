@@ -63,37 +63,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // ==================== SCROLL FIX FUNCTIONS ====================
     function blockBodyScroll() {
-        // Lock both body and html to prevent background page scroll on all browsers including iOS
+        // Exam container is position:fixed in CSS so it handles its own scroll.
+        // Lock body/html only to prevent any bleed-through on older iOS Safari.
         document.body.style.overflow = 'hidden';
         document.documentElement.style.overflow = 'hidden';
-        document.body.style.position = '';
-        document.body.style.width = '';
-        document.body.style.height = '';
-        // Explicitly make the exam container scrollable so Previous/Next buttons are reachable
-        const examPage = document.getElementById('examPage');
-        if (examPage) {
-            const headerEl = document.querySelector('.app-header');
-            const headerHeight = headerEl ? headerEl.offsetHeight : 60;
-            examPage.style.overflowY = 'scroll';
-            examPage.style.webkitOverflowScrolling = 'touch';
-            examPage.style.height = (window.innerHeight - headerHeight) + 'px';
-            examPage.style.paddingBottom = '80px';
-        }
     }
 
     function restoreBodyScroll() {
         document.body.style.overflow = '';
         document.documentElement.style.overflow = '';
-        document.body.style.position = '';
-        document.body.style.width = '';
-        document.body.style.height = '';
-        const examPage = document.getElementById('examPage');
-        if (examPage) {
-            examPage.style.overflowY = '';
-            examPage.style.webkitOverflowScrolling = '';
-            examPage.style.height = '';
-            examPage.style.paddingBottom = '';
-        }
         forceScrollToTop();
     }
     

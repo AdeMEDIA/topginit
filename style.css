@@ -1761,15 +1761,14 @@ html, body {
 /* ==================== EXAM PAGE COMPACT STYLE WITH REVIEW MODE ==================== */
 .exam-container {
     display: none;
-    max-width: 800px;
-    margin: 0 auto;
-    min-height: 100vh;
-    height: calc(100vh - 100px);
-    padding: 20px 20px 100px;
+    position: fixed;
+    inset: 0;
+    z-index: 200;
     overflow-y: auto;
+    overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
-    touch-action: pan-y;
     overscroll-behavior: contain;
+    background: #f0f4f8;
 }
 
 /* HEADER WITH SIDE-BY-SIDE LAYOUT */
@@ -1777,11 +1776,15 @@ html, body {
     background: linear-gradient(135deg, #4f7011 0%, #6a8a13 100%);
     color: white;
     padding: 22px 20px 18px;
-    border-radius: 16px 16px 0 0;
+    border-radius: 0;
     margin-bottom: 0;
     display: flex;
     flex-direction: column;
     gap: 14px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
 }
 
 /* Progress bar */
@@ -1900,9 +1903,12 @@ html, body {
 /* BIGGER, BOLDER QUESTION BOX */
 .exam-body {
     background: white;
-    padding: 30px;
-    border-radius: 0 0 12px 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    padding: 30px 30px 120px;
+    border-radius: 0;
+    box-shadow: none;
+    max-width: 800px;
+    margin: 0 auto;
+    min-height: calc(100vh - 120px);
 }
 
 .question-title {
@@ -2343,13 +2349,9 @@ html, body {
 
 /* Mobile Responsive for Exam Page */
 @media (max-width: 768px) {
-    .exam-container {
-        padding: 10px;
-    }
-    
     .exam-header {
         padding: 15px;
-        border-radius: 10px 10px 0 0;
+        border-radius: 0;
     }
     
     .exam-title {
@@ -2375,8 +2377,8 @@ html, body {
     }
     
     .exam-body {
-        padding: 20px;
-        border-radius: 0 0 10px 10px;
+        padding: 20px 16px 120px;
+        border-radius: 0;
     }
     
     .question-text {
