@@ -1,9 +1,9 @@
 // ==================== SERVICE WORKER FOR CBT APP ====================
 // Enables offline access and faster loading
 
-const CACHE_NAME = 'topg-cbt-v1';
-const STATIC_CACHE = 'topg-static-v1';
-const DYNAMIC_CACHE = 'topg-dynamic-v1';
+const CACHE_NAME = 'topg-cbt-v3';
+const STATIC_CACHE = 'topg-static-v3';
+const DYNAMIC_CACHE = 'topg-dynamic-v3';
 
 // Files to cache immediately on install
 const STATIC_ASSETS = [
@@ -24,6 +24,8 @@ const STATIC_ASSETS = [
   '/mls102.js',
   '/mls104.js',
   '/gst112.js',
+  '/games.js',
+  '/firebase-config.js',
   '/test.jpeg',
   '/manifest.json'
 ];
