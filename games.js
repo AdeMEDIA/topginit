@@ -522,6 +522,8 @@
 
     var fc = { questions: [], index: 0, score: 0, answered: false };
 
+    var FC_MAX_LIVES = 3;
+
     function startFlashCards(questions) {
         if (!questions || !questions.length) {
             alert('No questions available. Please select a course.');
@@ -530,11 +532,24 @@
         fc.questions = questions.slice(0, 20);
         fc.index     = 0;
         fc.score     = 0;
+        fc.fails     = 0;
         fc.answered  = false;
+
+        // Hide Next button — we auto-advance
+        var nextBtn = document.getElementById('fc-next-btn');
+        if (nextBtn) nextBtn.style.display = 'none';
 
         showGamePage('flashCardsPage');
         fcRender();
         registerKeyHandler('flashcards');
+    }
+
+    function fcLivesHTML() {
+        var html = '';
+        for (var i = 0; i < FC_MAX_LIVES; i++) {
+            html += i < (FC_MAX_LIVES - fc.fails) ? '❤️' : '🖤';
+        }
+        return html;
     }
 
     function fcRender() {
@@ -551,8 +566,8 @@
         var explEl  = document.getElementById('fc-explanation');
         var nextBtn = document.getElementById('fc-next-btn');
 
-        if (scoreEl) scoreEl.textContent = fc.score + ' / ' + fc.questions.length;
-        if (qEl)     qEl.textContent     = q.question || '';
+        if (scoreEl) scoreEl.innerHTML = fcLivesHTML() + ' &nbsp; ' + fc.score + ' / ' + fc.questions.length;
+        if (qEl)     qEl.textContent   = q.question || '';
         if (explEl)  { explEl.style.display = 'none'; explEl.textContent = ''; }
         if (nextBtn) nextBtn.style.display = 'none';
 
@@ -560,8 +575,7 @@
         if (grid) {
             grid.innerHTML = '';
             letters.forEach(function (letter, i) {
-                var opt = q.options && q.options[i] != null ? q.options[i] : '';
-                // Reuse existing .fc-card elements if present, otherwise create
+                var opt  = q.options && q.options[i] != null ? q.options[i] : '';
                 var card = document.createElement('div');
                 card.className = 'fc-card';
                 card.id = 'fc-card-' + i;
@@ -582,33 +596,43 @@
         var q       = fc.questions[fc.index];
         var correct = q.answer;
         var letters = ['A', 'B', 'C', 'D'];
+        var isRight = chosen === correct;
 
         letters.forEach(function (letter, i) {
             var card = document.getElementById('fc-card-' + i);
             if (!card) return;
             card.onclick = null;
-            if (letter === correct) card.classList.add('fc-correct');
-            else if (letter === chosen && letter !== correct) card.classList.add('fc-wrong');
+            if (letter === correct)                                card.classList.add('fc-correct');
+            else if (letter === chosen && letter !== correct)      card.classList.add('fc-wrong');
         });
 
-        if (chosen === correct) fc.score++;
+        if (isRight) {
+            fc.score++;
+        } else {
+            fc.fails++;
+        }
 
         var explEl  = document.getElementById('fc-explanation');
-        var nextBtn = document.getElementById('fc-next-btn');
         var scoreEl = document.getElementById('fc-score');
 
         if (explEl) {
             explEl.style.display = 'block';
             var ci = 'ABCD'.indexOf(correct);
             explEl.textContent = q.explanation
-                ? 'Explanation: ' + q.explanation
-                : 'Correct Answer: ' + correct + ' — ' + ((q.options && q.options[ci]) || '');
+                ? '💡 ' + q.explanation
+                : '✅ Answer: ' + correct + ' — ' + ((q.options && q.options[ci]) || '');
         }
-        if (nextBtn) nextBtn.style.display = 'inline-block';
-        if (scoreEl) scoreEl.textContent = fc.score + ' / ' + fc.questions.length;
+        if (scoreEl) scoreEl.innerHTML = fcLivesHTML() + ' &nbsp; ' + fc.score + ' / ' + fc.questions.length;
+
+        // Auto-advance after 2s; end immediately if 3 lives gone
+        var delay = fc.fails >= FC_MAX_LIVES ? 1200 : 2000;
+        setTimeout(function () { window.fcNext(); }, delay);
     };
 
     window.fcNext = function () {
+        if (fc.fails >= FC_MAX_LIVES) {
+            fcShowEnd(); return;
+        }
         fc.index++;
         fcRender();
     };
@@ -631,7 +655,7 @@
                 '<h2 class="game-end-title">Flash Cards Done!</h2>' +
                 '<div class="game-end-stats">' +
                 '<div class="game-end-stat"><span class="game-end-val">' + fc.score + '</span><span class="game-end-lbl">Correct</span></div>' +
-                '<div class="game-end-stat"><span class="game-end-val">' + (total - fc.score) + '</span><span class="game-end-lbl">Wrong</span></div>' +
+                '<div class="game-end-stat"><span class="game-end-val">' + fc.fails + ' / ' + FC_MAX_LIVES + '</span><span class="game-end-lbl">Lives Lost</span></div>' +
                 '<div class="game-end-stat"><span class="game-end-val">' + pct + '%</span><span class="game-end-lbl">Score</span></div>' +
                 '</div>' +
                 '<button class="game-play-btn" onclick="window.saveScore(\'flashcards\',' + fc.score + ',\'' + fc.score + '/' + total + '\');this.textContent=\'Saved! ✓\';this.disabled=true;">Save Score</button>' +
@@ -1632,8 +1656,10 @@
         var style = document.createElement('style');
         style.id = 'topgGamesStyles';
         style.textContent = [
-            /* Game page base */
-            '.game-page { background: #0f172a; min-height: 100vh; }',
+            /* Game page base — individual game pages dark, menu light */
+            '.game-page { min-height: 100vh; }',
+            '#gamesPage.game-page { background: #f8fafc; }',
+            '#flashCardsPage.game-page, #guessWordPage.game-page, #millionairePage.game-page, #timeAttackPage.game-page, #dailyChallengePage.game-page, #weeklyChallengePage.game-page { background: #0f172a; }',
 
             /* Back button on game pages */
             '.game-back-btn { background: none; border: none; color: #22c55e; font-size: 14px; cursor: pointer; padding: 6px 10px; border-radius: 8px; }',
