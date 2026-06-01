@@ -556,6 +556,394 @@
             </div>
         </div>
         
+        <!-- ==================== USERNAME MODAL ==================== -->
+        <div id="usernameModal" class="modal-overlay" style="display:none">
+            <div class="modal-card username-modal-card">
+                <h2 class="modal-title">Enter Your Name</h2>
+                <p class="modal-subtitle">Your name shows on the leaderboard</p>
+                <input id="usernameInput" type="text" class="username-input" placeholder="e.g. TopG_MLS" maxlength="20" autocomplete="off">
+                <button id="usernameConfirmBtn" class="username-confirm-btn">Continue →</button>
+            </div>
+        </div>
+
+        <!-- ==================== GAME COURSE/TOPIC SELECTOR PANEL ==================== -->
+        <div id="gameCoursePanel" class="fullscreen-overlay" style="display:none">
+            <div class="game-panel-inner">
+                <button class="panel-close-btn" onclick="closeGameCoursePanel()">✕</button>
+                <h2 class="panel-title">Choose Course &amp; Topic</h2>
+
+                <!-- Step 1: Course Selection -->
+                <div id="gameCourseStep">
+                    <p class="panel-step-subtitle">Select a course:</p>
+                    <div id="gameCourseGrid" class="game-course-grid"></div>
+                    <div id="gameCourseLoading" class="game-loading-spinner" style="display:none">
+                        <div class="spinner-ring"></div>
+                        <span>Loading courses…</span>
+                    </div>
+                </div>
+
+                <!-- Step 2: Topic Selection -->
+                <div id="gameTopicStep" style="display:none">
+                    <button class="panel-back-link" onclick="document.getElementById('gameCourseStep').style.display='block'; document.getElementById('gameTopicStep').style.display='none'">← Back to Courses</button>
+                    <p class="panel-step-subtitle">Choose topic:</p>
+                    <div id="gameTopicGrid" class="game-topic-grid"></div>
+                    <button class="game-play-btn" onclick="startSelectedGame()">▶ Play</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== GAMES MENU PAGE ==================== -->
+        <div id="gamesPage" class="game-page" style="display:none">
+            <div class="games-page-header">
+                <div class="games-header-text">
+                    <h1 class="games-main-title">🎮 Games</h1>
+                    <p class="games-main-subtitle">Challenge yourself. Beat your score.</p>
+                </div>
+                <button class="leaderboard-icon-btn" onclick="openLeaderboard('global')" title="Global Leaderboard">🏆</button>
+            </div>
+
+            <div class="game-cards-grid">
+                <!-- Flash Cards -->
+                <div class="game-card game-card--blue" onclick="openGameCourseSelector('flashcards')">
+                    <div class="game-card-accent"></div>
+                    <div class="game-card-body">
+                        <div class="game-card-icon">🃏</div>
+                        <h3 class="game-card-title">Flash Cards</h3>
+                        <p class="game-card-desc">Tap the right card — instant feedback</p>
+                    </div>
+                    <div class="game-card-footer">
+                        <span class="game-play-tag">Play</span>
+                        <button class="game-lb-tag" onclick="event.stopPropagation(); openLeaderboard('flashcards')">🏆 Leaderboard</button>
+                    </div>
+                </div>
+
+                <!-- Guess the Word -->
+                <div class="game-card game-card--purple" onclick="openGameCourseSelector('guessword')">
+                    <div class="game-card-accent"></div>
+                    <div class="game-card-body">
+                        <div class="game-card-icon">💬</div>
+                        <h3 class="game-card-title">Guess the Word</h3>
+                        <p class="game-card-desc">Fill in the blank!</p>
+                    </div>
+                    <div class="game-card-footer">
+                        <span class="game-play-tag">Play</span>
+                        <button class="game-lb-tag" onclick="event.stopPropagation(); openLeaderboard('guessword')">🏆 Leaderboard</button>
+                    </div>
+                </div>
+
+                <!-- Millionaire -->
+                <div class="game-card game-card--gold" onclick="openGameCourseSelector('millionaire')">
+                    <div class="game-card-accent"></div>
+                    <div class="game-card-body">
+                        <div class="game-card-icon">💰</div>
+                        <h3 class="game-card-title">Millionaire</h3>
+                        <p class="game-card-desc">Win up to ₦50 Million!</p>
+                    </div>
+                    <div class="game-card-footer">
+                        <span class="game-play-tag">Play</span>
+                        <button class="game-lb-tag" onclick="event.stopPropagation(); openLeaderboard('millionaire')">🏆 Leaderboard</button>
+                    </div>
+                </div>
+
+                <!-- Time Attack -->
+                <div class="game-card game-card--red" onclick="openGameCourseSelector('timeattack')">
+                    <div class="game-card-accent"></div>
+                    <div class="game-card-body">
+                        <div class="game-card-icon">⚡</div>
+                        <h3 class="game-card-title">Time Attack</h3>
+                        <p class="game-card-desc">Race against the clock</p>
+                    </div>
+                    <div class="game-card-footer">
+                        <span class="game-play-tag">Play</span>
+                        <button class="game-lb-tag" onclick="event.stopPropagation(); openLeaderboard('timeattack')">🏆 Leaderboard</button>
+                    </div>
+                </div>
+
+                <!-- Daily Challenge -->
+                <div class="game-card game-card--green" onclick="openGameCourseSelector('daily')">
+                    <div class="game-card-accent"></div>
+                    <div class="game-card-body">
+                        <div class="game-card-icon">📅</div>
+                        <h3 class="game-card-title">Daily Challenge</h3>
+                        <p class="game-card-desc">One attempt. Every day.</p>
+                    </div>
+                    <div class="game-card-footer">
+                        <span class="game-play-tag">Play</span>
+                        <button class="game-lb-tag" onclick="event.stopPropagation(); openLeaderboard('daily')">🏆 Leaderboard</button>
+                    </div>
+                </div>
+
+                <!-- Weekly Challenge (Locked) -->
+                <div class="game-card game-card--grey game-card--locked">
+                    <div class="game-card-accent"></div>
+                    <div class="game-card-soon-badge">SOON</div>
+                    <div class="game-card-body">
+                        <div class="game-card-icon">🏆</div>
+                        <h3 class="game-card-title">Weekly Challenge</h3>
+                        <p class="game-card-desc">Coming Soon</p>
+                    </div>
+                    <div class="game-card-footer">
+                        <span class="game-play-tag">Locked</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== FLASH CARDS PAGE ==================== -->
+        <div id="flashCardsPage" class="game-page" style="display:none">
+            <div class="game-header">
+                <button class="game-back-btn" onclick="showPage('games')">← Back</button>
+                <h2 class="game-page-title">Flash Cards 🃏</h2>
+                <span class="game-score-badge" id="fc-score">0 / 0</span>
+            </div>
+
+            <div id="fc-question" class="game-question-card"></div>
+
+            <div id="fc-options-grid" class="fc-grid">
+                <div class="fc-card" id="fc-card-0"></div>
+                <div class="fc-card" id="fc-card-1"></div>
+                <div class="fc-card" id="fc-card-2"></div>
+                <div class="fc-card" id="fc-card-3"></div>
+            </div>
+
+            <div id="fc-explanation" class="game-explanation-box" style="display:none"></div>
+            <button id="fc-next-btn" class="game-next-btn" onclick="fcNext()" style="display:none">Next →</button>
+        </div>
+
+        <!-- ==================== GUESS THE WORD PAGE ==================== -->
+        <div id="guessWordPage" class="game-page" style="display:none">
+            <div class="game-header">
+                <button class="game-back-btn" onclick="showPage('games')">← Back</button>
+                <h2 class="game-page-title">Guess the Word 💬</h2>
+                <span class="game-score-badge" id="gw-score">0 / 0</span>
+            </div>
+
+            <div id="gw-sentence" class="gw-sentence-display"></div>
+
+            <div id="gw-options" class="gw-options-list">
+                <button class="game-option-btn" data-index="0"></button>
+                <button class="game-option-btn" data-index="1"></button>
+                <button class="game-option-btn" data-index="2"></button>
+                <button class="game-option-btn" data-index="3"></button>
+            </div>
+
+            <div id="gw-explanation" class="game-explanation-box" style="display:none"></div>
+            <button id="gw-next-btn" class="game-next-btn" style="display:none">Next →</button>
+        </div>
+
+        <!-- ==================== MILLIONAIRE PAGE ==================== -->
+        <div id="millionairePage" class="game-page mil-page" style="display:none">
+            <div class="mil-top-row">
+                <div id="mil-prize-current" class="mil-prize-badge">₦0</div>
+                <button id="mil-walkaway-btn" class="mil-walkaway-btn">Walk Away</button>
+            </div>
+
+            <div class="mil-lifelines-row">
+                <button id="mil-lifeline-5050" class="mil-lifeline-btn" title="50:50">50:50</button>
+                <button id="mil-lifeline-audience" class="mil-lifeline-btn" title="Ask the Audience">👥</button>
+                <button id="mil-lifeline-friend" class="mil-lifeline-btn" title="Phone a Friend">📞</button>
+            </div>
+
+            <div id="mil-question" class="mil-question-box"></div>
+
+            <div id="mil-options-grid" class="mil-options-grid">
+                <button class="mil-option-btn" data-letter="A"><span class="mil-letter">A</span><span class="mil-option-text" id="mil-opt-A"></span></button>
+                <button class="mil-option-btn" data-letter="B"><span class="mil-letter">B</span><span class="mil-option-text" id="mil-opt-B"></span></button>
+                <button class="mil-option-btn" data-letter="C"><span class="mil-letter">C</span><span class="mil-option-text" id="mil-opt-C"></span></button>
+                <button class="mil-option-btn" data-letter="D"><span class="mil-letter">D</span><span class="mil-option-text" id="mil-opt-D"></span></button>
+            </div>
+
+            <div id="mil-ladder" class="mil-ladder">
+                <div class="mil-ladder-inner"></div>
+            </div>
+
+            <!-- Result Overlay -->
+            <div id="mil-result" class="mil-result-overlay" style="display:none">
+                <div class="mil-result-card">
+                    <div id="mil-result-emoji" class="mil-result-emoji"></div>
+                    <h2 id="mil-result-title" class="mil-result-title"></h2>
+                    <div id="mil-result-prize" class="mil-result-prize"></div>
+                    <button class="game-play-btn" onclick="openGameCourseSelector('millionaire')">Play Again</button>
+                    <button class="game-lb-tag" onclick="openLeaderboard('millionaire')" style="margin-top:10px; display:block; width:100%; text-align:center; padding:12px;">🏆 View Leaderboard</button>
+                </div>
+            </div>
+
+            <!-- Friend Hint Overlay -->
+            <div id="mil-friend-overlay" class="mil-hint-overlay" style="display:none">
+                <div class="mil-hint-card">
+                    <h3>📞 Friend says…</h3>
+                    <p id="mil-friend-text" class="mil-hint-text"></p>
+                    <button onclick="document.getElementById('mil-friend-overlay').style.display='none'" class="mil-hint-close">Got it</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Audience Overlay (Millionaire lifeline) -->
+        <div id="mil-audience-overlay" class="mil-hint-overlay" style="display:none">
+            <div class="mil-hint-card mil-audience-card">
+                <h3>👥 Audience Poll</h3>
+                <div id="mil-audience-bars" class="mil-audience-bars">
+                    <div class="mil-audience-bar-row"><span class="mil-bar-label">A</span><div class="mil-bar-track"><div class="mil-bar-fill" id="mil-bar-A" style="width:0%"></div></div><span class="mil-bar-pct" id="mil-pct-A">0%</span></div>
+                    <div class="mil-audience-bar-row"><span class="mil-bar-label">B</span><div class="mil-bar-track"><div class="mil-bar-fill" id="mil-bar-B" style="width:0%"></div></div><span class="mil-bar-pct" id="mil-pct-B">0%</span></div>
+                    <div class="mil-audience-bar-row"><span class="mil-bar-label">C</span><div class="mil-bar-track"><div class="mil-bar-fill" id="mil-bar-C" style="width:0%"></div></div><span class="mil-bar-pct" id="mil-pct-C">0%</span></div>
+                    <div class="mil-audience-bar-row"><span class="mil-bar-label">D</span><div class="mil-bar-track"><div class="mil-bar-fill" id="mil-bar-D" style="width:0%"></div></div><span class="mil-bar-pct" id="mil-pct-D">0%</span></div>
+                </div>
+                <button onclick="document.getElementById('mil-audience-overlay').style.display='none'" class="mil-hint-close">Close</button>
+            </div>
+        </div>
+
+        <!-- ==================== TIME ATTACK PAGE ==================== -->
+        <div id="timeAttackPage" class="game-page" style="display:none">
+            <div class="game-header">
+                <button class="game-back-btn" onclick="showPage('games')">← Back</button>
+                <h2 class="game-page-title">Time Attack ⚡</h2>
+            </div>
+
+            <div class="ta-timer-wrapper">
+                <svg id="ta-timer-svg" width="120" height="120" viewBox="0 0 120 120">
+                    <circle cx="60" cy="60" r="54" fill="none" stroke="#e2e8f0" stroke-width="8"/>
+                    <circle id="ta-timer-circle" cx="60" cy="60" r="54" fill="none" stroke="#4f7011" stroke-width="8"
+                        stroke-dasharray="339.3" stroke-dashoffset="0" stroke-linecap="round"
+                        transform="rotate(-90 60 60)"/>
+                    <text id="ta-timer-text" x="60" y="67" text-anchor="middle" font-size="28" font-weight="bold" fill="#1a202c">60</text>
+                </svg>
+            </div>
+
+            <div class="ta-stats-row">
+                <div class="ta-stat-chip ta-stat-chip--correct"><span id="ta-stat-correct">0</span> Correct</div>
+                <div class="ta-stat-chip ta-stat-chip--wrong"><span id="ta-stat-wrong">0</span> Wrong</div>
+                <div class="ta-stat-chip ta-stat-chip--total"><span id="ta-stat-total">0</span> Total</div>
+            </div>
+
+            <div id="ta-question" class="game-question-card"></div>
+
+            <div id="ta-options" class="ta-options-list">
+                <button class="game-option-btn" data-index="0"></button>
+                <button class="game-option-btn" data-index="1"></button>
+                <button class="game-option-btn" data-index="2"></button>
+                <button class="game-option-btn" data-index="3"></button>
+            </div>
+
+            <!-- End Screen -->
+            <div id="ta-result" class="game-end-screen" style="display:none">
+                <div class="game-end-card">
+                    <div class="game-end-icon">⚡</div>
+                    <h2 class="game-end-title">Time's Up!</h2>
+                    <div class="game-end-stats">
+                        <div class="game-end-stat"><span class="game-end-val" id="ta-result-correct">0</span><span class="game-end-lbl">Correct</span></div>
+                        <div class="game-end-stat"><span class="game-end-val" id="ta-result-wrong">0</span><span class="game-end-lbl">Wrong</span></div>
+                        <div class="game-end-stat"><span class="game-end-val" id="ta-result-acc">0%</span><span class="game-end-lbl">Accuracy</span></div>
+                    </div>
+                    <button class="game-play-btn" onclick="openGameCourseSelector('timeattack')">Play Again</button>
+                    <button class="game-lb-save-btn" onclick="saveTimeAttackScore()">Save to Leaderboard</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== DAILY CHALLENGE PAGE ==================== -->
+        <div id="dailyChallengePage" class="game-page" style="display:none">
+            <div class="dc-header">
+                <div id="dc-streak" class="dc-streak-badge">🔥 0 day streak</div>
+                <div id="dc-date" class="dc-date-label"></div>
+            </div>
+            <div id="dc-progress" class="dc-progress-label">Q 1 / 10</div>
+
+            <div id="dc-question" class="game-question-card"></div>
+
+            <div id="dc-options" class="dc-options-list">
+                <button class="game-option-btn" data-index="0"></button>
+                <button class="game-option-btn" data-index="1"></button>
+                <button class="game-option-btn" data-index="2"></button>
+                <button class="game-option-btn" data-index="3"></button>
+            </div>
+
+            <div id="dc-explanation" class="game-explanation-box" style="display:none"></div>
+            <button id="dc-next-btn" class="game-next-btn" style="display:none">Next →</button>
+
+            <!-- Result -->
+            <div id="dc-result" class="game-end-screen" style="display:none">
+                <div class="game-end-card">
+                    <div class="game-end-icon">📅</div>
+                    <h2 class="game-end-title">Challenge Complete!</h2>
+                    <div class="game-end-stats">
+                        <div class="game-end-stat"><span class="game-end-val" id="dc-result-score">0/10</span><span class="game-end-lbl">Score</span></div>
+                        <div class="game-end-stat"><span class="game-end-val" id="dc-result-streak">0</span><span class="game-end-lbl">Streak</span></div>
+                    </div>
+                    <div id="dc-result-share" class="dc-share-msg"></div>
+                    <button class="game-lb-tag" onclick="openLeaderboard('daily')" style="display:block; width:100%; text-align:center; padding:12px; margin-top:12px;">🏆 View Leaderboard</button>
+                </div>
+            </div>
+
+            <!-- Already Played Today -->
+            <div id="dc-already-played" class="dc-already-played" style="display:none">
+                <div class="dc-already-card">
+                    <div class="dc-already-icon">✅</div>
+                    <h3>You've already played today!</h3>
+                    <p>Your score: <strong id="dc-today-score">—</strong></p>
+                    <p class="dc-countdown-label">Next challenge in: <strong id="dc-countdown">—</strong></p>
+                    <button class="game-lb-tag" onclick="openLeaderboard('daily')" style="display:block; margin-top:16px; width:100%; text-align:center; padding:12px;">🏆 View Today's Leaderboard</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== WEEKLY CHALLENGE PAGE ==================== -->
+        <div id="weeklyChallengePage" class="game-page" style="display:none">
+            <div class="game-header">
+                <button class="game-back-btn" onclick="showPage('games')">← Back</button>
+                <h2 class="game-page-title">Weekly Challenge 🏆</h2>
+            </div>
+            <div class="weekly-coming-soon">
+                <div class="weekly-cs-icon">🏆</div>
+                <h2 class="weekly-cs-title">Coming Soon</h2>
+                <p class="weekly-cs-desc">Weekly challenges with prizes coming soon. Stay tuned!</p>
+                <button class="game-play-btn" disabled style="opacity:0.5; cursor:not-allowed;">Play</button>
+            </div>
+        </div>
+
+        <!-- ==================== LEADERBOARD MODAL ==================== -->
+        <div id="leaderboardModal" class="modal-overlay" style="display:none">
+            <div class="lb-modal-card">
+                <div class="lb-modal-header">
+                    <div>
+                        <h2 class="lb-modal-title">🏆 Leaderboard</h2>
+                        <p id="lb-game-title" class="lb-game-subtitle"></p>
+                    </div>
+                    <button class="panel-close-btn lb-close-btn" onclick="document.getElementById('leaderboardModal').style.display='none'">✕</button>
+                </div>
+
+                <div class="lb-tabs" id="lb-tabs">
+                    <button class="lb-tab active" data-game="global" onclick="switchLeaderboardTab('global')">Global</button>
+                    <button class="lb-tab" data-game="flashcards" onclick="switchLeaderboardTab('flashcards')">Flash Cards</button>
+                    <button class="lb-tab" data-game="guessword" onclick="switchLeaderboardTab('guessword')">Guess</button>
+                    <button class="lb-tab" data-game="millionaire" onclick="switchLeaderboardTab('millionaire')">Millionaire</button>
+                    <button class="lb-tab" data-game="timeattack" onclick="switchLeaderboardTab('timeattack')">Time Attack</button>
+                    <button class="lb-tab" data-game="daily" onclick="switchLeaderboardTab('daily')">Daily</button>
+                </div>
+
+                <div class="lb-table-wrapper">
+                    <div id="lb-loading" class="game-loading-spinner" style="display:none">
+                        <div class="spinner-ring"></div>
+                        <span>Loading…</span>
+                    </div>
+                    <div id="lb-empty" class="lb-empty-state" style="display:none">
+                        <div class="lb-empty-icon">📭</div>
+                        <p>No scores yet. Be the first!</p>
+                    </div>
+                    <table class="lb-table" id="lb-table">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Name</th>
+                                <th>Score</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="leaderboard-table-body"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
         <!-- ==================== ABOUT PAGE ==================== -->
         <div id="libraryPage" style="display:none">
             <div class="library-lock-page">
