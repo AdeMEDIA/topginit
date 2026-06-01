@@ -139,25 +139,38 @@
         window.scrollTo(0, 0);
     }
 
+    var GAME_PAGE_IDS = [
+        'flashCardsPage', 'guessWordPage', 'millionairePage',
+        'timeAttackPage', 'dailyChallengePage', 'weeklyChallengePage'
+    ];
+
     function hideAllGamePages() {
-        var ids = [
-            'flashCardsPage', 'guessWordPage', 'millionairePage',
-            'timeAttackPage', 'dailyChallengePage', 'weeklyChallengePage'
-        ];
-        ids.forEach(function (id) {
+        GAME_PAGE_IDS.forEach(function (id) {
             var el = document.getElementById(id);
             if (el) el.style.display = 'none';
         });
     }
 
     function showGamePage(pageId) {
-        // showPage('games') hides main pages and activates the games tab
-        if (window.showPage) window.showPage('games');
+        // Game sub-pages are position:fixed full-screen overlays — just show the right one
         hideAllGamePages();
         var page = document.getElementById(pageId);
-        if (page) page.style.display = 'block';
-        restoreBodyScroll();
+        if (page) {
+            page.style.display = 'block';
+            page.scrollTop = 0;
+        }
+        // Lock body scroll while a game is open (game page scrolls internally)
+        document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
     }
+
+    function closeGame() {
+        hideAllGamePages();
+        document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
+        if (window.showPage) window.showPage('games');
+    }
+    window.closeGame = closeGame;
 
     // ==================== FIREBASE INIT ====================
 
@@ -566,9 +579,9 @@
         var explEl  = document.getElementById('fc-explanation');
         var nextBtn = document.getElementById('fc-next-btn');
 
-        if (scoreEl) scoreEl.innerHTML = fcLivesHTML() + ' &nbsp; ' + fc.score + ' / ' + fc.questions.length;
-        if (qEl)     qEl.textContent   = q.question || '';
-        if (explEl)  { explEl.style.display = 'none'; explEl.textContent = ''; }
+        if (scoreEl) scoreEl.innerHTML = fcLivesHTML() + '&nbsp;' + fc.score + '/' + fc.questions.length;
+        if (qEl)     { qEl.textContent = q.question || ''; qEl.className = 'gp-question'; }
+        if (explEl)  { explEl.style.display = 'none'; explEl.textContent = ''; explEl.className = 'gp-explanation'; }
         if (nextBtn) nextBtn.style.display = 'none';
 
         var letters = ['A', 'B', 'C', 'D'];
@@ -606,23 +619,19 @@
             else if (letter === chosen && letter !== correct)      card.classList.add('fc-wrong');
         });
 
-        if (isRight) {
-            fc.score++;
-        } else {
-            fc.fails++;
-        }
+        if (isRight) { fc.score++; soundCorrect(); } else { fc.fails++; soundWrong(); }
 
         var explEl  = document.getElementById('fc-explanation');
         var scoreEl = document.getElementById('fc-score');
 
         if (explEl) {
-            explEl.style.display = 'block';
             var ci = 'ABCD'.indexOf(correct);
             explEl.textContent = q.explanation
                 ? '💡 ' + q.explanation
                 : '✅ Answer: ' + correct + ' — ' + ((q.options && q.options[ci]) || '');
+            explEl.style.display = 'block';
         }
-        if (scoreEl) scoreEl.innerHTML = fcLivesHTML() + ' &nbsp; ' + fc.score + ' / ' + fc.questions.length;
+        if (scoreEl) scoreEl.innerHTML = fcLivesHTML() + '&nbsp;' + fc.score + '/' + fc.questions.length;
 
         // Auto-advance after 2s; end immediately if 3 lives gone
         var delay = fc.fails >= FC_MAX_LIVES ? 1200 : 2000;
@@ -719,14 +728,14 @@
         if (nextBtn) nextBtn.style.display   = 'none';
 
         var letters = ['A', 'B', 'C', 'D'];
-        var btns    = optsEl ? optsEl.querySelectorAll('.game-option-btn') : [];
+        var btns    = optsEl ? optsEl.querySelectorAll('.gp-opt') : [];
 
         letters.forEach(function (letter, i) {
             var opt = q.options && q.options[i] != null ? q.options[i] : '';
             var btn = btns[i];
             if (!btn) return;
             btn.textContent = letter + '. ' + opt;
-            btn.className   = 'game-option-btn';
+            btn.className   = 'gp-opt'; btn.innerHTML = '<span class="gp-opt-letter">' + letter + '</span><span>' + esc(opt) + '</span>';
             btn.onclick     = (function (l) { return function () { window.gwAnswer(l); }; })(letter);
         });
     }
@@ -739,15 +748,15 @@
         var correct = q.answer;
         var letters = ['A', 'B', 'C', 'D'];
         var optsEl  = document.getElementById('gw-options');
-        var btns    = optsEl ? optsEl.querySelectorAll('.game-option-btn') : [];
+        var btns    = optsEl ? optsEl.querySelectorAll('.gp-opt') : [];
 
         btns.forEach(function (btn, i) {
             btn.onclick = null;
-            if (letters[i] === correct) btn.classList.add('gw-correct');
-            else if (letters[i] === chosen && letters[i] !== correct) btn.classList.add('gw-wrong');
+            if (letters[i] === correct) btn.classList.add('correct');
+            else if (letters[i] === chosen && letters[i] !== correct) btn.classList.add('wrong');
         });
 
-        if (chosen === correct) gw.score++;
+        if (chosen === correct) { gw.score++; soundCorrect(); } else { soundWrong(); }
 
         var explEl  = document.getElementById('gw-explanation');
         var nextBtn = document.getElementById('gw-next-btn');
@@ -935,6 +944,7 @@
             });
 
             if (chosen === correct) {
+                soundLevelUp();
                 if (SAFE_LEVELS.indexOf(mil.index) !== -1) mil.safePrize = PRIZE_LADDER[mil.index];
                 setTimeout(function () {
                     mil.index++;
@@ -946,6 +956,7 @@
                 }, 1200);
             } else {
                 mil.gameOver = true;
+                soundGameOver();
                 setTimeout(function () { milGameOver(false); }, 1500);
             }
         }, 800);
@@ -1166,14 +1177,14 @@
         if (qEl) qEl.textContent = q.question || '';
 
         var letters = ['A', 'B', 'C', 'D'];
-        var btns    = optsEl ? optsEl.querySelectorAll('.game-option-btn') : [];
+        var btns    = optsEl ? optsEl.querySelectorAll('.gp-opt') : [];
 
         letters.forEach(function (letter, i) {
             var opt = q.options && q.options[i] != null ? q.options[i] : '';
             var btn = btns[i];
             if (!btn) return;
             btn.textContent = letter + '. ' + opt;
-            btn.className   = 'game-option-btn';
+            btn.className   = 'gp-opt'; btn.innerHTML = '<span class="gp-opt-letter">' + letter + '</span><span>' + esc(opt) + '</span>';
             btn.onclick     = (function (l) { return function () { window.taAnswer(l); }; })(letter);
         });
     }
@@ -1187,20 +1198,22 @@
         var correct = q.answer;
         var letters = ['A', 'B', 'C', 'D'];
         var optsEl  = document.getElementById('ta-options');
-        var btns    = optsEl ? optsEl.querySelectorAll('.game-option-btn') : [];
+        var btns    = optsEl ? optsEl.querySelectorAll('.gp-opt') : [];
 
         btns.forEach(function (btn, i) {
             btn.onclick = null;
-            if (letters[i] === correct)                              btn.classList.add('ta-correct');
-            else if (letters[i] === chosen && letters[i] !== correct) btn.classList.add('ta-wrong');
+            if (letters[i] === correct)                              btn.classList.add('correct');
+            else if (letters[i] === chosen && letters[i] !== correct) btn.classList.add('wrong');
         });
 
         if (chosen === correct) {
             ta.correct++;
             ta.timeLeft = Math.min(ta.timeLeft + 2, 120);
+            soundCorrect();
         } else {
             ta.wrong++;
             ta.timeLeft = Math.max(ta.timeLeft - 3, 1);
+            soundWrong();
         }
 
         taUpdateStats();
@@ -1218,17 +1231,20 @@
             ta.timeLeft--;
             taUpdateSVG();
 
+            if (ta.timeLeft <= 10) { soundDanger(); } else if (ta.timeLeft % 5 === 0) { soundTick(); }
+
             if (textEl) {
                 textEl.textContent = ta.timeLeft;
-                textEl.setAttribute('fill', ta.timeLeft < 10 ? '#ef4444' : '#4f7011');
+                textEl.setAttribute('fill', ta.timeLeft < 10 ? '#ef4444' : ta.timeLeft < 20 ? '#f59e0b' : '#f1f5f9');
             }
             if (circleEl) {
-                circleEl.style.stroke = ta.timeLeft < 10 ? '#ef4444' : '#4f7011';
+                circleEl.className = 'ta-timer-circle' + (ta.timeLeft < 10 ? ' danger' : ta.timeLeft < 20 ? ' warning' : '');
             }
 
             if (ta.timeLeft <= 0) {
                 ta.running = false;
                 clearInterval(ta.timer);
+                soundGameOver();
                 taShowEnd();
             }
         }, 1000);
@@ -1426,14 +1442,14 @@
         if (progressEl) progressEl.textContent  = 'Q ' + (dc.index + 1) + ' / ' + dc.questions.length;
 
         var letters = ['A', 'B', 'C', 'D'];
-        var btns    = optsEl ? optsEl.querySelectorAll('.game-option-btn') : [];
+        var btns    = optsEl ? optsEl.querySelectorAll('.gp-opt') : [];
 
         letters.forEach(function (letter, i) {
             var opt = q.options && q.options[i] != null ? q.options[i] : '';
             var btn = btns[i];
             if (!btn) return;
             btn.textContent = letter + '. ' + opt;
-            btn.className   = 'game-option-btn';
+            btn.className   = 'gp-opt'; btn.innerHTML = '<span class="gp-opt-letter">' + letter + '</span><span>' + esc(opt) + '</span>';
             btn.onclick     = (function (l) { return function () { window.dcAnswer(l); }; })(letter);
         });
     }
@@ -1446,15 +1462,15 @@
         var correct = q.answer;
         var letters = ['A', 'B', 'C', 'D'];
         var optsEl  = document.getElementById('dc-options');
-        var btns    = optsEl ? optsEl.querySelectorAll('.game-option-btn') : [];
+        var btns    = optsEl ? optsEl.querySelectorAll('.gp-opt') : [];
 
         btns.forEach(function (btn, i) {
             btn.onclick = null;
-            if (letters[i] === correct)                               btn.classList.add('dc-correct');
-            else if (letters[i] === chosen && letters[i] !== correct) btn.classList.add('dc-wrong');
+            if (letters[i] === correct)                               btn.classList.add('correct');
+            else if (letters[i] === chosen && letters[i] !== correct) btn.classList.add('wrong');
         });
 
-        if (chosen === correct) dc.score++;
+        if (chosen === correct) { dc.score++; soundCorrect(); } else { soundWrong(); }
 
         var explEl  = document.getElementById('dc-explanation');
         var nextBtn = document.getElementById('dc-next-btn');
@@ -1649,6 +1665,54 @@
         document.addEventListener('keydown', _activeKeyHandler);
     }
 
+    // ==================== SOUND SYSTEM ====================
+
+    var _audioCtx = null;
+    function _getCtx() {
+        if (!_audioCtx) {
+            try { _audioCtx = new (window.AudioContext || window.webkitAudioContext)(); } catch(e) {}
+        }
+        return _audioCtx;
+    }
+    function _tone(freq, dur, type, vol, delay) {
+        try {
+            var ctx = _getCtx(); if (!ctx) return;
+            var osc = ctx.createOscillator();
+            var gain = ctx.createGain();
+            osc.connect(gain); gain.connect(ctx.destination);
+            osc.type = type || 'sine';
+            osc.frequency.setValueAtTime(freq, ctx.currentTime + (delay||0));
+            gain.gain.setValueAtTime(vol || 0.25, ctx.currentTime + (delay||0));
+            gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + (delay||0) + dur);
+            osc.start(ctx.currentTime + (delay||0));
+            osc.stop(ctx.currentTime + (delay||0) + dur);
+        } catch(e) {}
+    }
+    function soundCorrect() {
+        _tone(523, 0.08); _tone(659, 0.08, 'sine', 0.25, 0.08); _tone(784, 0.18, 'sine', 0.25, 0.16);
+    }
+    function soundWrong() {
+        _tone(300, 0.08, 'sawtooth', 0.2); _tone(220, 0.22, 'sawtooth', 0.2, 0.09);
+    }
+    function soundClick() {
+        _tone(900, 0.04, 'square', 0.12);
+    }
+    function soundTick() {
+        _tone(1200, 0.03, 'square', 0.08);
+    }
+    function soundWin() {
+        [523,659,784,1047].forEach(function(f,i){ _tone(f, 0.18, 'sine', 0.28, i*0.1); });
+    }
+    function soundGameOver() {
+        [494,440,392,349,294].forEach(function(f,i){ _tone(f, 0.22, 'sawtooth', 0.18, i*0.13); });
+    }
+    function soundLevelUp() {
+        [392,494,587,740,988].forEach(function(f,i){ _tone(f, 0.14, 'sine', 0.22, i*0.07); });
+    }
+    function soundDanger() {
+        _tone(220, 0.06, 'sawtooth', 0.15); _tone(220, 0.06, 'sawtooth', 0.15, 0.12);
+    }
+
     // ==================== INJECT SUPPLEMENTAL CSS ====================
 
     function injectStyles() {
@@ -1656,104 +1720,163 @@
         var style = document.createElement('style');
         style.id = 'topgGamesStyles';
         style.textContent = [
-            /* Game page base — individual game pages dark, menu light */
-            '.game-page { min-height: 100vh; }',
-            '#gamesPage.game-page { background: #f8fafc; }',
-            '#flashCardsPage.game-page, #guessWordPage.game-page, #millionairePage.game-page, #timeAttackPage.game-page, #dailyChallengePage.game-page, #weeklyChallengePage.game-page { background: #0f172a; }',
 
-            /* Back button on game pages */
-            '.game-back-btn { background: none; border: none; color: #22c55e; font-size: 14px; cursor: pointer; padding: 6px 10px; border-radius: 8px; }',
+            /* ─── GAMES MENU: gradient cards ─── */
+            '#gamesPage.game-page { background: #f0f4f8; min-height: 100vh; }',
+            '.game-card { border-radius: 20px; overflow: hidden; cursor: pointer; transition: transform .2s, box-shadow .2s; box-shadow: 0 6px 24px rgba(0,0,0,.13); display: flex; flex-direction: column; min-height: 160px; border: none; }',
+            '.game-card:active { transform: scale(.97); }',
+            '.game-card--blue   { background: linear-gradient(145deg,#3b82f6,#1d4ed8); }',
+            '.game-card--purple { background: linear-gradient(145deg,#8b5cf6,#6d28d9); }',
+            '.game-card--gold   { background: linear-gradient(145deg,#f59e0b,#b45309); }',
+            '.game-card--red    { background: linear-gradient(145deg,#ef4444,#b91c1c); }',
+            '.game-card--green  { background: linear-gradient(145deg,#22c55e,#15803d); }',
+            '.game-card--grey   { background: linear-gradient(145deg,#94a3b8,#475569); opacity:.7; }',
+            '.game-card-accent  { display: none; }',
+            '.game-card-body    { padding: 20px 16px 10px; flex: 1; }',
+            '.game-card-icon    { font-size: 36px; margin-bottom: 8px; }',
+            '.game-card-title   { font-size: 17px; font-weight: 700; color: #fff; margin: 0 0 4px; }',
+            '.game-card-desc    { font-size: 12px; color: rgba(255,255,255,.8); margin: 0; }',
+            '.game-card-footer  { padding: 10px 14px; display: flex; align-items: center; justify-content: space-between; background: rgba(0,0,0,.18); }',
+            '.game-play-tag     { color: #fff; font-size: 13px; font-weight: 700; letter-spacing: .3px; }',
+            '.game-lb-tag       { background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.3); color: #fff; padding: 4px 10px; border-radius: 20px; font-size: 11px; cursor: pointer; transition: background .15s; }',
+            '.game-lb-tag:active { background: rgba(255,255,255,.35); }',
+            '.game-cards-grid   { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }',
 
-            /* Flash Cards grid */
-            '.fc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 16px; }',
-            '.fc-card { background: #1e293b; border-radius: 14px; padding: 18px 12px; cursor: pointer; border: 2px solid transparent; display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; transition: transform .12s; }',
+            /* ─── INDIVIDUAL GAME PAGES: fixed full-screen overlays ─── */
+            '#flashCardsPage, #guessWordPage, #millionairePage, #timeAttackPage, #dailyChallengePage, #weeklyChallengePage { position: fixed !important; inset: 0 !important; z-index: 400 !important; overflow-y: auto; -webkit-overflow-scrolling: touch; background: #0d1117; display: none; }',
+            '@keyframes gameSlideIn { from { opacity:0; transform: translateY(30px); } to { opacity:1; transform: translateY(0); } }',
+            '#flashCardsPage[style*="block"], #guessWordPage[style*="block"], #millionairePage[style*="block"], #timeAttackPage[style*="block"], #dailyChallengePage[style*="block"], #weeklyChallengePage[style*="block"] { animation: gameSlideIn .28s ease; }',
+
+            /* ─── SHARED GAME HEADER ─── */
+            '.gp-header { display: flex; align-items: center; gap: 12px; padding: 14px 16px 10px; border-bottom: 1px solid rgba(255,255,255,.07); }',
+            '.gp-back { background: rgba(255,255,255,.1); border: none; color: #fff; width: 36px; height: 36px; border-radius: 50%; font-size: 18px; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }',
+            '.gp-title { font-size: 18px; font-weight: 700; color: #fff; flex: 1; }',
+            '.gp-score { font-size: 14px; font-weight: 600; color: #22c55e; background: rgba(34,197,94,.12); padding: 4px 12px; border-radius: 20px; white-space: nowrap; }',
+
+            /* ─── QUESTION CARD ─── */
+            '.gp-question { background: rgba(255,255,255,.06); border-radius: 16px; margin: 14px 16px; padding: 20px; color: #f1f5f9; font-size: 17px; font-weight: 500; line-height: 1.6; border: 1px solid rgba(255,255,255,.08); }',
+
+            /* ─── OPTION BUTTONS ─── */
+            '.gp-options { padding: 0 16px; display: flex; flex-direction: column; gap: 10px; }',
+            '.gp-opt { display: flex; align-items: center; gap: 14px; background: rgba(255,255,255,.06); border: 1.5px solid rgba(255,255,255,.1); color: #e2e8f0; padding: 14px 16px; border-radius: 14px; text-align: left; font-size: 15px; cursor: pointer; transition: background .12s, border-color .12s; width: 100%; }',
+            '.gp-opt:active { transform: scale(.98); }',
+            '.gp-opt-letter { font-size: 15px; font-weight: 800; color: #94a3b8; background: rgba(255,255,255,.08); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }',
+            '.gp-opt.correct { background: rgba(34,197,94,.2) !important; border-color: #22c55e !important; color: #fff; }',
+            '.gp-opt.correct .gp-opt-letter { background: #22c55e; color: #fff; }',
+            '.gp-opt.wrong   { background: rgba(239,68,68,.2) !important; border-color: #ef4444 !important; color: #fff; }',
+            '.gp-opt.wrong   .gp-opt-letter { background: #ef4444; color: #fff; }',
+
+            /* ─── EXPLANATION ─── */
+            '.gp-explanation { margin: 12px 16px; padding: 14px 16px; background: rgba(250,204,21,.08); border-left: 3px solid #facc15; border-radius: 0 12px 12px 0; color: #fde68a; font-size: 14px; line-height: 1.55; }',
+
+            /* ─── FLASH CARDS ─── */
+            '.fc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 14px 16px; }',
+            '.fc-card { border-radius: 18px; padding: 22px 14px; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; transition: transform .12s; border: 2px solid transparent; min-height: 120px; justify-content: center; }',
+            '.fc-card:nth-child(1) { background: linear-gradient(145deg,#1e3a5f,#1e4080); }',
+            '.fc-card:nth-child(2) { background: linear-gradient(145deg,#1e4d2b,#1a5c1a); }',
+            '.fc-card:nth-child(3) { background: linear-gradient(145deg,#4a1e6e,#5b1e8a); }',
+            '.fc-card:nth-child(4) { background: linear-gradient(145deg,#5c2a0a,#7a3010); }',
             '.fc-card:active { transform: scale(.96); }',
-            '.fc-letter { font-size: 22px; font-weight: 800; color: #22c55e; }',
-            '.fc-option-text { color: #cbd5e1; font-size: 13px; line-height: 1.4; }',
-            '.fc-correct { background: #065f46 !important; border-color: #22c55e !important; }',
-            '.fc-wrong   { background: #7f1d1d !important; border-color: #ef4444 !important; }',
+            '.fc-letter { font-size: 20px; font-weight: 800; color: rgba(255,255,255,.5); }',
+            '.fc-option-text { color: #e2e8f0; font-size: 14px; line-height: 1.4; font-weight: 500; }',
+            '.fc-card.fc-correct { background: linear-gradient(145deg,#065f46,#047857) !important; border-color: #22c55e !important; }',
+            '.fc-card.fc-correct .fc-letter { color: #6ee7b7; }',
+            '.fc-card.fc-wrong   { background: linear-gradient(145deg,#7f1d1d,#991b1b) !important; border-color: #ef4444 !important; }',
+            '.fc-card.fc-wrong   .fc-letter { color: #fca5a5; }',
+            '@keyframes fcShake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)} }',
+            '.fc-card.fc-wrong { animation: fcShake .3s ease; }',
 
-            /* Generic option buttons used across games */
-            '.game-option-btn { display: block; width: calc(100% - 32px); margin: 0 16px; background: #1e293b; border: 2px solid #334155; color: #f1f5f9; padding: 14px 16px; border-radius: 12px; text-align: left; font-size: 15px; cursor: pointer; transition: background .15s; margin-bottom: 10px; }',
-            '.game-option-btn:active { opacity: .8; }',
-            '.gw-correct, .ta-correct, .dc-correct { background: #065f46 !important; border-color: #22c55e !important; }',
-            '.gw-wrong,   .ta-wrong,   .dc-wrong   { background: #7f1d1d !important; border-color: #ef4444 !important; }',
+            /* ─── GAME END OVERLAY ─── */
+            '.game-end-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.88); display: flex; align-items: center; justify-content: center; z-index: 500; padding: 20px; }',
+            '.game-end-card { background: #161b27; border-radius: 24px; padding: 36px 24px; text-align: center; width: 100%; max-width: 360px; border: 1px solid rgba(255,255,255,.08); }',
+            '.game-end-icon { font-size: 64px; margin-bottom: 14px; }',
+            '.game-end-title { color: #f1f5f9; margin: 0 0 20px; font-size: 24px; font-weight: 700; }',
+            '.game-end-stats { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 24px; }',
+            '.game-end-stat { background: rgba(255,255,255,.05); border-radius: 12px; padding: 14px 8px; }',
+            '.game-end-val  { display: block; font-size: 28px; font-weight: 800; color: #22c55e; margin-bottom: 4px; }',
+            '.game-end-lbl  { font-size: 11px; color: #64748b; text-transform: uppercase; letter-spacing: .5px; }',
+            '.game-play-btn { display: block; width: 100%; padding: 14px; border: none; border-radius: 12px; font-size: 16px; font-weight: 700; cursor: pointer; margin-bottom: 10px; transition: opacity .15s; }',
+            '.game-play-btn:active { opacity: .8; }',
+            '.game-play-btn--primary { background: linear-gradient(135deg,#22c55e,#16a34a); color: #fff; }',
+            '.game-play-btn--secondary { background: rgba(255,255,255,.08); color: #e2e8f0; border: 1px solid rgba(255,255,255,.12) !important; }',
 
-            /* Millionaire option chosen state */
-            '.mil-chosen  { background: #1d4ed8 !important; border-color: #3b82f6 !important; }',
-            '.mil-correct { background: #065f46 !important; border-color: #22c55e !important; }',
-            '.mil-wrong   { background: #7f1d1d !important; border-color: #ef4444 !important; }',
+            /* ─── MILLIONAIRE ─── */
+            '#millionairePage { background: linear-gradient(180deg,#0a0a2e 0%,#1a1a4e 100%) !important; }',
+            '.mil-header { background: rgba(0,0,0,.3); border-bottom: 1px solid rgba(255,215,0,.15); padding: 12px 16px; display: flex; align-items: center; gap: 10px; }',
+            '.mil-prize-badge { background: linear-gradient(135deg,#b45309,#d97706); color: #fff; padding: 6px 16px; border-radius: 20px; font-weight: 700; font-size: 16px; flex: 1; text-align: center; }',
+            '.mil-question { background: rgba(255,255,255,.06); border: 1px solid rgba(255,215,0,.15); border-radius: 16px; margin: 14px 16px; padding: 22px 18px; color: #f1f5f9; font-size: 17px; line-height: 1.6; font-weight: 500; }',
+            '.mil-options-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 0 16px; }',
+            '.mil-opt { background: rgba(255,255,255,.06); border: 1.5px solid rgba(255,215,0,.2); color: #f1f5f9; padding: 14px 12px; border-radius: 14px; cursor: pointer; font-size: 14px; display: flex; align-items: center; gap: 10px; transition: background .12s; }',
+            '.mil-opt-letter { font-weight: 800; color: #fbbf24; font-size: 15px; flex-shrink: 0; }',
+            '.mil-opt.mil-chosen  { background: rgba(29,78,216,.4)  !important; border-color: #3b82f6 !important; }',
+            '.mil-opt.mil-correct { background: rgba(6,95,70,.5)    !important; border-color: #22c55e !important; }',
+            '.mil-opt.mil-wrong   { background: rgba(127,29,29,.5)  !important; border-color: #ef4444 !important; }',
+            '.mil-lifelines { display: flex; gap: 8px; padding: 10px 16px; flex-wrap: wrap; }',
+            '.mil-lifeline-btn { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.18); color: #e2e8f0; padding: 8px 14px; border-radius: 20px; font-size: 13px; cursor: pointer; transition: background .15s; }',
+            '.mil-lifeline-btn:disabled { opacity: .3; cursor: not-allowed; }',
+            '.mil-walk { background: rgba(239,68,68,.15) !important; border-color: rgba(239,68,68,.4) !important; color: #fca5a5 !important; }',
+            '.mil-ladder-strip { display: flex; gap: 6px; overflow-x: auto; padding: 8px 16px 12px; scrollbar-width: none; }',
+            '.mil-ladder-strip::-webkit-scrollbar { display:none; }',
+            '.mil-rung { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); color: #94a3b8; padding: 6px 12px; border-radius: 20px; font-size: 12px; white-space: nowrap; }',
+            '.mil-rung.active { background: linear-gradient(135deg,#b45309,#d97706); border-color: #d97706; color: #fff; font-weight: 700; }',
+            '.mil-rung.safe   { border-color: rgba(34,197,94,.4); color: #86efac; }',
 
-            /* Time Attack SVG pulse */
-            '@keyframes taPulse { from { opacity:1; } to { opacity:.35; } }',
+            /* ─── TIME ATTACK ─── */
+            '.ta-timer-wrap { display: flex; justify-content: center; padding: 20px 0 10px; }',
+            '.ta-timer-circle { stroke: #22c55e; transition: stroke-dashoffset .9s linear, stroke .3s; }',
+            '.ta-timer-circle.warning { stroke: #f59e0b; }',
+            '.ta-timer-circle.danger  { stroke: #ef4444; }',
+            '@keyframes taPulse { from{opacity:1} to{opacity:.4} }',
+            '.ta-timer-text { fill: #f1f5f9; font-family: inherit; }',
+            '.ta-stats-row { display: flex; gap: 10px; justify-content: center; padding: 0 16px 10px; }',
+            '.ta-stat-chip { padding: 6px 16px; border-radius: 20px; font-size: 14px; font-weight: 600; }',
+            '.ta-stat-chip--correct { background: rgba(34,197,94,.15); color: #6ee7b7; }',
+            '.ta-stat-chip--wrong   { background: rgba(239,68,68,.15); color: #fca5a5; }',
+            '.ta-stat-chip--total   { background: rgba(255,255,255,.06); color: #94a3b8; }',
 
-            /* Game end overlay */
-            '.game-end-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.9); display: flex; align-items: center; justify-content: center; z-index: 200; }',
-            '.game-end-card { background: #1e293b; border-radius: 20px; padding: 32px 24px; text-align: center; width: 90%; max-width: 380px; }',
-            '.game-end-icon { font-size: 56px; margin-bottom: 12px; }',
-            '.game-end-title { color: #f1f5f9; margin: 0 0 16px; font-size: 22px; }',
-            '.game-end-stats { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-bottom: 20px; }',
-            '.game-end-stat { background: #0f172a; border-radius: 10px; padding: 12px 8px; }',
-            '.game-end-val { display: block; font-size: 26px; font-weight: 800; color: #22c55e; margin-bottom: 4px; }',
-            '.game-end-lbl { font-size: 11px; color: #64748b; }',
+            /* ─── DAILY CHALLENGE ─── */
+            '#dailyChallengePage { background: linear-gradient(180deg,#0d1b2a 0%,#1a2a3a 100%) !important; }',
+            '.dc-header { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; }',
+            '.dc-streak-badge { background: linear-gradient(135deg,#dc2626,#ea580c); color: #fff; padding: 6px 14px; border-radius: 20px; font-size: 14px; font-weight: 700; }',
+            '.dc-progress-label { color: #38bdf8; font-size: 14px; font-weight: 700; }',
 
-            /* Audience overlay */
-            '.mil-audience-bars { margin-bottom: 16px; }',
-            '.mil-audience-bar-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }',
-            '.mil-bar-label { color: #f1f5f9; font-weight: 700; width: 16px; }',
-            '.mil-bar-track { flex: 1; background: #334155; border-radius: 4px; height: 18px; overflow: hidden; }',
-            '.mil-bar-fill  { background: #22c55e; height: 100%; border-radius: 4px; transition: width .6s ease; }',
-            '.mil-bar-pct   { color: #94a3b8; font-size: 12px; width: 36px; text-align: right; }',
+            /* ─── GAME COURSE SELECTOR PANEL (bottom sheet) ─── */
+            '#gameCoursePanel { background: #161b27; border: 1px solid rgba(255,255,255,.08); }',
+            '.panel-title { color: #f1f5f9 !important; }',
+            '.panel-step-subtitle { color: #94a3b8 !important; }',
+            '.game-course-card { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); border-radius: 12px; padding: 12px 10px; text-align: center; cursor: pointer; color: #e2e8f0; font-size: 13px; font-weight: 600; transition: background .15s; }',
+            '.game-course-card:active { background: rgba(255,255,255,.14); }',
+            '.game-topic-chip { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.12); color: #cbd5e1; padding: 8px 16px; border-radius: 20px; font-size: 13px; cursor: pointer; transition: background .15s; }',
+            '.game-topic-chip.active { background: rgba(34,197,94,.2); border-color: #22c55e; color: #6ee7b7; }',
+            '.panel-back-link { background: none; border: none; color: #22c55e; font-size: 14px; cursor: pointer; padding: 0 0 10px; display: block; }',
+            '.panel-close-btn { background: rgba(255,255,255,.1); border: none; color: #94a3b8; width: 32px; height: 32px; border-radius: 50%; font-size: 16px; cursor: pointer; position: absolute; top: 16px; right: 16px; }',
 
-            /* Hint overlays */
-            '.mil-hint-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.85); display: flex; align-items: center; justify-content: center; z-index: 300; }',
-            '.mil-hint-card { background: #1e293b; border-radius: 16px; padding: 24px; width: 90%; max-width: 360px; text-align: center; }',
-            '.mil-hint-card h3 { color: #f1f5f9; margin: 0 0 16px; }',
-            '.mil-hint-text { color: #cbd5e1; font-size: 15px; line-height: 1.5; margin-bottom: 20px; }',
-            '.mil-hint-close { background: #22c55e; border: none; color: #fff; padding: 10px 24px; border-radius: 8px; font-size: 15px; cursor: pointer; }',
+            /* ─── LEADERBOARD ─── */
+            '#leaderboard-table-body tr { border-bottom: 1px solid rgba(255,255,255,.06); }',
+            '#leaderboard-table-body td { padding: 11px 8px; color: #e2e8f0; font-size: 14px; }',
+            '#leaderboard-table-body tr:nth-child(1) td { color: #fbbf24; font-weight: 700; }',
+            '#leaderboard-table-body tr:nth-child(2) td { color: #d1d5db; font-weight: 600; }',
+            '#leaderboard-table-body tr:nth-child(3) td { color: #cd7c2f; font-weight: 600; }',
 
-            /* Game question card */
-            '.game-question-card { background: #1e293b; border-radius: 14px; margin: 16px; padding: 20px; color: #f1f5f9; font-size: 16px; line-height: 1.55; min-height: 80px; }',
-            '.game-explanation-box { background: #1e293b; border-left: 4px solid #22c55e; padding: 14px 16px; margin: 0 16px 16px; border-radius: 0 8px 8px 0; color: #94a3b8; font-size: 14px; line-height: 1.5; }',
-
-            /* Next buttons */
-            '.game-next-btn { display: block; width: calc(100% - 32px); margin: 0 16px; background: linear-gradient(135deg,#22c55e,#16a34a); color: #fff; border: none; border-radius: 10px; padding: 14px; font-size: 16px; font-weight: 700; cursor: pointer; }',
-
-            /* TA stats bar */
-            '.ta-stats-row { display: flex; gap: 12px; justify-content: center; margin: 8px 0; }',
-            '.ta-stat-chip { padding: 6px 14px; border-radius: 20px; font-size: 14px; font-weight: 600; }',
-            '.ta-stat-chip--correct { background: #065f46; color: #6ee7b7; }',
-            '.ta-stat-chip--wrong   { background: #7f1d1d; color: #fca5a5; }',
-            '.ta-stat-chip--total   { background: #1e293b; color: #94a3b8; }',
-
-            /* DC header */
-            '.dc-header { display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; }',
-            '.dc-streak-badge { background: #7f1d1d; color: #fca5a5; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 700; }',
-            '.dc-date-label { color: #64748b; font-size: 13px; }',
-            '.dc-progress-label { text-align: center; color: #22c55e; font-size: 14px; font-weight: 700; padding: 4px 16px; }',
-            '.dc-options-list { padding: 0; }',
-
-            /* Already-played card */
-            '.dc-already-card { background: #1e293b; border-radius: 16px; padding: 28px 20px; text-align: center; max-width: 360px; width: 90%; }',
-            '.dc-already-icon { font-size: 48px; margin-bottom: 12px; }',
-            '.dc-already-card h3 { color: #f1f5f9; margin: 0 0 10px; }',
-            '.dc-already-card p { color: #94a3b8; margin: 0 0 8px; }',
-            '.dc-countdown-label { font-size: 13px; }',
-
-            /* Game course grid inside panel */
+            /* ─── MISC ─── */
             '.game-course-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }',
             '.game-topic-grid  { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }',
+            '.weekly-coming-soon { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 70vh; text-align: center; padding: 30px 20px; }',
+            '.weekly-cs-icon  { font-size: 72px; margin-bottom: 16px; }',
+            '.weekly-cs-title { color: #f1f5f9; font-size: 26px; font-weight: 700; margin: 0 0 10px; }',
+            '.weekly-cs-desc  { color: #64748b; font-size: 15px; margin: 0 0 28px; max-width: 280px; line-height: 1.6; }',
+            '.mil-hint-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.85); display: flex; align-items: center; justify-content: center; z-index: 600; }',
+            '.mil-hint-card { background: #1e293b; border-radius: 20px; padding: 28px 24px; width: 90%; max-width: 360px; text-align: center; border: 1px solid rgba(255,255,255,.1); }',
+            '.mil-hint-card h3 { color: #f1f5f9; margin: 0 0 16px; font-size: 18px; }',
+            '.mil-hint-text { color: #cbd5e1; font-size: 15px; line-height: 1.6; margin-bottom: 22px; }',
+            '.mil-hint-close { background: #22c55e; border: none; color: #fff; padding: 12px 28px; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; }',
+            '.mil-audience-bars { margin-bottom: 16px; }',
+            '.mil-audience-bar-row { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }',
+            '.mil-bar-label { color: #fbbf24; font-weight: 700; width: 16px; }',
+            '.mil-bar-track { flex: 1; background: rgba(255,255,255,.08); border-radius: 4px; height: 20px; overflow: hidden; }',
+            '.mil-bar-fill  { background: linear-gradient(90deg,#22c55e,#16a34a); height: 100%; border-radius: 4px; transition: width .7s ease; }',
+            '.mil-bar-pct   { color: #94a3b8; font-size: 12px; width: 36px; text-align: right; }'
 
-            /* Weekly coming soon */
-            '.weekly-coming-soon { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 60vh; text-align: center; padding: 30px 20px; }',
-            '.weekly-cs-icon { font-size: 64px; margin-bottom: 16px; }',
-            '.weekly-cs-title { color: #f1f5f9; font-size: 24px; margin: 0 0 8px; }',
-            '.weekly-cs-desc  { color: #94a3b8; font-size: 15px; margin: 0 0 24px; max-width: 280px; }',
-
-            /* Leaderboard table rows */
-            '#leaderboard-table-body tr { border-bottom: 1px solid #1e293b; }',
-            '#leaderboard-table-body td { padding: 10px 6px; color: #f1f5f9; font-size: 14px; }',
-            '#leaderboard-table-body tr:first-child td { color: #f59e0b; font-weight: 700; }'
         ].join('\n');
         document.head.appendChild(style);
     }
