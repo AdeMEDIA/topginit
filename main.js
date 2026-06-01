@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('examPage').style.display = 'none';
         document.getElementById('resultPage').style.display = 'none';
         document.getElementById('notesPage').style.display = 'none';
-        document.getElementById('libraryPage').style.display = 'none';
+        if (document.getElementById('gamesPage')) document.getElementById('gamesPage').style.display = 'none';
         document.getElementById('resourcesPage').style.display = 'none';
         document.getElementById('aboutPage').style.display = 'none';
         
@@ -29,8 +29,8 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('notesPage').style.display = 'block';
             renderNotesPage();
             restoreBodyScroll();
-        } else if (page === 'library') {
-            document.getElementById('libraryPage').style.display = 'block';
+        } else if (page === 'games') {
+            if (document.getElementById('gamesPage')) document.getElementById('gamesPage').style.display = 'block';
             restoreBodyScroll();
         } else if (page === 'resources') {
             document.getElementById('resourcesPage').style.display = 'block';
