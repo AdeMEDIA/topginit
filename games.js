@@ -165,6 +165,8 @@
     }
 
     function closeGame() {
+        // Stop Time Attack timer if running
+        if (ta && ta.timer) { clearInterval(ta.timer); ta.timer = null; ta.running = false; }
         hideAllGamePages();
         document.body.style.overflow = '';
         document.documentElement.style.overflow = '';

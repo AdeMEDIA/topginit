@@ -6415,3 +6415,85 @@ html, body {
     }
 }
 
+/* ==================== SPLASH SCREEN ==================== */
+#splashScreen {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: linear-gradient(160deg, #0f172a 0%, #1e3a5f 60%, #0f172a 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.splash-icon {
+    font-size: 72px;
+    animation: splashPop 0.5s cubic-bezier(.34,1.56,.64,1) both;
+}
+
+.splash-title {
+    color: #f1f5f9;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin: 0;
+    animation: splashFadeUp 0.5s 0.15s ease both;
+}
+
+.splash-sub {
+    color: #64748b;
+    font-size: 14px;
+    margin: 0 0 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    animation: splashFadeUp 0.5s 0.25s ease both;
+}
+
+.splash-spinner-ring {
+    width: 38px;
+    height: 38px;
+    border: 3px solid rgba(255,255,255,.1);
+    border-top-color: #4ade80;
+    border-radius: 50%;
+    animation: splashFadeUp 0.4s 0.35s ease both, splashSpin 0.8s 0.35s linear infinite;
+}
+
+@keyframes splashPop {
+    from { opacity: 0; transform: scale(0.6); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes splashFadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes splashSpin {
+    to { transform: rotate(360deg); }
+}
+
+/* ==================== MILLIONAIRE BACK BUTTON ==================== */
+.mil-back-btn {
+    font-size: 13px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: rgba(255,255,255,.12);
+    border: 1px solid rgba(255,255,255,.2);
+    color: #e2e8f0;
+    flex-shrink: 0;
+}
+
+.mil-back-btn:hover,
+.mil-back-btn:active {
+    background: rgba(255,255,255,.22);
+}
+
+/* Daily Challenge top header */
+.dc-top-header {
+    background: rgba(255,255,255,.04);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    margin-bottom: 0;
+}
+

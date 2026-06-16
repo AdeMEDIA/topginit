@@ -1,4 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Hide splash screen after app initialises
+    var _splash = document.getElementById('splashScreen');
+    if (_splash) {
+        setTimeout(function () {
+            _splash.style.transition = 'opacity 0.5s ease';
+            _splash.style.opacity = '0';
+            setTimeout(function () { _splash.style.display = 'none'; }, 500);
+        }, 600);
+    }
+
     window.showPage = function(page) {
         if (isExamActive && page !== 'exam') {
             showExamLeaveModal();

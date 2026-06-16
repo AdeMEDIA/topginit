@@ -15,6 +15,15 @@
     <meta property="og:type" content="website">
 </head>
 <body>
+
+    <!-- ==================== SPLASH SCREEN ==================== -->
+    <div id="splashScreen">
+        <div class="splash-icon">🎓</div>
+        <h1 class="splash-title">TopG Init</h1>
+        <p class="splash-sub">CBT &middot; Games &middot; Notes</p>
+        <div class="splash-spinner-ring"></div>
+    </div>
+
     <!-- Top Header with Logo -->
     <header class="app-header">
         <div class="header-logo">
@@ -692,7 +701,7 @@
         <!-- ==================== FLASH CARDS PAGE ==================== -->
         <div id="flashCardsPage" class="game-page" style="display:none">
             <div class="game-header">
-                <button class="game-back-btn" onclick="showPage('games')">← Back</button>
+                <button class="game-back-btn" onclick="closeGame()">← Back</button>
                 <h2 class="game-page-title">Flash Cards 🃏</h2>
                 <span class="game-score-badge" id="fc-score">0 / 0</span>
             </div>
@@ -713,7 +722,7 @@
         <!-- ==================== GUESS THE WORD PAGE ==================== -->
         <div id="guessWordPage" class="game-page" style="display:none">
             <div class="game-header">
-                <button class="game-back-btn" onclick="showPage('games')">← Back</button>
+                <button class="game-back-btn" onclick="closeGame()">← Back</button>
                 <h2 class="game-page-title">Guess the Word 💬</h2>
                 <span class="game-score-badge" id="gw-score">0 / 0</span>
             </div>
@@ -721,10 +730,10 @@
             <div id="gw-sentence" class="gw-sentence-display"></div>
 
             <div id="gw-options" class="gw-options-list">
-                <button class="game-option-btn" data-index="0"></button>
-                <button class="game-option-btn" data-index="1"></button>
-                <button class="game-option-btn" data-index="2"></button>
-                <button class="game-option-btn" data-index="3"></button>
+                <button class="gp-opt" data-index="0"></button>
+                <button class="gp-opt" data-index="1"></button>
+                <button class="gp-opt" data-index="2"></button>
+                <button class="gp-opt" data-index="3"></button>
             </div>
 
             <div id="gw-explanation" class="game-explanation-box" style="display:none"></div>
@@ -734,6 +743,7 @@
         <!-- ==================== MILLIONAIRE PAGE ==================== -->
         <div id="millionairePage" class="game-page mil-page" style="display:none">
             <div class="mil-top-row">
+                <button class="game-back-btn mil-back-btn" onclick="closeGame()">← Back</button>
                 <div id="mil-prize-current" class="mil-prize-badge">₦0</div>
                 <button id="mil-walkaway-btn" class="mil-walkaway-btn">Walk Away</button>
             </div>
@@ -795,7 +805,7 @@
         <!-- ==================== TIME ATTACK PAGE ==================== -->
         <div id="timeAttackPage" class="game-page" style="display:none">
             <div class="game-header">
-                <button class="game-back-btn" onclick="showPage('games')">← Back</button>
+                <button class="game-back-btn" onclick="closeGame()">← Back</button>
                 <h2 class="game-page-title">Time Attack ⚡</h2>
             </div>
 
@@ -818,10 +828,10 @@
             <div id="ta-question" class="game-question-card"></div>
 
             <div id="ta-options" class="ta-options-list">
-                <button class="game-option-btn" data-index="0"></button>
-                <button class="game-option-btn" data-index="1"></button>
-                <button class="game-option-btn" data-index="2"></button>
-                <button class="game-option-btn" data-index="3"></button>
+                <button class="gp-opt" data-index="0"></button>
+                <button class="gp-opt" data-index="1"></button>
+                <button class="gp-opt" data-index="2"></button>
+                <button class="gp-opt" data-index="3"></button>
             </div>
 
             <!-- End Screen -->
@@ -842,6 +852,10 @@
 
         <!-- ==================== DAILY CHALLENGE PAGE ==================== -->
         <div id="dailyChallengePage" class="game-page" style="display:none">
+            <div class="game-header dc-top-header">
+                <button class="game-back-btn" onclick="closeGame()">← Back</button>
+                <h2 class="game-page-title">Daily Challenge 📅</h2>
+            </div>
             <div class="dc-header">
                 <div id="dc-streak" class="dc-streak-badge">🔥 0 day streak</div>
                 <div id="dc-date" class="dc-date-label"></div>
@@ -851,10 +865,10 @@
             <div id="dc-question" class="game-question-card"></div>
 
             <div id="dc-options" class="dc-options-list">
-                <button class="game-option-btn" data-index="0"></button>
-                <button class="game-option-btn" data-index="1"></button>
-                <button class="game-option-btn" data-index="2"></button>
-                <button class="game-option-btn" data-index="3"></button>
+                <button class="gp-opt" data-index="0"></button>
+                <button class="gp-opt" data-index="1"></button>
+                <button class="gp-opt" data-index="2"></button>
+                <button class="gp-opt" data-index="3"></button>
             </div>
 
             <div id="dc-explanation" class="game-explanation-box" style="display:none"></div>
@@ -889,7 +903,7 @@
         <!-- ==================== WEEKLY CHALLENGE PAGE ==================== -->
         <div id="weeklyChallengePage" class="game-page" style="display:none">
             <div class="game-header">
-                <button class="game-back-btn" onclick="showPage('games')">← Back</button>
+                <button class="game-back-btn" onclick="closeGame()">← Back</button>
                 <h2 class="game-page-title">Weekly Challenge 🏆</h2>
             </div>
             <div class="weekly-coming-soon">
