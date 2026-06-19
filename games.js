@@ -18,18 +18,35 @@
     var SAFE_LEVELS = [3, 9];
 
     var COURSES_LIST = [
+        { title: 'GST 102', bankKey: 'GST 102', icon: '📝', file: 'gst102.js',  iconGradient: 'linear-gradient(135deg,#667eea,#764ba2)' },
+        { title: 'GST 104', bankKey: 'GST 112', icon: '🇳🇬', file: 'gst112.js', iconGradient: 'linear-gradient(135deg,#f97316,#ea580c)' },
+        { title: 'MTH 102', bankKey: 'MTH 102', icon: '📐', file: 'mth102.js',  iconGradient: 'linear-gradient(135deg,#8b5cf6,#7c3aed)' },
+        { title: 'CHM 102', bankKey: 'CHM 102', icon: '🧪', file: 'chm102.js',  iconGradient: 'linear-gradient(135deg,#f59e0b,#d97706)' },
+        { title: 'MLS 102', bankKey: 'MLS 102', icon: '📜', file: 'mls102.js',  iconGradient: 'linear-gradient(135deg,#06b6d4,#0891b2)' },
         { title: 'BIO 102', bankKey: 'BIO 102', icon: '🔬', file: 'bio102.js',  iconGradient: 'linear-gradient(135deg,#10b981,#059669)' },
         { title: 'BIO 108', bankKey: 'BIO 108', icon: '🧫', file: 'bio108.js',  iconGradient: 'linear-gradient(135deg,#14b8a6,#0d9488)' },
-        { title: 'CHM 102', bankKey: 'CHM 102', icon: '🧪', file: 'chm102.js',  iconGradient: 'linear-gradient(135deg,#f59e0b,#d97706)' },
-        { title: 'GST 112', bankKey: 'GST 112', icon: '🇳🇬', file: 'gst112.js', iconGradient: 'linear-gradient(135deg,#f97316,#ea580c)' },
         { title: 'PHY 102', bankKey: 'PHY 102', icon: '⚡', file: 'phy102.js',  iconGradient: 'linear-gradient(135deg,#ef4444,#dc2626)' },
         { title: 'COS 102', bankKey: 'COS 102', icon: '💻', file: 'cos102.js',  iconGradient: 'linear-gradient(135deg,#3b82f6,#1d4ed8)' },
-        { title: 'MTH 102', bankKey: 'MTH 102', icon: '📐', file: 'mth102.js',  iconGradient: 'linear-gradient(135deg,#8b5cf6,#7c3aed)' },
-        { title: 'MLS 102', bankKey: 'MLS 102', icon: '📜', file: 'mls102.js',  iconGradient: 'linear-gradient(135deg,#06b6d4,#0891b2)' },
         { title: 'MLS 104', bankKey: 'MLS 104', icon: '🦠', file: 'mls104.js',  iconGradient: 'linear-gradient(135deg,#84cc16,#65a30d)' }
     ];
 
     var TOPICS_MAP = {
+        'GST 102': [
+            { id: 'grammar',       name: 'Grammar & Parts of Speech',  startIdx: 0,  endIdx: 13 },
+            { id: 'subject_verb',  name: 'Subject-Verb Agreement',      startIdx: 13, endIdx: 22 },
+            { id: 'essay_writing', name: 'Essay Writing',               startIdx: 22, endIdx: 37 },
+            { id: 'communication', name: 'Communication Theory',        startIdx: 37, endIdx: 47 },
+            { id: 'ict_basics',    name: 'Computer & ICT Basics',       startIdx: 47, endIdx: 51 }
+        ],
+        'GST 104': [
+            { id: 'pre_colonial',              name: 'Pre-Colonial Nigeria',        startIdx: 0,  endIdx: 15 },
+            { id: 'colonial_nigeria',          name: 'Colonial Nigeria',            startIdx: 15, endIdx: 30 },
+            { id: 'nationalism_independence',  name: 'Nationalism & Independence',  startIdx: 30, endIdx: 45 },
+            { id: 'civil_war_military',        name: 'Civil War & Military Rule',   startIdx: 45, endIdx: 60 },
+            { id: 'trade_economy',             name: 'Trade & Self-Reliance',       startIdx: 60, endIdx: 70 },
+            { id: 'norms_values',              name: 'Norms, Values & Vices',       startIdx: 70, endIdx: 80 },
+            { id: 'judiciary_rights',          name: 'Judiciary & Rights',          startIdx: 80, endIdx: 90 }
+        ],
         'BIO 102': [
             { id: 'viruses',                name: 'Viruses',                   startIdx: 0,  endIdx: 15  },
             { id: 'bacteria',               name: 'Bacteria',                  startIdx: 15, endIdx: 30  },
