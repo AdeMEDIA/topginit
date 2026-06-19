@@ -1,9 +1,9 @@
 // ==================== SERVICE WORKER FOR CBT APP ====================
 // Enables offline access and faster loading
 
-const CACHE_NAME = 'topg-cbt-v3';
-const STATIC_CACHE = 'topg-static-v3';
-const DYNAMIC_CACHE = 'topg-dynamic-v3';
+const CACHE_NAME = 'topg-cbt-v4';
+const STATIC_CACHE = 'topg-static-v4';
+const DYNAMIC_CACHE = 'topg-dynamic-v4';
 
 // Files to cache immediately on install
 const STATIC_ASSETS = [
@@ -21,6 +21,7 @@ const STATIC_ASSETS = [
   '/mth102.js',
   '/phy102.js',
   '/cos102.js',
+  '/gst102.js',
   '/mls102.js',
   '/mls104.js',
   '/gst112.js',

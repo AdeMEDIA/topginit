@@ -101,7 +101,8 @@ document.addEventListener('DOMContentLoaded', function() {
         "ENT 101": { semester: "first", title: "ENT 101", level: "100L • Entrepreneurship", description: "Business development and entrepreneurial skills", icon: "💼", iconGradient: "linear-gradient(135deg, #06b6d4, #0891b2)", qCount: 100, locked: true, file: "ent.js", bankKey: "ENT 101" },
         "GST 103": { semester: "first", title: "GST 112", level: "100L • Use of Library", description: "History, culture and development of Nigeria", icon: "📖", iconGradient: "linear-gradient(135deg, #84cc16, #65a30d)", qCount: 100, locked: true, file: "gst112.js", bankKey: "GST 112" },
        
-        "GST 112": { semester: "second", title: "GST 112", level: "100L • Nigeria Culture", description: "Nigerian history, culture and national development", icon: "🇳🇬", iconGradient: "linear-gradient(135deg, #f97316, #ea580c)", qCount: 100, locked: false, file: "gst112.js", bankKey: "GST 112" },
+        "GST 102": { semester: "second", title: "GST 102", level: "100L • Use of English II", description: "Grammar, essay writing, communication and ICT basics", icon: "📝", iconGradient: "linear-gradient(135deg, #667eea, #764ba2)", qCount: 51, locked: false, file: "gst102.js", bankKey: "GST 102" },
+        "GST 104": { semester: "second", title: "GST 104", level: "100L • Nigeria Culture", description: "Nigerian history, culture and national development", icon: "🇳🇬", iconGradient: "linear-gradient(135deg, #f97316, #ea580c)", qCount: 100, locked: false, file: "gst112.js", bankKey: "GST 112" },
         "MTH 102": { semester: "second", title: "MTH 102", level: "100L • Elementary Mathematics", description: "Calculus, vectors and differential equations", icon: "📐", iconGradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", qCount: 100, locked: false, file: "mth102.js", bankKey: "MTH 102" },
         "CHM 102": { semester: "second", title: "CHM 102", level: "100L • General Chemistry II", description: "Chemical kinetics, equilibrium and organic chemistry", icon: "🧪", iconGradient: "linear-gradient(135deg, #f59e0b, #d97706)", qCount: 100, locked: false, file: "chm102.js", bankKey: "CHM 102" },
         "MLS 102": { semester: "second", title: "MLS 102", level: "100L • History of Medical Laboratory Science", description: "History and development of MLS profession", icon: "📜", iconGradient: "linear-gradient(135deg, #06b6d4, #0891b2)", qCount: 100, locked: false, file: "mls102.js", bankKey: "MLS 102" },
@@ -116,7 +117,29 @@ document.addEventListener('DOMContentLoaded', function() {
     const COURSE_TOPICS = {
         
     
+        "GST 102": {
+    icon: "📝",
+    topics: [
+        { id: "grammar", name: "Grammar & Parts of Speech", description: "Morpheme, phoneme, word classes, pronouns, complements, intensifiers, homophones", qCount: 13, startIdx: 0, endIdx: 13 },
+        { id: "subject_verb", name: "Subject-Verb Agreement", description: "Concord rules, either/or, collective nouns, quantities and measurements", qCount: 9, startIdx: 13, endIdx: 22 },
+        { id: "essay_writing", name: "Essay Writing", description: "Types of essays, structure, writing stages, outlining, cohesion, formal language", qCount: 15, startIdx: 22, endIdx: 37 },
+        { id: "communication", name: "Communication Theory", description: "Encoding, feedback, channel, barriers, non-verbal and interpersonal communication", qCount: 10, startIdx: 37, endIdx: 47 },
+        { id: "ict_basics", name: "Computer & ICT Basics", description: "Networks, router, software types, storage devices, data vs information", qCount: 4, startIdx: 47, endIdx: 51 }
+    ]
+},
         "GST 112": {
+    icon: "🇳🇬",
+    topics: [
+        { id: "pre_colonial", name: "Pre-Colonial Nigeria", description: "Ancient civilizations, kingdoms, and ethnic groups before 1800", qCount: 15, startIdx: 0, endIdx: 15 },
+        { id: "colonial_nigeria", name: "Colonial Nigeria", description: "British rule, amalgamation, and resistance", qCount: 15, startIdx: 15, endIdx: 30 },
+        { id: "nationalism_independence", name: "Nationalism & Independence", description: "Political parties, nationalist leaders, independence", qCount: 15, startIdx: 30, endIdx: 45 },
+        { id: "civil_war_military", name: "Civil War & Military Rule", description: "1967-1970 Civil War, coups, military regimes", qCount: 15, startIdx: 45, endIdx: 60 },
+        { id: "trade_economy", name: "Trade & Self-Reliance", description: "Traditional trade, economic policies, apprenticeship", qCount: 10, startIdx: 60, endIdx: 70 },
+        { id: "norms_values", name: "Norms, Values & Social Vices", description: "Omoluabi, cultural values, cultism, kidnapping", qCount: 10, startIdx: 70, endIdx: 80 },
+        { id: "judiciary_rights", name: "Judiciary & Fundamental Rights", description: "Court system, constitutional rights, habeas corpus", qCount: 10, startIdx: 80, endIdx: 90 }
+    ]
+},
+        "GST 104": {
     icon: "🇳🇬",
     topics: [
         { id: "pre_colonial", name: "Pre-Colonial Nigeria", description: "Ancient civilizations, kingdoms, and ethnic groups before 1800", qCount: 15, startIdx: 0, endIdx: 15 },
