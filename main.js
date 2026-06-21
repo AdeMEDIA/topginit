@@ -4300,23 +4300,39 @@ print(result)  # Output: 8
         const examPage = document.getElementById('examPage');
         if (!examPage || examPage.style.display !== 'block') return;
         if (event.ctrlKey || event.altKey || event.metaKey) return;
-        const key = event.key.toLowerCase();
-        if (['a', 'b', 'c', 'd'].includes(key)) {
-            selectOptionLetter(key.toUpperCase());
+        const key = event.key;
+        const keyLower = key.toLowerCase();
+        // Submit modal: Y = confirm, N / Escape = cancel
+        const submitModal = document.getElementById('submitModal');
+        if (submitModal && submitModal.style.display === 'flex') {
+            if (keyLower === 'y') {
+                document.getElementById('confirmSubmit').click();
+                event.preventDefault();
+            } else if (keyLower === 'n' || key === 'Escape') {
+                document.getElementById('cancelSubmit').click();
+                event.preventDefault();
+            }
+            return;
+        }
+        // Answer selection A / B / C / D
+        if (['a', 'b', 'c', 'd'].includes(keyLower)) {
+            selectOptionLetter(keyLower.toUpperCase());
             event.preventDefault();
             return;
         }
-        if (key === 'n') {
+        // Navigation: arrow keys (← →) or P for previous
+        if (key === 'ArrowRight') {
             nextQuestion(event);
             event.preventDefault();
             return;
         }
-        if (key === 'p') {
+        if (key === 'ArrowLeft' || keyLower === 'p') {
             prevQuestion(event);
             event.preventDefault();
             return;
         }
-        if (key === 's') {
+        // S = open submit modal
+        if (keyLower === 's') {
             submitExam();
             event.preventDefault();
             return;

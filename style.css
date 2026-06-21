@@ -1775,12 +1775,14 @@ html, body {
 .exam-header {
     background: linear-gradient(135deg, #4f7011 0%, #6a8a13 100%);
     color: white;
-    padding: 22px 20px 18px;
+    padding: 10px 20px 0;
     border-radius: 0;
     margin-bottom: 0;
     display: flex;
-    flex-direction: column;
-    gap: 14px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0 10px;
     position: sticky;
     top: 0;
     z-index: 10;
@@ -1789,10 +1791,11 @@ html, body {
 
 /* Progress bar */
 .exam-progress-bar-wrapper {
-    width: 100%;
-    height: 6px;
+    flex: 0 0 100%;
+    order: 10;
+    height: 5px;
     background: rgba(255, 255, 255, 0.2);
-    border-radius: 3px;
+    border-radius: 0;
     overflow: hidden;
     margin: 8px 0 0 0;
 }
@@ -1823,37 +1826,37 @@ html, body {
 
 /* Top row: Course info */
 .exam-title {
-    font-size: 22px;
-    margin-bottom: 4px;
+    font-size: 18px;
     font-weight: 800;
-    text-align: center;
+    margin: 0;
+    text-align: left;
+    flex-shrink: 0;
 }
 
 .exam-subtitle {
-    font-size: 16px;
-    opacity: 0.95;
-    margin-bottom: 0;
+    font-size: 13px;
+    opacity: 0.9;
+    margin: 0;
+    flex: 1;
     text-align: center;
 }
 
 /* Bottom row: timer and submit side-by-side */
 .exam-controls {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    width: 100%;
-    padding-top: 15px;
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    flex-shrink: 0;
+    padding: 0;
+    border: none;
 }
 
 .timer-submit-row {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    gap: 8px;
     flex-wrap: nowrap;
-    width: 100%;
-    max-width: 520px;
 }
 
 /* Timer display */
@@ -1861,29 +1864,29 @@ html, body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    min-width: 160px;
-    max-width: 260px;
-    font-size: 16px;
+    gap: 6px;
+    min-width: 110px;
+    max-width: 200px;
+    font-size: 14px;
     background: rgba(255, 255, 255, 0.16);
-    padding: 10px 14px;
-    border-radius: 18px;
+    padding: 7px 12px;
+    border-radius: 16px;
     backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.22);
     font-weight: 700;
 }
 
 .timer-container span:first-child {
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .submit-btn {
     background: rgba(255,255,255,0.18);
     border: 1px solid rgba(255,255,255,0.28);
     color: white;
-    padding: 12px 20px;
-    border-radius: 20px;
-    font-size: 15px;
+    padding: 7px 16px;
+    border-radius: 16px;
+    font-size: 14px;
     font-weight: 700;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -2348,32 +2351,42 @@ html, body {
 /* Mobile Responsive for Exam Page */
 @media (max-width: 768px) {
     .exam-header {
-        padding: 15px;
-        border-radius: 0;
+        padding: 8px 14px 0;
     }
-    
+
     .exam-title {
-        font-size: 22px;
+        font-size: 15px;
     }
-    
+
     .exam-subtitle {
+        font-size: 11px;
+    }
+
+    .exam-controls {
+        padding: 0;
+        border: none;
+    }
+
+    .timer-submit-row {
+        flex-wrap: nowrap;
+        gap: 6px;
+    }
+
+    .timer-container {
+        min-width: 86px;
+        padding: 6px 10px;
         font-size: 13px;
     }
-    
-    .exam-controls {
-        justify-content: center;
-        align-items: center;
+
+    .submit-btn {
+        padding: 6px 12px;
+        font-size: 13px;
     }
-    
-    .timer-submit-row {
-        flex-wrap: wrap;
-        gap: 10px;
+
+    .question-title {
+        display: none;
     }
-    
-    .timer-container, .submit-btn {
-        min-width: 0;
-    }
-    
+
     .exam-body {
         padding: 14px 14px 30px;
         border-radius: 0;
@@ -2386,10 +2399,15 @@ html, body {
         margin-bottom: 16px;
         font-weight: 600;
     }
-    
+
+    .options {
+        gap: 10px;
+        margin-bottom: 16px;
+    }
+
     .option {
-        padding: 14px 16px;
-        min-height: 55px;
+        padding: 12px 14px;
+        min-height: 48px;
         font-size: 15px;
     }
     
