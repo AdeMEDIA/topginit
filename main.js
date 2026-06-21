@@ -4455,8 +4455,14 @@ print(result)  # Output: 8
         const total = getTotalQuestions();
         const unanswered = [];
         for (let i = 1; i <= total; i++) if (!answers[i]) unanswered.push(i);
+        if (unanswered.length > 0) {
+            currentQuestionIndex = unanswered[0] - 1;
+            loadQuestion();
+            showExamToast('⚠ ' + unanswered.length + ' question' + (unanswered.length > 1 ? 's' : '') + ' unanswered — answer all to submit');
+            return;
+        }
         const modal = document.getElementById('submitModal');
-        document.getElementById('submitModalMessage').innerText = unanswered.length ? `You have ${unanswered.length} unanswered question(s). Submit anyway?` : `Submit your exam?`;
+        document.getElementById('submitModalMessage').innerText = 'You\'ve answered all ' + total + ' questions. Ready to submit?';
         modal.style.display = 'flex';
         const newConfirm = document.getElementById('confirmSubmit').cloneNode(true);
         const newCancel = document.getElementById('cancelSubmit').cloneNode(true);
@@ -4465,6 +4471,20 @@ print(result)  # Output: 8
         newConfirm.onclick = () => { modal.style.display = 'none'; finalizeExam(); };
         newCancel.onclick = () => { modal.style.display = 'none'; };
     };
+
+    function showExamToast(msg) {
+        let t = document.getElementById('_examToast');
+        if (!t) {
+            t = document.createElement('div');
+            t.id = '_examToast';
+            t.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#ef4444;color:#fff;padding:12px 22px;border-radius:12px;font-weight:600;font-size:15px;z-index:9000;box-shadow:0 4px 20px rgba(0,0,0,0.3);transition:opacity 0.4s ease;white-space:nowrap;pointer-events:none;';
+            document.body.appendChild(t);
+        }
+        t.textContent = msg;
+        t.style.opacity = '1';
+        clearTimeout(t._timer);
+        t._timer = setTimeout(function() { t.style.opacity = '0'; }, 2800);
+    }
     
     function finalizeExam() {
         clearInterval(timerInterval);
