@@ -4207,7 +4207,14 @@ print(result)  # Output: 8
         let questions = [...currentQuestions];
         questions = shuffleArray(questions);
         const total = count === 'all' ? questions.length : Math.min(parseInt(count), questions.length);
-        currentExamQuestions = questions.slice(0, total);
+        const _letters = ['A', 'B', 'C', 'D'];
+        currentExamQuestions = questions.slice(0, total).map(q => {
+            const correctLetter = (typeof q.answer === 'number') ? _letters[q.answer] : q.answer;
+            const correctText = q.options[_letters.indexOf(correctLetter)];
+            const shuffledOpts = shuffleArray([...q.options]);
+            const newCorrectLetter = _letters[shuffledOpts.indexOf(correctText)];
+            return { ...q, options: shuffledOpts, answer: newCorrectLetter };
+        });
         
         // Start exam immediately (skip instructions) when user picks question count
         document.getElementById('questionCountPage').style.display = 'none';
@@ -4320,8 +4327,8 @@ print(result)  # Output: 8
             event.preventDefault();
             return;
         }
-        // Navigation: arrow keys (← →) or P for previous
-        if (key === 'ArrowRight') {
+        // Navigation: arrow keys (← →), N = next, P = previous
+        if (key === 'ArrowRight' || keyLower === 'n') {
             nextQuestion(event);
             event.preventDefault();
             return;
