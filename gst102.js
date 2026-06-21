@@ -322,5 +322,369 @@ window.questionBank["GST 102"] = [
         options: ["Information", "Data", "Knowledge", "Output"],
         answer: "B",
         explanation: "Data consists of raw, unprocessed facts, figures, and symbols that have no context or meaning on their own. When data is processed, organized, structured, and given context, it becomes information. For example, '37' is data; '37°C body temperature indicating fever' is information."
+    },
+
+    // ── SECTION 6: Language Skills — Listening, Reading, Speaking, Writing (51 – 65) ──
+    {
+        question: "Communication skill can be improved through",
+        options: ["Reading books only", "Constant practice", "Using technology", "Avoiding people"],
+        answer: "B",
+        explanation: "Communication is a skill, and like all skills it improves with deliberate, consistent practice. Constant practice — through conversation, public speaking, writing, and active listening — builds fluency, confidence, and effectiveness."
+    },
+    {
+        question: "Listening takes up to ----",
+        options: ["11% to 16%", "25% to 30%", "40% to 50%", "60% to 70%"],
+        answer: "C",
+        explanation: "Research on daily communication time shows that listening occupies approximately 40–50% of our communication activity — the single largest share. Speaking accounts for about 25–30%, reading 11–16%, and writing 9–11%."
+    },
+    {
+        question: "One way of developing effective listening skill is to",
+        options: ["Speak while listening", "Avoid distraction", "Take notes constantly", "Close your eyes"],
+        answer: "B",
+        explanation: "Avoiding distraction is fundamental to effective listening. Physical, environmental, and mental distractions prevent the listener from fully receiving and processing the speaker's message. Reducing distractions increases focus and comprehension."
+    },
+    {
+        question: "Listening skill involves",
+        options: ["The voice and the mouth", "The head and active soul", "The eyes and the pen", "The brain and tongue"],
+        answer: "B",
+        explanation: "Effective listening is not just a physical act (using ears) — it requires the full mental and emotional engagement of the listener: the head (cognitive processing and understanding) and active soul (attentiveness, empathy, and willingness to engage with the message)."
+    },
+    {
+        question: "Effective communication requires",
+        options: ["Loudness", "Speed", "Repetition", "Attention"],
+        answer: "D",
+        explanation: "Attention is essential for effective communication. Both the sender and receiver must pay attention — the sender to craft the message clearly, the receiver to process it accurately. Without attention, messages are missed or misunderstood regardless of how they are delivered."
+    },
+    {
+        question: "One importance of note taking is to",
+        options: ["Fill pages", "Waste time", "Improve memory", "Impress others"],
+        answer: "C",
+        explanation: "Note taking improves memory retention by providing a written record of key information that can be reviewed later. Writing information down also reinforces learning through active engagement with the material — studies show it significantly boosts recall."
+    },
+    {
+        question: "Choosing what you want to listen to is what type of listening?",
+        options: ["Active listening", "Passive listening", "Selective listening", "Critical listening"],
+        answer: "C",
+        explanation: "Selective listening (also called selective attention) is when the listener deliberately chooses what to focus on, tuning in to certain messages while filtering out others. It is driven by personal interest, relevance, or need."
+    },
+    {
+        question: "What is the art of delivering a formal address in public?",
+        options: ["Debate", "Dialogue", "Speech making", "Soliloquy"],
+        answer: "C",
+        explanation: "Speech making (or public speaking) is the formal art of delivering a prepared address to an audience. It involves deliberate preparation, clear organization, and effective delivery. A debate involves structured argument; a dialogue is a two-way conversation; a soliloquy is talking to oneself."
+    },
+    {
+        question: "Reading takes up to ---- percentage",
+        options: ["40% to 50%", "25% to 30%", "11% to 16%", "5% to 10%"],
+        answer: "C",
+        explanation: "In studies of daily communication time, reading accounts for approximately 11–16% of our communicative activities — far less than listening (40–50%) and speaking (25–30%). Writing takes the smallest share at about 9–11%."
+    },
+    {
+        question: "What is the third language skill after listening and speaking?",
+        options: ["Writing", "Reading", "Grammar", "Vocabulary"],
+        answer: "B",
+        explanation: "Language skills develop in a natural sequence: (1) Listening — the first skill acquired; (2) Speaking — building on what is heard; (3) Reading — decoding written symbols; (4) Writing — the most complex, involving production of written language. Reading is the third."
+    },
+    {
+        question: "Reading skill helps to",
+        options: ["Improve speaking", "Improve understanding", "Improve writing only", "Improve listening"],
+        answer: "B",
+        explanation: "The primary purpose of reading is to extract meaning from written text, thereby improving comprehension and understanding. Reading also indirectly builds vocabulary, grammar knowledge, and general knowledge, which benefit all other language skills."
+    },
+    {
+        question: "Which skill involves the use of the brain, eyes and lips?",
+        options: ["Listening", "Speaking", "Writing", "Reading"],
+        answer: "D",
+        explanation: "Reading engages the eyes (to decode written symbols), the brain (to process and comprehend meaning), and sometimes the lips (some readers sub-vocalize — moving lips silently as they read, especially beginners). This makes reading a multi-sensory cognitive skill."
+    },
+    {
+        question: "Vocabulary development can be improved through __",
+        options: ["Watching TV only", "Reading regularly", "Memorizing word lists", "Using dictionaries only"],
+        answer: "B",
+        explanation: "Reading regularly is the most effective and natural way to expand vocabulary because it exposes the reader to new words in meaningful contexts. Encountering words repeatedly in context is far more effective for retention than isolated memorization."
+    },
+    {
+        question: "The purpose of reading is obtainable through",
+        options: ["Practice, patience and persistence", "Picture, pleasure and points", "Points, purpose and passion", "Power, position and praise"],
+        answer: "B",
+        explanation: "The three P's of reading purpose are Picture (building mental images and understanding context), Pleasure (enjoying the content), and Points (gaining key information and ideas). These three motivations together encompass why readers engage with text."
+    },
+    {
+        question: "Which of the following is a productive skill?",
+        options: ["Reading", "Listening", "Writing", "Observing"],
+        answer: "C",
+        explanation: "Language skills are classified as receptive (input) or productive (output). Listening and reading are receptive skills — they receive language. Speaking and writing are productive skills — they produce language. Writing produces written output, making it a productive skill."
+    },
+
+    // ── SECTION 7: Note Taking & Outlining (66 – 79) ─────────────────────
+    {
+        question: "A good outline should be ---",
+        options: ["Long and detailed", "Complex and thorough", "Clear and logical", "Short and vague"],
+        answer: "C",
+        explanation: "A good outline must be clear (easily understood, with no ambiguity in the points listed) and logical (organized in a sequence that makes sense, with each point flowing naturally from the previous). Complexity or length alone does not make an outline effective."
+    },
+    {
+        question: "Note taking is the act of __ information while listening or reading.",
+        options: ["Ignoring", "Memorizing", "Recording", "Analyzing"],
+        answer: "C",
+        explanation: "Note taking is the practice of recording key information, ideas, and facts while listening to a lecture or reading a text. It creates a written record that can be reviewed later, improving comprehension and retention of the material."
+    },
+    {
+        question: "Which of the following helps in preparing a good outline?",
+        options: ["Editing", "Brainstorming", "Proofreading", "Publishing"],
+        answer: "B",
+        explanation: "Brainstorming — generating as many ideas as possible without initial judgment — helps gather the raw material that will be organized into an outline. It reveals the scope of a topic and surfaces points that can then be grouped, ordered, and structured in the outline."
+    },
+    {
+        question: "Major divisions in an outline are usually represented by ----",
+        options: ["Letters (a, b, c)", "Arabic numerals (1, 2, 3)", "Roman numerals", "Bullet points"],
+        answer: "C",
+        explanation: "In traditional outlining format, major divisions (main points) are represented by Roman numerals (I, II, III, IV...). Subordinate points use capital letters (A, B, C), then Arabic numerals (1, 2, 3), then lowercase letters (a, b, c) for further levels."
+    },
+    {
+        question: "________ is when you write for 5 minutes on your topic without stopping?",
+        options: ["Brainstorming", "Clustering", "Free Writing", "Journaling"],
+        answer: "C",
+        explanation: "Free writing is a prewriting technique where the writer writes continuously for a set period (typically 5–10 minutes) without pausing to edit, judge, or stop. The goal is to overcome writer's block and generate raw ideas quickly. Stopping or censoring disrupts the process."
+    },
+    {
+        question: "Who first introduced Brainstorming?",
+        options: ["William Gordon in 1940", "Alex Osborne in 1930", "Dale Carnegie in 1920", "Sigmund Freud in 1910"],
+        answer: "B",
+        explanation: "Brainstorming as a formal technique was introduced by advertising executive Alex Osborne (also spelled Osborn) around 1930 and popularized in his 1953 book 'Applied Imagination.' The method encourages free generation of ideas without criticism during the initial phase."
+    },
+    {
+        question: "Which of the following reading habits provides a user movement?",
+        options: ["Eye movement", "Word movement", "Lip movement", "Hand movement"],
+        answer: "B",
+        explanation: "Among the habits analyzed in reading studies, word-by-word movement — where the reader's attention moves from one word to the next sequentially — describes the physical progression through text. Efficient readers use smooth eye movements across phrases rather than word-by-word progression."
+    },
+    {
+        question: "Which of the following is NOT a feature of a good outline?",
+        options: ["Clarity of ideas", "Logical arrangement", "Repetition of ideas", "Proper subordination"],
+        answer: "C",
+        explanation: "A good outline features clarity (ideas are easy to understand), logical arrangement (points flow in a sensible order), and proper subordination (main points and subpoints are correctly ranked). Repetition of ideas is a flaw, not a feature — an effective outline avoids redundancy."
+    },
+    {
+        question: "An outline written before an essay is known as a -------",
+        options: ["Final outline", "Draft outline", "Sentence outline", "Topic outline"],
+        answer: "B",
+        explanation: "A draft outline (also called a preliminary or scratch outline) is created before writing begins to plan the structure of an essay. It is tentative and may be revised as writing progresses. A final outline reflects the actual structure of the completed essay."
+    },
+    {
+        question: "Subpoints in an outline provide",
+        options: ["Main ideas", "Conclusions", "Supporting information", "Introductions"],
+        answer: "C",
+        explanation: "Subpoints in an outline support and elaborate on the main points above them. They provide evidence, examples, explanations, or additional detail that supports the claim or idea in the main point. Without supporting subpoints, main ideas remain undeveloped."
+    },
+    {
+        question: "__ is the act of taking ideas and showing how they're connected to each other and the main topic",
+        options: ["Brainstorming", "Free Writing", "Clustering", "Outlining"],
+        answer: "C",
+        explanation: "Clustering (also called mind mapping) is a visual prewriting technique where ideas are placed in circles and connected with lines to show relationships. The main topic is placed at the centre, and related ideas radiate outwards, visually mapping connections between concepts."
+    },
+    {
+        question: "Main points in note taking are usually --------",
+        options: ["Minor details", "Key ideas", "Subpoints", "Examples"],
+        answer: "B",
+        explanation: "In note taking, the main points are the key ideas — the most important concepts, arguments, or facts from the lecture or text. These form the backbone of your notes, with supporting details and examples written beneath them as subpoints."
+    },
+    {
+        question: "Abbreviations are mainly used in note taking to ---",
+        options: ["Confuse the reader", "Save time", "Impress others", "Shorten sentences"],
+        answer: "B",
+        explanation: "Abbreviations are shortcuts used in note taking to write faster and keep up with the pace of a lecture or reading. They save time by replacing full words with shorter forms (e.g., 'w/' for 'with,' 'b/c' for 'because,' 'e.g.' for 'for example')."
+    },
+    {
+        question: "An outline shows how the writer has organized ___",
+        options: ["Sentences", "Paragraphs", "Ideas", "Words"],
+        answer: "C",
+        explanation: "An outline is a skeletal framework showing how the writer's ideas are organized before or after writing. It maps the structure of the argument or discussion — the hierarchy of ideas, how they relate, and the order in which they will be presented."
+    },
+    {
+        question: "The more important an idea is the closer to the ----",
+        options: ["Right", "Middle", "Left", "Top"],
+        answer: "C",
+        explanation: "In standard outlining format, the most important (main) points are positioned furthest to the left, aligned at the margin. Less important subpoints are progressively indented further to the right. The closer to the left margin, the higher the level of importance."
+    },
+
+    // ── SECTION 8: Vocabulary & Word Formation (80 – 91) ─────────────────
+    {
+        question: "Chin Chin is an example of ____",
+        options: ["Blending", "Compounding", "Affixation", "Reduplication"],
+        answer: "D",
+        explanation: "Reduplication is a word-formation process in which all or part of a word is repeated to create a new word or meaning. 'Chin Chin' is a reduplication — the syllable 'chin' is repeated. Other examples: 'so-so,' 'bye-bye,' 'hush-hush,' 'tick-tock.'"
+    },
+    {
+        question: "Leftover is a __ word",
+        options: ["Simple", "Derived", "Compound", "Complex"],
+        answer: "C",
+        explanation: "A compound word is formed by combining two or more independent words to create a new word with a related meaning. 'Leftover' = 'left' + 'over.' Other examples: 'sunflower,' 'football,' 'bedroom.' A simple word has no affixes or combining forms."
+    },
+    {
+        question: "Motel is the ---- of Motorway and Hotel",
+        options: ["Compounding", "Blending", "Acronym", "Abbreviation"],
+        answer: "B",
+        explanation: "Blending (or portmanteau) is a word-formation process that combines parts of two words to create a new one. 'Motel' = 'motor' + 'hotel.' Other blended words: 'brunch' (breakfast + lunch), 'smog' (smoke + fog), 'internet' (interconnected + network)."
+    },
+    {
+        question: "Bang is an example of ____",
+        options: ["Euphemism", "Metaphor", "Onomatopoeia", "Alliteration"],
+        answer: "C",
+        explanation: "Onomatopoeia refers to words whose pronunciation imitates the sound they describe. 'Bang' sounds like the explosive noise it represents. Other examples: 'buzz,' 'hiss,' 'splash,' 'crack,' 'whisper.' This makes language more vivid and sensory."
+    },
+    {
+        question: "Words that have opposite meanings are called --",
+        options: ["Synonyms", "Homophones", "Antonyms", "Homonyms"],
+        answer: "C",
+        explanation: "Antonyms are words with opposite or contrasting meanings. Examples: hot/cold, light/dark, love/hate, fast/slow. Synonyms share similar meanings; homophones sound alike but mean different things; homonyms share spelling and sound but have different meanings."
+    },
+    {
+        question: "Words that have similar meanings are called __",
+        options: ["Antonyms", "Homophones", "Synonyms", "Hyponyms"],
+        answer: "C",
+        explanation: "Synonyms are words that have the same or similar meanings and can often be substituted for one another in a sentence. Examples: happy/joyful, big/large, begin/start. Using synonyms enriches writing by avoiding repetition while maintaining meaning."
+    },
+    {
+        question: "A word that sounds alike but has different meanings is called a",
+        options: ["Synonym", "Antonym", "Homophone", "Homonym"],
+        answer: "C",
+        explanation: "Homophones are words that sound identical when spoken aloud but have different spellings and meanings. Examples: 'their/there/they're,' 'flour/flower,' 'bear/bare,' 'sea/see.' The similarity in sound often causes spelling errors in writing."
+    },
+    {
+        question: "Associative meaning of words beyond the basic level.",
+        options: ["Denotation", "Connotation", "Definition", "Annotation"],
+        answer: "B",
+        explanation: "Connotation refers to the emotional, cultural, or implied associations a word carries beyond its literal dictionary meaning (denotation). For example, 'home' denotes a dwelling, but connotes warmth, safety, and belonging. Connotations may be positive, negative, or neutral."
+    },
+    {
+        question: "What does the prefix 'Mal' mean?",
+        options: ["Well", "Before", "Badly", "After"],
+        answer: "C",
+        explanation: "The prefix 'mal-' comes from Latin meaning 'bad' or 'badly.' Words using it: malfunction (functioning badly), malnutrition (bad nutrition), malice (bad intent), malpractice (bad professional practice), maltreat (treat badly). The opposite prefix is 'bene-' meaning 'well.'"
+    },
+    {
+        question: "The basic word for the word 'International' is ______",
+        options: ["Inter", "National", "Nation", "Tion"],
+        answer: "C",
+        explanation: "'International' is built on the root (base) word 'nation.' The prefix 'inter-' means 'between,' and the suffix '-al' makes it an adjective. So 'international' = between nations. 'Nation' is the free morpheme (base word) from which the longer word is derived."
+    },
+    {
+        question: "Which of the following contains a silent letter?",
+        options: ["Table", "Chair", "Knife", "Book"],
+        answer: "C",
+        explanation: "In 'knife,' the letter 'k' is silent — it is written but not pronounced (/naɪf/). Silent letters are letters that appear in the spelling of a word but produce no sound when the word is spoken. Other examples with silent 'k': know, knight, kneel, knock."
+    },
+    {
+        question: "How many phonemes do we have in English?",
+        options: ["26", "36", "40", "44"],
+        answer: "D",
+        explanation: "English has 44 phonemes (distinct units of sound) despite having only 26 letters in the alphabet. These include 20 vowel sounds and 24 consonant sounds. The mismatch between letters and phonemes explains why English spelling does not always reflect pronunciation."
+    },
+
+    // ── SECTION 9: Language Contact & Code Switching (92 – 97) ───────────
+    {
+        question: "Which of the following is not a Code Switch?",
+        options: ["Tag Switching", "Inter-Sentential", "Outer-Sentential", "Intra-Sentential"],
+        answer: "C",
+        explanation: "The three recognized types of code switching are: Tag Switching (inserting a tag phrase from another language), Inter-Sentential switching (switching languages between sentences), and Intra-Sentential switching (switching within a single sentence). 'Outer-Sentential' is not a standard type."
+    },
+    {
+        question: "The alternative use of two languages in a conversation is known as ----",
+        options: ["Bilingualism", "Code Mix", "Code Switch", "Language transfer"],
+        answer: "C",
+        explanation: "Code switching is the practice of alternating between two or more languages within a single conversation or even within a single sentence. It is common in multilingual communities and differs from code mixing, which blends elements of languages within utterances."
+    },
+    {
+        question: "Which of the following is not a level of interference?",
+        options: ["Phonological Interference", "Morphological Interference", "Code Interference", "Syntactic Interference"],
+        answer: "C",
+        explanation: "Linguistic interference occurs at recognized structural levels: Phonological (sound system), Morphological (word structure), Lexical (vocabulary), and Syntactic (sentence structure). 'Code Interference' is not a recognized level of interference in linguistics."
+    },
+    {
+        question: "________ is the situation where two different languages overlap.",
+        options: ["Code Switching", "Bilingualism", "Interference", "Code Mixing"],
+        answer: "C",
+        explanation: "Linguistic interference (also called language transfer) occurs when two language systems overlap and the features of one language influence or intrude upon the use of another. This often produces errors or non-native patterns when speakers use their second language."
+    },
+    {
+        question: "Which is not a Code Mixing?",
+        options: ["Insertion", "Alternation", "Removal", "Congruent Lexicalization"],
+        answer: "C",
+        explanation: "The recognized types of code mixing are: Insertion (inserting elements from one language into another), Alternation (switching between languages clause by clause), and Congruent Lexicalization (using shared grammatical structures with vocabulary from both languages). 'Removal' is not a type."
+    },
+    {
+        question: "Alcohol is derived from which language?",
+        options: ["English", "French", "Latin", "Arabic"],
+        answer: "D",
+        explanation: "The word 'alcohol' is derived from Arabic 'al-kuḥl' (الكحل), originally referring to a fine powder of antimony used as eyeliner. Through Arabic→Medieval Latin→Spanish/Portuguese→English, the word's meaning evolved to refer to distilled spirits. Many scientific terms entered English via Arabic."
+    },
+
+    // ── SECTION 10: Pronunciation, Reading Types & Fluency (98 – 108) ─────
+    {
+        question: "Standard way in which a word is made to sound when spoken?",
+        options: ["Articulation", "Pronunciation", "Intonation", "Enunciation"],
+        answer: "B",
+        explanation: "Pronunciation is the standard, accepted way of producing the sounds of a word — the correct sequence of phonemes and stress patterns. It differs from articulation (the physical movement of speech organs) and intonation (the rise and fall of pitch across a sentence)."
+    },
+    {
+        question: "Pronunciation deals with",
+        options: ["Correct spelling of words", "Correct sounding of words", "Correct meaning of words", "Correct writing of words"],
+        answer: "B",
+        explanation: "Pronunciation specifically concerns the correct sounding (phonetic rendering) of words — how words are spoken, including which phonemes are used, where stress falls, and how sounds are connected in speech. It does not directly address spelling, meaning, or writing."
+    },
+    {
+        question: "British spelling of the word 'color' in American English is -------",
+        options: ["colour", "coler", "colore", "colorr"],
+        answer: "A",
+        explanation: "'Color' is the American English spelling. 'Colour' is the British English spelling. British English retains the 'u' in many words where American English drops it: colour/color, honour/honor, behaviour/behavior, favour/favor. This difference reflects divergent spelling reforms."
+    },
+    {
+        question: "The act of trying to use visual clues at the page of a book is called",
+        options: ["Scanning", "Skimming", "Browsing", "Surveying"],
+        answer: "C",
+        explanation: "Browsing is a reading strategy that involves moving through a text casually, using visual cues (headings, pictures, bold words, layout) to get a general sense of content without reading in depth. It is more casual than scanning (searching for specific items) or skimming (grasping the main idea)."
+    },
+    {
+        question: "Which of the following reading habits provides a user movement?",
+        options: ["Eye movement", "Word movement", "Lip movement", "Head movement"],
+        answer: "B",
+        explanation: "Word movement describes the reader's progression through text — moving from one word to the next in sequence. Efficient readers develop smooth eye movements across meaningful phrases; poor readers exhibit excessive word-by-word movement which slows reading speed and comprehension."
+    },
+    {
+        question: "The process of speaking English correctly and confidently is called",
+        options: ["Eloquence", "Diction", "Fluency", "Articulation"],
+        answer: "C",
+        explanation: "Fluency in a language refers to the ability to speak it correctly, smoothly, and confidently — with natural rhythm, appropriate speed, and minimal hesitation. It encompasses pronunciation, grammar, and vocabulary use in real-time speech without laboured searching for words."
+    },
+    {
+        question: "Life is like a walking shadow for this whole year...",
+        options: ["Simile", "Irony", "Metaphor", "Personification"],
+        answer: "C",
+        explanation: "This is drawn from Shakespeare's imagery. In the original 'Life's but a walking shadow' (Macbeth), it is a metaphor — a direct comparison without 'like' or 'as.' In exam contexts referring to Shakespearean figurative language of this type, it is classified as a metaphor."
+    },
+    {
+        question: "Which type of Email is also known as One to One Email?",
+        options: ["Marketing Email", "Newsletter Email", "Transactional Email", "Promotional Email"],
+        answer: "C",
+        explanation: "Transactional Email is triggered by a specific action or transaction by one individual recipient — such as a password reset, order confirmation, or account notification. Because it is sent to one person in response to their action, it is called a 'one-to-one' email, unlike mass marketing or newsletter emails."
+    },
+    {
+        question: "___ is not a type of Email",
+        options: ["Transactional Email", "Marketing Email", "Social Email", "Newsletter Email"],
+        answer: "C",
+        explanation: "Common email types include: Transactional (triggered by user action), Marketing (promotional campaigns), Newsletter (regular updates to subscribers), and Announcement emails. 'Social Email' is not a recognized standard email category in digital communication classification."
+    },
+    {
+        question: "Who wrote the book 'The Secrets of Good Communicator'?",
+        options: ["William Shakespeare", "Larry King", "Dale Carnegie", "Stephen Covey"],
+        answer: "B",
+        explanation: "Larry King, the renowned American television and radio host, authored works on communication skills. He is associated with practical guides to public communication. His experience as a broadcaster for decades gave him deep insight into effective communication techniques."
+    },
+    {
+        question: "The full meaning of ISP is",
+        options: ["Internet System Provider", "International Service Protocol", "Internet Service Provider", "Internal System Program"],
+        answer: "C",
+        explanation: "ISP stands for Internet Service Provider — a company that provides individuals and organizations with access to the internet. Examples include MTN, Airtel, Glo, and 9mobile in Nigeria. ISPs connect users to the global internet infrastructure through various technologies."
     }
 ];

@@ -32,11 +32,16 @@
 
     var TOPICS_MAP = {
         'GST 102': [
-            { id: 'grammar',       name: 'Grammar & Parts of Speech',  startIdx: 0,  endIdx: 13 },
-            { id: 'subject_verb',  name: 'Subject-Verb Agreement',      startIdx: 13, endIdx: 22 },
-            { id: 'essay_writing', name: 'Essay Writing',               startIdx: 22, endIdx: 37 },
-            { id: 'communication', name: 'Communication Theory',        startIdx: 37, endIdx: 47 },
-            { id: 'ict_basics',    name: 'Computer & ICT Basics',       startIdx: 47, endIdx: 51 }
+            { id: 'grammar',         name: 'Grammar & Parts of Speech',        startIdx: 0,   endIdx: 13  },
+            { id: 'subject_verb',    name: 'Subject-Verb Agreement',            startIdx: 13,  endIdx: 22  },
+            { id: 'essay_writing',   name: 'Essay Writing',                     startIdx: 22,  endIdx: 37  },
+            { id: 'communication',   name: 'Communication Theory',              startIdx: 37,  endIdx: 47  },
+            { id: 'ict_basics',      name: 'Computer & ICT Basics',             startIdx: 47,  endIdx: 51  },
+            { id: 'language_skills', name: 'Language Skills',                   startIdx: 51,  endIdx: 66  },
+            { id: 'note_taking',     name: 'Note Taking & Outlining',           startIdx: 66,  endIdx: 80  },
+            { id: 'vocabulary',      name: 'Vocabulary & Word Formation',       startIdx: 80,  endIdx: 92  },
+            { id: 'code_switching',  name: 'Language Contact & Code Switching', startIdx: 92,  endIdx: 98  },
+            { id: 'pronunciation',   name: 'Pronunciation, Reading & Fluency',  startIdx: 98,  endIdx: 109 }
         ],
         'GST 104': [
             { id: 'pre_colonial',              name: 'Pre-Colonial Nigeria',        startIdx: 0,  endIdx: 15 },

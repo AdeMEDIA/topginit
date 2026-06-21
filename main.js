@@ -120,11 +120,16 @@ document.addEventListener('DOMContentLoaded', function() {
         "GST 102": {
     icon: "📝",
     topics: [
-        { id: "grammar", name: "Grammar & Parts of Speech", description: "Morpheme, phoneme, word classes, pronouns, complements, intensifiers, homophones", qCount: 13, startIdx: 0, endIdx: 13 },
-        { id: "subject_verb", name: "Subject-Verb Agreement", description: "Concord rules, either/or, collective nouns, quantities and measurements", qCount: 9, startIdx: 13, endIdx: 22 },
-        { id: "essay_writing", name: "Essay Writing", description: "Types of essays, structure, writing stages, outlining, cohesion, formal language", qCount: 15, startIdx: 22, endIdx: 37 },
-        { id: "communication", name: "Communication Theory", description: "Encoding, feedback, channel, barriers, non-verbal and interpersonal communication", qCount: 10, startIdx: 37, endIdx: 47 },
-        { id: "ict_basics", name: "Computer & ICT Basics", description: "Networks, router, software types, storage devices, data vs information", qCount: 4, startIdx: 47, endIdx: 51 }
+        { id: "grammar",          name: "Grammar & Parts of Speech",         description: "Morpheme, word classes, pronouns, complements, intensifiers, homophones", qCount: 13, startIdx: 0,   endIdx: 13  },
+        { id: "subject_verb",     name: "Subject-Verb Agreement",             description: "Concord rules, either/or, collective nouns, quantities and measurements", qCount: 9,  startIdx: 13,  endIdx: 22  },
+        { id: "essay_writing",    name: "Essay Writing",                      description: "Types of essays, structure, writing stages, outlining, cohesion, formal language", qCount: 15, startIdx: 22, endIdx: 37 },
+        { id: "communication",    name: "Communication Theory",               description: "Encoding, feedback, channel, barriers, non-verbal and interpersonal communication", qCount: 10, startIdx: 37, endIdx: 47 },
+        { id: "ict_basics",       name: "Computer & ICT Basics",              description: "Networks, router, software types, storage devices, data vs information", qCount: 4,  startIdx: 47,  endIdx: 51  },
+        { id: "language_skills",  name: "Language Skills",                    description: "Listening, speaking, reading and writing skills; communication time percentages", qCount: 15, startIdx: 51, endIdx: 66 },
+        { id: "note_taking",      name: "Note Taking & Outlining",            description: "Outline features, brainstorming, clustering, free writing, abbreviations", qCount: 14, startIdx: 66, endIdx: 80 },
+        { id: "vocabulary",       name: "Vocabulary & Word Formation",        description: "Reduplication, blending, compounding, onomatopoeia, antonyms, synonyms, connotation", qCount: 12, startIdx: 80, endIdx: 92 },
+        { id: "code_switching",   name: "Language Contact & Code Switching",  description: "Code switching types, interference levels, code mixing, loanwords", qCount: 6,  startIdx: 92,  endIdx: 98  },
+        { id: "pronunciation",    name: "Pronunciation, Reading & Fluency",   description: "Pronunciation, fluency, British vs American English, reading types, email, ISP", qCount: 11, startIdx: 98, endIdx: 109 }
     ]
 },
         "GST 112": {
