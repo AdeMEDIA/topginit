@@ -32,10 +32,10 @@
 
     var TOPICS_MAP = {
         'GST 102': [
-            { id: 'predicator',      name: 'Predicator',                        startIdx: 0, endIdx: 2 },
-            { id: 'narrative_essay', name: 'Narrative Essay',                   startIdx: 2, endIdx: 5 },
-            { id: 'cohesion',        name: 'Cohesion',                          startIdx: 5, endIdx: 6 },
-            { id: 'topic_sentence',  name: 'Topic Sentence',                    startIdx: 6, endIdx: 7 }
+            { id: 'predicator',      name: 'Predicator',                        startIdx: 0,  endIdx: 3  },
+            { id: 'narrative_essay', name: 'Narrative Essay',                   startIdx: 3,  endIdx: 9  },
+            { id: 'cohesion',        name: 'Cohesion',                          startIdx: 9,  endIdx: 11 },
+            { id: 'topic_sentence',  name: 'Topic Sentence',                    startIdx: 11, endIdx: 14 }
         ],
         'GST 104': [
             { id: 'pre_colonial',              name: 'Pre-Colonial Nigeria',        startIdx: 0,  endIdx: 15 },
