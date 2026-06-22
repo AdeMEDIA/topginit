@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
         "ENT 101": { semester: "first", title: "ENT 101", level: "100L • Entrepreneurship", description: "Business development and entrepreneurial skills", icon: "💼", iconGradient: "linear-gradient(135deg, #06b6d4, #0891b2)", qCount: 100, locked: true, file: "ent.js", bankKey: "ENT 101" },
         "GST 103": { semester: "first", title: "GST 112", level: "100L • Use of Library", description: "History, culture and development of Nigeria", icon: "📖", iconGradient: "linear-gradient(135deg, #84cc16, #65a30d)", qCount: 100, locked: true, file: "gst112.js", bankKey: "GST 112" },
        
-        "GST 102": { semester: "second", title: "GST 102", level: "100L • Use of English II", description: "Grammar, essay writing, communication and ICT basics", icon: "📝", iconGradient: "linear-gradient(135deg, #667eea, #764ba2)", qCount: 14, locked: false, file: "gst102.js", bankKey: "GST 102" },
+        "GST 102": { semester: "second", title: "GST 102", level: "100L • Use of English II", description: "Grammar, essay writing, communication and ICT basics", icon: "📝", iconGradient: "linear-gradient(135deg, #667eea, #764ba2)", qCount: 318, locked: false, file: "gst102.js", bankKey: "GST 102" },
         "GST 104": { semester: "second", title: "GST 104", level: "100L • Nigeria Culture", description: "Nigerian history, culture and national development", icon: "🇳🇬", iconGradient: "linear-gradient(135deg, #f97316, #ea580c)", qCount: 100, locked: false, file: "gst112.js", bankKey: "GST 112" },
         "MTH 102": { semester: "second", title: "MTH 102", level: "100L • Elementary Mathematics", description: "Calculus, vectors and differential equations", icon: "📐", iconGradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", qCount: 100, locked: false, file: "mth102.js", bankKey: "MTH 102" },
         "CHM 102": { semester: "second", title: "CHM 102", level: "100L • General Chemistry II", description: "Chemical kinetics, equilibrium and organic chemistry", icon: "🧪", iconGradient: "linear-gradient(135deg, #f59e0b, #d97706)", qCount: 100, locked: false, file: "chm102.js", bankKey: "CHM 102" },
@@ -120,10 +120,16 @@ document.addEventListener('DOMContentLoaded', function() {
         "GST 102": {
     icon: "📝",
     topics: [
-        { id: "predicator",      name: "Predicator",          description: "Subject, predicate, predicator verb and sentence structure", qCount: 3, startIdx: 0,  endIdx: 3  },
-        { id: "narrative_essay", name: "Narrative Essay",     description: "Definition, features, tense usage and examples of narrative essays", qCount: 6, startIdx: 3,  endIdx: 9  },
-        { id: "cohesion",        name: "Cohesion",            description: "Cohesion devices, sentence connectors and paragraph unity", qCount: 2, startIdx: 9,  endIdx: 11 },
-        { id: "topic_sentence",  name: "Topic Sentence",      description: "Central idea, topic sentences and paragraph structure", qCount: 3, startIdx: 11, endIdx: 14 }
+        { id: "communication",   name: "Communication Theory",              description: "Elements of communication, barriers, oral/written/non-verbal types, formal/informal", qCount: 56,  startIdx: 0,   endIdx: 56  },
+        { id: "ict",             name: "Computer & ICT Basics",             description: "Hardware, software, networks, internet, storage, data and information", qCount: 26,  startIdx: 56,  endIdx: 82  },
+        { id: "subject_verb",    name: "Subject-Verb Agreement",            description: "Concord rules, either/or, collective nouns, quantities and measurements", qCount: 12,  startIdx: 82,  endIdx: 94  },
+        { id: "essay",           name: "Essay Writing",                     description: "Types of essays, structure, cohesion, topic sentence and paragraph unity", qCount: 22,  startIdx: 94,  endIdx: 116 },
+        { id: "language_skills", name: "Language Skills",                   description: "Listening, speaking, reading and writing skills; fluency and comprehension", qCount: 30,  startIdx: 116, endIdx: 146 },
+        { id: "note_taking",     name: "Note Taking & Outlining",           description: "Outline features, brainstorming, clustering, free writing, writing process", qCount: 18,  startIdx: 146, endIdx: 164 },
+        { id: "vocabulary",      name: "Vocabulary & Word Formation",       description: "Reduplication, blending, compounding, antonyms, synonyms, connotation", qCount: 12,  startIdx: 164, endIdx: 176 },
+        { id: "code_switching",  name: "Language Contact & Code Switching", description: "Code switching types, interference levels, code mixing, loanwords", qCount: 3,   startIdx: 176, endIdx: 179 },
+        { id: "pronunciation",   name: "Pronunciation & Fluency",           description: "Vowel/consonant sounds, stress, accent, phonetics and phonology", qCount: 9,   startIdx: 179, endIdx: 188 },
+        { id: "grammar",         name: "Grammar & Parts of Speech",         description: "Morpheme, word classes, tense, sentence structure, predicate and clauses", qCount: 130, startIdx: 188, endIdx: 318 }
     ]
 },
         "GST 112": {

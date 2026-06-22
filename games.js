@@ -32,10 +32,16 @@
 
     var TOPICS_MAP = {
         'GST 102': [
-            { id: 'predicator',      name: 'Predicator',                        startIdx: 0,  endIdx: 3  },
-            { id: 'narrative_essay', name: 'Narrative Essay',                   startIdx: 3,  endIdx: 9  },
-            { id: 'cohesion',        name: 'Cohesion',                          startIdx: 9,  endIdx: 11 },
-            { id: 'topic_sentence',  name: 'Topic Sentence',                    startIdx: 11, endIdx: 14 }
+            { id: 'communication',   name: 'Communication Theory',              startIdx: 0,   endIdx: 56  },
+            { id: 'ict',             name: 'Computer & ICT Basics',             startIdx: 56,  endIdx: 82  },
+            { id: 'subject_verb',    name: 'Subject-Verb Agreement',            startIdx: 82,  endIdx: 94  },
+            { id: 'essay',           name: 'Essay Writing',                     startIdx: 94,  endIdx: 116 },
+            { id: 'language_skills', name: 'Language Skills',                   startIdx: 116, endIdx: 146 },
+            { id: 'note_taking',     name: 'Note Taking & Outlining',           startIdx: 146, endIdx: 164 },
+            { id: 'vocabulary',      name: 'Vocabulary & Word Formation',       startIdx: 164, endIdx: 176 },
+            { id: 'code_switching',  name: 'Language Contact & Code Switching', startIdx: 176, endIdx: 179 },
+            { id: 'pronunciation',   name: 'Pronunciation & Fluency',           startIdx: 179, endIdx: 188 },
+            { id: 'grammar',         name: 'Grammar & Parts of Speech',         startIdx: 188, endIdx: 318 }
         ],
         'GST 104': [
             { id: 'pre_colonial',              name: 'Pre-Colonial Nigeria',        startIdx: 0,  endIdx: 15 },
