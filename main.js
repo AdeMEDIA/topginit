@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
         "ENT 101": { semester: "first", title: "ENT 101", level: "100L • Entrepreneurship", description: "Business development and entrepreneurial skills", icon: "💼", iconGradient: "linear-gradient(135deg, #06b6d4, #0891b2)", qCount: 100, locked: true, file: "ent.js", bankKey: "ENT 101" },
         "GST 103": { semester: "first", title: "GST 112", level: "100L • Use of Library", description: "History, culture and development of Nigeria", icon: "📖", iconGradient: "linear-gradient(135deg, #84cc16, #65a30d)", qCount: 100, locked: true, file: "gst112.js", bankKey: "GST 112" },
        
-        "GST 102": { semester: "second", title: "GST 102", level: "100L • Use of English II", description: "Grammar, essay writing, communication and ICT basics", icon: "📝", iconGradient: "linear-gradient(135deg, #667eea, #764ba2)", qCount: 51, locked: false, file: "gst102.js", bankKey: "GST 102" },
+        "GST 102": { semester: "second", title: "GST 102", level: "100L • Use of English II", description: "Grammar, essay writing, communication and ICT basics", icon: "📝", iconGradient: "linear-gradient(135deg, #667eea, #764ba2)", qCount: 7, locked: false, file: "gst102.js", bankKey: "GST 102" },
         "GST 104": { semester: "second", title: "GST 104", level: "100L • Nigeria Culture", description: "Nigerian history, culture and national development", icon: "🇳🇬", iconGradient: "linear-gradient(135deg, #f97316, #ea580c)", qCount: 100, locked: false, file: "gst112.js", bankKey: "GST 112" },
         "MTH 102": { semester: "second", title: "MTH 102", level: "100L • Elementary Mathematics", description: "Calculus, vectors and differential equations", icon: "📐", iconGradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", qCount: 100, locked: false, file: "mth102.js", bankKey: "MTH 102" },
         "CHM 102": { semester: "second", title: "CHM 102", level: "100L • General Chemistry II", description: "Chemical kinetics, equilibrium and organic chemistry", icon: "🧪", iconGradient: "linear-gradient(135deg, #f59e0b, #d97706)", qCount: 100, locked: false, file: "chm102.js", bankKey: "CHM 102" },
@@ -120,16 +120,10 @@ document.addEventListener('DOMContentLoaded', function() {
         "GST 102": {
     icon: "📝",
     topics: [
-        { id: "grammar",          name: "Grammar & Parts of Speech",         description: "Morpheme, word classes, pronouns, complements, intensifiers, homophones", qCount: 13, startIdx: 0,   endIdx: 13  },
-        { id: "subject_verb",     name: "Subject-Verb Agreement",             description: "Concord rules, either/or, collective nouns, quantities and measurements", qCount: 9,  startIdx: 13,  endIdx: 22  },
-        { id: "essay_writing",    name: "Essay Writing",                      description: "Types of essays, structure, writing stages, outlining, cohesion, formal language", qCount: 15, startIdx: 22, endIdx: 37 },
-        { id: "communication",    name: "Communication Theory",               description: "Encoding, feedback, channel, barriers, non-verbal and interpersonal communication", qCount: 10, startIdx: 37, endIdx: 47 },
-        { id: "ict_basics",       name: "Computer & ICT Basics",              description: "Networks, router, software types, storage devices, data vs information", qCount: 4,  startIdx: 47,  endIdx: 51  },
-        { id: "language_skills",  name: "Language Skills",                    description: "Listening, speaking, reading and writing skills; communication time percentages", qCount: 15, startIdx: 51, endIdx: 66 },
-        { id: "note_taking",      name: "Note Taking & Outlining",            description: "Outline features, brainstorming, clustering, free writing, abbreviations", qCount: 14, startIdx: 66, endIdx: 80 },
-        { id: "vocabulary",       name: "Vocabulary & Word Formation",        description: "Reduplication, blending, compounding, onomatopoeia, antonyms, synonyms, connotation", qCount: 12, startIdx: 80, endIdx: 92 },
-        { id: "code_switching",   name: "Language Contact & Code Switching",  description: "Code switching types, interference levels, code mixing, loanwords", qCount: 6,  startIdx: 92,  endIdx: 98  },
-        { id: "pronunciation",    name: "Pronunciation, Reading & Fluency",   description: "Pronunciation, fluency, British vs American English, reading types, email, ISP", qCount: 11, startIdx: 98, endIdx: 109 }
+        { id: "predicator",      name: "Predicator",          description: "Subject, predicate, predicator verb and sentence structure", qCount: 2, startIdx: 0, endIdx: 2 },
+        { id: "narrative_essay", name: "Narrative Essay",     description: "Definition, features, tense usage and examples of narrative essays", qCount: 3, startIdx: 2, endIdx: 5 },
+        { id: "cohesion",        name: "Cohesion",            description: "Cohesion devices, sentence connectors and paragraph unity", qCount: 1, startIdx: 5, endIdx: 6 },
+        { id: "topic_sentence",  name: "Topic Sentence",      description: "Central idea, topic sentences and paragraph structure", qCount: 1, startIdx: 6, endIdx: 7 }
     ]
 },
         "GST 112": {
