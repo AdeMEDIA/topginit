@@ -5,7 +5,7 @@ if (!window.questionBank) {
     window.questionBank = {};
 }
 
-window.questionBank["GST 110"] = [
+window.questionBank["GST 112"] = [
     {
         "question": "Which Nigerian ethnic group is famous for bronze casting?",
         "options": ["Tiv", "Benin", "Kanuri", "Nupe"],
