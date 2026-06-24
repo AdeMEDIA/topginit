@@ -6,7 +6,7 @@ if (!window.questionBank) {
     window.questionBank = {};
 }
 
-window.questionBank["GST 110 & 104"] = [
+window.questionBank["GST 112"] = [
 
     // ==================== TOPIC: CONCEPTS OF CULTURE & EARLY HUMAN EVOLUTION (From User's JSON) ====================
     {
