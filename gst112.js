@@ -5,7 +5,7 @@ if (!window.questionBank) {
     window.questionBank = {};
 }
 
-window.questionBank["GST112"] = [
+window.questionBank["GST 112"] = [
     {
         "question": "Who was the first President of Nigeria?",
         "options": ["Abubakar Tafawa Balewa", "Nnamdi Azikiwe", "Shehu Shagari", "Ernest Shonekan"],
