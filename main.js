@@ -110,7 +110,8 @@ document.addEventListener('DOMContentLoaded', function() {
         "BIO 108": { semester: "second", title: "BIO 108", level: "100L • Biology Practical II", description: "Practical biology techniques and experiments", icon: "🧫", iconGradient: "linear-gradient(135deg, #14b8a6, #0d9488)", qCount: 100, locked: false, file: "bio108.js", bankKey: "BIO 108" },
         "PHY 102": { semester: "second", title: "PHY 102", level: "100L • General Physics II", description: "Electricity, magnetism and modern physics", icon: "⚡", iconGradient: "linear-gradient(135deg, #ef4444, #dc2626)", qCount: 100, locked: false, file: "phy102.js", bankKey: "PHY 102" },
         "COS 102": { semester: "second", title: "COS 102", level: "100L • Intro to Computing Science", description: "Computer science fundamentals and programming", icon: "💻", iconGradient: "linear-gradient(135deg, #3b82f6, #1d4ed8)", qCount: 100, locked: false, file: "cos102.js", bankKey: "COS 102" },
-        "MLS 104": { semester: "second", title: "MLS 104", level: "100L • Introduction to Biology of Diseases", description: "Disease mechanisms and pathology basics", icon: "🦠", iconGradient: "linear-gradient(135deg, #84cc16, #65a30d)", qCount: 100, locked: false, file: "mls104.js", bankKey: "MLS 104" }
+        "MLS 104": { semester: "second", title: "MLS 104", level: "100L • Introduction to Biology of Diseases", description: "Disease mechanisms and pathology basics", icon: "🦠", iconGradient: "linear-gradient(135deg, #84cc16, #65a30d)", qCount: 100, locked: false, file: "mls104.js", bankKey: "MLS 104" },
+        "MCB 102": { semester: "second", title: "MCB 102", level: "100L • Introductory Microbiology", description: "Bacteria, viruses, fungi, protozoa and microbial disease", icon: "🔬", iconGradient: "linear-gradient(135deg, #22c55e, #16a34a)", qCount: 0, locked: false, file: "mcb102.js", bankKey: "MCB 102" }
     };
 
    // ==================== TOPICS & NOTES FOR EACH COURSE ====================
@@ -198,6 +199,19 @@ document.addEventListener('DOMContentLoaded', function() {
         { id: "disease_mechanisms", name: "Pathophysiology of Diseases", description: "Mechanisms of acute infections, disease progression", qCount: 10, startIdx: 65, endIdx: 75 },
         { id: "laboratory_diagnosis", name: "Laboratory Diagnosis", description: "Microscopy, techniques for disease detection", qCount: 15, startIdx: 75, endIdx: 90 },
         { id: "prevention_control", name: "Prevention & Control", description: "Sanitation, hygiene, antibiotics, public health measures", qCount: 10, startIdx: 90, endIdx: 100 }
+    ]
+},
+"MCB 102": {
+    icon: "🔬",
+    topics: [
+        { id: "intro_microbiology",   name: "Introduction to Microbiology",  description: "History, scope, branches and importance of microbiology",         qCount: 0, startIdx: 0,  endIdx: 0  },
+        { id: "bacteria",             name: "Bacteria",                       description: "Bacterial structure, classification, morphology and staining",     qCount: 0, startIdx: 0,  endIdx: 0  },
+        { id: "viruses",              name: "Viruses",                        description: "Viral structure, replication, classification and disease",          qCount: 0, startIdx: 0,  endIdx: 0  },
+        { id: "fungi_algae",          name: "Fungi & Algae",                  description: "Structure, reproduction and importance of fungi and algae",         qCount: 0, startIdx: 0,  endIdx: 0  },
+        { id: "protozoa",             name: "Protozoa & Parasites",           description: "Protozoan classification, life cycles and diseases caused",         qCount: 0, startIdx: 0,  endIdx: 0  },
+        { id: "microbial_growth",     name: "Microbial Growth & Genetics",    description: "Growth phases, culture media, microbial genetics and mutation",    qCount: 0, startIdx: 0,  endIdx: 0  },
+        { id: "sterilization",        name: "Sterilization & Disinfection",   description: "Methods of sterilization, antiseptics, disinfectants, antibiotics", qCount: 0, startIdx: 0,  endIdx: 0  },
+        { id: "applied_microbiology", name: "Applied & Medical Microbiology", description: "Microbial diseases, host-parasite relations, immunity and control", qCount: 0, startIdx: 0,  endIdx: 0  }
     ]
 },
 "MTH 102": {
@@ -3215,6 +3229,16 @@ document.addEventListener('DOMContentLoaded', function() {
             <li>Set denominator = 0, solve for x → that's where the function breaks</li>
         </ul>
     `
+},
+"MCB 102": {
+    intro_microbiology: `<p class="notes-coming-soon">Notes coming soon — questions are being added from the PDF source.</p>`,
+    bacteria: `<p class="notes-coming-soon">Notes coming soon.</p>`,
+    viruses: `<p class="notes-coming-soon">Notes coming soon.</p>`,
+    fungi_algae: `<p class="notes-coming-soon">Notes coming soon.</p>`,
+    protozoa: `<p class="notes-coming-soon">Notes coming soon.</p>`,
+    microbial_growth: `<p class="notes-coming-soon">Notes coming soon.</p>`,
+    sterilization: `<p class="notes-coming-soon">Notes coming soon.</p>`,
+    applied_microbiology: `<p class="notes-coming-soon">Notes coming soon.</p>`
 },
 "COS 102": {
     intro_computing: `

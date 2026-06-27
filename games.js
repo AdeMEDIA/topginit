@@ -27,7 +27,8 @@
         { title: 'BIO 108', bankKey: 'BIO 108', icon: '🧫', file: 'bio108.js',  iconGradient: 'linear-gradient(135deg,#14b8a6,#0d9488)' },
         { title: 'PHY 102', bankKey: 'PHY 102', icon: '⚡', file: 'phy102.js',  iconGradient: 'linear-gradient(135deg,#ef4444,#dc2626)' },
         { title: 'COS 102', bankKey: 'COS 102', icon: '💻', file: 'cos102.js',  iconGradient: 'linear-gradient(135deg,#3b82f6,#1d4ed8)' },
-        { title: 'MLS 104', bankKey: 'MLS 104', icon: '🦠', file: 'mls104.js',  iconGradient: 'linear-gradient(135deg,#84cc16,#65a30d)' }
+        { title: 'MLS 104', bankKey: 'MLS 104', icon: '🦠', file: 'mls104.js',  iconGradient: 'linear-gradient(135deg,#84cc16,#65a30d)' },
+        { title: 'MCB 102', bankKey: 'MCB 102', icon: '🔬', file: 'mcb102.js', iconGradient: 'linear-gradient(135deg,#22c55e,#16a34a)' }
     ];
 
     var TOPICS_MAP = {
@@ -131,6 +132,16 @@
             { id: 'disease_mechanisms',   name: 'Pathophysiology',            startIdx: 65, endIdx: 75  },
             { id: 'laboratory_diagnosis', name: 'Laboratory Diagnosis',       startIdx: 75, endIdx: 90  },
             { id: 'prevention_control',   name: 'Prevention & Control',       startIdx: 90, endIdx: 100 }
+        ],
+        'MCB 102': [
+            { id: 'intro_microbiology',   name: 'Introduction to Microbiology',  startIdx: 0, endIdx: 0 },
+            { id: 'bacteria',             name: 'Bacteria',                       startIdx: 0, endIdx: 0 },
+            { id: 'viruses',              name: 'Viruses',                        startIdx: 0, endIdx: 0 },
+            { id: 'fungi_algae',          name: 'Fungi & Algae',                  startIdx: 0, endIdx: 0 },
+            { id: 'protozoa',             name: 'Protozoa & Parasites',           startIdx: 0, endIdx: 0 },
+            { id: 'microbial_growth',     name: 'Microbial Growth & Genetics',    startIdx: 0, endIdx: 0 },
+            { id: 'sterilization',        name: 'Sterilization & Disinfection',   startIdx: 0, endIdx: 0 },
+            { id: 'applied_microbiology', name: 'Applied & Medical Microbiology', startIdx: 0, endIdx: 0 }
         ]
     };
 
