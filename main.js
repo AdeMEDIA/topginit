@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
         "PHY 102": { semester: "second", title: "PHY 102", level: "100L • General Physics II", description: "Electricity, magnetism and modern physics", icon: "⚡", iconGradient: "linear-gradient(135deg, #ef4444, #dc2626)", qCount: 100, locked: false, file: "phy102.js", bankKey: "PHY 102" },
         "COS 102": { semester: "second", title: "COS 102", level: "100L • Intro to Computing Science", description: "Computer science fundamentals and programming", icon: "💻", iconGradient: "linear-gradient(135deg, #3b82f6, #1d4ed8)", qCount: 100, locked: false, file: "cos102.js", bankKey: "COS 102" },
         "MLS 104": { semester: "second", title: "MLS 104", level: "100L • Introduction to Biology of Diseases", description: "Disease mechanisms and pathology basics", icon: "🦠", iconGradient: "linear-gradient(135deg, #84cc16, #65a30d)", qCount: 100, locked: false, file: "mls104.js", bankKey: "MLS 104" },
-        "MCB 102": { semester: "second", title: "MCB 102", level: "100L • Introductory Microbiology", description: "Bacteria, viruses, fungi, protozoa and microbial disease", icon: "🔬", iconGradient: "linear-gradient(135deg, #22c55e, #16a34a)", qCount: 0, locked: false, file: "mcb102.js", bankKey: "MCB 102" }
+        "MCB 102": { semester: "second", title: "MCB 102", level: "100L • Introductory Microbiology", description: "Bacteria, viruses, fungi, protozoa and microbial disease", icon: "🔬", iconGradient: "linear-gradient(135deg, #22c55e, #16a34a)", qCount: 92, locked: false, file: "mcb102.js", bankKey: "MCB 102" }
     };
 
    // ==================== TOPICS & NOTES FOR EACH COURSE ====================
@@ -204,14 +204,13 @@ document.addEventListener('DOMContentLoaded', function() {
 "MCB 102": {
     icon: "🔬",
     topics: [
-        { id: "intro_microbiology",   name: "Introduction to Microbiology",  description: "History, scope, branches and importance of microbiology",         qCount: 0, startIdx: 0,  endIdx: 0  },
-        { id: "bacteria",             name: "Bacteria",                       description: "Bacterial structure, classification, morphology and staining",     qCount: 0, startIdx: 0,  endIdx: 0  },
-        { id: "viruses",              name: "Viruses",                        description: "Viral structure, replication, classification and disease",          qCount: 0, startIdx: 0,  endIdx: 0  },
-        { id: "fungi_algae",          name: "Fungi & Algae",                  description: "Structure, reproduction and importance of fungi and algae",         qCount: 0, startIdx: 0,  endIdx: 0  },
-        { id: "protozoa",             name: "Protozoa & Parasites",           description: "Protozoan classification, life cycles and diseases caused",         qCount: 0, startIdx: 0,  endIdx: 0  },
-        { id: "microbial_growth",     name: "Microbial Growth & Genetics",    description: "Growth phases, culture media, microbial genetics and mutation",    qCount: 0, startIdx: 0,  endIdx: 0  },
-        { id: "sterilization",        name: "Sterilization & Disinfection",   description: "Methods of sterilization, antiseptics, disinfectants, antibiotics", qCount: 0, startIdx: 0,  endIdx: 0  },
-        { id: "applied_microbiology", name: "Applied & Medical Microbiology", description: "Microbial diseases, host-parasite relations, immunity and control", qCount: 0, startIdx: 0,  endIdx: 0  }
+        { id: "intro_history",            name: "Introduction & History",         description: "Definition, history of microbiology and pioneering scientists",      qCount: 15, startIdx: 0,  endIdx: 15 },
+        { id: "spontaneous_generation",   name: "Spontaneous Generation",         description: "The debate, key experiments and disproving abiogenesis",              qCount: 12, startIdx: 15, endIdx: 27 },
+        { id: "germ_theory",              name: "Germ Theory & Koch's Postulate", description: "Pasteur's germ theory and Koch's postulates for disease causation",   qCount: 11, startIdx: 27, endIdx: 38 },
+        { id: "microbe_characteristics",  name: "Characteristics of Microbes",    description: "Unique features, structure and classification of microorganisms",     qCount: 10, startIdx: 38, endIdx: 48 },
+        { id: "microbial_growth",         name: "Microbial Growth Phases",        description: "Lag, log, stationary and death phases of microbial growth",          qCount: 9,  startIdx: 48, endIdx: 57 },
+        { id: "economic_fungi",           name: "Economic Importance of Fungi",   description: "Beneficial and harmful roles of fungi in industry and health",        qCount: 19, startIdx: 57, endIdx: 76 },
+        { id: "economic_bacteria",        name: "Economic Importance of Bacteria",description: "Uses and harms of bacteria in food, medicine and environment",        qCount: 16, startIdx: 76, endIdx: 92 }
     ]
 },
 "MTH 102": {
@@ -3231,14 +3230,249 @@ document.addEventListener('DOMContentLoaded', function() {
     `
 },
 "MCB 102": {
-    intro_microbiology: `<p class="notes-coming-soon">Notes coming soon — questions are being added from the PDF source.</p>`,
-    bacteria: `<p class="notes-coming-soon">Notes coming soon.</p>`,
-    viruses: `<p class="notes-coming-soon">Notes coming soon.</p>`,
-    fungi_algae: `<p class="notes-coming-soon">Notes coming soon.</p>`,
-    protozoa: `<p class="notes-coming-soon">Notes coming soon.</p>`,
-    microbial_growth: `<p class="notes-coming-soon">Notes coming soon.</p>`,
-    sterilization: `<p class="notes-coming-soon">Notes coming soon.</p>`,
-    applied_microbiology: `<p class="notes-coming-soon">Notes coming soon.</p>`
+    intro_history: `
+        <h4>🔬 Introduction & History of Microbiology</h4>
+
+        <div class="definition-box">
+            <strong>📌 Quick Definition:</strong>
+            <ul>
+                <li><strong>Microbiology</strong> = study of microscopic forms of life (bacteria, viruses, fungi, protozoa, algae).</li>
+                <li><strong>Microbes</strong> are invisible to the naked eye — need a microscope.</li>
+            </ul>
+        </div>
+
+        <h4>🏆 Key Scientists — memorise these!</h4>
+        <table class="notes-table">
+            <tr><th>Scientist</th><th>Contribution</th><th>Year</th></tr>
+            <tr><td>Antonie van Leeuwenhoek</td><td>First to observe bacteria ("animalcules") with single-lens microscope</td><td>1676</td></tr>
+            <tr><td>Louis Pasteur</td><td>Disproved spontaneous generation; germ theory; pasteurisation; vaccines</td><td>1850s–1880s</td></tr>
+            <tr><td>Robert Koch</td><td>Koch's postulates; proved specific microbes cause specific diseases</td><td>1876–1884</td></tr>
+            <tr><td>Robert Hooke</td><td>First to use the word "cell"; observed cells in cork (1665)</td><td>1665</td></tr>
+            <tr><td>Joseph Lister</td><td>Antiseptic surgery using carbolic acid</td><td>1867</td></tr>
+            <tr><td>Alexander Fleming</td><td>Discovered penicillin (first antibiotic)</td><td>1928</td></tr>
+            <tr><td>Edward Jenner</td><td>First vaccine (smallpox/cowpox)</td><td>1796</td></tr>
+            <tr><td>Dmitri Ivanovsky</td><td>First evidence of viruses (tobacco mosaic disease)</td><td>1892</td></tr>
+        </table>
+
+        <div class="key-point">
+            <strong>💡 Trick:</strong> Leeuwenhoek = first to SEE bacteria. Pasteur = germ theory. Koch = postulates. Fleming = penicillin. These four come up every exam.
+        </div>
+
+        <h4>📋 Branches of Microbiology</h4>
+        <ul>
+            <li><strong>Bacteriology</strong> — bacteria</li>
+            <li><strong>Virology</strong> — viruses</li>
+            <li><strong>Mycology</strong> — fungi</li>
+            <li><strong>Protozoology</strong> — protozoa</li>
+            <li><strong>Phycology / Algology</strong> — algae</li>
+            <li><strong>Immunology</strong> — immune system</li>
+            <li><strong>Epidemiology</strong> — disease spread in populations</li>
+        </ul>
+    `,
+
+    spontaneous_generation: `
+        <h4>🧫 Spontaneous Generation</h4>
+
+        <div class="definition-box">
+            <strong>📌 What it is:</strong> The old belief that living things arise from non-living matter (e.g., maggots from meat, frogs from mud). Also called <strong>abiogenesis</strong>.
+        </div>
+
+        <h4>⚔️ The Debate — Who said what</h4>
+        <table class="notes-table">
+            <tr><th>Scientist</th><th>Side</th><th>Experiment</th></tr>
+            <tr><td>Francesco Redi (1668)</td><td>Against</td><td>Covered vs uncovered meat → maggots only on uncovered = flies lay eggs</td></tr>
+            <tr><td>John Needham (1748)</td><td>For</td><td>Boiled broth in sealed flasks → still grew microbes → "life force"</td></tr>
+            <tr><td>Lazzaro Spallanzani (1768)</td><td>Against</td><td>Properly sealed + boiled broth → no growth. (Needham said he killed the "life force")</td></tr>
+            <tr><td>Louis Pasteur (1859)</td><td>Against (FINAL)</td><td><strong>Swan-neck flask</strong>: boiled broth + curved neck → no growth unless neck broken. SETTLED the debate.</td></tr>
+        </table>
+
+        <div class="key-point">
+            <strong>💡 Trick:</strong> Pasteur's swan-neck flask = the experiment that ended the debate. Air could enter but dust/microbes couldn't reach the broth. When neck was broken, broth grew cloudy. Exam loves this.
+        </div>
+
+        <h4>📌 Key Terms</h4>
+        <ul>
+            <li><strong>Abiogenesis</strong> = spontaneous generation (life from non-life)</li>
+            <li><strong>Biogenesis</strong> = life only comes from existing life (what we believe now)</li>
+            <li><strong>Pasteurisation</strong> = mild heat to kill pathogens in food/drinks (not the same as sterilisation)</li>
+        </ul>
+    `,
+
+    germ_theory: `
+        <h4>🦠 Germ Theory & Koch's Postulates</h4>
+
+        <div class="definition-box">
+            <strong>📌 Germ Theory (Pasteur):</strong> Specific microorganisms (germs) cause specific infectious diseases. This replaced the old "miasma" theory (bad air causes disease).
+        </div>
+
+        <h4>✅ Koch's Postulates — 4 steps, memorise order</h4>
+        <ol>
+            <li>The microorganism must be found in <strong>all diseased organisms</strong> but NOT in healthy ones.</li>
+            <li>The microorganism must be <strong>isolated</strong> from the diseased organism and grown in <strong>pure culture</strong>.</li>
+            <li>The cultured microorganism must <strong>cause disease</strong> when introduced into a healthy organism.</li>
+            <li>The microorganism must be <strong>re-isolated</strong> from the experimentally diseased organism and shown to be identical to the original.</li>
+        </ol>
+
+        <div class="key-point">
+            <strong>💡 Trick:</strong> Find → Isolate → Infect → Re-isolate. That's the 4-step chain. If any step fails, Koch's postulates are NOT fulfilled.
+        </div>
+
+        <h4>📋 Koch's Work</h4>
+        <ul>
+            <li>Proved <em>Bacillus anthracis</em> causes <strong>anthrax</strong> (1876)</li>
+            <li>Proved <em>Mycobacterium tuberculosis</em> causes <strong>tuberculosis</strong> (1882)</li>
+            <li>Introduced use of <strong>solid agar</strong> culture media (credited to Fannie Hesse/Richard Petri)</li>
+            <li>Developed <strong>staining techniques</strong> for bacteria</li>
+        </ul>
+
+        <h4>⚠️ Limitations of Koch's Postulates</h4>
+        <ul>
+            <li>Does NOT apply to viruses (can't grow in pure culture)</li>
+            <li>Some people carry pathogens but show no disease (asymptomatic carriers)</li>
+            <li>Some diseases are caused by multiple organisms</li>
+        </ul>
+    `,
+
+    microbe_characteristics: `
+        <h4>🔬 Characteristics of Microorganisms</h4>
+
+        <div class="definition-box">
+            <strong>📌 General Characteristics of ALL Microbes:</strong>
+            <ul>
+                <li>Microscopic (too small to see with naked eye)</li>
+                <li>Ubiquitous (found everywhere — soil, water, air, body)</li>
+                <li>Reproduce rapidly</li>
+                <li>Show great metabolic diversity</li>
+            </ul>
+        </div>
+
+        <h4>📊 Major Groups — Quick Comparison</h4>
+        <table class="notes-table">
+            <tr><th>Group</th><th>Cell Type</th><th>Has Nucleus?</th><th>Example</th></tr>
+            <tr><td>Bacteria</td><td>Prokaryote</td><td>No</td><td>E. coli, Salmonella</td></tr>
+            <tr><td>Fungi</td><td>Eukaryote</td><td>Yes</td><td>Rhizopus, Aspergillus, Candida</td></tr>
+            <tr><td>Protozoa</td><td>Eukaryote</td><td>Yes</td><td>Plasmodium, Amoeba</td></tr>
+            <tr><td>Algae</td><td>Eukaryote</td><td>Yes</td><td>Chlamydomonas, Spirogyra</td></tr>
+            <tr><td>Viruses</td><td>Acellular</td><td>No</td><td>Influenza, HIV, SARS-CoV-2</td></tr>
+        </table>
+
+        <div class="key-point">
+            <strong>💡 Trick:</strong> Only bacteria are prokaryotes. Viruses are NOT cells at all — they're acellular (no cell structure). Everything else (fungi, protozoa, algae) = eukaryotes.
+        </div>
+
+        <h4>📋 Bacterial Shapes (Morphology)</h4>
+        <ul>
+            <li><strong>Cocci</strong> — spherical (e.g., Staphylococcus, Streptococcus)</li>
+            <li><strong>Bacilli</strong> — rod-shaped (e.g., E. coli, Bacillus)</li>
+            <li><strong>Spirilla</strong> — spiral/helical (e.g., Helicobacter pylori)</li>
+            <li><strong>Vibrio</strong> — comma-shaped (e.g., Vibrio cholerae)</li>
+        </ul>
+    `,
+
+    microbial_growth: `
+        <h4>📈 Microbial Growth Phases</h4>
+
+        <div class="definition-box">
+            <strong>📌 Growth = increase in cell number</strong>, not cell size. Bacteria reproduce by <strong>binary fission</strong>.
+        </div>
+
+        <h4>🔄 The 4 Phases — Must Know All 4</h4>
+        <table class="notes-table">
+            <tr><th>Phase</th><th>What Happens</th><th>Key Feature</th></tr>
+            <tr><td>1. Lag Phase</td><td>Bacteria adjusting to new environment. No division yet.</td><td>Synthesis of enzymes, RNA — preparation stage</td></tr>
+            <tr><td>2. Log Phase (Exponential)</td><td>Rapid cell division. Population doubles every generation time.</td><td>Fastest growth; most metabolically active; best time to study bacteria</td></tr>
+            <tr><td>3. Stationary Phase</td><td>Growth = Death rate. Population stays constant.</td><td>Nutrients depleted, waste builds up</td></tr>
+            <tr><td>4. Death Phase (Decline)</td><td>Death rate > Growth rate. Population falls.</td><td>Toxic waste kills cells; nutrient exhaustion</td></tr>
+        </table>
+
+        <div class="key-point">
+            <strong>💡 Trick:</strong> Lag → Log → Stationary → Death. Remember: "Let Logs Stay Dead." In the log phase, bacteria are at peak activity — antibiotics work best here.
+        </div>
+
+        <h4>📌 Key Terms</h4>
+        <ul>
+            <li><strong>Generation time</strong> = time for population to double (E. coli ≈ 20 min)</li>
+            <li><strong>Binary fission</strong> = one cell splits into two equal cells</li>
+            <li><strong>Colony</strong> = visible mass of bacteria grown from a single cell on solid media</li>
+            <li><strong>Culture media</strong> = nutrients used to grow bacteria in the lab</li>
+        </ul>
+    `,
+
+    economic_fungi: `
+        <h4>🍄 Economic Importance of Fungi</h4>
+
+        <div class="definition-box">
+            <strong>📌 Fungi are eukaryotes</strong> that are saprophytes (feed on dead organic matter). They reproduce by spores. Major groups: Zygomycetes, Ascomycetes, Basidiomycetes, Deuteromycetes.
+        </div>
+
+        <h4>✅ Beneficial Uses of Fungi</h4>
+        <table class="notes-table">
+            <tr><th>Use</th><th>Fungus</th><th>Product/Role</th></tr>
+            <tr><td>Bread making</td><td>Saccharomyces cerevisiae (yeast)</td><td>Fermentation → CO₂ makes bread rise</td></tr>
+            <tr><td>Alcohol production</td><td>Saccharomyces cerevisiae</td><td>Ferments sugars → ethanol (beer, wine)</td></tr>
+            <tr><td>Cheese making</td><td>Penicillium roqueforti / P. camemberti</td><td>Ripening and flavouring of cheese</td></tr>
+            <tr><td>Antibiotics</td><td>Penicillium notatum (Fleming)</td><td>Produces penicillin</td></tr>
+            <tr><td>Soy sauce / tempeh</td><td>Aspergillus sojae / Rhizopus</td><td>Fermented food products</td></tr>
+            <tr><td>Citric acid</td><td>Aspergillus niger</td><td>Used in food and beverages</td></tr>
+            <tr><td>Decomposition</td><td>Various saprophytic fungi</td><td>Recycle nutrients in ecosystem</td></tr>
+            <tr><td>Food itself</td><td>Agaricus (mushroom)</td><td>Edible mushrooms</td></tr>
+        </table>
+
+        <h4>❌ Harmful Effects of Fungi</h4>
+        <ul>
+            <li><strong>Diseases in humans:</strong> Ringworm (Tinea), Candidiasis (Candida albicans), Athlete's foot, Histoplasmosis</li>
+            <li><strong>Diseases in plants:</strong> Damping off (Pythium), Blight, Mildew, Rust — destroy crops</li>
+            <li><strong>Food spoilage:</strong> Aspergillus, Rhizopus, Mucor spoil stored food</li>
+            <li><strong>Mycotoxins:</strong> Aflatoxin (from Aspergillus flavus) — contaminates groundnuts/maize; can cause liver cancer</li>
+            <li><strong>Wood rot:</strong> Fungi destroy timber and wooden structures</li>
+        </ul>
+
+        <div class="key-point">
+            <strong>💡 Trick:</strong> Aspergillus = aflatoxin + citric acid + food spoilage. Penicillium = penicillin antibiotic + cheese. Saccharomyces = yeast = bread + alcohol. These three come up most.
+        </div>
+    `,
+
+    economic_bacteria: `
+        <h4>🦠 Economic Importance of Bacteria</h4>
+
+        <div class="definition-box">
+            <strong>📌 Bacteria are prokaryotes.</strong> They are both enormously useful and dangerously harmful to humans.
+        </div>
+
+        <h4>✅ Beneficial Uses of Bacteria</h4>
+        <table class="notes-table">
+            <tr><th>Use</th><th>Bacterium</th><th>Role</th></tr>
+            <tr><td>Nitrogen fixation</td><td>Rhizobium (in legume roots), Azotobacter</td><td>Convert N₂ gas → ammonia → soil fertility</td></tr>
+            <tr><td>Yoghurt/Cheese</td><td>Lactobacillus, Streptococcus thermophilus</td><td>Ferment lactose → lactic acid</td></tr>
+            <tr><td>Vinegar</td><td>Acetobacter aceti</td><td>Oxidise ethanol → acetic acid</td></tr>
+            <tr><td>Antibiotics</td><td>Streptomyces</td><td>Produces streptomycin, tetracycline, erythromycin</td></tr>
+            <tr><td>Sewage treatment</td><td>Mixed bacteria</td><td>Break down organic waste</td></tr>
+            <tr><td>Bioremediation</td><td>Various</td><td>Clean up oil spills, toxic waste</td></tr>
+            <tr><td>Biotechnology</td><td>E. coli (engineered)</td><td>Produces insulin, growth hormones, vaccines</td></tr>
+            <tr><td>Decomposition</td><td>Saprophytic bacteria</td><td>Recycle dead organic matter</td></tr>
+        </table>
+
+        <h4>❌ Harmful Effects of Bacteria</h4>
+        <ul>
+            <li><strong>Food poisoning:</strong> Salmonella typhi (typhoid), Clostridium botulinum (botulism), Staphylococcus aureus</li>
+            <li><strong>Respiratory diseases:</strong> Mycobacterium tuberculosis (TB), Streptococcus pneumoniae (pneumonia)</li>
+            <li><strong>STIs:</strong> Neisseria gonorrhoeae (gonorrhoea), Treponema pallidum (syphilis)</li>
+            <li><strong>Plant diseases:</strong> Agrobacterium (crown gall), Erwinia (soft rot)</li>
+            <li><strong>Food spoilage:</strong> Pseudomonas, Clostridium spoil meat, canned food</li>
+        </ul>
+
+        <div class="key-point">
+            <strong>💡 Trick:</strong> Rhizobium = nitrogen fixation in legumes (most common exam Q). Lactobacillus = yoghurt. Streptomyces = antibiotic source (NOT Penicillium — that's a fungus). E. coli = lab workhorse for biotech.
+        </div>
+
+        <h4>📌 Nitrogen Cycle — Quick Summary</h4>
+        <ul>
+            <li><strong>Nitrogen fixation:</strong> Rhizobium/Azotobacter → N₂ → NH₃</li>
+            <li><strong>Nitrification:</strong> Nitrosomonas → NH₃ → NO₂⁻; Nitrobacter → NO₂⁻ → NO₃⁻</li>
+            <li><strong>Denitrification:</strong> Pseudomonas → NO₃⁻ back to N₂ gas</li>
+            <li><strong>Ammonification:</strong> Decomposers break down proteins → NH₃</li>
+        </ul>
+    `
 },
 "COS 102": {
     intro_computing: `

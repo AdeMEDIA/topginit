@@ -134,14 +134,13 @@
             { id: 'prevention_control',   name: 'Prevention & Control',       startIdx: 90, endIdx: 100 }
         ],
         'MCB 102': [
-            { id: 'intro_microbiology',   name: 'Introduction to Microbiology',  startIdx: 0, endIdx: 0 },
-            { id: 'bacteria',             name: 'Bacteria',                       startIdx: 0, endIdx: 0 },
-            { id: 'viruses',              name: 'Viruses',                        startIdx: 0, endIdx: 0 },
-            { id: 'fungi_algae',          name: 'Fungi & Algae',                  startIdx: 0, endIdx: 0 },
-            { id: 'protozoa',             name: 'Protozoa & Parasites',           startIdx: 0, endIdx: 0 },
-            { id: 'microbial_growth',     name: 'Microbial Growth & Genetics',    startIdx: 0, endIdx: 0 },
-            { id: 'sterilization',        name: 'Sterilization & Disinfection',   startIdx: 0, endIdx: 0 },
-            { id: 'applied_microbiology', name: 'Applied & Medical Microbiology', startIdx: 0, endIdx: 0 }
+            { id: 'intro_history',           name: 'Introduction & History',          startIdx: 0,  endIdx: 15 },
+            { id: 'spontaneous_generation',  name: 'Spontaneous Generation',          startIdx: 15, endIdx: 27 },
+            { id: 'germ_theory',             name: "Germ Theory & Koch's Postulate",  startIdx: 27, endIdx: 38 },
+            { id: 'microbe_characteristics', name: 'Characteristics of Microbes',     startIdx: 38, endIdx: 48 },
+            { id: 'microbial_growth',        name: 'Microbial Growth Phases',         startIdx: 48, endIdx: 57 },
+            { id: 'economic_fungi',          name: 'Economic Importance of Fungi',    startIdx: 57, endIdx: 76 },
+            { id: 'economic_bacteria',       name: 'Economic Importance of Bacteria', startIdx: 76, endIdx: 92 }
         ]
     };
 
