@@ -2874,250 +2874,346 @@ document.addEventListener('DOMContentLoaded', function() {
 },
 "MTH 102": {
     functions: `
-        <h4>📈 Functions and Graphs</h4>
-        
         <div class="definition-box">
-            <strong>📌 Key Definition:</strong> A function f is a rule that assigns each input x exactly one output f(x). Domain = set of inputs, Range = set of outputs.
+            <strong>📌 The Big Idea:</strong> A function takes one input x and gives exactly one output f(x). Domain = all allowed x values. Range = all possible outputs.
         </div>
-        
-        <h4>📊 Types of Functions</h4>
+
+        <h4>⚡ Quick Rules — Domain</h4>
         <ul>
-            <li><strong>Linear:</strong> f(x) = mx + b (straight line, slope m)</li>
-            <li><strong>Quadratic:</strong> f(x) = ax² + bx + c (parabola, U-shaped)</li>
-            <li><strong>Polynomial:</strong> f(x) = aₙxⁿ + ... + a₀ (degree n)</li>
-            <li><strong>Exponential:</strong> f(x) = aˣ (rapid growth/decay)</li>
-            <li><strong>Logarithmic:</strong> f(x) = logₐ x (inverse of exponential)</li>
-            <li><strong>Trigonometric:</strong> sin x, cos x, tan x (periodic)</li>
-            <li><strong>Absolute Value:</strong> f(x) = |x| (V-shaped, corner at 0)</li>
+            <li><strong>Square root √:</strong> Inside must be ≥ 0. e.g. f(x) = √(x−5) → domain: x ≥ 5</li>
+            <li><strong>Fraction 1/x:</strong> Denominator ≠ 0. Set bottom = 0, those values are excluded.</li>
+            <li><strong>log / ln:</strong> Inside must be > 0.</li>
+            <li><strong>Polynomial:</strong> Domain = all real numbers (ℝ), no restrictions.</li>
+            <li><strong>Floor function ⌊x⌋:</strong> Domain = ℝ, Range = ℤ (integers). <em>Always remember this!</em></li>
         </ul>
-        
-        <div class="key-point">
-            <strong>💡 Key Point:</strong> The vertical line test determines if a graph represents a function. The horizontal line test determines if it's one-to-one (has an inverse).
-        </div>
-        
-        <h4>🔄 Function Operations</h4>
+
+        <h4>📋 Must-Know Function Types</h4>
         <ul>
-            <li><strong>Composition:</strong> (f ∘ g)(x) = f(g(x))</li>
-            <li><strong>Inverse:</strong> f⁻¹(f(x)) = x, found by swapping x and y</li>
-            <li><strong>Even function:</strong> f(-x) = f(x) (symmetric about y-axis)</li>
-            <li><strong>Odd function:</strong> f(-x) = -f(x) (symmetric about origin)</li>
+            <li><strong>Linear:</strong> y = mx + b — straight line</li>
+            <li><strong>Quadratic:</strong> y = ax² + bx + c — U-shaped (parabola)</li>
+            <li><strong>Cubic:</strong> degree 3 — S-shaped</li>
+            <li><strong>Exponential:</strong> y = aˣ — variable is in the exponent</li>
+            <li><strong>Absolute value:</strong> y = |x| — V-shape, corner at x = 0, not differentiable there</li>
+            <li><strong>Even function:</strong> f(−x) = f(x) — symmetric about y-axis (e.g. x²)</li>
+            <li><strong>Odd function:</strong> f(−x) = −f(x) — symmetric about origin</li>
+        </ul>
+
+        <h4>🔑 Tests (Quick CBT Answers)</h4>
+        <ul>
+            <li><strong>Vertical line test:</strong> Passes → it's a function</li>
+            <li><strong>Horizontal line test:</strong> Passes → it's one-to-one (has an inverse)</li>
+        </ul>
+
+        <h4>🧮 CBT Examples</h4>
+        <ul>
+            <li><strong>f(x) = 2x + 3, find f(4):</strong> → 2(4) + 3 = <strong>11</strong></li>
+            <li><strong>f(x) = x² − 4x, find f(3):</strong> → 9 − 12 = <strong>−3</strong></li>
+            <li><strong>f(x) = √(x − 5), domain?</strong> → x − 5 ≥ 0 → x ≥ 5 → <strong>[5, ∞)</strong></li>
+            <li><strong>Composition (f∘g)(x) where f(x) = x²+1, g(x) = 2x:</strong> → f(2x) = (2x)²+1 = <strong>4x²+1</strong></li>
+            <li><strong>Inverse of f(x) = 3x − 2:</strong> Swap x and y → x = 3y − 2 → y = (x+2)/3</li>
+            <li><strong>Range of y = x² + 2:</strong> x² ≥ 0, so minimum is 2 → Range: <strong>y ≥ 2</strong></li>
         </ul>
     `,
     
     limits: `
-        <h4>🎯 Limits and Continuity</h4>
-        
         <div class="definition-box">
-            <strong>📌 Key Definition:</strong> lim_{x→a} f(x) = L means f(x) approaches L as x approaches a. Continuity requires lim_{x→a} f(x) = f(a).
+            <strong>📌 The Big Idea:</strong> A limit asks: "what value does f(x) approach as x gets close to a number?" You don't actually plug in — you see what it approaches.
         </div>
-        
-        <h4>📊 Limit Laws</h4>
+
+        <h4>⚡ 3-Step Strategy for Any Limit</h4>
+        <ol>
+            <li><strong>Try direct substitution first</strong> — just plug in the value. If you get a real number, that's the answer.</li>
+            <li><strong>Got 0/0? Factor and cancel</strong> — the common factor causing 0/0 will cancel out.</li>
+            <li><strong>Still stuck? Use L'Hôpital's Rule</strong> — differentiate top and bottom separately.</li>
+        </ol>
+
+        <h4>🔥 Must-Memorize Standard Limits</h4>
         <ul>
-            <li>Sum: lim [f+g] = lim f + lim g</li>
-            <li>Product: lim [f·g] = lim f · lim g</li>
-            <li>Quotient: lim [f/g] = lim f / lim g (if lim g ≠ 0)</li>
-            <li>Constant multiple: lim [c·f] = c·lim f</li>
+            <li>lim (sin x / x) → <strong>1</strong> &nbsp;&nbsp; (as x → 0)</li>
+            <li>lim (tan x / x) → <strong>1</strong> &nbsp;&nbsp; (as x → 0)</li>
+            <li>lim ((1 − cos x) / x) → <strong>0</strong> &nbsp;&nbsp; (as x → 0)</li>
+            <li>lim ((1 − cos x) / x²) → <strong>1/2</strong> &nbsp;&nbsp; (as x → 0)</li>
+            <li>lim (1/x) → <strong>0</strong> &nbsp;&nbsp; (as x → ∞)</li>
         </ul>
-        
-        <div class="key-point">
-            <strong>💡 Key Point:</strong> Standard limits you must memorize:
-            <ul>
-                <li>lim_{x→0} sin x / x = 1</li>
-                <li>lim_{x→0} (cos x - 1)/x = 0</li>
-                <li>lim_{x→∞} (1 + 1/x)ˣ = e</li>
-            </ul>
-        </div>
-        
-        <h4>📈 Asymptotes</h4>
+
+        <h4>📋 Continuity & Discontinuity</h4>
         <ul>
-            <li><strong>Vertical:</strong> x = a where denominator = 0 (unbounded behavior)</li>
-            <li><strong>Horizontal:</strong> y = L as x → ±∞ (end behavior)</li>
-            <li><strong>Slant (Oblique):</strong> y = mx + b when degree of numerator = degree of denominator + 1</li>
+            <li>Function is <strong>continuous at x = a</strong> if: limit exists AND equals f(a)</li>
+            <li><strong>Point of discontinuity</strong> → set denominator = 0, solve for x</li>
+            <li><strong>Hole (removable):</strong> common factor in top and bottom that cancels</li>
+            <li><strong>Vertical asymptote:</strong> denominator = 0, numerator ≠ 0</li>
+            <li><strong>Horizontal asymptote:</strong> compare degrees of top vs bottom
+                <ul>
+                    <li>Top degree &lt; bottom → y = 0</li>
+                    <li>Degrees equal → y = ratio of leading coefficients</li>
+                    <li>Top degree &gt; bottom → no horizontal asymptote</li>
+                </ul>
+            </li>
         </ul>
-        
-        <h4>🔄 Continuity</h4>
+
+        <h4>🧮 CBT Examples</h4>
         <ul>
-            <li>Polynomials are continuous everywhere</li>
-            <li>Rational functions are continuous except where denominator = 0</li>
-            <li>Types: removable (holes), jump, infinite (vertical asymptote)</li>
+            <li><strong>lim (x² − 4)/(x − 2) as x → 2:</strong> Factor → (x−2)(x+2)/(x−2) = x+2 → plug in 2 = <strong>4</strong></li>
+            <li><strong>lim (x² − 9)/(x − 3) as x → 3:</strong> Factor → (x−3)(x+3)/(x−3) = x+3 → plug in 3 = <strong>6</strong></li>
+            <li><strong>lim (3x² + 2x − 1) as x → 2:</strong> Just substitute → 3(4)+2(2)−1 = <strong>15</strong></li>
+            <li><strong>lim (cos x − 1)/x as x → 0:</strong> Standard limit → <strong>0</strong></li>
+            <li><strong>Discontinuity of (3x²−9)/(x−3):</strong> Set x−3 = 0 → <strong>x = 3</strong></li>
+            <li><strong>Vertical asymptote of 1/(x−3):</strong> x−3 = 0 → <strong>x = 3</strong></li>
+            <li><strong>HA of (2x²+1)/(x²−4):</strong> Degrees equal → 2/1 = <strong>y = 2</strong></li>
         </ul>
     `,
     
     differentiation: `
-        <h4>⚡ Differentiation (Derivatives)</h4>
-        
         <div class="definition-box">
-            <strong>📌 Key Definition:</strong> The derivative f'(x) = lim_{h→0} [f(x+h)-f(x)]/h represents the instantaneous rate of change or slope of the tangent line.
+            <strong>📌 The Big Idea:</strong> dy/dx tells you the slope of the curve at any point. Think of it as "how fast y is changing as x changes."
         </div>
-        
-        <h4>📋 Basic Differentiation Rules</h4>
+
+        <h4>🔥 Must-Know Derivative Rules</h4>
         <ul>
-            <li><strong>Power Rule:</strong> d/dx(xⁿ) = nxⁿ⁻¹</li>
-            <li><strong>Constant Rule:</strong> d/dx(c) = 0</li>
-            <li><strong>Constant Multiple:</strong> d/dx(c·f) = c·f'</li>
-            <li><strong>Sum Rule:</strong> d/dx(f+g) = f' + g'</li>
-            <li><strong>Product Rule:</strong> d/dx(uv) = u'v + uv'</li>
-            <li><strong>Quotient Rule:</strong> d/dx(u/v) = (u'v - uv')/v²</li>
-            <li><strong>Chain Rule:</strong> d/dx[f(g(x))] = f'(g(x))·g'(x)</li>
+            <li><strong>Power Rule:</strong> y = xⁿ → dy/dx = nxⁿ⁻¹ &nbsp; <em>(bring the power down, reduce it by 1)</em></li>
+            <li><strong>Constant:</strong> y = 7 → dy/dx = 0</li>
+            <li><strong>Product Rule:</strong> y = u·v → dy/dx = u·(dv/dx) + v·(du/dx) &nbsp; <em>"first × derivative of second + second × derivative of first"</em></li>
+            <li><strong>Quotient Rule:</strong> y = u/v → dy/dx = [v·(du/dx) − u·(dv/dx)] / v² &nbsp; <em>"low d-high minus high d-low, over low squared"</em></li>
+            <li><strong>Chain Rule:</strong> y = f(g(x)) → dy/dx = f'(g(x)) · g'(x) &nbsp; <em>"derivative of outside × derivative of inside"</em></li>
         </ul>
-        
-        <div class="key-point">
-            <strong>💡 Key Point:</strong> Memorize these derivatives:
-            <ul>
-                <li>d/dx(eˣ) = eˣ</li>
-                <li>d/dx(ln x) = 1/x</li>
-                <li>d/dx(sin x) = cos x</li>
-                <li>d/dx(cos x) = -sin x</li>
-                <li>d/dx(tan x) = sec² x</li>
-                <li>d/dx(aˣ) = aˣ ln a</li>
-            </ul>
-        </div>
-        
-        <h4>📈 Implicit Differentiation</h4>
-        <p>Used when y is not isolated. Differentiate both sides with respect to x, treating y as a function of x, then solve for dy/dx.</p>
-        
-        <h4>🎯 Applications of Derivatives</h4>
+
+        <h4>🔥 Must-Know Standard Derivatives</h4>
         <ul>
-            <li><strong>Tangent lines:</strong> y - y₀ = f'(x₀)(x - x₀)</li>
-            <li><strong>Increasing/Decreasing:</strong> f' > 0 → increasing; f' < 0 → decreasing</li>
-            <li><strong>Critical points:</strong> f'(c) = 0 or undefined (potential max/min)</li>
-            <li><strong>First Derivative Test:</strong> Sign change indicates local max or min</li>
-            <li><strong>Second Derivative Test:</strong> f'' > 0 → min; f'' < 0 → max</li>
-            <li><strong>Concavity:</strong> f'' > 0 → concave up; f'' < 0 → concave down</li>
-            <li><strong>Points of inflection:</strong> f'' changes sign</li>
-            <li><strong>Velocity:</strong> v(t) = s'(t)</li>
-            <li><strong>Acceleration:</strong> a(t) = v'(t) = s''(t)</li>
-            <li><strong>Optimization:</strong> Find critical points of function to maximize/minimize</li>
+            <li>y = xⁿ &nbsp;→&nbsp; dy/dx = nxⁿ⁻¹</li>
+            <li>y = eˣ &nbsp;→&nbsp; dy/dx = eˣ</li>
+            <li>y = aˣ &nbsp;→&nbsp; dy/dx = aˣ ln a</li>
+            <li>y = ln x &nbsp;→&nbsp; dy/dx = 1/x</li>
+            <li>y = ln(f(x)) &nbsp;→&nbsp; dy/dx = f'(x)/f(x) &nbsp; <strong>← shortcut!</strong></li>
+            <li>y = sin x &nbsp;→&nbsp; dy/dx = cos x</li>
+            <li>y = cos x &nbsp;→&nbsp; dy/dx = −sin x</li>
+            <li>y = tan x &nbsp;→&nbsp; dy/dx = sec² x</li>
+            <li>y = sec x &nbsp;→&nbsp; dy/dx = sec x tan x</li>
+            <li>y = arctan x &nbsp;→&nbsp; dy/dx = 1/(1+x²)</li>
+            <li>y = √x = x^(1/2) &nbsp;→&nbsp; dy/dx = 1/(2√x)</li>
+        </ul>
+
+        <h4>📋 Partial Differentiation</h4>
+        <p>Treat ALL other variables as constants, differentiate only with respect to the target variable.</p>
+        <ul>
+            <li>v = 4x²y → ∂v/∂x = <strong>8xy</strong> &nbsp; (treat y as a number)</li>
+            <li>v = 4x²y → ∂v/∂y = <strong>4x²</strong> &nbsp; (treat x as a number)</li>
+        </ul>
+
+        <h4>🧮 CBT Worked Examples</h4>
+        <ul>
+            <li><strong>y = x³ → dy/dx = 3x²</strong></li>
+            <li><strong>y = 5x⁴ → dy/dx = 20x³</strong></li>
+            <li><strong>y = (3/2)x⁴ − 3x² − 6x − 1 → dy/dx = 6x³ − 6x − 6</strong></li>
+            <li><strong>y = 5x²·(6/x):</strong> Simplify first → y = 30x → dy/dx = <strong>30</strong> &nbsp; <em>(always simplify before differentiating!)</em></li>
+            <li><strong>y = ln(sin x) → dy/dx = cos x / sin x = cot x</strong> &nbsp; <em>(used the ln shortcut)</em></li>
+            <li><strong>y = ln(x² + 1) → dy/dx = 2x/(x² + 1)</strong></li>
+            <li><strong>y = x·sin(x³):</strong> Product Rule + Chain Rule
+                <ul>
+                    <li>u = x → du/dx = 1</li>
+                    <li>v = sin(x³) → dv/dx = cos(x³)·3x² &nbsp; (chain rule)</li>
+                    <li>dy/dx = x·3x²cos(x³) + sin(x³)·1 = <strong>3x³cos(x³) + sin(x³)</strong></li>
+                </ul>
+            </li>
+            <li><strong>y = (x²+1)⁵ → dy/dx = 5(x²+1)⁴·2x = 10x(x²+1)⁴</strong> &nbsp; (chain rule)</li>
+            <li><strong>y = e^{2x} → dy/dx = 2e^{2x}</strong> &nbsp; (chain rule: outer stays, multiply by inner's derivative)</li>
+            <li><strong>4x³ − 2x² + 5x − 7 → dy/dx = 12x² − 4x + 5</strong></li>
         </ul>
     `,
     
+    applications_derivatives: `
+        <div class="definition-box">
+            <strong>📌 The Big Idea:</strong> dy/dx = 0 finds stationary points (max/min). The sign of d²y/dx² tells you which one.
+        </div>
+
+        <h4>🔥 Stationary Points — Step by Step</h4>
+        <ol>
+            <li>Find dy/dx</li>
+            <li>Set dy/dx = 0, solve for x</li>
+            <li>Substitute x back into original equation to get y → that's the point</li>
+            <li>Find d²y/dx² at that x:
+                <ul>
+                    <li>d²y/dx² &gt; 0 → <strong>minimum</strong></li>
+                    <li>d²y/dx² &lt; 0 → <strong>maximum</strong></li>
+                </ul>
+            </li>
+        </ol>
+
+        <h4>⚡ Shortcut for Quadratics</h4>
+        <p>For y = ax² + bx + c → stationary point at: &nbsp;<strong>x = −b / (2a)</strong></p>
+        <p>Then substitute to find y.</p>
+
+        <h4>📋 Increasing / Decreasing</h4>
+        <ul>
+            <li>dy/dx &gt; 0 → function is <strong>increasing</strong></li>
+            <li>dy/dx &lt; 0 → function is <strong>decreasing</strong></li>
+            <li>dy/dx = 0 → stationary (turning point)</li>
+        </ul>
+
+        <h4>📋 Tangent Line</h4>
+        <p>At point (x₀, y₀): &nbsp; <strong>y − y₀ = m(x − x₀)</strong> where m = dy/dx at x₀</p>
+
+        <h4>📋 Motion (Physics questions)</h4>
+        <ul>
+            <li>Position = s(t) → velocity = ds/dt → acceleration = d²s/dt²</li>
+        </ul>
+
+        <h4>🧮 CBT Examples</h4>
+        <ul>
+            <li><strong>y = x² − x + 2, find stationary point:</strong>
+                <ul>
+                    <li>dy/dx = 2x − 1 = 0 → x = 1/2</li>
+                    <li>y = (1/2)² − (1/2) + 2 = 1/4 − 1/2 + 2 = 7/4</li>
+                    <li>Point: <strong>(1/2, 7/4)</strong> &nbsp; <em>Shortcut: x = −(−1)/(2×1) = 1/2 ✓</em></li>
+                </ul>
+            </li>
+            <li><strong>f(x) = x³ − 3x² + 2, critical points:</strong>
+                <ul>
+                    <li>f'(x) = 3x² − 6x = 3x(x−2) = 0 → <strong>x = 0 and x = 2</strong></li>
+                </ul>
+            </li>
+            <li><strong>Slope of tangent to y = x² at x = 2:</strong> dy/dx = 2x → at x=2 → slope = <strong>4</strong></li>
+            <li><strong>Tangent line to y = x² at (2, 4):</strong> y − 4 = 4(x − 2) → y = 4x − 4</li>
+        </ul>
+    `,
+
     integration: `
-        <h4>∫ Integration (Antiderivatives)</h4>
-        
         <div class="definition-box">
-            <strong>📌 Key Definition:</strong> Integration is the inverse of differentiation. ∫ f(x) dx = F(x) + C where F'(x) = f(x).
+            <strong>📌 The Big Idea:</strong> Integration is the reverse of differentiation. Always add +C for indefinite integrals (because constants disappear when you differentiate).
         </div>
-        
-        <h4>📋 Basic Integration Rules</h4>
+
+        <h4>🔥 Must-Know Integral Rules</h4>
         <ul>
-            <li><strong>Power Rule:</strong> ∫ xⁿ dx = xⁿ⁺¹/(n+1) + C, n ≠ -1</li>
-            <li><strong>Natural Log:</strong> ∫ 1/x dx = ln|x| + C</li>
-            <li><strong>Exponential:</strong> ∫ eˣ dx = eˣ + C</li>
-            <li><strong>Exponential base a:</strong> ∫ aˣ dx = aˣ/ln a + C</li>
-            <li><strong>Trigonometric:</strong>
+            <li><strong>Power Rule:</strong> ∫ xⁿ dx = xⁿ⁺¹/(n+1) + C &nbsp; <em>(add 1 to power, divide by new power)</em></li>
+            <li><strong>1/x Rule:</strong> ∫ 1/x dx = ln|x| + C</li>
+            <li><strong>eˣ Rule:</strong> ∫ eˣ dx = eˣ + C</li>
+            <li><strong>aˣ Rule:</strong> ∫ aˣ dx = aˣ / ln a + C</li>
+            <li><strong>sin Rule:</strong> ∫ sin x dx = −cos x + C</li>
+            <li><strong>cos Rule:</strong> ∫ cos x dx = sin x + C</li>
+            <li><strong>sec² Rule:</strong> ∫ sec² x dx = tan x + C</li>
+            <li><strong>ln Trick:</strong> ∫ f'(x)/f(x) dx = ln|f(x)| + C &nbsp; <strong>← key CBT trick!</strong>
+                <ul><li>Check: is numerator = derivative of denominator? → answer is ln|denominator|</li></ul>
+            </li>
+            <li><strong>arctan:</strong> ∫ 1/(1+x²) dx = arctan x + C</li>
+        </ul>
+
+        <h4>📊 Integration by Substitution (u-sub)</h4>
+        <ol>
+            <li>Let u = inner function</li>
+            <li>Find du/dx, rearrange to get dx</li>
+            <li>Substitute, integrate, substitute back</li>
+        </ol>
+        <p><em>Example: ∫ 2x(x²+1)⁴ dx → let u = x²+1, du = 2x dx → ∫ u⁴ du = u⁵/5 = (x²+1)⁵/5 + C</em></p>
+
+        <h4>📊 Integration by Parts</h4>
+        <p><strong>∫ u dv = uv − ∫ v du</strong></p>
+        <p><em>Use when integrating a product like x·eˣ or x·ln x</em></p>
+        <p><em>Example: ∫ x eˣ dx → u=x, dv=eˣdx → v=eˣ → xeˣ − ∫eˣdx = xeˣ − eˣ + C</em></p>
+
+        <h4>🧮 CBT Examples</h4>
+        <ul>
+            <li><strong>∫ x dx = x²/2 + C</strong></li>
+            <li><strong>∫ (3x² + 2x) dx = x³ + x² + C</strong></li>
+            <li><strong>∫ cos x dx = sin x + C</strong></li>
+            <li><strong>∫ sin x dx = −cos x + C</strong></li>
+            <li><strong>∫ (12x² + 10)/(4x³ + 10x + 5) dx:</strong>
                 <ul>
-                    <li>∫ sin x dx = -cos x + C</li>
-                    <li>∫ cos x dx = sin x + C</li>
-                    <li>∫ sec² x dx = tan x + C</li>
-                    <li>∫ csc² x dx = -cot x + C</li>
-                    <li>∫ sec x tan x dx = sec x + C</li>
+                    <li>Check: derivative of (4x³+10x+5) = 12x²+10 ✓ &nbsp; (numerator = derivative of denominator)</li>
+                    <li>Answer: <strong>ln|4x³ + 10x + 5| + C</strong></li>
                 </ul>
             </li>
-        </ul>
-        
-        <div class="key-point">
-            <strong>💡 Key Point:</strong> Inverse trigonometric integrals:
-            <ul>
-                <li>∫ 1/(1+x²) dx = arctan x + C</li>
-                <li>∫ 1/√(1-x²) dx = arcsin x + C</li>
-                <li>∫ 1/(x√(x²-1)) dx = arcsec|x| + C</li>
-            </ul>
-        </div>
-        
-        <h4>📊 Integration Techniques</h4>
-        <ul>
-            <li><strong>u-Substitution:</strong> Let u = g(x), du = g'(x)dx (reverse of chain rule)</li>
-            <li><strong>Integration by Parts:</strong> ∫ u dv = uv - ∫ v du (reverse of product rule)</li>
-            <li><strong>Partial Fractions:</strong> Decompose rational functions into simpler fractions</li>
-            <li><strong>Trigonometric Substitution:</strong> For integrals with √(a²-x²), √(a²+x²), √(x²-a²)</li>
-        </ul>
-        
-        <h4>📈 Definite Integrals</h4>
-        <ul>
-            <li><strong>Fundamental Theorem of Calculus Part 1:</strong> ∫ₐᵇ f(x) dx = F(b) - F(a)</li>
-            <li><strong>Area under curve:</strong> ∫ₐᵇ f(x) dx (signed area)</li>
-            <li><strong>Properties:</strong> ∫ₐᵇ f = -∫ᵇₐ f; ∫ₐᵇ f + ∫ᵇᶜ f = ∫ₐᶜ f</li>
-        </ul>
-        
-        <h4>📊 Applications of Definite Integrals</h4>
-        <ul>
-            <li><strong>Area between curves:</strong> ∫ₐᵇ [f(x) - g(x)] dx</li>
-            <li><strong>Volume (disk method):</strong> V = π ∫ₐᵇ [f(x)]² dx (rotation about x-axis)</li>
-            <li><strong>Volume (washer method):</strong> V = π ∫ₐᵇ [R² - r²] dx (with hole)</li>
-            <li><strong>Volume (shell method):</strong> V = 2π ∫ₐᵇ x f(x) dx (rotation about y-axis)</li>
-            <li><strong>Average value:</strong> f_avg = (1/(b-a)) ∫ₐᵇ f(x) dx</li>
-            <li><strong>Displacement:</strong> ∫ v(t) dt</li>
-            <li><strong>Work:</strong> W = ∫ F(x) dx</li>
-        </ul>
-        
-        <h4>🔢 Numerical Integration</h4>
-        <ul>
-            <li><strong>Trapezoidal Rule:</strong> ∫ₐᵇ f(x) dx ≈ Δx/2 [f(x₀) + 2f(x₁) + 2f(x₂) + ... + f(x_n)]</li>
-            <li><strong>Simpson's Rule:</strong> ∫ₐᵇ f(x) dx ≈ Δx/3 [f(x₀) + 4f(x₁) + 2f(x₂) + 4f(x₃) + ... + f(x_n)] (n even)</li>
-        </ul>
-        
-        <h4>🔄 Improper Integrals</h4>
-        <ul>
-            <li><strong>Type 1 (Infinite limits):</strong> ∫ₐ^∞ f(x) dx = lim_{b→∞} ∫ₐᵇ f(x) dx</li>
-            <li><strong>Type 2 (Discontinuous integrand):</strong> ∫ₐᵇ f(x) dx where f has vertical asymptote</li>
-            <li>Converges if limit exists finite; diverges otherwise</li>
         </ul>
     `,
     
-    advanced_topics: `
-        <h4>🔬 Advanced Calculus Topics</h4>
-        
+    definite_integrals: `
         <div class="definition-box">
-            <strong>📌 Key Theorems:</strong> The Mean Value Theorem (MVT) and Rolle's Theorem are fundamental results connecting derivatives to function behavior.
+            <strong>📌 The Big Idea:</strong> A definite integral gives a number (not a function). It's the area under the curve between two limits. Always use: ∫ₐᵇ f(x) dx = F(b) − F(a)
         </div>
-        
-        <h4>📊 Key Theorems</h4>
+
+        <h4>⚡ How to Evaluate Definite Integrals</h4>
+        <ol>
+            <li>Integrate normally (find F(x))</li>
+            <li>Plug in upper limit b → get F(b)</li>
+            <li>Plug in lower limit a → get F(a)</li>
+            <li>Answer = F(b) − F(a) &nbsp; (no +C needed)</li>
+        </ol>
+
+        <h4>🧮 CBT Examples</h4>
         <ul>
-            <li><strong>Rolle's Theorem:</strong> If f(a) = f(b) and f is continuous on [a,b], differentiable on (a,b), then ∃ c in (a,b) with f'(c) = 0.</li>
-            <li><strong>Mean Value Theorem (MVT):</strong> If f is continuous on [a,b], differentiable on (a,b), then ∃ c in (a,b) with f'(c) = [f(b)-f(a)]/(b-a).</li>
-            <li><strong>Intermediate Value Theorem (IVT):</strong> If f is continuous on [a,b] and k between f(a) and f(b), then ∃ c in [a,b] with f(c) = k.</li>
+            <li><strong>∫₀¹ x² dx:</strong> = [x³/3]₀¹ = 1/3 − 0 = <strong>1/3</strong></li>
+            <li><strong>∫₀^π sin x dx:</strong> = [−cos x]₀^π = (−cos π) − (−cos 0) = −(−1) − (−1) = 1 + 1 = <strong>2</strong></li>
+            <li><strong>∫₁² (1/x) dx:</strong> = [ln x]₁² = ln 2 − ln 1 = <strong>ln 2</strong></li>
         </ul>
-        
-        <div class="key-point">
-            <strong>💡 Key Point:</strong> L'Hôpital's Rule: If lim f(x)/g(x) gives 0/0 or ∞/∞, then lim f(x)/g(x) = lim f'(x)/g'(x) (provided limit exists).
+
+        <h4>📋 Integration by Parts (recap)</h4>
+        <p><strong>∫ u dv = uv − ∫ v du</strong></p>
+        <ul>
+            <li>∫ x eˣ dx: u=x, dv=eˣdx → v=eˣ → <strong>xeˣ − eˣ + C</strong></li>
+        </ul>
+
+        <h4>📋 Trapezoidal & Simpson's Rules (for MCQs)</h4>
+        <ul>
+            <li><strong>Trapezoidal:</strong> ≈ Δx/2 · [f(x₀) + 2f(x₁) + 2f(x₂) + ... + f(xₙ)]</li>
+            <li><strong>Simpson's:</strong> ≈ Δx/3 · [f(x₀) + 4f(x₁) + 2f(x₂) + 4f(x₃) + ... + f(xₙ)] &nbsp; <em>(n must be even)</em></li>
+        </ul>
+    `,
+
+    advanced_topics: `
+        <div class="definition-box">
+            <strong>📌 L'Hôpital's Rule:</strong> If a limit gives 0/0 or ∞/∞, differentiate top and bottom separately, then take the limit again.
         </div>
-        
-        <h4>📈 L'Hôpital's Rule Examples</h4>
+
+        <h4>⚡ L'Hôpital — When to Use</h4>
         <ul>
-            <li>lim_{x→0} sin x/x = lim cos x/1 = 1</li>
-            <li>lim_{x→∞} eˣ/x² = lim eˣ/2x = lim eˣ/2 = ∞</li>
-            <li>Can be applied repeatedly until indeterminate form resolved</li>
+            <li>Only use when direct substitution gives <strong>0/0 or ∞/∞</strong></li>
+            <li>lim sin x/x as x→0: gives 0/0 → differentiate → cos x / 1 → at x=0 = <strong>1</strong></li>
+            <li>Can be applied multiple times if still indeterminate</li>
         </ul>
-        
-        <h4>🔢 Sequences and Series</h4>
+
+        <h4>📋 Key Theorems (quick CBT answers)</h4>
         <ul>
-            <li><strong>Sequence:</strong> Ordered list a₁, a₂, a₃, ... Converges if limit exists</li>
-            <li><strong>Arithmetic sequence:</strong> a_n = a₁ + (n-1)d</li>
-            <li><strong>Geometric sequence:</strong> a_n = a₁·rⁿ⁻¹</li>
-            <li><strong>Series:</strong> Sum of sequence terms</li>
-            <li><strong>Geometric series:</strong> ∑ arⁿ⁻¹ = a/(1-r) for |r| < 1 (converges)</li>
-            <li><strong>Harmonic series:</strong> ∑ 1/n diverges (slowly to infinity)</li>
-            <li><strong>p-series:</strong> ∑ 1/nᵖ converges for p > 1, diverges for p ≤ 1</li>
+            <li><strong>Mean Value Theorem (MVT):</strong> There exists a point c between a and b where the instantaneous rate = average rate: f'(c) = [f(b)−f(a)]/(b−a)</li>
+            <li><strong>Rolle's Theorem:</strong> If f(a) = f(b), then somewhere between a and b, f'(c) = 0</li>
+            <li><strong>IVT (Intermediate Value Theorem):</strong> If f is continuous between a and b, it hits every value between f(a) and f(b)</li>
         </ul>
-        
-        <h4>📊 Power Series</h4>
+
+        <h4>🔥 Must-Memorize Summary Sheet</h4>
+        <h4>Derivatives</h4>
         <ul>
-            <li><strong>Form:</strong> ∑ a_n (x - c)ⁿ</li>
-            <li><strong>Radius of convergence (R):</strong> Converges for |x-c| < R</li>
-            <li><strong>Taylor Series:</strong> f(x) = ∑ fⁿ(c)(x-c)ⁿ/n!</li>
-            <li><strong>Maclaurin Series:</strong> Taylor with c = 0</li>
-            <li><strong>Common Maclaurin Series:</strong>
-                <ul>
-                    <li>eˣ = ∑ xⁿ/n! = 1 + x + x²/2! + x³/3! + ...</li>
-                    <li>sin x = ∑ (-1)ⁿ x²ⁿ⁺¹/(2n+1)! = x - x³/3! + x⁵/5! - ...</li>
-                    <li>cos x = ∑ (-1)ⁿ x²ⁿ/(2n)! = 1 - x²/2! + x⁴/4! - ...</li>
-                    <li>1/(1-x) = ∑ xⁿ = 1 + x + x² + x³ + ... for |x| < 1</li>
-                </ul>
-            </li>
+            <li>xⁿ → nxⁿ⁻¹</li>
+            <li>eˣ → eˣ</li>
+            <li>ln x → 1/x</li>
+            <li>ln(f(x)) → f'(x)/f(x)</li>
+            <li>sin x → cos x</li>
+            <li>cos x → −sin x</li>
+            <li>tan x → sec² x</li>
+            <li>aˣ → aˣ ln a</li>
         </ul>
-        
-        <h4>🎯 Newton's Method</h4>
-        <p>Iterative root-finding: x_{n+1} = x_n - f(x_n)/f'(x_n). Converges quickly with good initial guess.</p>
+        <h4>Integrals</h4>
+        <ul>
+            <li>∫ xⁿ dx = xⁿ⁺¹/(n+1) + C</li>
+            <li>∫ 1/x dx = ln|x| + C</li>
+            <li>∫ f'(x)/f(x) dx = ln|f(x)| + C</li>
+            <li>∫ eˣ dx = eˣ + C</li>
+            <li>∫ sin x dx = −cos x + C</li>
+            <li>∫ cos x dx = sin x + C</li>
+        </ul>
+        <h4>Limits</h4>
+        <ul>
+            <li>sin x / x → 1 &nbsp; (x→0)</li>
+            <li>tan x / x → 1 &nbsp; (x→0)</li>
+            <li>(1−cos x)/x → 0 &nbsp; (x→0)</li>
+            <li>(1−cos x)/x² → 1/2 &nbsp; (x→0)</li>
+        </ul>
+        <h4>Stationary Points</h4>
+        <ul>
+            <li>Set dy/dx = 0, solve x</li>
+            <li>Quadratic shortcut: x = −b/(2a)</li>
+            <li>d²y/dx² &gt; 0 = minimum, &lt; 0 = maximum</li>
+        </ul>
+        <h4>Discontinuity</h4>
+        <ul>
+            <li>Set denominator = 0, solve for x → that's where the function breaks</li>
+        </ul>
     `
 },
 "COS 102": {
