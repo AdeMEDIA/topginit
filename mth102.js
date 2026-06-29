@@ -425,11 +425,105 @@ window.questionBank["MTH 102"] = [
         answer: "B",
         explanation: "Spot the pattern: derivative of (x²+x+1) = 2x+1 ✓. Pattern f'(x)·sin(f(x)) → −cos(f(x)) + C."
     }
+
+,
+    // ── TRIG FUNCTIONS & IDENTITIES  (idx 66 – 80) ───────────────────────
+    {
+        question: "d/dx(cot x) =",
+        options: ["csc²x", "−csc²x", "sec²x", "−sec²x"],
+        answer: "B",
+        explanation: "cot = cos/sin. Quotient rule (or memorise): d/dx(cot x) = −csc²x. Full set: sin→cos, cos→−sin, tan→sec², cot→−csc², sec→sec·tan, csc→−csc·cot."
+    },
+    {
+        question: "d/dx(sec x) =",
+        options: ["tan x", "sec x tan x", "−sec x tan x", "sec²x"],
+        answer: "B",
+        explanation: "Memorise: d/dx(sec x) = sec x tan x. Mnemonic: 'sec keeps itself, multiplied by tan'."
+    },
+    {
+        question: "d/dx(csc x) =",
+        options: ["csc x cot x", "−csc x cot x", "−csc²x", "cot x"],
+        answer: "B",
+        explanation: "Memorise: d/dx(csc x) = −csc x cot x. Everything cosecant-related carries a negative."
+    },
+    {
+        question: "If y = sin(3x), find dy/dx",
+        options: ["cos(3x)", "3cos(3x)", "−3cos(3x)", "3sin(3x)"],
+        answer: "B",
+        explanation: "Chain rule: d/dx(sin(ax)) = a·cos(ax). Here a = 3 → dy/dx = 3cos(3x)."
+    },
+    {
+        question: "If y = cos(5x), find dy/dx",
+        options: ["5sin(5x)", "−sin(5x)", "−5sin(5x)", "5cos(5x)"],
+        answer: "C",
+        explanation: "Chain rule: d/dx(cos(ax)) = −a·sin(ax). Here a = 5 → dy/dx = −5sin(5x)."
+    },
+    {
+        question: "d/dx(sin²x) =",
+        options: ["2sin x", "2cos x", "sin 2x", "cos 2x"],
+        answer: "C",
+        explanation: "Chain rule: 2sin x · cos x. Identity: 2sin x cos x = sin 2x. So d/dx(sin²x) = sin 2x."
+    },
+    {
+        question: "If y = tan²x, find dy/dx",
+        options: ["2tan x", "sec²x", "2tan x sec²x", "2sec x"],
+        answer: "C",
+        explanation: "Chain rule: 2tan x × d/dx(tan x) = 2tan x × sec²x."
+    },
+    {
+        question: "∫csc x cot x dx =",
+        options: ["csc²x + C", "cot x + C", "−csc x + C", "csc x + C"],
+        answer: "C",
+        explanation: "Reverse of d/dx(csc x) = −csc x cot x. So ∫csc x cot x dx = −csc x + C."
+    },
+    {
+        question: "∫cot x dx =",
+        options: ["−ln|sin x| + C", "ln|sin x| + C", "ln|cos x| + C", "−ln|cos x| + C"],
+        answer: "B",
+        explanation: "cot x = cos x / sin x. Spot the f'(x)/f(x) pattern: numerator = derivative of denominator → ln|sin x| + C."
+    },
+    {
+        question: "∫tan x dx =",
+        options: ["ln|sec x| + C", "−ln|cos x| + C", "sec²x + C", "Both A and B"],
+        answer: "D",
+        explanation: "tan x = sin x/cos x. Let u = cos x, du = −sin x dx → −∫du/u = −ln|cos x| + C = ln|sec x| + C. Both are equivalent."
+    },
+    {
+        question: "sin²x + cos²x =",
+        options: ["0", "2", "1", "−1"],
+        answer: "C",
+        explanation: "This is the fundamental Pythagorean identity. Memorise — it comes up everywhere in calculus."
+    },
+    {
+        question: "1 + tan²x =",
+        options: ["sec²x", "csc²x", "cos²x", "sin²x"],
+        answer: "A",
+        explanation: "Divide sin²+cos²=1 through by cos²x → tan²x + 1 = sec²x. Memorise: 1 + tan² = sec²."
+    },
+    {
+        question: "1 + cot²x =",
+        options: ["sec²x", "csc²x", "tan²x", "cos²x"],
+        answer: "B",
+        explanation: "Divide sin²+cos²=1 through by sin²x → 1 + cot²x = csc²x."
+    },
+    {
+        question: "sin 2x =",
+        options: ["sin x + cos x", "2sin x cos x", "sin²x − cos²x", "2cos²x − 1"],
+        answer: "B",
+        explanation: "Double-angle identity: sin 2x = 2sin x cos x. Also equals 2sin x cos x only — don't confuse with cos 2x formulas."
+    },
+    {
+        question: "cos 2x is equal to all of the following EXCEPT",
+        options: ["cos²x − sin²x", "2cos²x − 1", "1 − 2sin²x", "2sin x cos x"],
+        answer: "D",
+        explanation: "2sin x cos x = sin 2x, not cos 2x. cos 2x has three equivalent forms: cos²x−sin²x, 2cos²x−1, and 1−2sin²x."
+    }
 ];
 
-// Total: 66 questions
+// Total: 81 questions
 // idx  0 – 10: Functions & Mappings (11 q)
 // idx 11 – 21: Limits & Continuity (11 q)
 // idx 22 – 39: Differentiation (18 q)
 // idx 40 – 45: Applications of Derivatives (6 q)
 // idx 46 – 65: Integration (20 q)
+// idx 66 – 80: Trig Functions & Identities (15 q)

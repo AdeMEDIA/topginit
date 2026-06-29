@@ -111,7 +111,8 @@
             { id: 'limits',                   name: 'Limits & Continuity',         startIdx: 11, endIdx: 22 },
             { id: 'differentiation',          name: 'Differentiation',             startIdx: 22, endIdx: 40 },
             { id: 'applications_derivatives', name: 'Applications of Derivatives', startIdx: 40, endIdx: 46 },
-            { id: 'integration',              name: 'Integration',                 startIdx: 46, endIdx: 66 }
+            { id: 'integration',              name: 'Integration',                 startIdx: 46, endIdx: 66 },
+            { id: 'trig_functions',           name: 'Trig Functions & Identities', startIdx: 66, endIdx: 81 }
         ],
         'MLS 102': [
             { id: 'evolution',                  name: 'Evolution of MLS Practice',       startIdx: 0,  endIdx: 15 },

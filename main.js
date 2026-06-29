@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
        
         "GST 102": { semester: "second", title: "GST 102", level: "100L • Use of English II", description: "Grammar, essay writing, communication and ICT basics", icon: "📝", iconGradient: "linear-gradient(135deg, #667eea, #764ba2)", qCount: 318, locked: false, file: "gst102.js", bankKey: "GST 102" },
         "GST 104": { semester: "second", title: "GST 104", level: "100L • Nigeria Culture", description: "Nigerian history, culture and national development", icon: "🇳🇬", iconGradient: "linear-gradient(135deg, #f97316, #ea580c)", qCount: 100, locked: false, file: "gst112.js", bankKey: "GST 112" },
-        "MTH 102": { semester: "second", title: "MTH 102", level: "100L • Elementary Mathematics", description: "Calculus, vectors and differential equations", icon: "📐", iconGradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", qCount: 66, locked: false, file: "mth102.js", bankKey: "MTH 102" },
+        "MTH 102": { semester: "second", title: "MTH 102", level: "100L • Elementary Mathematics", description: "Calculus, vectors and differential equations", icon: "📐", iconGradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", qCount: 81, locked: false, file: "mth102.js", bankKey: "MTH 102" },
         "CHM 102": { semester: "second", title: "CHM 102", level: "100L • General Chemistry II", description: "Chemical kinetics, equilibrium and organic chemistry", icon: "🧪", iconGradient: "linear-gradient(135deg, #f59e0b, #d97706)", qCount: 100, locked: false, file: "chm102.js", bankKey: "CHM 102" },
         "MLS 102": { semester: "second", title: "MLS 102", level: "100L • History of Medical Laboratory Science", description: "History and development of MLS profession", icon: "📜", iconGradient: "linear-gradient(135deg, #06b6d4, #0891b2)", qCount: 100, locked: false, file: "mls102.js", bankKey: "MLS 102" },
         "BIO 102": { semester: "second", title: "BIO 102", level: "100L • General Biology II", description: "Diversity of life, plant and animal morphology", icon: "🔬", iconGradient: "linear-gradient(135deg, #10b981, #059669)", qCount: 100, locked: false, file: "bio102.js", bankKey: "BIO 102" },
@@ -220,7 +220,8 @@ document.addEventListener('DOMContentLoaded', function() {
         { id: "limits", name: "Limits & Continuity", description: "Limit definition, limits at infinity, singularities, discontinuities, asymptotes", qCount: 11, startIdx: 11, endIdx: 22 },
         { id: "differentiation", name: "Differentiation", description: "Power, chain, product, quotient rules; trig, log, exponential, inverse trig derivatives", qCount: 18, startIdx: 22, endIdx: 40 },
         { id: "applications_derivatives", name: "Applications of Derivatives", description: "Tangent lines, maxima/minima, stationary points, velocity", qCount: 6,  startIdx: 40, endIdx: 46 },
-        { id: "integration", name: "Integration", description: "Standard integrals, substitution, integration by parts, definite integrals", qCount: 20, startIdx: 46, endIdx: 66 }
+        { id: "integration", name: "Integration", description: "Standard integrals, substitution, integration by parts, definite integrals", qCount: 20, startIdx: 46, endIdx: 66 },
+        { id: "trig_functions", name: "Trig Functions & Identities", description: "All 6 trig derivatives & integrals, Pythagorean identities, double-angle formulas", qCount: 15, startIdx: 66, endIdx: 81 }
     ]
 },
 "PHY 102": {
@@ -3237,6 +3238,55 @@ document.addEventListener('DOMContentLoaded', function() {
         <h4>Discontinuity</h4>
         <ul>
             <li>Set denominator = 0, solve for x → that's where the function breaks</li>
+        </ul>
+    `,
+
+    trig_functions: `
+        <div class="definition-box">
+            <strong>📌 The Big Idea:</strong> There are 6 trig functions. Every one has a derivative and an integral — memorise all 6 pairs. Trig identities let you simplify before differentiating or integrating.
+        </div>
+
+        <h4>🔥 All 6 Trig Derivatives — Must Memorise</h4>
+        <ul>
+            <li>d/dx(sin x) = <strong>cos x</strong></li>
+            <li>d/dx(cos x) = <strong>−sin x</strong></li>
+            <li>d/dx(tan x) = <strong>sec²x</strong></li>
+            <li>d/dx(cot x) = <strong>−csc²x</strong> &nbsp; <em>(negative version of tan's derivative)</em></li>
+            <li>d/dx(sec x) = <strong>sec x tan x</strong> &nbsp; <em>('sec keeps itself, times tan')</em></li>
+            <li>d/dx(csc x) = <strong>−csc x cot x</strong> &nbsp; <em>(same pattern but negative)</em></li>
+        </ul>
+
+        <h4>🔥 All 6 Trig Integrals — Must Memorise</h4>
+        <ul>
+            <li>∫ sin x dx = <strong>−cos x + C</strong></li>
+            <li>∫ cos x dx = <strong>sin x + C</strong></li>
+            <li>∫ sec²x dx = <strong>tan x + C</strong></li>
+            <li>∫ csc²x dx = <strong>−cot x + C</strong></li>
+            <li>∫ sec x tan x dx = <strong>sec x + C</strong></li>
+            <li>∫ csc x cot x dx = <strong>−csc x + C</strong></li>
+            <li>∫ tan x dx = <strong>−ln|cos x| + C = ln|sec x| + C</strong> &nbsp; <em>(f'/f trick: tan = sin/cos)</em></li>
+            <li>∫ cot x dx = <strong>ln|sin x| + C</strong> &nbsp; <em>(cot = cos/sin → f'/f)</em></li>
+        </ul>
+
+        <h4>🔥 Chain Rule with Trig</h4>
+        <ul>
+            <li>d/dx(sin(ax)) = <strong>a·cos(ax)</strong></li>
+            <li>d/dx(cos(ax)) = <strong>−a·sin(ax)</strong></li>
+            <li>d/dx(sin²x) = 2sin x cos x = <strong>sin 2x</strong></li>
+            <li>d/dx(tan²x) = <strong>2tan x sec²x</strong></li>
+        </ul>
+
+        <h4>📋 Pythagorean Identities — Must Know</h4>
+        <ul>
+            <li><strong>sin²x + cos²x = 1</strong> &nbsp; (the master identity)</li>
+            <li><strong>1 + tan²x = sec²x</strong> &nbsp; (divide by cos²x)</li>
+            <li><strong>1 + cot²x = csc²x</strong> &nbsp; (divide by sin²x)</li>
+        </ul>
+
+        <h4>📋 Double-Angle Formulas</h4>
+        <ul>
+            <li><strong>sin 2x = 2sin x cos x</strong></li>
+            <li><strong>cos 2x = cos²x − sin²x = 2cos²x − 1 = 1 − 2sin²x</strong> &nbsp; <em>(three forms, all equal)</em></li>
         </ul>
     `
 },
