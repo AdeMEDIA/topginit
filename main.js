@@ -4416,13 +4416,13 @@ print(result)  # Output: 8
         if (topicId === 'all') {
             currentTopics = ['all'];
         } else {
-            if (currentTopics.includes('all')) currentTopics = [];
-            if (currentTopics.includes(topicId)) {
-                currentTopics = currentTopics.filter(id => id !== topicId);
+            // Exclusive single-select: clicking a topic selects ONLY that topic.
+            // Clicking the already-selected topic resets to All.
+            if (currentTopics.length === 1 && currentTopics[0] === topicId) {
+                currentTopics = ['all'];
             } else {
-                currentTopics.push(topicId);
+                currentTopics = [topicId];
             }
-            if (currentTopics.length === 0) currentTopics = ['all'];
         }
         updateTopicSelectionUI();
     }
@@ -4572,6 +4572,9 @@ print(result)  # Output: 8
 
     window.closeModeModal = function() {
         document.getElementById('modeSelectModal').style.display = 'none';
+        // Reset selection so the user can pick again cleanly
+        currentTopics = ['all'];
+        updateTopicSelectionUI();
         document.getElementById('topicPage').style.display = 'block';
         forceScrollToTop();
     };
@@ -5090,7 +5093,9 @@ print(result)  # Output: 8
         isReviewMode = false;
         isPracticeMode = false;
         document.getElementById('resultPage').style.display = 'none';
-        // Return to topic page (still shows same course topics)
+        // Reset topic selection to default (All) so page is fresh
+        currentTopics = ['all'];
+        updateTopicSelectionUI();
         document.getElementById('topicPage').style.display = 'block';
         forceScrollToTop();
     };
