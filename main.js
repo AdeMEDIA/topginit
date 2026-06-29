@@ -4480,6 +4480,7 @@ print(result)  # Output: 8
     let selectedTimerMinutes = 20;
     let currentExamQuestions = [];
     let isExamActive = false;
+    let isPracticeMode = false;
 
     window.questionBank = window.questionBank || {};
 
@@ -4518,11 +4519,35 @@ print(result)  # Output: 8
         document.getElementById('selectedCourseName').innerText = currentCourse;
         document.getElementById('selectedTopicInfo').innerHTML = `Selected: ${topicNames} <span style="color:#4F6809;">(${currentQuestions.length} questions)</span>`;
         
+        // Show mode selection modal instead of jumping straight to question count
+        document.getElementById('modeModalIcon').innerText = COURSE_TOPICS[currentCourse]?.icon || '📚';
+        document.getElementById('modeModalCourse').innerText = currentCourse;
+        document.getElementById('modeModalTopic').innerText = topicNames + ` (${currentQuestions.length} questions available)`;
         document.getElementById('topicPage').style.display = 'none';
-        document.getElementById('questionCountPage').style.display = 'block';
+        document.getElementById('modeSelectModal').style.display = 'flex';
         forceScrollToTop();
     }
-    
+
+    window.selectExamMode = function() {
+        isPracticeMode = false;
+        document.getElementById('modeSelectModal').style.display = 'none';
+        document.getElementById('questionCountPage').style.display = 'block';
+        forceScrollToTop();
+    };
+
+    window.selectPracticeMode = function() {
+        isPracticeMode = true;
+        document.getElementById('modeSelectModal').style.display = 'none';
+        document.getElementById('questionCountPage').style.display = 'block';
+        forceScrollToTop();
+    };
+
+    window.closeModeModal = function() {
+        document.getElementById('modeSelectModal').style.display = 'none';
+        document.getElementById('topicPage').style.display = 'block';
+        forceScrollToTop();
+    };
+
     async function loadQuestionBank(courseTitle) {
         const course = COURSES_DB[courseTitle];
         if (!course || !course.file) return false;
@@ -4589,7 +4614,13 @@ print(result)  # Output: 8
             document.getElementById('totalQuestionsDisplay').innerText = currentExamQuestions.length;
             
             const submitBtn = document.querySelector('button[onclick=\"submitExam()\"]');
-            if (submitBtn) submitBtn.style.display = 'block';
+            if (submitBtn) {
+                submitBtn.style.display = 'block';
+                const span = submitBtn.querySelector('span');
+                if (span) span.textContent = isPracticeMode ? 'End Practice' : 'Submit';
+            }
+            const practiceBadge = document.getElementById('practiceModeBadge');
+            if (practiceBadge) practiceBadge.style.display = isPracticeMode ? 'inline-flex' : 'none';
             
             const reviewBackBtn = document.getElementById('reviewBackBtn');
             if (reviewBackBtn) reviewBackBtn.style.display = 'none';
@@ -4698,14 +4729,15 @@ print(result)  # Output: 8
         }
     });
     
-    function saveAnswer() { 
-        const selected = document.querySelector('input[name="answer"]:checked'); 
+    function saveAnswer() {
+        if (isPracticeMode) return; // answers stored immediately on click in practice mode
+        const selected = document.querySelector('input[name="answer"]:checked');
         if (selected) answers[currentQuestionIndex + 1] = selected.value;
         updateProgressBar();
     }
-    
+
     function selectOptionLetter(letter) {
-        if (isReviewMode) return;
+        if (isReviewMode || isPracticeMode) return;
         const option = document.querySelector(`#optionsContainer input[name="answer"][value="${letter}"]`);
         if (!option) return;
         option.checked = true;
@@ -4733,36 +4765,134 @@ print(result)  # Output: 8
         // Normalise answer: support legacy integer format (0→A, 1→B, 2→C, 3→D)
         const correctAnswer = (typeof q.answer === 'number') ? letters[q.answer] : q.answer;
 
-        q.options.forEach((opt, idx) => {
-            const letter = letters[idx];
+        if (isPracticeMode) {
             const userAns = answers[currentQuestionIndex + 1];
-            const lbl = document.createElement('label');
-            lbl.className = 'option';
-            if (isReviewMode) {
-                if (letter === correctAnswer) lbl.classList.add('correct');
-                if (userAns === letter && userAns !== correctAnswer) lbl.classList.add('wrong');
-                if (userAns === letter) lbl.classList.add('user-selected');
+            const alreadyAnswered = !!userAns;
+            q.options.forEach((opt, idx) => {
+                const letter = letters[idx];
+                const div = document.createElement('div');
+                div.className = 'option practice-option';
+                div.dataset.letter = letter;
+                if (alreadyAnswered) {
+                    div.classList.add('practice-locked');
+                    if (letter === correctAnswer) div.classList.add('correct');
+                    if (userAns === letter && letter !== correctAnswer) div.classList.add('wrong');
+                    const icon = letter === correctAnswer
+                        ? '<span class="opt-result-icon correct-icon">✓</span>'
+                        : (userAns === letter ? '<span class="opt-result-icon wrong-icon">✗</span>' : '');
+                    div.innerHTML = `<span class="opt-letter-circle">${letter}</span><span class="opt-text">${opt}</span>${icon}`;
+                } else {
+                    div.innerHTML = `<span class="opt-letter-circle">${letter}</span><span class="opt-text">${opt}</span>`;
+                    div.addEventListener('click', () => practiceSelectAnswer(letter, correctAnswer, q));
+                }
+                container.appendChild(div);
+            });
+            const expBox = document.getElementById('explanationBox');
+            const expContent = document.getElementById('explanationContent');
+            if (alreadyAnswered && q.explanation) {
+                expBox.style.display = 'block';
+                expContent.innerHTML = formatPracticeExplanation(q.explanation, userAns === correctAnswer);
+                expBox.classList.remove('correct', 'wrong');
+                expBox.classList.add(userAns === correctAnswer ? 'correct' : 'wrong');
+            } else {
+                expBox.style.display = 'none';
             }
-            lbl.innerHTML = `<input type="radio" name="answer" value="${letter}" ${isReviewMode ? 'disabled' : ''} ${userAns === letter ? 'checked' : ''}><span>${letter}. ${opt}</span>`;
-            container.appendChild(lbl);
-        });
-
-        const expBox = document.getElementById('explanationBox');
-        const expContent = document.getElementById('explanationContent');
-        if (isReviewMode && q.explanation) {
-            expBox.style.display = 'block';
-            expContent.innerText = q.explanation;
-            const userAns = answers[currentQuestionIndex + 1];
-            expBox.classList.remove('correct', 'wrong');
-            if (userAns === correctAnswer) expBox.classList.add('correct');
-            else expBox.classList.add('wrong');
         } else {
-            expBox.style.display = 'none';
+            q.options.forEach((opt, idx) => {
+                const letter = letters[idx];
+                const userAns = answers[currentQuestionIndex + 1];
+                const lbl = document.createElement('label');
+                lbl.className = 'option';
+                if (isReviewMode) {
+                    if (letter === correctAnswer) lbl.classList.add('correct');
+                    if (userAns === letter && userAns !== correctAnswer) lbl.classList.add('wrong');
+                    if (userAns === letter) lbl.classList.add('user-selected');
+                }
+                lbl.innerHTML = `<input type="radio" name="answer" value="${letter}" ${isReviewMode ? 'disabled' : ''} ${userAns === letter ? 'checked' : ''}><span>${letter}. ${opt}</span>`;
+                container.appendChild(lbl);
+            });
+            const expBox = document.getElementById('explanationBox');
+            const expContent = document.getElementById('explanationContent');
+            if (isReviewMode && q.explanation) {
+                expBox.style.display = 'block';
+                expContent.innerText = q.explanation;
+                const userAns = answers[currentQuestionIndex + 1];
+                expBox.classList.remove('correct', 'wrong');
+                if (userAns === correctAnswer) expBox.classList.add('correct');
+                else expBox.classList.add('wrong');
+            } else {
+                expBox.style.display = 'none';
+            }
         }
 
         updateQuestionGrid();
     }
     
+    function practiceSelectAnswer(clickedLetter, correctAnswer, currentQ) {
+        if (answers[currentQuestionIndex + 1]) return; // already answered, ignore
+        answers[currentQuestionIndex + 1] = clickedLetter;
+        updateProgressBar();
+        updateQuestionGrid();
+
+        // Re-render options in revealed/locked state
+        const container = document.getElementById('optionsContainer');
+        container.innerHTML = '';
+        currentQ.options.forEach((opt, idx) => {
+            const letter = ['A','B','C','D'][idx];
+            const div = document.createElement('div');
+            div.className = 'option practice-option practice-locked';
+            div.dataset.letter = letter;
+            let icon = '';
+            if (letter === correctAnswer) {
+                div.classList.add('correct');
+                icon = '<span class="opt-result-icon correct-icon">✓</span>';
+            } else if (letter === clickedLetter) {
+                div.classList.add('wrong');
+                icon = '<span class="opt-result-icon wrong-icon">✗</span>';
+            }
+            div.innerHTML = `<span class="opt-letter-circle">${letter}</span><span class="opt-text">${opt}</span>${icon}`;
+            container.appendChild(div);
+        });
+
+        // Show explanation
+        const expBox = document.getElementById('explanationBox');
+        const expContent = document.getElementById('explanationContent');
+        if (currentQ.explanation) {
+            expBox.style.display = 'block';
+            expContent.innerHTML = formatPracticeExplanation(currentQ.explanation, clickedLetter === correctAnswer);
+            expBox.classList.remove('correct', 'wrong');
+            expBox.classList.add(clickedLetter === correctAnswer ? 'correct' : 'wrong');
+        }
+
+        // If last question, style "Next" as "Finish"
+        const isLast = currentQuestionIndex + 1 === currentExamQuestions.length;
+        const nextNavBtn = document.querySelector('.nav-buttons .nav-btn:last-child');
+        if (nextNavBtn) {
+            if (isLast) {
+                nextNavBtn.textContent = 'Finish ✓';
+                nextNavBtn.style.cssText = 'background:linear-gradient(135deg,#22c55e,#16a34a);color:#fff;font-weight:700;border-color:transparent;';
+            } else {
+                nextNavBtn.textContent = 'Next →';
+                nextNavBtn.style.cssText = '';
+            }
+        }
+
+        // Scroll explanation into view
+        setTimeout(() => {
+            const examPage = document.getElementById('examPage');
+            if (examPage) examPage.scrollTo({ top: examPage.scrollHeight, behavior: 'smooth' });
+        }, 120);
+    }
+
+    function formatPracticeExplanation(text, isCorrect) {
+        const headerText = isCorrect ? '✓ Correct! Here\'s why:' : '✗ Incorrect. Here\'s the solution:';
+        const headerClass = isCorrect ? 'correct-header' : 'wrong-header';
+        const formatted = String(text)
+            .replace(/\n/g, '<br>')
+            .replace(/→/g, '<span class="step-arrow">→</span>');
+        return `<div class="practice-exp-header ${headerClass}">${headerText}</div><div class="practice-exp-body">${formatted}</div>`;
+    }
+
     function updateQuestionGrid() {
         const total = getTotalQuestions();
         const grid = document.getElementById('questionGrid');
@@ -4776,7 +4906,7 @@ print(result)  # Output: 8
             if (i === currentQuestionIndex + 1) div.classList.add('active');
             if (answers[i]) div.classList.add('answered');
             else div.classList.add('unanswered');
-            if (isReviewMode && answers[i]) {
+            if ((isReviewMode || isPracticeMode) && answers[i]) {
                 const qIdx = i - 1;
                 const isCorrect = answers[i] === currentExamQuestions[qIdx]?.answer;
                 if (isCorrect) div.classList.add('review-correct');
@@ -4802,6 +4932,7 @@ print(result)  # Output: 8
     window.nextPage = function(e) { saveAnswer(); const newIdx = Math.min(getTotalQuestions() - 1, (Math.floor(currentQuestionIndex / 10) + 1) * 10); if (newIdx > currentQuestionIndex) { currentQuestionIndex = newIdx; loadQuestion(); } };
     
     window.submitExam = function() {
+        if (isPracticeMode) { finalizeExam(); return; }
         saveAnswer();
         if (isReviewMode) { finalizeExam(); return; }
         const total = getTotalQuestions();
@@ -4907,10 +5038,28 @@ print(result)  # Output: 8
         document.getElementById('resultPage').style.display = 'block';
         isExamActive = false;
         restoreBodyScroll();
-        
+
+        // Customise result page for practice vs exam mode
+        const reviewBtn = document.getElementById('reviewBtn');
+        const practiceAgainBtn = document.getElementById('practiceAgainBtn');
+        const resultH2 = document.querySelector('#resultPage h2');
+        if (resultH2) resultH2.textContent = isPracticeMode ? 'Practice Complete!' : 'Exam Completed';
+        if (reviewBtn) reviewBtn.style.display = isPracticeMode ? 'none' : '';
+        if (practiceAgainBtn) practiceAgainBtn.style.display = isPracticeMode ? '' : 'none';
+
         // Force scroll to top of result page
         forceScrollToTop();
     }
+
+    window.practiceAgain = function() {
+        isExamActive = false;
+        isReviewMode = false;
+        isPracticeMode = false;
+        document.getElementById('resultPage').style.display = 'none';
+        // Return to topic page (still shows same course topics)
+        document.getElementById('topicPage').style.display = 'block';
+        forceScrollToTop();
+    };
     
     function showExamLeaveModal() {
         const modal = document.getElementById('examNavModal');
@@ -4947,7 +5096,7 @@ print(result)  # Output: 8
     if (backToTopicsBtn) {
         backToTopicsBtn.addEventListener('click', () => {
             document.getElementById('questionCountPage').style.display = 'none';
-            document.getElementById('topicPage').style.display = 'block';
+            document.getElementById('modeSelectModal').style.display = 'flex';
             forceScrollToTop();
         });
     }
