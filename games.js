@@ -107,11 +107,11 @@
             { id: 'programming_basics',  name: 'Programming Concepts',        startIdx: 80, endIdx: 100 }
         ],
         'MTH 102': [
-            { id: 'functions',                name: 'Functions & Mappings',        startIdx: 0,  endIdx: 10 },
-            { id: 'limits',                   name: 'Limits & Continuity',         startIdx: 10, endIdx: 20 },
-            { id: 'differentiation',          name: 'Differentiation',             startIdx: 20, endIdx: 35 },
-            { id: 'applications_derivatives', name: 'Applications of Derivatives', startIdx: 35, endIdx: 40 },
-            { id: 'integration',              name: 'Integration',                 startIdx: 40, endIdx: 60 }
+            { id: 'functions',                name: 'Functions & Mappings',        startIdx: 0,  endIdx: 11 },
+            { id: 'limits',                   name: 'Limits & Continuity',         startIdx: 11, endIdx: 22 },
+            { id: 'differentiation',          name: 'Differentiation',             startIdx: 22, endIdx: 40 },
+            { id: 'applications_derivatives', name: 'Applications of Derivatives', startIdx: 40, endIdx: 46 },
+            { id: 'integration',              name: 'Integration',                 startIdx: 46, endIdx: 66 }
         ],
         'MLS 102': [
             { id: 'evolution',                  name: 'Evolution of MLS Practice',       startIdx: 0,  endIdx: 15 },

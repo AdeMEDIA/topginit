@@ -1,11 +1,11 @@
 // ==================== MTH 102 QUESTION BANK ====================
-// Elementary Mathematics II – 55 CBT-style questions
+// Elementary Mathematics II – 66 CBT-style questions
 
 if (!window.questionBank) window.questionBank = {};
 
 window.questionBank["MTH 102"] = [
 
-    // ── FUNCTIONS & MAPPINGS  (idx 0 – 9) ────────────────────────────────
+    // ── FUNCTIONS & MAPPINGS  (idx 0 – 10) ───────────────────────────────
     {
         question: "If f(x) = 2x + 1, find f(1)",
         options: ["1", "2", "3", "4"],
@@ -71,8 +71,14 @@ window.questionBank["MTH 102"] = [
         answer: "B",
         explanation: "x² ≥ 0 always, so minimum value = 0 + 2 = 2. Range: y ≥ 2."
     },
+    {
+        question: "An ideal vending machine maps each unique button to exactly one specific drink, and no two buttons give the same drink. What type of mapping is this?",
+        options: ["Onto (Surjective)", "One-to-One (Injective)", "Constant Mapping", "Identity Mapping"],
+        answer: "B",
+        explanation: "Each button → exactly one drink (it's a function), and no two buttons give the same drink (different inputs → different outputs). That is the definition of One-to-One (Injective)."
+    },
 
-    // ── LIMITS & CONTINUITY  (idx 10 – 19) ───────────────────────────────
+    // ── LIMITS & CONTINUITY  (idx 11 – 21) ───────────────────────────────
     {
         question: "A function f(x) is said to have a limit at x = a if",
         options: [
@@ -138,8 +144,14 @@ window.questionBank["MTH 102"] = [
         answer: "C",
         explanation: "Same degree → ratio of leading coefficients: 2/1 = 2. So y = 2."
     },
+    {
+        question: "lim_{x→∞} (6x² + 5x) / (2x² − 1) =",
+        options: ["0", "3", "∞", "−5"],
+        answer: "B",
+        explanation: "Same degree top and bottom → ratio of leading coefficients: 6 / 2 = 3."
+    },
 
-    // ── DIFFERENTIATION  (idx 20 – 34) ───────────────────────────────────
+    // ── DIFFERENTIATION  (idx 22 – 39) ───────────────────────────────────
     {
         question: "Find dy/dx if y = (1 + x) / (1 − x)",
         options: ["1 / (1−x)²", "2 / (1−x)²", "(1+x) / (1−x)²", "2 / (1+x)²"],
@@ -230,8 +242,26 @@ window.questionBank["MTH 102"] = [
         answer: "C",
         explanation: "(uv)' = u'v + uv'. u=x²(u'=2x), v=sin x(v'=cos x) → 2x sin x + x² cos x."
     },
+    {
+        question: "If y = x / sin(x), which is the correct numerator when applying the quotient rule?",
+        options: ["sin(x)(1) − x·cos(x)", "x·cos(x) − sin(x)(1)", "sin(x)(1) + x·cos(x)", "x(1) − sin(x)·cos(x)"],
+        answer: "A",
+        explanation: "Quotient rule numerator = v·u' − u·v'. Here u=x, u'=1, v=sin x, v'=cos x → sin(x)·1 − x·cos(x)."
+    },
+    {
+        question: "Find dy/dx if y = ln(3x)",
+        options: ["3/x", "1/(3x)", "1/x", "3x"],
+        answer: "C",
+        explanation: "Two ways: (1) ln(3x) = ln 3 + ln x → d/dx = 0 + 1/x = 1/x. (2) Chain rule: (1/3x)·3 = 1/x."
+    },
+    {
+        question: "Find dy/dx if y = 2sin(x) + 3cos(x)",
+        options: ["2cos(x) + 3sin(x)", "2cos(x) − 3sin(x)", "−2cos(x) + 3sin(x)", "5sin(x)cos(x)"],
+        answer: "B",
+        explanation: "d/dx(sin x) = cos x, d/dx(cos x) = −sin x. So dy/dx = 2cos(x) + 3·(−sin x) = 2cos(x) − 3sin(x)."
+    },
 
-    // ── APPLICATIONS OF DERIVATIVES  (idx 35 – 39) ───────────────────────
+    // ── APPLICATIONS OF DERIVATIVES  (idx 40 – 45) ───────────────────────
     {
         question: "A maximum of a function f(x) can occur at",
         options: ["Any point where f(x) > 0", "A critical point where f'(x) = 0", "A point where f(x) = 0", "Any point on the graph"],
@@ -262,8 +292,14 @@ window.questionBank["MTH 102"] = [
         answer: "C",
         explanation: "Velocity = rate of change of displacement = ds/dt (first derivative). Acceleration = d²s/dt²."
     },
+    {
+        question: "Find the x-coordinate of the turning point of y = x² − 8x + 12",
+        options: ["x = 2", "x = 4", "x = 8", "x = 6"],
+        answer: "B",
+        explanation: "dy/dx = 2x − 8 = 0 → x = 4. Shortcut: x = −b/(2a) = −(−8)/(2×1) = 8/2 = 4."
+    },
 
-    // ── INTEGRATION  (idx 40 – 54) ────────────────────────────────────────
+    // ── INTEGRATION  (idx 46 – 65) ────────────────────────────────────────
     {
         question: "∫cos x dx =",
         options: ["−sin x + C", "sin x + C", "cos x + C", "−cos x + C"],
@@ -391,9 +427,9 @@ window.questionBank["MTH 102"] = [
     }
 ];
 
-// Total: 60 questions
-// idx  0 –  9: Functions & Mappings (10 q)
-// idx 10 – 19: Limits & Continuity (10 q)
-// idx 20 – 34: Differentiation (15 q)
-// idx 35 – 39: Applications of Derivatives (5 q)
-// idx 40 – 59: Integration (20 q)
+// Total: 66 questions
+// idx  0 – 10: Functions & Mappings (11 q)
+// idx 11 – 21: Limits & Continuity (11 q)
+// idx 22 – 39: Differentiation (18 q)
+// idx 40 – 45: Applications of Derivatives (6 q)
+// idx 46 – 65: Integration (20 q)
