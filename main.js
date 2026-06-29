@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
        
         "GST 102": { semester: "second", title: "GST 102", level: "100L • Use of English II", description: "Grammar, essay writing, communication and ICT basics", icon: "📝", iconGradient: "linear-gradient(135deg, #667eea, #764ba2)", qCount: 318, locked: false, file: "gst102.js", bankKey: "GST 102" },
         "GST 104": { semester: "second", title: "GST 104", level: "100L • Nigeria Culture", description: "Nigerian history, culture and national development", icon: "🇳🇬", iconGradient: "linear-gradient(135deg, #f97316, #ea580c)", qCount: 100, locked: false, file: "gst112.js", bankKey: "GST 112" },
-        "MTH 102": { semester: "second", title: "MTH 102", level: "100L • Elementary Mathematics", description: "Calculus, vectors and differential equations", icon: "📐", iconGradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", qCount: 100, locked: false, file: "mth102.js", bankKey: "MTH 102" },
+        "MTH 102": { semester: "second", title: "MTH 102", level: "100L • Elementary Mathematics", description: "Calculus, vectors and differential equations", icon: "📐", iconGradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", qCount: 22, locked: false, file: "mth102.js", bankKey: "MTH 102" },
         "CHM 102": { semester: "second", title: "CHM 102", level: "100L • General Chemistry II", description: "Chemical kinetics, equilibrium and organic chemistry", icon: "🧪", iconGradient: "linear-gradient(135deg, #f59e0b, #d97706)", qCount: 100, locked: false, file: "chm102.js", bankKey: "CHM 102" },
         "MLS 102": { semester: "second", title: "MLS 102", level: "100L • History of Medical Laboratory Science", description: "History and development of MLS profession", icon: "📜", iconGradient: "linear-gradient(135deg, #06b6d4, #0891b2)", qCount: 100, locked: false, file: "mls102.js", bankKey: "MLS 102" },
         "BIO 102": { semester: "second", title: "BIO 102", level: "100L • General Biology II", description: "Diversity of life, plant and animal morphology", icon: "🔬", iconGradient: "linear-gradient(135deg, #10b981, #059669)", qCount: 100, locked: false, file: "bio102.js", bankKey: "BIO 102" },
@@ -216,13 +216,11 @@ document.addEventListener('DOMContentLoaded', function() {
 "MTH 102": {
     icon: "📐",
     topics: [
-        { id: "functions", name: "Functions & Graphs", description: "Domain, range, types of functions, graph sketching", qCount: 15, startIdx: 0, endIdx: 15 },
-        { id: "limits", name: "Limits & Continuity", description: "Limit laws, continuity, asymptotes", qCount: 10, startIdx: 15, endIdx: 25 },
-        { id: "differentiation", name: "Differentiation", description: "Derivatives, rules, chain rule, implicit differentiation", qCount: 20, startIdx: 25, endIdx: 45 },
-        { id: "applications_derivatives", name: "Applications of Derivatives", description: "Tangents, optimization, curve sketching", qCount: 10, startIdx: 45, endIdx: 55 },
-        { id: "integration", name: "Integration", description: "Indefinite integrals, substitution, integration by parts", qCount: 20, startIdx: 55, endIdx: 75 },
-        { id: "definite_integrals", name: "Definite Integrals", description: "Area, volume, trapezoidal rule, Simpson's rule", qCount: 15, startIdx: 75, endIdx: 90 },
-        { id: "advanced_topics", name: "Advanced Topics", description: "L'Hôpital's rule, MVT, sequences, series", qCount: 10, startIdx: 90, endIdx: 100 }
+        { id: "functions", name: "Functions & Mappings", description: "Evaluation, inverse, composition, injective/surjective, floor/ceiling", qCount: 8, startIdx: 0, endIdx: 8 },
+        { id: "limits", name: "Limits & Continuity", description: "Limit definition, limits at infinity, singularities, discontinuities", qCount: 6, startIdx: 8, endIdx: 14 },
+        { id: "differentiation", name: "Differentiation", description: "Quotient rule, product rule, chain rule", qCount: 1, startIdx: 14, endIdx: 15 },
+        { id: "applications_derivatives", name: "Applications of Derivatives", description: "Maxima, minima, critical points, curve sketching", qCount: 1, startIdx: 15, endIdx: 16 },
+        { id: "integration", name: "Integration", description: "Standard integrals, simplification, integration by parts", qCount: 6, startIdx: 16, endIdx: 22 }
     ]
 },
 "PHY 102": {
