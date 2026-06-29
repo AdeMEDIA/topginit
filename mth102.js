@@ -358,12 +358,42 @@ window.questionBank["MTH 102"] = [
         options: ["1", "1/2", "1/3", "2/3"],
         answer: "C",
         explanation: "[x³/3]₀¹ = 1/3 − 0 = 1/3. Shortcut: ∫₀¹ xⁿ dx = 1/(n+1). For n=2: 1/3."
+    },
+    {
+        question: "∫sin x cos x dx =",
+        options: ["sin²x + C", "(1/2)sin²x + C", "−(1/2)cos²x + C", "Both B and C are correct"],
+        answer: "D",
+        explanation: "Let u = sin x, du = cos x dx → ∫u du = u²/2 + C = (1/2)sin²x + C. Equivalently −(1/2)cos²x + C. Both are correct."
+    },
+    {
+        question: "∫3sin(2x + 3) dx =",
+        options: ["3cos(2x+3) + C", "−(3/2)cos(2x+3) + C", "(3/2)cos(2x+3) + C", "−3cos(2x+3) + C"],
+        answer: "B",
+        explanation: "Rule: ∫sin(ax+b) dx = −(1/a)cos(ax+b) + C. Here a = 2 → 3 × [−(1/2)cos(2x+3)] = −(3/2)cos(2x+3) + C."
+    },
+    {
+        question: "∫sin x / cos x dx =",
+        options: ["ln|sin x| + C", "ln|cos x| + C", "−ln|cos x| + C", "−ln|sin x| + C"],
+        answer: "C",
+        explanation: "sin x/cos x = tan x. Let u = cos x, du = −sin x dx → −∫(1/u)du = −ln|cos x| + C. Also written as ln|sec x| + C."
+    },
+    {
+        question: "∫₀^(π/2) sin x dx =",
+        options: ["0", "1", "2", "π/2"],
+        answer: "B",
+        explanation: "[−cos x]₀^(π/2) = (−cos π/2) − (−cos 0) = −0 − (−1) = 1."
+    },
+    {
+        question: "∫(2x + 1)sin(x² + x + 1) dx =",
+        options: ["cos(x²+x+1) + C", "−cos(x²+x+1) + C", "(1/2)cos(x²+x+1) + C", "sin(x²+x+1) + C"],
+        answer: "B",
+        explanation: "Spot the pattern: derivative of (x²+x+1) = 2x+1 ✓. Pattern f'(x)·sin(f(x)) → −cos(f(x)) + C."
     }
 ];
 
-// Total: 55 questions
+// Total: 60 questions
 // idx  0 –  9: Functions & Mappings (10 q)
 // idx 10 – 19: Limits & Continuity (10 q)
 // idx 20 – 34: Differentiation (15 q)
 // idx 35 – 39: Applications of Derivatives (5 q)
-// idx 40 – 54: Integration (15 q)
+// idx 40 – 59: Integration (20 q)

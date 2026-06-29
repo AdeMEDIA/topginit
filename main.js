@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
        
         "GST 102": { semester: "second", title: "GST 102", level: "100L • Use of English II", description: "Grammar, essay writing, communication and ICT basics", icon: "📝", iconGradient: "linear-gradient(135deg, #667eea, #764ba2)", qCount: 318, locked: false, file: "gst102.js", bankKey: "GST 102" },
         "GST 104": { semester: "second", title: "GST 104", level: "100L • Nigeria Culture", description: "Nigerian history, culture and national development", icon: "🇳🇬", iconGradient: "linear-gradient(135deg, #f97316, #ea580c)", qCount: 100, locked: false, file: "gst112.js", bankKey: "GST 112" },
-        "MTH 102": { semester: "second", title: "MTH 102", level: "100L • Elementary Mathematics", description: "Calculus, vectors and differential equations", icon: "📐", iconGradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", qCount: 55, locked: false, file: "mth102.js", bankKey: "MTH 102" },
+        "MTH 102": { semester: "second", title: "MTH 102", level: "100L • Elementary Mathematics", description: "Calculus, vectors and differential equations", icon: "📐", iconGradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", qCount: 60, locked: false, file: "mth102.js", bankKey: "MTH 102" },
         "CHM 102": { semester: "second", title: "CHM 102", level: "100L • General Chemistry II", description: "Chemical kinetics, equilibrium and organic chemistry", icon: "🧪", iconGradient: "linear-gradient(135deg, #f59e0b, #d97706)", qCount: 100, locked: false, file: "chm102.js", bankKey: "CHM 102" },
         "MLS 102": { semester: "second", title: "MLS 102", level: "100L • History of Medical Laboratory Science", description: "History and development of MLS profession", icon: "📜", iconGradient: "linear-gradient(135deg, #06b6d4, #0891b2)", qCount: 100, locked: false, file: "mls102.js", bankKey: "MLS 102" },
         "BIO 102": { semester: "second", title: "BIO 102", level: "100L • General Biology II", description: "Diversity of life, plant and animal morphology", icon: "🔬", iconGradient: "linear-gradient(135deg, #10b981, #059669)", qCount: 100, locked: false, file: "bio102.js", bankKey: "BIO 102" },
@@ -220,7 +220,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { id: "limits", name: "Limits & Continuity", description: "Limit definition, limits at infinity, singularities, discontinuities, asymptotes", qCount: 10, startIdx: 10, endIdx: 20 },
         { id: "differentiation", name: "Differentiation", description: "Power, chain, product, quotient rules; trig, log, exponential, inverse trig derivatives", qCount: 15, startIdx: 20, endIdx: 35 },
         { id: "applications_derivatives", name: "Applications of Derivatives", description: "Tangent lines, maxima/minima, stationary points, velocity", qCount: 5,  startIdx: 35, endIdx: 40 },
-        { id: "integration", name: "Integration", description: "Standard integrals, substitution, integration by parts, definite integrals", qCount: 15, startIdx: 40, endIdx: 55 }
+        { id: "integration", name: "Integration", description: "Standard integrals, substitution, integration by parts, definite integrals", qCount: 20, startIdx: 40, endIdx: 60 }
     ]
 },
 "PHY 102": {
@@ -3089,50 +3089,63 @@ document.addEventListener('DOMContentLoaded', function() {
 
     integration: `
         <div class="definition-box">
-            <strong>📌 The Big Idea:</strong> Integration is the reverse of differentiation. Always add +C for indefinite integrals (because constants disappear when you differentiate).
+            <strong>📌 The Big Idea:</strong> Integration is the reverse of differentiation. Always add +C for indefinite integrals. For definite integrals: ∫ₐᵇ f(x) dx = F(b) − F(a) (no +C needed).
         </div>
 
-        <h4>🔥 Must-Know Integral Rules</h4>
+        <h4>🔥 Must-Memorize Rules</h4>
         <ul>
-            <li><strong>Power Rule:</strong> ∫ xⁿ dx = xⁿ⁺¹/(n+1) + C &nbsp; <em>(add 1 to power, divide by new power)</em></li>
-            <li><strong>1/x Rule:</strong> ∫ 1/x dx = ln|x| + C</li>
-            <li><strong>eˣ Rule:</strong> ∫ eˣ dx = eˣ + C</li>
-            <li><strong>aˣ Rule:</strong> ∫ aˣ dx = aˣ / ln a + C</li>
-            <li><strong>sin Rule:</strong> ∫ sin x dx = −cos x + C</li>
-            <li><strong>cos Rule:</strong> ∫ cos x dx = sin x + C</li>
-            <li><strong>sec² Rule:</strong> ∫ sec² x dx = tan x + C</li>
-            <li><strong>ln Trick:</strong> ∫ f'(x)/f(x) dx = ln|f(x)| + C &nbsp; <strong>← key CBT trick!</strong>
-                <ul><li>Check: is numerator = derivative of denominator? → answer is ln|denominator|</li></ul>
-            </li>
-            <li><strong>arctan:</strong> ∫ 1/(1+x²) dx = arctan x + C</li>
+            <li><strong>Power Rule:</strong> ∫ xⁿ dx = xⁿ⁺¹/(n+1) + C</li>
+            <li><strong>∫ 1/x dx = ln|x| + C</strong></li>
+            <li><strong>∫ eˣ dx = eˣ + C</strong></li>
+            <li><strong>∫ aˣ dx = aˣ / ln a + C</strong></li>
+            <li><strong>∫ sin x dx = −cos x + C</strong></li>
+            <li><strong>∫ cos x dx = sin x + C</strong></li>
+            <li><strong>∫ sec² x dx = tan x + C</strong></li>
+            <li><strong>∫ tan x dx = −ln|cos x| + C = ln|sec x| + C</strong></li>
+            <li><strong>∫ 1/(1+x²) dx = arctan x + C</strong></li>
         </ul>
 
-        <h4>📊 Integration by Substitution (u-sub)</h4>
+        <h4>🔥 CBT Pattern Shortcuts — Must Memorize</h4>
+        <ul>
+            <li><strong>f'(x)/f(x) pattern → ln|f(x)| + C</strong>
+                <ul><li>Check: is numerator the derivative of denominator? → answer is ln|denominator| + C</li>
+                <li>e.g. ∫ (12x²+10)/(4x³+10x+5) dx → 12x²+10 = derivative of 4x³+10x+5 ✓ → <strong>ln|4x³+10x+5| + C</strong></li></ul>
+            </li>
+            <li><strong>f'(x)·sin(f(x)) → −cos(f(x)) + C</strong>
+                <ul><li>e.g. ∫ (2x+1)sin(x²+x+1) dx → derivative of x²+x+1 = 2x+1 ✓ → <strong>−cos(x²+x+1) + C</strong></li></ul>
+            </li>
+            <li><strong>f'(x)·cos(f(x)) → sin(f(x)) + C</strong>
+                <ul><li>e.g. ∫ 2x·cos(x²) dx → 2x = derivative of x² ✓ → <strong>sin(x²) + C</strong></li></ul>
+            </li>
+            <li><strong>∫ sin(ax+b) dx = −(1/a)cos(ax+b) + C</strong>
+                <ul><li>e.g. ∫ 3sin(2x+3) dx = 3 × [−(1/2)cos(2x+3)] = <strong>−(3/2)cos(2x+3) + C</strong></li></ul>
+            </li>
+            <li><strong>∫ cos(ax+b) dx = (1/a)sin(ax+b) + C</strong></li>
+        </ul>
+
+        <h4>📊 u-Substitution (when you see a composite function)</h4>
         <ol>
             <li>Let u = inner function</li>
-            <li>Find du/dx, rearrange to get dx</li>
-            <li>Substitute, integrate, substitute back</li>
+            <li>Find du, substitute everything, integrate, sub back</li>
         </ol>
-        <p><em>Example: ∫ 2x(x²+1)⁴ dx → let u = x²+1, du = 2x dx → ∫ u⁴ du = u⁵/5 = (x²+1)⁵/5 + C</em></p>
+        <p><em>∫ 2x(x²+1)⁴ dx → u = x²+1, du = 2x dx → ∫ u⁴ du = u⁵/5 + C = (x²+1)⁵/5 + C</em></p>
+        <p><em>∫ sin x cos x dx → u = sin x, du = cos x dx → ∫ u du = u²/2 + C = sin²x/2 + C</em></p>
+
+        <h4>📊 Definite Integrals</h4>
+        <ol>
+            <li>Integrate normally (find F(x))</li>
+            <li>Answer = F(upper) − F(lower) — no +C</li>
+        </ol>
+        <ul>
+            <li><strong>∫₀¹ x² dx = [x³/3]₀¹ = 1/3 − 0 = 1/3</strong></li>
+            <li><strong>∫₀^(π/2) sin x dx = [−cos x]₀^(π/2) = −cos(π/2) + cos(0) = 0 + 1 = 1</strong></li>
+            <li><strong>∫₀^π sin x dx = [−cos x]₀^π = −(−1) − (−1) = 2</strong></li>
+            <li><strong>∫₁² 1/x dx = ln 2 − ln 1 = ln 2</strong></li>
+        </ul>
 
         <h4>📊 Integration by Parts</h4>
-        <p><strong>∫ u dv = uv − ∫ v du</strong></p>
-        <p><em>Use when integrating a product like x·eˣ or x·ln x</em></p>
-        <p><em>Example: ∫ x eˣ dx → u=x, dv=eˣdx → v=eˣ → xeˣ − ∫eˣdx = xeˣ − eˣ + C</em></p>
-
-        <h4>🧮 CBT Examples</h4>
-        <ul>
-            <li><strong>∫ x dx = x²/2 + C</strong></li>
-            <li><strong>∫ (3x² + 2x) dx = x³ + x² + C</strong></li>
-            <li><strong>∫ cos x dx = sin x + C</strong></li>
-            <li><strong>∫ sin x dx = −cos x + C</strong></li>
-            <li><strong>∫ (12x² + 10)/(4x³ + 10x + 5) dx:</strong>
-                <ul>
-                    <li>Check: derivative of (4x³+10x+5) = 12x²+10 ✓ &nbsp; (numerator = derivative of denominator)</li>
-                    <li>Answer: <strong>ln|4x³ + 10x + 5| + C</strong></li>
-                </ul>
-            </li>
-        </ul>
+        <p><strong>∫ u dv = uv − ∫ v du</strong> — use for products like x·eˣ, x·ln x</p>
+        <p><em>∫ x eˣ dx → u=x, dv=eˣdx → xeˣ − eˣ + C</em></p>
     `,
     
     definite_integrals: `

@@ -111,7 +111,7 @@
             { id: 'limits',                   name: 'Limits & Continuity',         startIdx: 10, endIdx: 20 },
             { id: 'differentiation',          name: 'Differentiation',             startIdx: 20, endIdx: 35 },
             { id: 'applications_derivatives', name: 'Applications of Derivatives', startIdx: 35, endIdx: 40 },
-            { id: 'integration',              name: 'Integration',                 startIdx: 40, endIdx: 55 }
+            { id: 'integration',              name: 'Integration',                 startIdx: 40, endIdx: 60 }
         ],
         'MLS 102': [
             { id: 'evolution',                  name: 'Evolution of MLS Practice',       startIdx: 0,  endIdx: 15 },
