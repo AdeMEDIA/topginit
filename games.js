@@ -149,6 +149,34 @@
         return a;
     }
 
+    // Shuffle a question's options and update the answer letter to match
+    function shuffleOptions(q) {
+        var letters = ['A', 'B', 'C', 'D'];
+        var correctIdx = letters.indexOf(q.answer);
+        if (correctIdx < 0 || !q.options || q.options.length < 2) return q;
+
+        var indexed = q.options.map(function (opt, i) {
+            return { text: opt, isCorrect: i === correctIdx };
+        });
+
+        for (var i = indexed.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var tmp = indexed[i]; indexed[i] = indexed[j]; indexed[j] = tmp;
+        }
+
+        var newCorrectIdx = 0;
+        for (var k = 0; k < indexed.length; k++) {
+            if (indexed[k].isCorrect) { newCorrectIdx = k; break; }
+        }
+
+        return {
+            question:    q.question,
+            options:     indexed.map(function (o) { return o.text; }),
+            answer:      letters[newCorrectIdx],
+            explanation: q.explanation
+        };
+    }
+
     function esc(str) {
         return String(str || '')
             .replace(/&/g, '&amp;').replace(/</g, '&lt;')
@@ -536,7 +564,7 @@
             if (topic) questions = bank.slice(topic.startIdx, topic.endIdx);
         }
 
-        _gameQuestions = shuffleArray(questions);
+        _gameQuestions = shuffleArray(questions).map(shuffleOptions);
         window.closeGameCoursePanel();
 
         // Map HTML onclick gameId strings to game functions
@@ -1423,7 +1451,7 @@
 
         if (!hasBank) {
             window.loadQuestionBank('BIO 102').then(function () {
-                dc.questions = dcPickQuestions(dateStr);
+                dc.questions = dcPickQuestions(dateStr).map(shuffleOptions);
                 dcStart();
             });
         } else {
