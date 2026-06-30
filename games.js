@@ -71,24 +71,15 @@
             { id: 'dissection',       name: 'Dissection & Practical',      startIdx: 90, endIdx: 100 }
         ],
         'CHM 102': [
-            { id: 'history_organic',        name: 'History of Organic Chemistry', startIdx: 0,   endIdx: 10  },
-            { id: 'fullerenes',             name: 'Fullerenes & Nanochemistry',   startIdx: 10,  endIdx: 20  },
-            { id: 'electronic_theory',      name: 'Electronic Theory',            startIdx: 20,  endIdx: 30  },
-            { id: 'purification_analysis',  name: 'Isolation & Structure',        startIdx: 30,  endIdx: 40  },
-            { id: 'nomenclature',           name: 'Nomenclature & Functional',    startIdx: 40,  endIdx: 55  },
-            { id: 'hydrocarbons',           name: 'Alkanes, Alkenes, Alkynes',    startIdx: 55,  endIdx: 65  },
-            { id: 'mechanisms',             name: 'Reaction Mechanisms',          startIdx: 65,  endIdx: 75  },
-            { id: 'functional_group_chem',  name: 'Alcohols, Ethers, Amines',     startIdx: 75,  endIdx: 85  },
-            { id: 'inorganic_chemistry',    name: 'Groups & Transition Metals',   startIdx: 85,  endIdx: 100 },
-            { id: 'esters_hydrolysis',      name: 'Esters & Saponification',      startIdx: 100, endIdx: 110 },
-            { id: 'carbonyl_chemistry',     name: 'Carbonyl Chemistry',           startIdx: 110, endIdx: 120 },
-            { id: 'amines_misc',            name: 'Amines & Amides',              startIdx: 120, endIdx: 128 },
-            { id: 'carbohydrates',          name: 'Carbohydrates',                startIdx: 128, endIdx: 136 },
-            { id: 'proteins_amino_acids',   name: 'Proteins & Amino Acids',       startIdx: 136, endIdx: 142 },
-            { id: 'benzene_reactions',      name: 'Benzene & Misc Reactions',     startIdx: 142, endIdx: 150 },
-            { id: 'isomerism',              name: 'Isomerism',                    startIdx: 150, endIdx: 153 },
-            { id: 'enantiomers',            name: 'Enantiomers & Chirality',      startIdx: 153, endIdx: 156 },
-            { id: 'epoxides',               name: 'Epoxides',                     startIdx: 156, endIdx: 160 }
+            { id: 'esters_hydrolysis',    name: 'Esters & Saponification',  startIdx: 0,  endIdx: 10 },
+            { id: 'carbonyl_chemistry',   name: 'Carbonyl Chemistry',       startIdx: 10, endIdx: 20 },
+            { id: 'amines_misc',          name: 'Amines & Amides',          startIdx: 20, endIdx: 28 },
+            { id: 'carbohydrates',        name: 'Carbohydrates',            startIdx: 28, endIdx: 36 },
+            { id: 'proteins_amino_acids', name: 'Proteins & Amino Acids',   startIdx: 36, endIdx: 42 },
+            { id: 'benzene_reactions',    name: 'Benzene & Misc Reactions', startIdx: 42, endIdx: 50 },
+            { id: 'isomerism',            name: 'Isomerism',                startIdx: 50, endIdx: 53 },
+            { id: 'enantiomers',          name: 'Enantiomers & Chirality',  startIdx: 53, endIdx: 56 },
+            { id: 'epoxides',             name: 'Epoxides',                 startIdx: 56, endIdx: 60 }
         ],
         'GST 112': [
             { id: 'pre_colonial',              name: 'Pre-Colonial Nigeria',        startIdx: 0,  endIdx: 15 },
