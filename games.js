@@ -79,7 +79,13 @@
             { id: 'benzene_reactions',    name: 'Benzene & Misc Reactions', startIdx: 42, endIdx: 50 },
             { id: 'isomerism',            name: 'Isomerism',                startIdx: 50, endIdx: 53 },
             { id: 'enantiomers',          name: 'Enantiomers & Chirality',  startIdx: 53, endIdx: 56 },
-            { id: 'epoxides',             name: 'Epoxides',                 startIdx: 56, endIdx: 60 }
+            { id: 'epoxides',             name: 'Epoxides',                 startIdx: 56,  endIdx: 60  },
+            { id: 'amines_chemistry',     name: 'Amine Chemistry',           startIdx: 60,  endIdx: 91  },
+            { id: 'proteins_amino_ii',    name: 'Proteins & Amino Acids II', startIdx: 91,  endIdx: 116 },
+            { id: 'stereo_isomerism',     name: 'Isomerism & Stereochem',    startIdx: 116, endIdx: 140 },
+            { id: 'alcohols_carbonyls',   name: 'Alcohols & Carbonyls',      startIdx: 140, endIdx: 160 },
+            { id: 'applied_inorganic',    name: 'Applied & Inorganic',       startIdx: 160, endIdx: 165 },
+            { id: 'must_know',            name: 'Must Know ⭐',               startIdx: 160, endIdx: 200 }
         ],
         'GST 112': [
             { id: 'pre_colonial',              name: 'Pre-Colonial Nigeria',        startIdx: 0,  endIdx: 15 },
