@@ -857,8 +857,182 @@ window.questionBank["CHM 102"] = [
         options: ["paraffins, because they are relatively unreactive", "olefins", "acetylenes", "aromatics"],
         answer: "A",
         explanation: "The common name 'paraffins' (Latin: parum affinis = little affinity) reflects alkanes' low reactivity. They undergo mainly free-radical substitution (e.g. with Cl₂ in light)."
+    },
+
+    // ==================== MANUAL TEXTBOOK ADDITIONS — CARBOHYDRATES, REACTIONS & MISC (idx 140-164) ====================
+
+    // --- CARBOHYDRATES ---
+    {
+        question: "The main form in which carbohydrates are transported in plants is",
+        options: ["Glucose", "Sucrose", "Maltose", "Lactose"],
+        answer: "B",
+        explanation: "Sucrose (glucose + fructose) is the main transport carbohydrate in plant phloem sap. Glucose is the metabolic fuel but travels as sucrose for long-distance translocation."
+    },
+    {
+        question: "The following sugars are disaccharides EXCEPT",
+        options: ["Glucose", "Sucrose", "Maltose", "Lactose"],
+        answer: "A",
+        explanation: "Glucose is a monosaccharide (single sugar unit). Sucrose (glucose + fructose), Maltose (glucose + glucose), and Lactose (glucose + galactose) are all disaccharides (two sugar units)."
+    },
+    {
+        question: "The following are reducing sugars EXCEPT",
+        options: ["Glucose", "Sucrose", "Maltose", "Lactose"],
+        answer: "B",
+        explanation: "Sucrose is non-reducing because both anomeric carbons are locked in the glycosidic bond — no free aldehyde or ketone group remains to reduce Benedict's/Fehling's reagent. Glucose, maltose, and lactose all have free anomeric –OH groups."
+    },
+    {
+        question: "A positive test to Benedict's reagent is indicated by colour change from",
+        options: ["Blue to brick-red", "Brick-red to blue", "Brick-red to brown", "Brown to blue"],
+        answer: "A",
+        explanation: "Benedict's reagent is blue (Cu²⁺). Reducing sugars reduce Cu²⁺ to Cu₂O, which is brick-red/orange-red. The test colour change is blue → brick-red (positive = reducing sugar present)."
+    },
+    {
+        question: "The enzyme responsible for fermentation of bread/dough in yeast is",
+        options: ["Zylose", "Ketose", "Zymase", "Yeastose"],
+        answer: "C",
+        explanation: "Zymase is the enzyme complex in yeast that converts glucose to ethanol and CO₂: C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂. The CO₂ causes dough to rise; ethanol is baked off."
+    },
+    {
+        question: "Glycogen is a branched biopolymer consisting of linear chains of ______ residues",
+        options: ["Glucose", "Maltose", "Fructose", "Sucrose"],
+        answer: "A",
+        explanation: "Glycogen is the animal storage polysaccharide made entirely of glucose units — α-1,4 bonds in chains and α-1,6 bonds at branch points. It is more highly branched than amylopectin."
+    },
+    {
+        question: "Cellulose has the following properties EXCEPT that it is",
+        options: ["A white solid", "Insoluble in water", "Insoluble in ordinary organic solvents", "Easily hydrolysed"],
+        answer: "D",
+        explanation: "Cellulose is NOT easily hydrolysed — the β-1,4-glycosidic bonds require cellulase enzymes (absent in humans) or harsh acid treatment. It is a white solid that is insoluble in water and most organic solvents."
+    },
+    {
+        question: "The enzyme (cellulase) that aids the hydrolysis of cellulose is found in",
+        options: ["Ants", "Termites", "Spiders", "Man"],
+        answer: "B",
+        explanation: "Termites harbour symbiotic gut microorganisms (protozoa and bacteria) that produce cellulase, allowing them to digest wood. Humans and most vertebrates cannot produce cellulase."
+    },
+    {
+        question: "The product of fermentation of maize (corn) is",
+        options: ["Ketone", "Carboxylic acid", "Alcohol (ethanol)", "Aldehyde"],
+        answer: "C",
+        explanation: "Fermentation: maize starch → glucose (amylase) → ethanol + CO₂ (zymase in yeast). This produces corn ethanol used as biofuel and in beverages."
+    },
+    {
+        question: "The following foods will turn blue-black with iodine solution EXCEPT",
+        options: ["Gari (cassava product)", "Guinea corn", "Ground nut (peanut)", "Guguru (popcorn)"],
+        answer: "C",
+        explanation: "Iodine turns blue-black with starch (amylose). Ground nuts (peanuts) are rich in fat and protein but NOT starch — they do NOT give a blue-black colour. Gari, guinea corn, and popcorn all contain starch."
+    },
+    {
+        question: "Starch is also called all of the following EXCEPT",
+        options: ["Amylum", "Amylose", "Amylopectin", "Pectin"],
+        answer: "D",
+        explanation: "Pectin is a different polysaccharide from plant cell walls/fruits — NOT a form of starch. Starch consists of amylose (linear, α-1,4) and amylopectin (branched, α-1,6). Amylum is the Latin/old name for starch."
+    },
+    {
+        question: "The following terms can be used to describe cellulose EXCEPT",
+        options: ["Polymer", "Biomass", "Biopolymer", "Bioenzyme"],
+        answer: "D",
+        explanation: "Cellulose is a polymer (long chain macromolecule), a biopolymer (biologically produced), and biomass (plant structural material). It is NOT a bioenzyme — enzymes are proteins, not polysaccharides."
+    },
+
+    // --- CARBONYLS & REACTIONS ---
+    {
+        question: "Which of the following is a method of preparing ketones?",
+        options: ["Oxidation of secondary alcohols", "Oxidation of primary alcohols", "Reduction of aldehydes", "Reduction of haloalkanes"],
+        answer: "A",
+        explanation: "Secondary alcohols (R–CHOH–R') are oxidised by KMnO₄ or K₂Cr₂O₇ to give ketones (R–CO–R'). Primary alcohols give aldehydes then acids; aldehydes reduce to primary alcohols, not ketones."
+    },
+    {
+        question: "The boiling point of tertiary butanol is 65°C while that of normal butanol is 88°C. The difference in their boiling points is due to",
+        options: ["Nucleophilicity", "Resonance", "Hydrogen bonding", "Isomerism"],
+        answer: "C",
+        explanation: "Both are alcohols and hydrogen-bond, but n-butanol (1-butanol) has an unhindered –OH → more extensive H-bonding → higher bp (88°C). t-Butanol's –OH is sterically shielded by three methyl groups → weaker H-bonding → lower bp (65°C)."
+    },
+    {
+        question: "CH₃–CH₂–CH₂–OH reacted with acidified KMnO₄ gives the primary oxidation product",
+        options: ["CH₃–CH₂–CH₃ (propane)", "CH₃–CH₂–CHO (propanal)", "CH₃–CH₂–COOH (propanoic acid)", "No reaction"],
+        answer: "B",
+        explanation: "Primary alcohols are first oxidised to aldehydes (RCHO). Under mild conditions or with the reaction stopped early, propanal (CH₃CH₂CHO) is obtained. Further strong oxidation with excess acidified KMnO₄ would give propanoic acid."
+    },
+    {
+        question: "The final product of aldol condensation of two molecules of an aldehyde is",
+        options: ["A β-hydroxyaldehyde", "An α,β-unsaturated aldehyde", "An α-hydroxyaldehyde", "A β-hydroxy acid"],
+        answer: "B",
+        explanation: "Aldol condensation: (1) Aldol addition → β-hydroxyaldehyde; (2) Dehydration (elimination of H₂O) → α,β-unsaturated aldehyde (enal). The FINAL condensation product is always the α,β-unsaturated carbonyl compound."
+    },
+    {
+        question: "Ketones are less susceptible to nucleophilic attack than aldehydes because",
+        options: ["Ketones are less stable than aldehydes", "Aldehydes are more stable than ketones", "The steric hindrance of the two alkyl groups of ketones reduces nucleophile access", "Ketones are more reactive"],
+        answer: "C",
+        explanation: "Ketones have TWO alkyl groups flanking the carbonyl carbon, creating steric hindrance that blocks nucleophilic approach. Aldehydes have only ONE alkyl group (and one H) → less hindered → more reactive toward nucleophilic addition."
+    },
+    {
+        question: "The carbonyl compounds that can be oxidised easily to form carboxylic acids are",
+        options: ["Ketones", "Aldehydes", "Haloalkanes", "Esters"],
+        answer: "B",
+        explanation: "Aldehydes (R–CHO) are readily oxidised to carboxylic acids (R–COOH) by Tollens', Fehling's, Benedict's, or KMnO₄. Ketones have no C–H on the carbonyl carbon and resist mild oxidation."
+    },
+
+    // --- ESTERIFICATION, ACIDS & MISC ---
+    {
+        question: "Saponification reaction is best described as",
+        options: ["A condensation reaction", "Acid-promoted hydrolysis", "Base-promoted hydrolysis (soap making)", "A neutralisation involving an acid and a base"],
+        answer: "C",
+        explanation: "Saponification is the alkaline hydrolysis of a fat/ester with NaOH or KOH → soap (fatty acid salt) + glycerol. The base is consumed as a reagent, not a catalyst."
+    },
+    {
+        question: "The products of the reaction: CH₃COOH + CH₃OH →(H⁺)→",
+        options: ["CH₃COOCH₃ + H₂O", "CH₃COCH₃ + H₂O", "CH₃CH₂CHO + H₂O", "CH₃CH₂CH₃ + H₂O"],
+        answer: "A",
+        explanation: "Fischer esterification: carboxylic acid + alcohol → ester + water (H⁺ catalyst). CH₃COOH (acetic acid) + CH₃OH (methanol) → CH₃COOCH₃ (methyl acetate) + H₂O."
+    },
+    {
+        question: "Identify the most acidic compound from the following",
+        options: ["ClCH₂COOH (chloroacetic acid)", "Cl₂CHCOOH (dichloroacetic acid)", "CH₃COOH (acetic acid)", "C₂H₅COOH (propanoic acid)"],
+        answer: "B",
+        explanation: "Electron-withdrawing Cl destabilises the neutral acid and stabilises the conjugate base (carboxylate) by inductive effect — more Cl atoms = stronger acid. Cl₂CHCOOH (pKa ≈ 1.48) > ClCH₂COOH (pKa ≈ 2.86) > CH₃COOH (pKa ≈ 4.76) > C₂H₅COOH (pKa ≈ 4.87)."
+    },
+    {
+        question: "The gas produced when sodium metal is dropped into ethanol is",
+        options: ["H₂", "O₂", "N₂", "CO₂"],
+        answer: "A",
+        explanation: "Na reacts with the hydroxyl group of alcohols similarly to water: 2Na + 2C₂H₅OH → 2C₂H₅ONa + H₂↑. Hydrogen gas is evolved and sodium ethoxide is formed."
+    },
+
+    // --- GRIGNARD & MECHANISMS ---
+    {
+        question: "A Grignard reagent (RMgX) when reacted with methanal (formaldehyde, HCHO) will yield",
+        options: ["Ethanol", "Secondary alcohol", "Tertiary alcohol", "Primary alcohol"],
+        answer: "D",
+        explanation: "RMgX + HCHO → R–CH₂–OMgX → (H₃O⁺) → R–CH₂–OH (primary alcohol, one carbon longer than R). Methanal (formaldehyde) is the simplest aldehyde and always gives primary alcohols with Grignard reagents."
+    },
+    {
+        question: "Compound 'A' undergoes cyanohydrin formation; on hydrolysis this gives lactic acid (CH₃CHOHCOOH). Compound 'A' is",
+        options: ["Formaldehyde (HCHO)", "Acetaldehyde (CH₃CHO)", "Benzaldehyde (C₆H₅CHO)", "Acetone (CH₃COCH₃)"],
+        answer: "B",
+        explanation: "Cyanohydrin: CH₃CHO + HCN → CH₃CH(OH)CN. Hydrolysis: CH₃CH(OH)CN + H₂O + H⁺ → CH₃CH(OH)COOH (lactic acid). Working back: A = acetaldehyde (ethanal)."
+    },
+
+    // --- AMINES & FUNCTIONAL GROUPS ---
+    {
+        question: "Which general class of compounds do amines belong to?",
+        options: ["Oxidising agents", "Dehydrating agents", "Reducing agents", "Bases"],
+        answer: "D",
+        explanation: "Amines are organic bases. The lone pair on nitrogen readily accepts protons: R–NH₂ + H⁺ → R–NH₃⁺. Basicity increases with electron-donating substituents and decreases with electron-withdrawing groups."
+    },
+    {
+        question: "When an amine reacts with a carboxylic acid and the mixture is heated, the product formed is",
+        options: ["Amine oxide", "Cyanoamine", "Amide", "Tertiary amine"],
+        answer: "C",
+        explanation: "R–NH₂ + R'COOH → [R'COONH₃R] (ammonium salt, cold) → R'CONHR + H₂O (amide, on heating). This condensation forms an amide bond (the same bond found in proteins as the peptide bond)."
+    },
+    {
+        question: "(CH₃CO)₂O is classified as",
+        options: ["An ether", "An ester", "An anhydride", "An amide"],
+        answer: "C",
+        explanation: "(CH₃CO)₂O is acetic anhydride (ethanoic anhydride). Acid anhydrides (R–CO–O–CO–R) are formed by removing water from two carboxylic acid molecules. It is a powerful acylating agent."
     }
 ];
 
-// Total: 140 questions covering CHM 102 exam-relevant topics
+// Total: 165 questions covering CHM 102 exam-relevant topics
 
