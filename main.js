@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
         "GST 102": { semester: "second", title: "GST 102", level: "100L • Use of English II", description: "Grammar, essay writing, communication and ICT basics", icon: "📝", iconGradient: "linear-gradient(135deg, #667eea, #764ba2)", qCount: 318, locked: false, file: "gst102.js", bankKey: "GST 102" },
         "GST 104": { semester: "second", title: "GST 104", level: "100L • Nigeria Culture", description: "Nigerian history, culture and national development", icon: "🇳🇬", iconGradient: "linear-gradient(135deg, #f97316, #ea580c)", qCount: 100, locked: false, file: "gst112.js", bankKey: "GST 112" },
         "MTH 102": { semester: "second", title: "MTH 102", level: "100L • Elementary Mathematics", description: "Calculus, vectors and differential equations", icon: "📐", iconGradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", qCount: 81, locked: false, file: "mth102.js", bankKey: "MTH 102" },
-        "CHM 102": { semester: "second", title: "CHM 102", level: "100L • General Chemistry II", description: "Chemical kinetics, equilibrium and organic chemistry", icon: "🧪", iconGradient: "linear-gradient(135deg, #f59e0b, #d97706)", qCount: 200, locked: false, file: "chm102.js", bankKey: "CHM 102" },
+        "CHM 102": { semester: "second", title: "CHM 102", level: "100L • General Chemistry II", description: "Chemical kinetics, equilibrium and organic chemistry", icon: "🧪", iconGradient: "linear-gradient(135deg, #f59e0b, #d97706)", qCount: 140, locked: false, file: "chm102.js", bankKey: "CHM 102" },
         "MLS 102": { semester: "second", title: "MLS 102", level: "100L • History of Medical Laboratory Science", description: "History and development of MLS profession", icon: "📜", iconGradient: "linear-gradient(135deg, #06b6d4, #0891b2)", qCount: 100, locked: false, file: "mls102.js", bankKey: "MLS 102" },
         "BIO 102": { semester: "second", title: "BIO 102", level: "100L • General Biology II", description: "Diversity of life, plant and animal morphology", icon: "🔬", iconGradient: "linear-gradient(135deg, #10b981, #059669)", qCount: 100, locked: false, file: "bio102.js", bankKey: "BIO 102" },
         "BIO 108": { semester: "second", title: "BIO 108", level: "100L • Biology Practical II", description: "Practical biology techniques and experiments", icon: "🧫", iconGradient: "linear-gradient(135deg, #14b8a6, #0d9488)", qCount: 100, locked: false, file: "bio108.js", bankKey: "BIO 108" },
@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', function() {
             ]
         },
         "BIO 108": { icon: "🧫", topics: [{ id: "all", name: "All Topics", description: "Complete practical biology", qCount: 100, startIdx: 0, endIdx: 100 }] },
-        "CHM 102": { icon: "🧪", topics: [{ id: "all", name: "All Topics", description: "Complete chemistry II", qCount: 200, startIdx: 0, endIdx: 200 }] },
+        "CHM 102": { icon: "🧪", topics: [{ id: "all", name: "All Topics", description: "Complete chemistry II", qCount: 140, startIdx: 0, endIdx: 140 }] },
         "CHM 108": { icon: "⚗️", topics: [{ id: "all", name: "All Topics", description: "Complete practical chemistry", qCount: 100, startIdx: 0, endIdx: 100 }] },
         "PHY 102": { icon: "⚡", topics: [{ id: "all", name: "All Topics", description: "Complete physics II", qCount: 100, startIdx: 0, endIdx: 100 }] },
         "PHY 108": { icon: "📐", topics: [{ id: "all", name: "All Topics", description: "Complete practical physics", qCount: 100, startIdx: 0, endIdx: 100 }] },
@@ -259,21 +259,12 @@ document.addEventListener('DOMContentLoaded', function() {
   "CHM 102": {
       icon: "🧪",
       topics: [
-          { id: "esters_hydrolysis",    name: "Esters & Saponification",      description: "Esterification, saponification, acid anhydrides, acyl chlorides, soap",                               qCount: 10, startIdx: 0,  endIdx: 10 },
-          { id: "carbonyl_chemistry",   name: "Carbonyl Chemistry",           description: "Aldehydes, ketones, Clemmensen, Wolff-Kishner, iodoform, aldol, nucleophilic addition",              qCount: 10, startIdx: 10, endIdx: 20 },
-          { id: "amines_misc",          name: "Amines, Amides & Misc",        description: "Hofmann degradation, NaBH₄ limits, decarboxylation, urea, polymers, LiAlH₄",                       qCount: 8,  startIdx: 20, endIdx: 28 },
-          { id: "carbohydrates",        name: "Carbohydrates",                description: "Reducing/non-reducing sugars, Benedict's test, fermentation, glycogen, starch vs cellulose",        qCount: 8,  startIdx: 28, endIdx: 36 },
-          { id: "proteins_amino_acids", name: "Proteins & Amino Acids",       description: "Denaturation, disulfide bonds, zwitterions, isoelectric point, peptide bonds",                      qCount: 6,  startIdx: 36, endIdx: 42 },
-          { id: "benzene_reactions",    name: "Benzene & Misc Reactions",     description: "Friedel-Crafts acylation, Tollens', KMnO₄ oxidation, iodoform, azeotrope, amide formation",        qCount: 8,  startIdx: 42, endIdx: 50 },
-          { id: "isomerism",            name: "Isomerism",                    description: "Structural isomers, functional group isomers, geometric (cis-trans) isomerism",                     qCount: 3,  startIdx: 50, endIdx: 53 },
-          { id: "enantiomers",          name: "Enantiomers & Chirality",      description: "Chiral centres, non-superimposable mirror images, optical rotation of polarised light",             qCount: 3,  startIdx: 53, endIdx: 56 },
-          { id: "epoxides",             name: "Epoxides",                     description: "Oxirane ring, peracid synthesis, acid-catalysed and base-catalysed ring opening",                   qCount: 4,  startIdx: 56,  endIdx: 60  },
-          { id: "amines_chemistry",     name: "Amine Chemistry",              description: "Basicity of amines, IUPAC naming, Hofmann, Hinsberg, Schiff's base, isonitriles, nitrous acid",          qCount: 31, startIdx: 60,  endIdx: 91  },
-          { id: "proteins_amino_ii",    name: "Proteins & Amino Acids II",    description: "Amino acid classes, essential vs non-essential, acidic/basic/neutral AA, denaturation, Biuret test",      qCount: 25, startIdx: 91,  endIdx: 116 },
-          { id: "stereo_isomerism",     name: "Isomerism & Stereochemistry",  description: "Structural, geometric, optical isomers; chirality, enantiomers, diastereomers, meso, racemic mixtures",   qCount: 24, startIdx: 116, endIdx: 140 },
-          { id: "alcohols_carbonyls",   name: "Alcohols, Carbonyls & Misc",   description: "Alcohol classes, dehydration, oxidation, Grignard reactions, Clemmensen, Lucas test, aldol reaction",    qCount: 20, startIdx: 140, endIdx: 160 },
-          { id: "applied_inorganic",    name: "Applied & Inorganic",          description: "Transition metal catalysts, industrial processes, fuel types, welding, material properties, ester origin",  qCount: 5,  startIdx: 160, endIdx: 165 },
-          { id: "must_know",            name: "Must Know ⭐",                  description: "40 highest-yield exam topics: IUPAC naming, functional groups, key reactions, stereochemistry essentials",  qCount: 40, startIdx: 160, endIdx: 200 }
+          { id: "amines_chemistry",     name: "Amine Chemistry",              description: "Basicity of amines, IUPAC naming, Hofmann, Hinsberg, Schiff's base, isonitriles, nitrous acid",          qCount: 31, startIdx: 0,   endIdx: 31  },
+          { id: "proteins_amino_ii",    name: "Proteins & Amino Acids",       description: "Amino acid classes, essential vs non-essential, acidic/basic/neutral AA, denaturation, Biuret test",      qCount: 25, startIdx: 31,  endIdx: 56  },
+          { id: "stereo_isomerism",     name: "Isomerism & Stereochemistry",  description: "Structural, geometric, optical isomers; chirality, enantiomers, diastereomers, meso, racemic mixtures",   qCount: 24, startIdx: 56,  endIdx: 80  },
+          { id: "alcohols_carbonyls",   name: "Alcohols, Carbonyls & Misc",   description: "Alcohol classes, dehydration, oxidation, Grignard reactions, Clemmensen, Lucas test, aldol reaction",    qCount: 20, startIdx: 80,  endIdx: 100 },
+          { id: "applied_inorganic",    name: "Applied & Inorganic",          description: "Transition metal catalysts, industrial processes, fuel types, welding, material properties, ester origin",  qCount: 5,  startIdx: 100, endIdx: 105 },
+          { id: "must_know",            name: "Must Know ⭐",                  description: "40 highest-yield exam topics: IUPAC naming, functional groups, key reactions, stereochemistry essentials",  qCount: 40, startIdx: 100, endIdx: 140 }
       ]
   },
     };
