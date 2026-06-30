@@ -647,216 +647,216 @@ window.questionBank["CHM 102"] = [
         explanation: "Esters (RCOOR') are formed by the condensation of a carboxylic acid (RCOOH) with an alcohol (R'OH): RCOOH + R'OH ⇌ RCOOR' + H₂O. They are acyl derivatives of carboxylic acids."
     },
 
-    // ==================== MUST KNOW — CURATED EXAM ESSENTIALS (Questions 166-200, idx 165-199) ====================
+    // ==================== MUST KNOW — V1 INORGANIC, METALS & ESSENTIALS (idx 105-139) ====================
     {
-        question: "What is the IUPAC name for CH₃CH₂OH?",
-        options: ["Methanol", "Ethyl alcohol (common name only)", "Ethanol", "Propanol"],
-        answer: "C",
-        explanation: "CH₃CH₂OH: 2-carbon chain + –OH → ethanol (IUPAC). 'Ethyl alcohol' is the common name; IUPAC requires the -ol suffix on the parent chain."
+        question: "A covalent bond is formed by",
+        options: ["sharing of electron pairs between atoms", "complete transfer of electrons from one atom to another", "electrostatic attraction between ions", "van der Waals forces only"],
+        answer: "A",
+        explanation: "Covalent bonds arise from the mutual sharing of one or more electron pairs between two atoms, resulting in a lower overall energy state."
     },
     {
-        question: "The IUPAC name for (CH₃)₂CHNH₂ (isopropylamine) is",
-        options: ["Propan-1-amine", "2-Methylpropan-1-amine", "N-Methylethanamine", "Propan-2-amine"],
+        question: "An ionic bond is formed by",
+        options: ["sharing of electrons between atoms", "complete transfer of electrons from one atom to another", "metallic bonding forces", "van der Waals forces"],
+        answer: "B",
+        explanation: "Ionic bonds result from the complete transfer of one or more electrons from a metal to a non-metal, forming cations and anions held together by electrostatic attraction."
+    },
+    {
+        question: "Electronegativity is the measure of",
+        options: ["an atom's ability to attract shared electrons towards itself", "atomic size", "atomic mass", "number of valence electrons"],
+        answer: "A",
+        explanation: "Electronegativity (Pauling scale) measures an atom's tendency to attract bonding electrons. Fluorine is the most electronegative (4.0), followed by O (3.5) and N/Cl (3.0)."
+    },
+    {
+        question: "The most electronegative element in the periodic table is",
+        options: ["Oxygen (O)", "Chlorine (Cl)", "Fluorine (F)", "Nitrogen (N)"],
+        answer: "C",
+        explanation: "Fluorine (F) has the highest electronegativity value of 4.0 on the Pauling scale. Its small atomic size and high effective nuclear charge make it strongly attract bonding electrons."
+    },
+    {
+        question: "Electronegativity across a period (left to right) in the periodic table",
+        options: ["Decreases steadily", "Increases steadily (more protons pull electrons more strongly)", "Remains constant", "First increases then decreases"],
+        answer: "B",
+        explanation: "Across a period, nuclear charge increases while atomic radius decreases, so atoms attract bonding electrons more strongly → electronegativity increases left to right."
+    },
+    {
+        question: "Electronegativity down a group in the periodic table",
+        options: ["Decreases (larger atoms attract shared electrons less effectively)", "Increases", "Remains constant", "First decreases then increases"],
+        answer: "A",
+        explanation: "Down a group, atomic radius increases and electrons are further from the nucleus, so the atom's ability to attract bonding electrons decreases → electronegativity decreases."
+    },
+    {
+        question: "A polar covalent bond occurs when",
+        options: ["electrons are shared equally between identical atoms", "electrons are shared unequally due to a difference in electronegativity", "electrons are transferred completely", "no electrons are shared"],
+        answer: "B",
+        explanation: "Polar covalent bonds have unequal electron sharing when Δelectronegativity ≈ 0.5–1.7. The more electronegative atom acquires a partial negative charge (δ⁻)."
+    },
+    {
+        question: "The inductive effect is defined as",
+        options: ["permanent polarization of electrons along a sigma (σ) bond chain", "delocalization of pi (π) electrons across conjugated systems", "transfer of protons between molecules", "formation of free radicals"],
+        answer: "A",
+        explanation: "The inductive effect is the through-bond transmission of partial charges due to electronegativity differences, transmitted along σ-bonds and decreasing with distance."
+    },
+    {
+        question: "Resonance in organic chemistry refers to",
+        options: ["delocalization of electrons across multiple atoms represented by several resonance structures", "bond breaking between atoms", "complete electron transfer forming ions", "proton transfer from one molecule to another"],
+        answer: "A",
+        explanation: "Resonance describes electron delocalization — no single Lewis structure is adequate; the true structure is a hybrid. Benzene is the classic example."
+    },
+    {
+        question: "Hückel's rule states that an aromatic compound must have",
+        options: ["4n+2 π electrons in a cyclic, planar, fully-conjugated ring (n = 0, 1, 2, …)", "only even number of carbon atoms", "only six π electrons always", "at least one benzene ring"],
+        answer: "A",
+        explanation: "Aromaticity requires: (1) cyclic, (2) planar, (3) fully conjugated, (4) 4n+2 π electrons. Benzene (n=1, 6π), naphthalene (n=2, 10π) are examples."
+    },
+    {
+        question: "The reactivity of alkali metals (Group IA) with water",
+        options: ["decreases down the group (Li most reactive)", "increases down the group (Li < Na < K < Rb < Cs)", "is the same for all alkali metals", "depends only on temperature"],
+        answer: "B",
+        explanation: "Reactivity increases down Group I as ionisation energy decreases: Li reacts slowly, Na vigorously, K catches fire, Rb and Cs explode on contact with water."
+    },
+    {
+        question: "Sodium (Na) reacts violently with",
+        options: ["Water only", "Water and alcohols only", "Oxygen and acids only", "Water, alcohols, and oxygen (all of the above)"],
         answer: "D",
-        explanation: "(CH₃)₂CHNH₂: 3-carbon chain, –NH₂ on C-2 → propan-2-amine (IUPAC). 'Isopropylamine' is the common name."
+        explanation: "Alkali metals react with water (2Na + 2H₂O → 2NaOH + H₂↑), alcohols (2Na + 2ROH → 2RONa + H₂↑), and oxygen (4Na + O₂ → 2Na₂O, or Na₂O₂ in excess O₂)."
     },
     {
-        question: "The IUPAC name for CH₃COOC₂H₅ (ethyl acetate) is",
-        options: ["Ethyl propanoate", "Methyl ethanoate", "Ethyl ethanoate", "Propyl methanoate"],
-        answer: "C",
-        explanation: "CH₃COO–C₂H₅: the acid part is ethanoic acid (CH₃COOH) and the alcohol part is ethanol (C₂H₅OH) → ethyl ethanoate."
-    },
-    {
-        question: "The IUPAC name for (CH₃)₃N (trimethylamine) is",
-        options: ["Trimethylamine (common name)", "N,N-Dimethylmethanamine", "N-Dimethylamine", "Dimethylamine"],
-        answer: "B",
-        explanation: "For (CH₃)₃N: parent = methanamine (CH₃NH₂), with two N-methyl substituents → N,N-Dimethylmethanamine. 'Trimethylamine' is the common name."
-    },
-    {
-        question: "The IUPAC name for CH₃CHO (acetaldehyde) is",
-        options: ["Methanal", "Propanal", "Ethanone", "Ethanal"],
-        answer: "D",
-        explanation: "CH₃CHO: 2-carbon chain with –CHO at C-1 → ethanal (IUPAC). The –CHO suffix is written as '-al' in the IUPAC name."
-    },
-    {
-        question: "The functional group –NH₂ is characteristic of",
-        options: ["Carboxylic acids (–COOH)", "Primary amines (R–NH₂)", "Esters (R–COO–R')", "Aldehydes (R–CHO)"],
-        answer: "B",
-        explanation: "The amino group (–NH₂) directly bonded to carbon defines a primary amine. Secondary amines have –NH–; tertiary amines have –N< with no N–H bonds."
-    },
-    {
-        question: "Which functional group is present in carboxylic acids?",
-        options: ["–NH₂ (amino)", "–OH alone (hydroxyl)", "–COOH (carboxyl: C=O + OH combined)", "–CHO (aldehyde)"],
-        answer: "C",
-        explanation: "The carboxyl group (–COOH) is unique to carboxylic acids. It combines a carbonyl (C=O) and a hydroxyl (–OH) on the same carbon."
-    },
-    {
-        question: "The functional group present in esters is",
-        options: ["–CHO (aldehyde)", "–COOH (carboxyl)", "–COO– (ester linkage)", "–OH (hydroxyl)"],
-        answer: "C",
-        explanation: "Esters contain the –COO– (ester) linkage: R–C(=O)–O–R'. The C=O and C–O–C together form the ester functional group."
-    },
-    {
-        question: "What distinguishes an aldehyde from a ketone at the structural level?",
-        options: ["Aldehydes have the –CHO group at the end of a carbon chain; ketones have C=O within the chain", "Aldehydes have two carbonyl groups; ketones have one", "Ketones have a terminal –CHO group; aldehydes do not", "Both have identical functional groups — no structural difference"],
+        question: "Calcium hydroxide solution (limewater) is used as a test for",
+        options: ["carbon dioxide — turns limewater milky (CaCO₃ precipitate)", "oxygen — reignites a glowing splint", "hydrogen — burns with a squeaky pop", "chlorine — bleaches damp litmus paper"],
         answer: "A",
-        explanation: "Aldehyde: R–CHO (terminal, C=O bonded to at least one H). Ketone: R–CO–R' (internal, C=O bonded to two carbon groups). This structural difference drives their different reactivity."
+        explanation: "CO₂ + Ca(OH)₂ → CaCO₃↓ (white/milky) + H₂O. Excess CO₂ dissolves CaCO₃: CaCO₃ + H₂O + CO₂ → Ca(HCO₃)₂ (solution clears)."
     },
     {
-        question: "The amide linkage (–CO–NH–) found in proteins and nylon is formed by reaction between",
-        options: ["Two carboxylic acid groups", "An amine group (–NH₂) and a carboxylic acid group (–COOH) — condensation", "Two alcohol groups", "An ether and water"],
+        question: "The flame test for sodium gives a flame colour of",
+        options: ["Lilac/violet", "Yellow/orange", "Brick red", "Green"],
         answer: "B",
-        explanation: "Condensation: –COOH + H₂N– → –CO–NH– + H₂O. In proteins this gives the peptide bond; in nylon it gives the amide repeat unit."
+        explanation: "Sodium compounds produce a persistent yellow/orange flame due to the 3s → 3p electronic transition emitting light at 589 nm. Na is identified by this characteristic yellow colour."
     },
     {
-        question: "The Hinsberg test uses benzene sulfonyl chloride (C₆H₅SO₂Cl) to",
-        options: ["Oxidise amines to nitroso compounds", "Distinguish primary, secondary, and tertiary amines", "Prepare diazonium salts", "Reduce nitro groups"],
-        answer: "B",
-        explanation: "Hinsberg test: 1° amine → NaOH-soluble sulfonamide; 2° amine → NaOH-insoluble sulfonamide; 3° amine → no reaction. Used to classify unknown amines."
+        question: "Alkali metals (Group IA) are stored in kerosene or oil because",
+        options: ["It improves their electrical conductivity", "They are too soft to handle with bare hands", "They react rapidly with moisture and oxygen in air, so must be excluded from both", "Kerosene reacts with them to form alloys"],
+        answer: "C",
+        explanation: "Na, K, Rb, Cs tarnish instantly in air and react violently with water. Storage under kerosene (or in dry inert gas for Rb/Cs) prevents contact with O₂ and H₂O."
     },
     {
-        question: "Hofmann degradation of propionamide (CH₃CH₂CONH₂) with Br₂/NaOH gives",
-        options: ["Propylamine (CH₃CH₂CH₂NH₂)", "Ethylamine (CH₃CH₂NH₂)", "Methylamine (CH₃NH₂)", "Aniline (C₆H₅NH₂)"],
-        answer: "B",
-        explanation: "Propionamide (3C amide) undergoes Hofmann → ethylamine (2C primary amine). The rule: product has one fewer carbon than the starting amide."
-    },
-    {
-        question: "Arylamines (e.g. aniline) are weaker bases than alkylamines because",
-        options: ["They have higher molecular mass", "The lone pair on N is delocalised into the aromatic ring, reducing its availability for protonation", "They contain more carbon atoms", "They form stronger hydrogen bonds with water"],
-        answer: "B",
-        explanation: "In aniline, resonance delocalises the N lone pair into the benzene ring: C₆H₅–NH₂ ↔ quinoid forms. This stabilises aniline more than its conjugate acid → weaker base."
-    },
-    {
-        question: "The correct order of basicity in aqueous solution is",
-        options: ["(CH₃)₂NH > CH₃NH₂ > NH₃ > C₆H₅NH₂", "C₆H₅NH₂ > NH₃ > CH₃NH₂ > (CH₃)₂NH", "NH₃ > C₆H₅NH₂ > CH₃NH₂ > (CH₃)₂NH", "CH₃NH₂ > (CH₃)₂NH > C₆H₅NH₂ > NH₃"],
+        question: "Group IIA elements (alkaline earth metals) have",
+        options: ["two valence electrons in the outer shell (ns² configuration)", "one valence electron", "seven valence electrons", "eight valence electrons (full outer shell)"],
         answer: "A",
-        explanation: "Basicity (pKa of conjugate acid): dimethylamine (10.7) > methylamine (10.6) > NH₃ (9.25) > aniline (4.6). Arylamines are weakest due to lone-pair delocalisation."
+        explanation: "Alkaline earth metals (Be, Mg, Ca, Sr, Ba, Ra) all have ns² configuration and lose two electrons to form M²⁺ ions."
     },
     {
-        question: "When an alkyl primary amine reacts with NaNO₂/HCl (nitrous acid), the main organic product is",
-        options: ["A secondary amine", "A stable N-nitroso compound (yellow oil)", "A nitrile (R–CN)", "An alcohol (R–OH) via unstable diazonium decomposition"],
-        answer: "D",
-        explanation: "R–NH₂ + HNO₂ → R–N₂⁺ (alkyl diazonium, unstable) → R–OH + N₂↑. Alkyl diazonium salts are too unstable to isolate; the main product is the alcohol."
-    },
-    {
-        question: "The Biuret test is used to detect",
-        options: ["The presence of glucose (reducing sugar)", "The presence of peptide bonds in proteins", "Aldehyde groups", "Starch"],
-        answer: "B",
-        explanation: "Biuret test: Cu²⁺ (alkaline solution) + peptide bonds → violet complex. A positive result (violet/purple) confirms the presence of protein (≥2 peptide bonds)."
-    },
-    {
-        question: "The peptide bond (–CO–NH–) in proteins forms between",
-        options: ["The –COOH of one amino acid and the –NH₂ of the next amino acid", "Two –NH₂ groups", "Two –COOH groups", "An –OH group and a –NH₂ group"],
+        question: "Group IVA elements (the carbon group) are",
+        options: ["C, Si, Ge, Sn, Pb", "C, N, O, F, Ne", "C, Si, P, S, Cl", "C, Si, Ge, As, Sb"],
         answer: "A",
-        explanation: "–COOH + H₂N– → –CO–NH– + H₂O. This condensation at the α-carboxyl and α-amino groups builds the polypeptide backbone."
+        explanation: "Group 14 (IVA) runs from carbon to lead: C → Si → Ge → Sn → Pb. They have ns²np² valence configuration."
     },
     {
-        question: "The simplest naturally occurring amino acid is",
-        options: ["Alanine", "Valine", "Glycine (H₂N–CH₂–COOH, R = H)", "Serine"],
-        answer: "C",
-        explanation: "Glycine has H as its R-group. It is the smallest amino acid and the only one that is NOT chiral (C-α bears two H atoms)."
-    },
-    {
-        question: "Essential amino acids must be obtained from the diet because",
-        options: ["They are needed for energy production only", "The human body cannot synthesise them in sufficient amounts", "They are found only in animal proteins", "They contain sulfur in their side chains"],
-        answer: "B",
-        explanation: "Essential amino acids (e.g. valine, leucine, isoleucine, lysine, methionine, phenylalanine, threonine, tryptophan, histidine) cannot be biosynthesised in the body in adequate amounts."
-    },
-    {
-        question: "At physiological pH (~7.4), amino acids exist predominantly as",
-        options: ["Neutral uncharged molecules", "Fully protonated cations (–NH₃⁺ and –COOH)", "Zwitterions (–NH₃⁺ and –COO⁻ on the same molecule)", "Fully deprotonated anions (–NH₂ and –COO⁻)"],
-        answer: "C",
-        explanation: "At physiological pH, the –NH₂ group is protonated (–NH₃⁺, pKa ≈ 9) and the –COOH is deprotonated (–COO⁻, pKa ≈ 2), giving a neutral overall charge but an internally charged zwitterion."
-    },
-    {
-        question: "Enantiomers can be distinguished by",
-        options: ["Their boiling points", "Their solubility in water", "The direction in which they rotate plane-polarised light", "Their molecular formulae"],
-        answer: "C",
-        explanation: "Enantiomers have identical bp, mp, and solubility in achiral media. Optical rotation (measured by a polarimeter) is the only simple physical measurement that distinguishes them."
-    },
-    {
-        question: "A racemic mixture contains",
-        options: ["Only the R-enantiomer in excess", "Equal amounts (50:50) of R and S enantiomers → net optical rotation = 0", "A mixture of diastereomers", "A single meso compound"],
-        answer: "B",
-        explanation: "A racemate (racemic mixture) is an equimolar mixture of two enantiomers. Their opposite rotations cancel exactly, giving zero optical activity."
-    },
-    {
-        question: "For cis-trans (geometric) isomerism to exist in an alkene, the requirement is that",
-        options: ["Each carbon of C=C is bonded to only one substituent", "The molecule must have a chiral carbon", "Each doubly-bonded carbon must carry TWO DIFFERENT substituents", "The molecule must contain at least 6 carbons"],
-        answer: "C",
-        explanation: "If either carbon of C=C has two identical groups, the cis and trans 'isomers' are actually identical. Both must carry different groups to give distinct cis and trans forms."
-    },
-    {
-        question: "A chiral (asymmetric) carbon atom has",
-        options: ["Only two substituents", "Three identical substituents", "Four different substituents (sp³ carbon with no plane of symmetry)", "A double bond"],
-        answer: "C",
-        explanation: "A tetrahedral sp³ carbon bearing four different groups is chiral. It has no plane, axis, or centre of symmetry, and its mirror image cannot be superimposed on it."
-    },
-    {
-        question: "Constitutional (structural) isomers are compounds that have",
-        options: ["The same atom connectivity but different spatial arrangement", "Non-superimposable mirror-image arrangements", "The same molecular formula but DIFFERENT atom connectivity (different bonding)", "Identical physical properties"],
-        answer: "C",
-        explanation: "Constitutional isomers share the molecular formula but differ in which atoms are bonded to which. Example: ethanol (CH₃CH₂OH) and dimethyl ether (CH₃OCH₃), both C₂H₆O."
-    },
-    {
-        question: "Addition of a Grignard reagent (RMgX) to an aldehyde (R'CHO), followed by aqueous workup, gives",
-        options: ["A primary alcohol", "A secondary alcohol", "A tertiary alcohol", "A ketone"],
-        answer: "B",
-        explanation: "RMgX + R'CHO → R'CH(OH)R (after H₂O/H⁺). The Grignard carbon adds to the aldehyde carbonyl → secondary alcohol (one C from Grignard + one C from CHO)."
-    },
-    {
-        question: "Tollens' test (silver mirror test) gives a positive result (silver mirror) with",
-        options: ["Ketones only", "Aldehydes only (they reduce Ag⁺ to Ag; ketones do not)", "Both aldehydes and ketones", "Carboxylic acids only"],
-        answer: "B",
-        explanation: "Aldehydes: RCHO + 2[Ag(NH₃)₂]⁺ → RCOO⁻ + 2Ag↓ (mirror) + ... Ketones lack the aldehyde H needed for this oxidation, so they give no reaction."
-    },
-    {
-        question: "Saponification (alkaline hydrolysis of an ester with NaOH) produces",
-        options: ["An alcohol and a carboxylic acid (acid hydrolysis products)", "Soap (fatty acid sodium salt) and glycerol (from fats/oils)", "A ketone and water", "An ether and CO₂"],
-        answer: "B",
-        explanation: "Fat (triglyceride) + 3NaOH → glycerol + 3 fatty acid sodium salts (soap). Alkaline hydrolysis is irreversible (unlike acid hydrolysis) because the carboxylate salt cannot re-esterify."
-    },
-    {
-        question: "The iodoform test gives a yellow precipitate (CHI₃) with compounds containing",
-        options: ["The –COOH group", "The –NH₂ group", "The CH₃CO– (methyl ketone) group or CH₃CH(OH)– (secondary alcohol oxidisable to methyl ketone)", "The –CHO group in all aldehydes"],
-        answer: "C",
-        explanation: "Iodoform test is positive for: CH₃COR (methyl ketones), CH₃CH(OH)R (secondary alcohols oxidised to methyl ketones in situ), and ethanol (CH₃CH₂OH → acetaldehyde)."
-    },
-    {
-        question: "Heating ethanol with excess conc. H₂SO₄ at 170°C (elimination conditions) gives primarily",
-        options: ["Diethyl ether", "Ethene (CH₂=CH₂)", "Ethanoic acid", "Ethyl hydrogen sulfate"],
-        answer: "B",
-        explanation: "At 170°C (high temp, excess H₂SO₄): C₂H₅OH → CH₂=CH₂ + H₂O (dehydration/elimination). At 140°C the ether forms instead."
-    },
-    {
-        question: "Glucose (an aldose) and fructose (a ketose) are both C₆H₁₂O₆. They differ in that glucose has a/an ________ group while fructose has a/an ________ group.",
-        options: ["Aldehyde / ketone", "Ketone / aldehyde", "Alcohol / ether", "Ester / aldehyde"],
+        question: "The inert pair effect explains why",
+        options: ["heavier p-block elements (e.g. Tl, Pb, Bi) prefer an oxidation state two less than their group number", "noble gases are unreactive", "transition metals have variable oxidation states", "lanthanides have similar chemistry"],
         answer: "A",
-        explanation: "Glucose is an aldohexose (–CHO at C-1); fructose is a ketohexose (C=O at C-2). Both are reducing sugars but due to different carbonyl positions."
+        explanation: "In heavier p-block elements, the outermost s electrons become increasingly difficult to ionise (the 'inert pair'), so Tl⁺, Pb²⁺, and Bi³⁺ are more stable than their higher-valency counterparts."
     },
     {
-        question: "Glucose is a reducing sugar because it",
-        options: ["Dissolves readily in water", "Contains a free aldehyde group that can be oxidised (reduces Cu²⁺ or Ag⁺)", "Is a disaccharide", "Contains a keto group"],
+        question: "Silicon dioxide (SiO₂) is classified as",
+        options: ["a network covalent (macromolecular) solid with very high melting point", "an ionic solid", "a simple molecular solid", "a metallic solid"],
+        answer: "A",
+        explanation: "In SiO₂, each Si is tetrahedrally bonded to four O atoms, and each O bridges two Si atoms, forming an infinite three-dimensional covalent network — hence high mp (~1600°C)."
+    },
+    {
+        question: "Lead (Pb) in Group IVA most commonly exhibits the",
+        options: ["+2 oxidation state (Pb²⁺), due to the inert pair effect", "+4 oxidation state exclusively", "0 oxidation state (elemental lead is most stable)", "–4 oxidation state"],
+        answer: "A",
+        explanation: "Although Pb is in Group IVA (suggesting +4), the inert pair effect makes Pb²⁺ (losing only the 6p² electrons) more stable than Pb⁴⁺ (which would also lose the 6s² pair)."
+    },
+    {
+        question: "Transition metals are characterised by",
+        options: ["partially filled d-orbitals in the atom or in a common oxidation state", "completely filled d-orbitals only", "empty d-orbitals", "no d-orbitals"],
+        answer: "A",
+        explanation: "Elements with partially filled d-orbitals (groups 3–12, e.g. Fe, Cu, Mn) are transition metals. This gives them variable oxidation states, colour, and catalytic ability."
+    },
+    {
+        question: "Which property is most characteristic of transition metals?",
+        options: ["Variable oxidation states (multiple stable oxidation states)", "Fixed, single oxidation state like group I and II metals", "Low melting points and softness", "Gaseous state at room temperature"],
+        answer: "A",
+        explanation: "Transition metals exhibit variable oxidation states because the energy difference between (n–1)d and ns electrons is small (e.g. Fe²⁺/Fe³⁺, Cu⁺/Cu²⁺, Mn²⁺/Mn⁴⁺/Mn⁷⁺)."
+    },
+    {
+        question: "Most compounds of transition metals are",
+        options: ["coloured, due to d–d electron transitions in the crystal field", "colourless and white", "always black", "coloured only when dissolved in water"],
+        answer: "A",
+        explanation: "In a ligand (crystal) field, d-orbitals split into sets of different energy. Electrons absorb visible light to jump between split d-levels, giving the compound a complementary colour."
+    },
+    {
+        question: "A complex ion (coordination compound) consists of",
+        options: ["a central metal ion surrounded by ligands (Lewis bases) that donate electron pairs", "two metal ions bonded together", "a metal bonded only to water molecules", "cations without any accompanying anions"],
+        answer: "A",
+        explanation: "Example: [Cu(NH₃)₄]²⁺ — Cu²⁺ is the central metal ion, NH₃ molecules are ligands. Ligands coordinate to the metal via lone-pair donation."
+    },
+    {
+        question: "Ligands in a coordination compound are",
+        options: ["electron pair donors (Lewis bases) that coordinate to the central metal", "electron pair acceptors (Lewis acids)", "neutral atoms with no lone pairs", "always negatively charged anions"],
+        answer: "A",
+        explanation: "Ligands donate electron pairs to the central metal ion (a Lewis acid), forming dative (coordinate) covalent bonds. Examples: NH₃, H₂O, Cl⁻, CN⁻."
+    },
+    {
+        question: "The catalytic properties of transition metals are due to",
+        options: ["their variable oxidation states and ability to adsorb and activate reactant molecules on their surfaces", "their high melting points making them stable", "their low reactivity with most chemicals", "their diamagnetic properties"],
+        answer: "A",
+        explanation: "Transition metals (e.g. Fe in Haber process, Ni in hydrogenation, Pt in catalytic converters) adsorb reactants, weaken bonds, and provide alternative reaction pathways with lower activation energies."
+    },
+    {
+        question: "Which transition metal is present in haemoglobin and is essential for oxygen transport in blood?",
+        options: ["Copper (Cu)", "Iron (Fe)", "Zinc (Zn)", "Cobalt (Co)"],
         answer: "B",
-        explanation: "The free aldehyde (–CHO) of glucose acts as a reducing agent in Fehling's/Benedict's/Tollens' tests, being oxidised to a carboxylate while Cu²⁺ → Cu₂O or Ag⁺ → Ag."
+        explanation: "Haemoglobin contains iron (Fe²⁺) at the centre of a porphyrin (haem) ring. Fe²⁺ reversibly binds O₂ for transport; Fe³⁺ (methaemoglobin) cannot carry O₂."
     },
     {
-        question: "Acid hydrolysis of an ester (RCOOR') gives",
-        options: ["An amine and CO₂", "An alcohol (R'OH) and a carboxylic acid (RCOOH)", "An aldehyde and water", "A ketone and an alkene"],
-        answer: "B",
-        explanation: "RCOOR' + H₂O ⇌ (H⁺) ⇌ RCOOH + R'OH. Acid hydrolysis is the reverse of esterification — both the acid and alcohol are recovered."
+        question: "The functional group of alcohols is",
+        options: ["–OH (hydroxyl group)", "–COOH (carboxyl)", "–CHO (aldehyde)", "–NH₂ (amino)"],
+        answer: "A",
+        explanation: "Alcohols are characterised by the –OH (hydroxyl) group attached to a saturated carbon. Primary: RCH₂OH; secondary: R₂CHOH; tertiary: R₃COH."
     },
     {
-        question: "Oxidation of a primary alcohol (RCH₂OH) using acidified K₂Cr₂O₇ can give",
-        options: ["An alkene only", "A secondary alcohol", "An aldehyde (with controlled oxidation) or a carboxylic acid (with excess oxidant)", "No reaction — primary alcohols are not oxidised"],
-        answer: "C",
-        explanation: "Primary alcohols: RCH₂OH → [controlled] → RCHO (aldehyde) → [excess] → RCOOH. Using reflux with excess K₂Cr₂O₇ takes the reaction to the carboxylic acid."
+        question: "The functional group of aldehydes is",
+        options: ["–CHO (a carbonyl group at the end of a carbon chain)", "–COOH", "–CO– (internal)", "–OH"],
+        answer: "A",
+        explanation: "Aldehydes have the –CHO group (RCHO): a carbonyl carbon bonded to at least one hydrogen. They are easily oxidised to carboxylic acids."
     },
     {
-        question: "The characteristic reaction mechanism for carbonyl compounds (C=O in aldehydes and ketones) is",
-        options: ["Electrophilic substitution", "Free-radical chain reaction", "Nucleophilic addition", "Elimination (E2)"],
-        answer: "C",
-        explanation: "The electrophilic carbonyl carbon (C=O, δ+) is attacked by nucleophiles (Nu⁻ or Nu:), making nucleophilic addition the fundamental mechanism for aldehyde and ketone reactions."
+        question: "The functional group of ketones is",
+        options: ["–CO– (a carbonyl group between two carbon atoms)", "–CHO", "–COOH", "–OH"],
+        answer: "A",
+        explanation: "Ketones have an internal C=O group flanked by two carbon substituents (RCOR'). Unlike aldehydes, ketones resist mild oxidation."
+    },
+    {
+        question: "Carboxylic acids contain the functional group",
+        options: ["–COOH (a carbonyl C=O and a hydroxyl –OH on the same carbon)", "–OH only", "–CHO only", "–COOR (ester linkage)"],
+        answer: "A",
+        explanation: "The carboxyl group (–COOH) makes carboxylic acids acidic: the O–H proton is released. Example: CH₃COOH (ethanoic/acetic acid, pKa 4.76)."
+    },
+    {
+        question: "Esters have the general functional group / formula",
+        options: ["–COO– (R–COO–R', derived from acid + alcohol)", "–COOH", "–CHO", "–OH"],
+        answer: "A",
+        explanation: "Esters (RCOOR') contain the –COO– linkage formed by condensation of a carboxylic acid (RCOOH) and an alcohol (R'OH): RCOOH + R'OH ⇌ RCOOR' + H₂O."
+    },
+    {
+        question: "Primary amines contain the functional group",
+        options: ["–NH₂ (amino group attached directly to carbon)", "–OH", "–COOH", "–SH (thiol)"],
+        answer: "A",
+        explanation: "Primary amines (RNH₂) have one –NH₂ group on carbon. They are derivatives of ammonia (NH₃) in which one H is replaced by an alkyl or aryl group."
+    },
+    {
+        question: "Benzene (C₆H₆) is an example of",
+        options: ["an aromatic hydrocarbon — cyclic, planar, 6 π electrons (Hückel, n=1)", "an aliphatic hydrocarbon", "an alkane (saturated)", "an alkene with simple double bonds"],
+        answer: "A",
+        explanation: "Benzene satisfies Hückel's rule (4×1+2=6 π electrons), is planar and fully conjugated. Its exceptional stability (resonance energy ~150 kJ/mol) is the hallmark of aromaticity."
+    },
+    {
+        question: "Alkanes (saturated hydrocarbons) are also called",
+        options: ["paraffins, because they are relatively unreactive", "olefins", "acetylenes", "aromatics"],
+        answer: "A",
+        explanation: "The common name 'paraffins' (Latin: parum affinis = little affinity) reflects alkanes' low reactivity. They undergo mainly free-radical substitution (e.g. with Cl₂ in light)."
     }
 ];
 
