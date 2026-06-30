@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
         "GST 102": { semester: "second", title: "GST 102", level: "100L • Use of English II", description: "Grammar, essay writing, communication and ICT basics", icon: "📝", iconGradient: "linear-gradient(135deg, #667eea, #764ba2)", qCount: 318, locked: false, file: "gst102.js", bankKey: "GST 102" },
         "GST 104": { semester: "second", title: "GST 104", level: "100L • Nigeria Culture", description: "Nigerian history, culture and national development", icon: "🇳🇬", iconGradient: "linear-gradient(135deg, #f97316, #ea580c)", qCount: 100, locked: false, file: "gst112.js", bankKey: "GST 112" },
         "MTH 102": { semester: "second", title: "MTH 102", level: "100L • Elementary Mathematics", description: "Calculus, vectors and differential equations", icon: "📐", iconGradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", qCount: 81, locked: false, file: "mth102.js", bankKey: "MTH 102" },
-        "CHM 102": { semester: "second", title: "CHM 102", level: "100L • General Chemistry II", description: "Chemical kinetics, equilibrium and organic chemistry", icon: "🧪", iconGradient: "linear-gradient(135deg, #f59e0b, #d97706)", qCount: 100, locked: false, file: "chm102.js", bankKey: "CHM 102" },
+        "CHM 102": { semester: "second", title: "CHM 102", level: "100L • General Chemistry II", description: "Chemical kinetics, equilibrium and organic chemistry", icon: "🧪", iconGradient: "linear-gradient(135deg, #f59e0b, #d97706)", qCount: 60, locked: false, file: "chm102.js", bankKey: "CHM 102" },
         "MLS 102": { semester: "second", title: "MLS 102", level: "100L • History of Medical Laboratory Science", description: "History and development of MLS profession", icon: "📜", iconGradient: "linear-gradient(135deg, #06b6d4, #0891b2)", qCount: 100, locked: false, file: "mls102.js", bankKey: "MLS 102" },
         "BIO 102": { semester: "second", title: "BIO 102", level: "100L • General Biology II", description: "Diversity of life, plant and animal morphology", icon: "🔬", iconGradient: "linear-gradient(135deg, #10b981, #059669)", qCount: 100, locked: false, file: "bio102.js", bankKey: "BIO 102" },
         "BIO 108": { semester: "second", title: "BIO 108", level: "100L • Biology Practical II", description: "Practical biology techniques and experiments", icon: "🧫", iconGradient: "linear-gradient(135deg, #14b8a6, #0d9488)", qCount: 100, locked: false, file: "bio108.js", bankKey: "BIO 108" },
@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', function() {
             ]
         },
         "BIO 108": { icon: "🧫", topics: [{ id: "all", name: "All Topics", description: "Complete practical biology", qCount: 100, startIdx: 0, endIdx: 100 }] },
-        "CHM 102": { icon: "🧪", topics: [{ id: "all", name: "All Topics", description: "Complete chemistry II", qCount: 100, startIdx: 0, endIdx: 100 }] },
+        "CHM 102": { icon: "🧪", topics: [{ id: "all", name: "All Topics", description: "Complete chemistry II", qCount: 60, startIdx: 0, endIdx: 60 }] },
         "CHM 108": { icon: "⚗️", topics: [{ id: "all", name: "All Topics", description: "Complete practical chemistry", qCount: 100, startIdx: 0, endIdx: 100 }] },
         "PHY 102": { icon: "⚡", topics: [{ id: "all", name: "All Topics", description: "Complete physics II", qCount: 100, startIdx: 0, endIdx: 100 }] },
         "PHY 108": { icon: "📐", topics: [{ id: "all", name: "All Topics", description: "Complete practical physics", qCount: 100, startIdx: 0, endIdx: 100 }] },
@@ -259,15 +259,15 @@ document.addEventListener('DOMContentLoaded', function() {
   "CHM 102": {
       icon: "🧪",
       topics: [
-          { id: "history_organic", name: "History of Organic Chemistry", description: "Development, vital force theory, importance", qCount: 10, startIdx: 0, endIdx: 10 },
-          { id: "fullerenes", name: "Fullerenes & Nanochemistry", description: "Allotropes of carbon, C₆₀, nanotubes, graphene", qCount: 10, startIdx: 10, endIdx: 20 },
-          { id: "electronic_theory", name: "Electronic Theory", description: "Bonding, electronegativity, resonance, hyperconjugation", qCount: 10, startIdx: 20, endIdx: 30 },
-          { id: "purification_analysis", name: "Isolation & Structure Determination", description: "Recrystallization, distillation, chromatography, IR, NMR, MS", qCount: 10, startIdx: 30, endIdx: 40 },
-          { id: "nomenclature", name: "Nomenclature & Functional Groups", description: "IUPAC naming, alcohols, aldehydes, ketones, acids, amines", qCount: 15, startIdx: 40, endIdx: 55 },
-          { id: "hydrocarbons", name: "Alkanes, Alkenes, Alkynes", description: "Properties, reactions, Markovnikov's rule", qCount: 10, startIdx: 55, endIdx: 65 },
-          { id: "mechanisms", name: "Reaction Mechanisms & Kinetics", description: "SN1, SN2, carbocations, nucleophiles, electrophiles", qCount: 10, startIdx: 65, endIdx: 75 },
-          { id: "functional_group_chem", name: "Alcohols, Ethers, Amines", description: "Oxidation, Lucas test, iodoform, diazotization", qCount: 10, startIdx: 75, endIdx: 85 },
-          { id: "inorganic_chemistry", name: "Group IA, IIA, IVA & Transition Metals", description: "Alkali metals, alkaline earth, carbon group, d-block elements", qCount: 15, startIdx: 85, endIdx: 100 }
+          { id: "esters_hydrolysis",    name: "Esters & Saponification",      description: "Esterification, saponification, acid anhydrides, acyl chlorides, soap",                               qCount: 10, startIdx: 0,  endIdx: 10 },
+          { id: "carbonyl_chemistry",   name: "Carbonyl Chemistry",           description: "Aldehydes, ketones, Clemmensen, Wolff-Kishner, iodoform, aldol, nucleophilic addition",              qCount: 10, startIdx: 10, endIdx: 20 },
+          { id: "amines_misc",          name: "Amines, Amides & Misc",        description: "Hofmann degradation, NaBH₄ limits, decarboxylation, urea, polymers, LiAlH₄",                       qCount: 8,  startIdx: 20, endIdx: 28 },
+          { id: "carbohydrates",        name: "Carbohydrates",                description: "Reducing/non-reducing sugars, Benedict's test, fermentation, glycogen, starch vs cellulose",        qCount: 8,  startIdx: 28, endIdx: 36 },
+          { id: "proteins_amino_acids", name: "Proteins & Amino Acids",       description: "Denaturation, disulfide bonds, zwitterions, isoelectric point, peptide bonds",                      qCount: 6,  startIdx: 36, endIdx: 42 },
+          { id: "benzene_reactions",    name: "Benzene & Misc Reactions",     description: "Friedel-Crafts acylation, Tollens', KMnO₄ oxidation, iodoform, azeotrope, amide formation",        qCount: 8,  startIdx: 42, endIdx: 50 },
+          { id: "isomerism",            name: "Isomerism",                    description: "Structural isomers, functional group isomers, geometric (cis-trans) isomerism",                     qCount: 3,  startIdx: 50, endIdx: 53 },
+          { id: "enantiomers",          name: "Enantiomers & Chirality",      description: "Chiral centres, non-superimposable mirror images, optical rotation of polarised light",             qCount: 3,  startIdx: 53, endIdx: 56 },
+          { id: "epoxides",             name: "Epoxides",                     description: "Oxirane ring, peracid synthesis, acid-catalysed and base-catalysed ring opening",                   qCount: 4,  startIdx: 56, endIdx: 60 }
       ]
   },
     };

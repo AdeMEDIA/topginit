@@ -27,8 +27,7 @@
         { title: 'BIO 108', bankKey: 'BIO 108', icon: '🧫', file: 'bio108.js',  iconGradient: 'linear-gradient(135deg,#14b8a6,#0d9488)' },
         { title: 'PHY 102', bankKey: 'PHY 102', icon: '⚡', file: 'phy102.js',  iconGradient: 'linear-gradient(135deg,#ef4444,#dc2626)' },
         { title: 'COS 102', bankKey: 'COS 102', icon: '💻', file: 'cos102.js',  iconGradient: 'linear-gradient(135deg,#3b82f6,#1d4ed8)' },
-        { title: 'MLS 104', bankKey: 'MLS 104', icon: '🦠', file: 'mls104.js',  iconGradient: 'linear-gradient(135deg,#84cc16,#65a30d)' },
-        { title: 'MCB 102', bankKey: 'MCB 102', icon: '🔬', file: 'mcb102.js', iconGradient: 'linear-gradient(135deg,#22c55e,#16a34a)' }
+        { title: 'MLS 104', bankKey: 'MLS 104', icon: '🦠', file: 'mls104.js',  iconGradient: 'linear-gradient(135deg,#84cc16,#65a30d)' }
     ];
 
     var TOPICS_MAP = {
@@ -72,15 +71,15 @@
             { id: 'dissection',       name: 'Dissection & Practical',      startIdx: 90, endIdx: 100 }
         ],
         'CHM 102': [
-            { id: 'history_organic',        name: 'History of Organic Chemistry', startIdx: 0,  endIdx: 10  },
-            { id: 'fullerenes',             name: 'Fullerenes & Nanochemistry',   startIdx: 10, endIdx: 20  },
-            { id: 'electronic_theory',      name: 'Electronic Theory',            startIdx: 20, endIdx: 30  },
-            { id: 'purification_analysis',  name: 'Isolation & Structure',        startIdx: 30, endIdx: 40  },
-            { id: 'nomenclature',           name: 'Nomenclature & Functional',    startIdx: 40, endIdx: 55  },
-            { id: 'hydrocarbons',           name: 'Alkanes, Alkenes, Alkynes',    startIdx: 55, endIdx: 65  },
-            { id: 'mechanisms',             name: 'Reaction Mechanisms',          startIdx: 65, endIdx: 75  },
-            { id: 'functional_group_chem',  name: 'Alcohols, Ethers, Amines',     startIdx: 75, endIdx: 85  },
-            { id: 'inorganic_chemistry',    name: 'Groups & Transition Metals',   startIdx: 85, endIdx: 100 }
+            { id: 'esters_hydrolysis',    name: 'Esters & Saponification',  startIdx: 0,  endIdx: 10 },
+            { id: 'carbonyl_chemistry',   name: 'Carbonyl Chemistry',       startIdx: 10, endIdx: 20 },
+            { id: 'amines_misc',          name: 'Amines & Amides',          startIdx: 20, endIdx: 28 },
+            { id: 'carbohydrates',        name: 'Carbohydrates',            startIdx: 28, endIdx: 36 },
+            { id: 'proteins_amino_acids', name: 'Proteins & Amino Acids',   startIdx: 36, endIdx: 42 },
+            { id: 'benzene_reactions',    name: 'Benzene & Misc Reactions', startIdx: 42, endIdx: 50 },
+            { id: 'isomerism',            name: 'Isomerism',                startIdx: 50, endIdx: 53 },
+            { id: 'enantiomers',          name: 'Enantiomers & Chirality',  startIdx: 53, endIdx: 56 },
+            { id: 'epoxides',             name: 'Epoxides',                 startIdx: 56, endIdx: 60 }
         ],
         'GST 112': [
             { id: 'pre_colonial',              name: 'Pre-Colonial Nigeria',        startIdx: 0,  endIdx: 15 },
@@ -107,12 +106,13 @@
             { id: 'programming_basics',  name: 'Programming Concepts',        startIdx: 80, endIdx: 100 }
         ],
         'MTH 102': [
-            { id: 'functions',                name: 'Functions & Mappings',        startIdx: 0,  endIdx: 11 },
-            { id: 'limits',                   name: 'Limits & Continuity',         startIdx: 11, endIdx: 22 },
-            { id: 'differentiation',          name: 'Differentiation',             startIdx: 22, endIdx: 40 },
-            { id: 'applications_derivatives', name: 'Applications of Derivatives', startIdx: 40, endIdx: 46 },
-            { id: 'integration',              name: 'Integration',                 startIdx: 46, endIdx: 66 },
-            { id: 'trig_functions',           name: 'Trig Functions & Identities', startIdx: 66, endIdx: 81 }
+            { id: 'functions',                name: 'Functions & Graphs',          startIdx: 0,  endIdx: 15  },
+            { id: 'limits',                   name: 'Limits & Continuity',         startIdx: 15, endIdx: 25  },
+            { id: 'differentiation',          name: 'Differentiation',             startIdx: 25, endIdx: 45  },
+            { id: 'applications_derivatives', name: 'Applications of Derivatives', startIdx: 45, endIdx: 55  },
+            { id: 'integration',              name: 'Integration',                 startIdx: 55, endIdx: 75  },
+            { id: 'definite_integrals',       name: 'Definite Integrals',          startIdx: 75, endIdx: 90  },
+            { id: 'advanced_topics',          name: 'Advanced Topics',             startIdx: 90, endIdx: 100 }
         ],
         'MLS 102': [
             { id: 'evolution',                  name: 'Evolution of MLS Practice',       startIdx: 0,  endIdx: 15 },
@@ -131,15 +131,6 @@
             { id: 'disease_mechanisms',   name: 'Pathophysiology',            startIdx: 65, endIdx: 75  },
             { id: 'laboratory_diagnosis', name: 'Laboratory Diagnosis',       startIdx: 75, endIdx: 90  },
             { id: 'prevention_control',   name: 'Prevention & Control',       startIdx: 90, endIdx: 100 }
-        ],
-        'MCB 102': [
-            { id: 'intro_history',           name: 'Introduction & History',          startIdx: 0,  endIdx: 15 },
-            { id: 'spontaneous_generation',  name: 'Spontaneous Generation',          startIdx: 15, endIdx: 27 },
-            { id: 'germ_theory',             name: "Germ Theory & Koch's Postulate",  startIdx: 27, endIdx: 38 },
-            { id: 'microbe_characteristics', name: 'Characteristics of Microbes',     startIdx: 38, endIdx: 48 },
-            { id: 'microbial_growth',        name: 'Microbial Growth Phases',         startIdx: 48, endIdx: 57 },
-            { id: 'economic_fungi',          name: 'Economic Importance of Fungi',    startIdx: 57, endIdx: 76 },
-            { id: 'economic_bacteria',       name: 'Economic Importance of Bacteria', startIdx: 76, endIdx: 92 }
         ]
     };
 
@@ -156,6 +147,34 @@
             var tmp = a[i]; a[i] = a[j]; a[j] = tmp;
         }
         return a;
+    }
+
+    // Shuffle a question's options and update the answer letter to match
+    function shuffleOptions(q) {
+        var letters = ['A', 'B', 'C', 'D'];
+        var correctIdx = letters.indexOf(q.answer);
+        if (correctIdx < 0 || !q.options || q.options.length < 2) return q;
+
+        var indexed = q.options.map(function (opt, i) {
+            return { text: opt, isCorrect: i === correctIdx };
+        });
+
+        for (var i = indexed.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var tmp = indexed[i]; indexed[i] = indexed[j]; indexed[j] = tmp;
+        }
+
+        var newCorrectIdx = 0;
+        for (var k = 0; k < indexed.length; k++) {
+            if (indexed[k].isCorrect) { newCorrectIdx = k; break; }
+        }
+
+        return {
+            question:    q.question,
+            options:     indexed.map(function (o) { return o.text; }),
+            answer:      letters[newCorrectIdx],
+            explanation: q.explanation
+        };
     }
 
     function esc(str) {
@@ -545,7 +564,7 @@
             if (topic) questions = bank.slice(topic.startIdx, topic.endIdx);
         }
 
-        _gameQuestions = shuffleArray(questions);
+        _gameQuestions = shuffleArray(questions).map(shuffleOptions);
         window.closeGameCoursePanel();
 
         // Map HTML onclick gameId strings to game functions
@@ -1432,7 +1451,7 @@
 
         if (!hasBank) {
             window.loadQuestionBank('BIO 102').then(function () {
-                dc.questions = dcPickQuestions(dateStr);
+                dc.questions = dcPickQuestions(dateStr).map(shuffleOptions);
                 dcStart();
             });
         } else {
