@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
         "MLS 102": { semester: "second", title: "MLS 102", level: "100L • History of Medical Laboratory Science", description: "History and development of MLS profession", icon: "📜", iconGradient: "linear-gradient(135deg, #06b6d4, #0891b2)", qCount: 65, locked: false, file: "mls102.js", bankKey: "MLS 102" },
 
         // ── ACTIVE (unlocked) — second semester ──
-        "BIO 102": { semester: "second", title: "BIO 102", level: "100L • General Biology II", description: "Diversity of life, plant and animal morphology", icon: "🔬", iconGradient: "linear-gradient(135deg, #10b981, #059669)", qCount: 100, locked: false, file: "bio102.js", bankKey: "BIO 102" },
+        "BIO 102": { semester: "second", title: "BIO 102", level: "100L • General Biology II", description: "Diversity of life, plant and animal morphology", icon: "🔬", iconGradient: "linear-gradient(135deg, #10b981, #059669)", qCount: 111, locked: false, file: "bio102.js", bankKey: "BIO 102" },
         "BIO 108": { semester: "second", title: "BIO 108", level: "100L • Biology Practical II", description: "Practical biology techniques and experiments", icon: "🧫", iconGradient: "linear-gradient(135deg, #14b8a6, #0d9488)", qCount: 100, locked: false, file: "bio108.js", bankKey: "BIO 108" },
         "PHY 102": { semester: "second", title: "PHY 102", level: "100L • General Physics II", description: "Electricity, magnetism and modern physics", icon: "⚡", iconGradient: "linear-gradient(135deg, #ef4444, #dc2626)", qCount: 100, locked: false, file: "phy102.js", bankKey: "PHY 102" },
         "COS 102": { semester: "second", title: "COS 102", level: "100L • Intro to Computing Science", description: "Computer science fundamentals and programming", icon: "💻", iconGradient: "linear-gradient(135deg, #3b82f6, #1d4ed8)", qCount: 100, locked: false, file: "cos102.js", bankKey: "COS 102" },
@@ -166,12 +166,13 @@ document.addEventListener('DOMContentLoaded', function() {
         "BIO 102": {
             icon: "🔬",
             topics: [
-                { id: "arthropoda",        name: "Arthropoda & Arachnida",  description: "Arthropod classes, insects, arachnids, crustaceans, myriapods, spiders", qCount: 34, startIdx: 0,  endIdx: 34 },
-                { id: "protozoa",          name: "Protozoa",                description: "Classification, locomotion types, Ciliata, Mastigophora, Sporozoa",       qCount: 15, startIdx: 34, endIdx: 49 },
-                { id: "porifera_mollusca", name: "Porifera & Mollusca",     description: "Sponge symmetry, mollusk classes, mantle, radula, shell types",           qCount: 9,  startIdx: 49, endIdx: 58 },
-                { id: "aves",              name: "Aves (Birds)",            description: "Bird characteristics, wing adaptations, leg adaptations",                 qCount: 15, startIdx: 58, endIdx: 73 },
-                { id: "pisces",            name: "Pisces (Fish)",           description: "Fish features, functions of fins: caudal, dorsal, pectoral, pelvic",      qCount: 12, startIdx: 73, endIdx: 85 },
-                { id: "taxonomy",          name: "Taxonomy & Classification",description: "Binomial nomenclature, taxonomic ranks, kingdoms, domains, phylogeny",    qCount: 15, startIdx: 85, endIdx: 100 }
+                { id: "arthropoda",        name: "Arthropoda & Arachnida",  description: "Arthropod classes, insects, arachnids, crustaceans, myriapods, spiders", qCount: 34,  startIdx: 0,   endIdx: 34  },
+                { id: "protozoa",          name: "Protozoa",                description: "Classification, locomotion types, Ciliata, Mastigophora, Sporozoa",       qCount: 15,  startIdx: 34,  endIdx: 49  },
+                { id: "porifera_mollusca", name: "Porifera & Mollusca",     description: "Sponge symmetry, mollusk classes, mantle, radula, shell types",           qCount: 9,   startIdx: 49,  endIdx: 58  },
+                { id: "aves",              name: "Aves (Birds)",            description: "Bird characteristics, wing adaptations, leg adaptations",                 qCount: 15,  startIdx: 58,  endIdx: 73  },
+                { id: "pisces",            name: "Pisces (Fish)",           description: "Fish features, functions of fins: caudal, dorsal, pectoral, pelvic",      qCount: 12,  startIdx: 73,  endIdx: 85  },
+                { id: "taxonomy",          name: "Taxonomy & Classification",description: "Binomial nomenclature, taxonomic ranks, kingdoms, domains, phylogeny",    qCount: 15,  startIdx: 85,  endIdx: 100 },
+                { id: "last_mins",         name: "Last Mins Must Know",     description: "Coelenterata body wall, symmetry, insect orders, cephalopod circulation, fish species, primitive Mollusca", qCount: 11, startIdx: 100, endIdx: 111 }
             ]
         },
         "BIO 108": { icon: "🧫", topics: [{ id: "all", name: "All Topics", description: "Complete practical biology", qCount: 100, startIdx: 0, endIdx: 100 }] },

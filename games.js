@@ -53,12 +53,13 @@
             { id: 'judiciary_rights',          name: 'Judiciary & Rights',          startIdx: 80, endIdx: 90 }
         ],
         'BIO 102': [
-            { id: 'arthropoda',        name: 'Arthropoda & Arachnida',   startIdx: 0,  endIdx: 34  },
-            { id: 'protozoa',          name: 'Protozoa',                  startIdx: 34, endIdx: 49  },
-            { id: 'porifera_mollusca', name: 'Porifera & Mollusca',       startIdx: 49, endIdx: 58  },
-            { id: 'aves',              name: 'Aves (Birds)',               startIdx: 58, endIdx: 73  },
-            { id: 'pisces',            name: 'Pisces (Fish)',              startIdx: 73, endIdx: 85  },
-            { id: 'taxonomy',          name: 'Taxonomy & Classification',  startIdx: 85, endIdx: 100 }
+            { id: 'arthropoda',        name: 'Arthropoda & Arachnida',   startIdx: 0,   endIdx: 34  },
+            { id: 'protozoa',          name: 'Protozoa',                  startIdx: 34,  endIdx: 49  },
+            { id: 'porifera_mollusca', name: 'Porifera & Mollusca',       startIdx: 49,  endIdx: 58  },
+            { id: 'aves',              name: 'Aves (Birds)',               startIdx: 58,  endIdx: 73  },
+            { id: 'pisces',            name: 'Pisces (Fish)',              startIdx: 73,  endIdx: 85  },
+            { id: 'taxonomy',          name: 'Taxonomy & Classification',  startIdx: 85,  endIdx: 100 },
+            { id: 'last_mins',         name: 'Last Mins Must Know',        startIdx: 100, endIdx: 111 }
         ],
         'BIO 108': [
             { id: 'plant_anatomy',    name: 'Anatomy of Flowering Plants', startIdx: 0,  endIdx: 30  },

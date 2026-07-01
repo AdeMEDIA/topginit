@@ -634,7 +634,87 @@ window.questionBank["BIO 102"] = [
         options: ["Monera", "Protista", "Fungi", "Plantae"],
         answer: "B",
         explanation: "Protista includes unicellular (and some multicellular) eukaryotic organisms like Amoeba, Paramecium, and algae."
+    },
+
+    // ==================== LAST MINS MUST KNOW (Questions 101-111, idx 100-110) ====================
+
+    // Body wall of Coelenterata
+    {
+        question: "The body wall of Coelenterata consists of how many cell layers?",
+        options: ["One", "Two", "Three", "Four"],
+        answer: "B",
+        explanation: "Coelenterates (cnidarians) are diploblastic — their body wall has two cell layers: the outer ectoderm and the inner endoderm, separated by a non-cellular mesoglea."
+    },
+    {
+        question: "Which two cell layers make up the body wall of Coelenterata?",
+        options: ["Ectoderm and mesoderm", "Ectoderm and endoderm", "Mesoderm and endoderm", "Epidermis and dermis"],
+        answer: "B",
+        explanation: "Coelenterata are diploblastic: ectoderm (outer) and endoderm (inner), with mesoglea between them. They lack a true mesoderm."
+    },
+
+    // Body symmetry
+    {
+        question: "What type of body symmetry do Coelenterates (e.g., jellyfish, hydra) exhibit?",
+        options: ["Bilateral", "Radial", "Asymmetrical", "Spherical"],
+        answer: "B",
+        explanation: "Coelenterates show radial symmetry — body parts are arranged around a central axis, like the spokes of a wheel."
+    },
+    {
+        question: "Which of these organisms exhibits bilateral symmetry?",
+        options: ["Jellyfish", "Earthworm", "Sponge", "Sea anemone"],
+        answer: "B",
+        explanation: "Earthworms have bilateral symmetry — the body can be divided into two equal halves along one plane only. Jellyfish and sea anemones are radially symmetrical; sponges are asymmetrical."
+    },
+
+    // Orders of insects / Beetles
+    {
+        question: "Beetles belong to which order of insects?",
+        options: ["Diptera", "Coleoptera", "Lepidoptera", "Hymenoptera"],
+        answer: "B",
+        explanation: "Order Coleoptera (meaning 'sheathed wings') includes beetles — the largest order of insects, with over 400,000 known species."
+    },
+    {
+        question: "Which order of insects includes butterflies and moths?",
+        options: ["Coleoptera", "Diptera", "Lepidoptera", "Orthoptera"],
+        answer: "C",
+        explanation: "Order Lepidoptera (scale wings) includes butterflies and moths. Diptera = flies; Coleoptera = beetles; Orthoptera = grasshoppers."
+    },
+
+    // Circulatory system of Cephalopods
+    {
+        question: "The circulatory system of cephalopods (e.g., octopus, squid) is:",
+        options: ["Open", "Closed", "Absent", "Incomplete"],
+        answer: "B",
+        explanation: "Cephalopods have a closed circulatory system — blood flows entirely within vessels, allowing efficient oxygen delivery. This is unique among mollusks."
+    },
+    {
+        question: "How many hearts does a typical cephalopod (e.g., octopus) have?",
+        options: ["One", "Two", "Three", "Four"],
+        answer: "C",
+        explanation: "Cephalopods have three hearts: one systemic heart (pumps blood to the body) and two branchial hearts (one per gill, pumping blood through the gills)."
+    },
+
+    // Estimated population of fishes
+    {
+        question: "Approximately how many species of fish are currently known?",
+        options: ["Around 10,000", "Around 20,000", "Around 33,000", "Around 60,000"],
+        answer: "C",
+        explanation: "There are approximately 33,000 known species of fish, making them the largest group of vertebrates."
+    },
+
+    // Most primitive class of Mollusca
+    {
+        question: "Which class is considered the most primitive of the Mollusca?",
+        options: ["Gastropoda", "Bivalvia", "Monoplacophora", "Cephalopoda"],
+        answer: "C",
+        explanation: "Monoplacophora is the most primitive class of Mollusca. Once thought extinct, living specimens were discovered in 1952. They show repetition of organs (metamerism) resembling ancestral mollusks."
+    },
+    {
+        question: "Monoplacophora is regarded as the most primitive mollusks because they:",
+        options: ["Have no shell", "Show repetition of organs (metameric segmentation)", "Have the largest shells", "Live only on land"],
+        answer: "B",
+        explanation: "Monoplacophorans show serial repetition of gills, muscles, and other organs — a primitive trait linking mollusks to segmented ancestors."
     }
 
 ];
-// Total: 100 questions covering BIO 102 Animal Kingdom topics
+// Total: 111 questions covering BIO 102 Animal Kingdom + Last Mins Must Know
