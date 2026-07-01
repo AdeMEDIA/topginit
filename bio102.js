@@ -1,624 +1,640 @@
-// ==================== BIO 102 QUESTION BANK ====================
-// General Biology II - Viruses, Bacteria, Fungi, Plant & Animal Kingdoms, Ecology, Physiology
-
 if (!window.questionBank) {
   window.questionBank = {};
 }
 
 window.questionBank["BIO 102"] = [
-    // ==================== VIRUSES (Questions 1-15) ====================
+
+    // ==================== ARTHROPODA & ARACHNIDA (Questions 1-34, idx 0-33) ====================
+
+    // From PDF: Arthropoda basics
     {
-        question: "Viruses are considered non-living primarily because they",
-        options: ["can replicate", "contain genetic material", "cannot reproduce outside a host cell", "have protein coats"],
-        answer: "C",
-        explanation: "Viruses are acellular and cannot carry out metabolic processes or reproduce independently. They require a host cell's machinery to replicate, which is why they are considered non-living."
+        question: "What is the defining characteristic of the phylum Arthropoda?",
+        options: ["Segmented body with a true coelom", "Jointed appendages and exoskeleton", "Acoelomate body", "Soft body with shell"],
+        answer: "B",
+        explanation: "Arthropods are defined by their jointed appendages (arthro = joint, poda = foot) and a hard chitin exoskeleton."
     },
     {
-        question: "The protein coat that surrounds a virus is called the",
-        options: ["capsid", "envelope", "nucleocapsid", "spike"],
+        question: "Which class of Arthropoda includes animals with two body regions and eight legs?",
+        options: ["Insecta", "Arachnida", "Crustacea", "Myriapoda"],
+        answer: "B",
+        explanation: "Arachnids (spiders, scorpions, ticks) have two body regions — cephalothorax and abdomen — and four pairs (eight) of legs."
+    },
+    {
+        question: "Which class of Arthropoda includes animals with one pair of antennae?",
+        options: ["Arachnida", "Insecta", "Crustacea", "Myriapoda"],
+        answer: "B",
+        explanation: "Insects have one pair of antennae. Arachnids have none; crustaceans have two pairs."
+    },
+    {
+        question: "Which of these is a characteristic of the class Crustacea?",
+        options: ["Two pairs of antennae", "No antennae", "Eight legs only", "Segmented body without joints"],
         answer: "A",
-        explanation: "The capsid is the protein shell that encloses the viral genetic material (DNA or RNA). It is composed of protein subunits called capsomeres."
+        explanation: "Crustaceans (crabs, lobsters, shrimp) are distinguished by having two pairs of antennae."
     },
     {
-        question: "Which of the following is NOT a characteristic of viruses?",
-        options: ["They contain either DNA or RNA", "They are obligate intracellular parasites", "They have ribosomes for protein synthesis", "They can crystallize"],
-        answer: "C",
-        explanation: "Viruses lack ribosomes and cannot synthesize proteins on their own. They depend entirely on the host cell's ribosomes for protein production."
-    },
-    {
-        question: "The viral envelope is derived from",
-        options: ["the viral capsid", "the host cell membrane", "the viral genetic material", "cytoplasmic proteins"],
+        question: "True or False: Crustaceans have a single pair of antennae.",
+        options: ["True", "False — they have two pairs", "True — only in some species", "False — they have no antennae"],
         answer: "B",
-        explanation: "Enveloped viruses acquire their lipid envelope by budding through the host cell's membrane (nuclear or plasma membrane), incorporating host lipids and viral glycoproteins."
+        explanation: "Crustaceans have TWO pairs of antennae (antennules and antennae), unlike insects which have one pair."
     },
     {
-        question: "Which virus is associated with causing Acquired Immunodeficiency Syndrome (AIDS)?",
-        options: ["Influenza virus", "Hepatitis B virus", "HIV (Human Immunodeficiency Virus)", "Ebola virus"],
-        answer: "C",
-        explanation: "HIV attacks CD4+ T cells (helper T cells), progressively destroying the immune system and leading to AIDS if untreated."
-    },
-    {
-        question: "Bacteriophages are viruses that infect",
-        options: ["plants", "animals", "bacteria", "fungi"],
-        answer: "C",
-        explanation: "Bacteriophages (or phages) are viruses that specifically infect bacterial cells. They are important tools in molecular biology and genetic research."
-    },
-    {
-        question: "The genetic material of a virus can be",
-        options: ["DNA only", "RNA only", "either DNA or RNA, but never both", "both DNA and RNA"],
-        answer: "C",
-        explanation: "Viruses contain either DNA or RNA, but never both. This distinguishes them from cellular organisms, which always contain both types of nucleic acids."
-    },
-    {
-        question: "Which stage of the viral life cycle involves integration of viral DNA into the host genome?",
-        options: ["Lytic cycle", "Lysogenic cycle", "Budding", "Release"],
-        answer: "B",
-        explanation: "In the lysogenic cycle, viral DNA integrates into the host chromosome as a prophage, remaining dormant until environmental triggers induce the lytic cycle."
-    },
-    {
-        question: "The virus responsible for causing COVID-19 is",
-        options: ["SARS-CoV", "MERS-CoV", "SARS-CoV-2", "H1N1"],
-        answer: "C",
-        explanation: "SARS-CoV-2 (Severe Acute Respiratory Syndrome Coronavirus 2) emerged in 2019 and caused the global COVID-19 pandemic."
-    },
-    {
-        question: "Retroviruses such as HIV contain which enzyme to convert RNA into DNA?",
-        options: ["RNA polymerase", "DNA polymerase", "Reverse transcriptase", "Helicase"],
-        answer: "C",
-        explanation: "Reverse transcriptase is a unique enzyme carried by retroviruses that transcribes their RNA genome into DNA, which then integrates into the host genome."
-    },
-    {
-        question: "The smallest infectious pathogens consisting only of RNA without a protein coat are called",
-        options: ["prions", "viroids", "virions", "capsomeres"],
-        answer: "B",
-        explanation: "Viroids are infectious RNA molecules that cause diseases in plants. They lack a protein capsid and are smaller than viruses."
-    },
-    {
-        question: "Influenza virus primarily infects the",
-        options: ["liver", "nervous system", "respiratory tract", "digestive system"],
-        answer: "C",
-        explanation: "Influenza viruses target epithelial cells lining the respiratory tract, causing symptoms like cough, sore throat, and fever."
-    },
-    {
-        question: "Which of the following is an example of a DNA virus?",
-        options: ["HIV", "Influenza virus", "Hepatitis B virus", "Zika virus"],
-        answer: "C",
-        explanation: "Hepatitis B virus (HBV) contains DNA. HIV and Influenza are RNA viruses, and Zika virus is also an RNA virus (flavivirus)."
-    },
-    {
-        question: "The process by which enveloped viruses acquire their envelope is called",
-        options: ["lysis", "budding", "endocytosis", "fusion"],
-        answer: "B",
-        explanation: "Budding occurs when an enveloped virus exits the host cell by pushing through the cell membrane, acquiring a lipid envelope in the process."
-    },
-    {
-        question: "Prions are infectious agents composed entirely of",
-        options: ["DNA", "RNA", "protein", "lipid"],
-        answer: "C",
-        explanation: "Prions are misfolded proteins that cause neurodegenerative diseases like mad cow disease and Creutzfeldt-Jakob disease. They contain no nucleic acids."
-    },
-
-    // ==================== BACTERIA (Questions 16-30) ====================
-    {
-        question: "Bacteria that retain the crystal violet stain during Gram staining appear",
-        options: ["pink", "red", "purple", "colorless"],
-        answer: "C",
-        explanation: "Gram-positive bacteria have a thick peptidoglycan layer that retains the crystal violet-iodine complex, appearing purple under the microscope."
-    },
-    {
-        question: "Which bacterial shape is described as rod-like?",
-        options: ["Cocci", "Bacilli", "Spirilla", "Vibrio"],
-        answer: "B",
-        explanation: "Bacilli are rod-shaped bacteria. Cocci are spherical, spirilla are spiral-shaped, and vibrio are comma-shaped."
-    },
-    {
-        question: "The process of bacterial reproduction is called",
-        options: ["mitosis", "meiosis", "binary fission", "fragmentation"],
-        answer: "C",
-        explanation: "Binary fission is the process by which bacteria reproduce asexually, dividing into two identical daughter cells."
-    },
-    {
-        question: "Which of the following is an example of Gram-negative bacteria?",
-        options: ["Staphylococcus aureus", "Streptococcus pneumoniae", "Escherichia coli", "Bacillus subtilis"],
-        answer: "C",
-        explanation: "E. coli is Gram-negative, with a thin peptidoglycan layer and an outer membrane containing lipopolysaccharides (LPS)."
-    },
-    {
-        question: "Bacterial endospores are primarily for",
-        options: ["reproduction", "survival under harsh conditions", "nutrient absorption", "movement"],
-        answer: "B",
-        explanation: "Endospores are highly resistant dormant structures formed by bacteria like Bacillus and Clostridium to survive extreme heat, radiation, and chemicals."
-    },
-    {
-        question: "The bacterial structure responsible for motility is the",
-        options: ["pilus", "flagellum", "capsule", "plasmid"],
-        answer: "B",
-        explanation: "Flagella are long, whip-like appendages that rotate to propel bacteria through liquid environments."
-    },
-    {
-        question: "Which of the following diseases is caused by a bacterium?",
-        options: ["Malaria", "Tuberculosis", "Influenza", "AIDS"],
-        answer: "B",
-        explanation: "Tuberculosis is caused by the bacterium Mycobacterium tuberculosis. Malaria is caused by a protozoan, influenza by a virus, and AIDS by HIV."
-    },
-    {
-        question: "Plasmids are",
-        options: ["bacterial chromosomes", "small circular DNA molecules", "protein structures", "ribosomal units"],
-        answer: "B",
-        explanation: "Plasmids are extrachromosomal circular DNA molecules that can replicate independently and often carry genes for antibiotic resistance."
-    },
-    {
-        question: "Bacteria that require oxygen for growth are called",
-        options: ["obligate anaerobes", "obligate aerobes", "facultative anaerobes", "aerotolerant anaerobes"],
-        answer: "B",
-        explanation: "Obligate aerobes require oxygen for cellular respiration and cannot survive without it. Examples include Mycobacterium tuberculosis."
-    },
-    {
-        question: "The cell wall of bacteria is composed primarily of",
-        options: ["cellulose", "chitin", "peptidoglycan", "lipopolysaccharide"],
-        answer: "C",
-        explanation: "Peptidoglycan (murein) is a polymer of sugars and amino acids that provides structural strength to bacterial cell walls."
-    },
-    {
-        question: "Which bacterial structure is used for attachment to surfaces and conjugation?",
-        options: ["flagella", "pili", "capsule", "mesosome"],
-        answer: "B",
-        explanation: "Pili (or fimbriae) are hair-like structures that help bacteria attach to surfaces and are involved in conjugation (transfer of genetic material)."
-    },
-    {
-        question: "Cyanobacteria are also known as",
-        options: ["blue-green algae", "green algae", "red algae", "brown algae"],
+        question: "Which class of Arthropoda includes animals with a single pair of legs per segment?",
+        options: ["Myriapoda (Chilopoda)", "Insecta", "Arachnida", "Crustacea"],
         answer: "A",
-        explanation: "Cyanobacteria are photosynthetic bacteria often called blue-green algae. They were the first organisms to produce oxygen via photosynthesis."
+        explanation: "Centipedes (class Chilopoda, a subgroup of Myriapoda) have one pair of legs per body segment."
     },
     {
-        question: "The Gram staining technique was developed by",
-        options: ["Louis Pasteur", "Robert Koch", "Hans Christian Gram", "Joseph Lister"],
-        answer: "C",
-        explanation: "Hans Christian Gram, a Danish bacteriologist, developed the Gram staining method in 1884, which remains fundamental in bacterial classification."
-    },
-    {
-        question: "Bacteria that grow in clusters resembling grapes are",
-        options: ["Streptococci", "Staphylococci", "Diplococci", "Tetrads"],
-        answer: "B",
-        explanation: "Staphylococci (from Greek staphyle meaning 'bunch of grapes') form irregular grape-like clusters. Staphylococcus aureus is a common example."
-    },
-    {
-        question: "Which of the following is NOT a beneficial role of bacteria?",
-        options: ["Nitrogen fixation", "Production of antibiotics", "Causing food spoilage", "Digestion in ruminants"],
-        answer: "C",
-        explanation: "Food spoilage by bacteria is detrimental, causing economic losses and health risks. The other options are beneficial roles of bacteria."
-    },
-
-    // ==================== FUNGI (Questions 31-45) ====================
-    {
-        question: "Fungi are classified as",
-        options: ["autotrophs", "heterotrophs", "photosynthetic", "chemosynthetic"],
-        answer: "B",
-        explanation: "Fungi are heterotrophic organisms that obtain nutrients by absorbing organic matter from their environment. They are decomposers or parasites."
-    },
-    {
-        question: "The cell wall of fungi is composed primarily of",
-        options: ["cellulose", "peptidoglycan", "chitin", "lignin"],
-        answer: "C",
-        explanation: "Fungal cell walls contain chitin, a nitrogen-containing polysaccharide also found in the exoskeletons of arthropods."
-    },
-    {
-        question: "Yeasts are unicellular fungi that reproduce primarily by",
-        options: ["binary fission", "budding", "spore formation", "fragmentation"],
-        answer: "B",
-        explanation: "Yeasts reproduce asexually by budding, where a small daughter cell forms on the parent cell and eventually separates."
-    },
-    {
-        question: "Which of the following is an example of a zygomycete (bread mold)?",
-        options: ["Penicillium", "Rhizopus stolonifer", "Agaricus bisporus", "Candida albicans"],
-        answer: "B",
-        explanation: "Rhizopus stolonifer is the common black bread mold, belonging to the phylum Zygomycota. It produces zygospores during sexual reproduction."
-    },
-    {
-        question: "The visible mushroom we see is the",
-        options: ["mycelium", "hyphae", "fruiting body", "spore"],
-        answer: "C",
-        explanation: "The mushroom is the fruiting body (basidiocarp) of the fungus, which produces and releases spores for reproduction."
-    },
-    {
-        question: "Which fungal disease affects human skin, hair, and nails?",
-        options: ["Candidiasis", "Ringworm (Dermatophytosis)", "Aspergillosis", "Histoplasmosis"],
-        answer: "B",
-        explanation: "Ringworm (tinea) is caused by dermatophyte fungi that infect keratinized tissues like skin, hair, and nails. It is highly contagious."
-    },
-    {
-        question: "Lichens are symbiotic associations between",
-        options: ["fungi and bacteria", "fungi and algae/cyanobacteria", "algae and protozoa", "bacteria and protozoa"],
-        answer: "B",
-        explanation: "Lichens consist of a fungus (mycobiont) and a photosynthetic partner (phycobiont) - either green algae or cyanobacteria - living in mutualistic symbiosis."
-    },
-    {
-        question: "The antibiotic penicillin is derived from the fungus",
-        options: ["Penicillium chrysogenum", "Aspergillus niger", "Candida albicans", "Saccharomyces cerevisiae"],
+        question: "True or False: Millipedes have two pairs of legs per segment.",
+        options: ["True", "False — one pair per segment", "False — four pairs per segment", "True — in adult millipedes only"],
         answer: "A",
-        explanation: "Penicillin, the first antibiotic discovered by Alexander Fleming, is produced by Penicillium chrysogenum (formerly P. notatum)."
+        explanation: "Millipedes (class Diplopoda) have two pairs of legs per body segment, unlike centipedes which have one pair."
     },
     {
-        question: "Mycorrhizae are associations between fungi and",
-        options: ["algae", "plant roots", "bacteria", "animal tissues"],
+        question: "Which of these is a characteristic of the class Insecta?",
+        options: ["Three body regions (head, thorax, abdomen)", "Two body regions", "No antennae", "Eight legs"],
+        answer: "A",
+        explanation: "Insects have three distinct body regions: head, thorax, and abdomen, plus three pairs of legs and one pair of antennae."
+    },
+    {
+        question: "Which class of Arthropoda includes animals with chelicerae?",
+        options: ["Insecta", "Arachnida", "Crustacea", "Myriapoda"],
         answer: "B",
-        explanation: "Mycorrhizae are mutualistic associations between fungi and plant roots, where the fungus enhances water and nutrient absorption for the plant."
+        explanation: "Arachnids have chelicerae (fang-like mouthparts) instead of mandibles or antennae."
     },
     {
-        question: "Which phylum of fungi produces sexual spores called basidiospores on club-shaped structures?",
-        options: ["Zygomycota", "Ascomycota", "Basidiomycota", "Deuteromycota"],
-        answer: "C",
-        explanation: "Basidiomycota (club fungi) produce sexual basidiospores on basidia. Examples include mushrooms, puffballs, and bracket fungi."
-    },
-    {
-        question: "The yeast used in baking and brewing is",
-        options: ["Candida albicans", "Saccharomyces cerevisiae", "Aspergillus oryzae", "Penicillium camemberti"],
+        question: "Which of these is an example of an arachnid?",
+        options: ["Grasshopper", "Scorpion", "Crayfish", "Millipede"],
         answer: "B",
-        explanation: "Saccharomyces cerevisiae (baker's yeast) ferments sugars to produce carbon dioxide (leavening bread) and ethanol (brewing alcoholic beverages)."
-    },
-    {
-        question: "Aflatoxins, which are carcinogenic compounds, are produced by",
-        options: ["Penicillium", "Aspergillus flavus", "Candida", "Rhizopus"],
-        answer: "B",
-        explanation: "Aspergillus flavus and Aspergillus parasiticus produce aflatoxins, which contaminate stored crops and can cause liver cancer in humans and animals."
-    },
-    {
-        question: "Fungi reproduce asexually by producing",
-        options: ["zygospores", "ascospores", "conidia", "basidiospores"],
-        answer: "C",
-        explanation: "Conidia are asexual spores produced at the tips of specialized hyphae called conidiophores. They are common in ascomycetes and deuteromycetes."
-    },
-    {
-        question: "Which of the following is an edible mushroom?",
-        options: ["Amanita phalloides", "Agaricus bisporus", "Claviceps purpurea", "Cryptococcus neoformans"],
-        answer: "B",
-        explanation: "Agaricus bisporus is the common cultivated button mushroom. Amanita phalloides (death cap) is deadly poisonous."
-    },
-    {
-        question: "The vegetative body of a fungus is called the",
-        options: ["thallus", "mycelium", "hypha", "sporangium"],
-        answer: "B",
-        explanation: "The mycelium is the network of thread-like hyphae that forms the vegetative body of a fungus, absorbing nutrients from the environment."
+        explanation: "Scorpions are arachnids. Grasshoppers are insects, crayfish are crustaceans, millipedes are myriapods."
     },
 
-    // ==================== PLANT KINGDOM (Questions 46-60) ====================
+    // Generated: Arthropoda extra
     {
-        question: "Which division of plants is known as 'amphibians of the plant kingdom'?",
-        options: ["Pteridophytes", "Bryophytes", "Gymnosperms", "Angiosperms"],
-        answer: "B",
-        explanation: "Bryophytes (mosses, liverworts) are called amphibians because they require water for fertilization but can live on land."
-    },
-    {
-        question: "Ferns belong to which plant division?",
-        options: ["Bryophyta", "Pteridophyta", "Gymnospermae", "Angiospermae"],
-        answer: "B",
-        explanation: "Ferns are pteridophytes, vascular plants that reproduce via spores rather than seeds. They have true roots, stems, and leaves (fronds)."
-    },
-    {
-        question: "The dominant generation in bryophytes is the",
-        options: ["sporophyte", "gametophyte", "zygote", "embryo"],
-        answer: "B",
-        explanation: "In bryophytes, the gametophyte generation is dominant, photosynthetic, and long-lived. The sporophyte is dependent on the gametophyte."
-    },
-    {
-        question: "Which of the following are seed-producing plants?",
-        options: ["Pteridophytes", "Bryophytes", "Gymnosperms and Angiosperms", "Algae"],
+        question: "Arachnids have how many pairs of walking legs?",
+        options: ["Two pairs", "Three pairs", "Four pairs", "Five pairs"],
         answer: "C",
-        explanation: "Gymnosperms (naked seeds) and angiosperms (enclosed seeds) are spermatophytes (seed plants). Pteridophytes and bryophytes reproduce via spores."
+        explanation: "All arachnids (spiders, scorpions, ticks, mites) have four pairs (eight) of walking legs."
     },
     {
-        question: "Angiosperms are characterized by",
-        options: ["naked seeds", "flowers and fruits", "lack of vascular tissue", "dominant gametophyte"],
+        question: "Insects have how many pairs of walking legs?",
+        options: ["Two pairs", "Three pairs", "Four pairs", "Five pairs"],
         answer: "B",
-        explanation: "Angiosperms (flowering plants) produce flowers for reproduction and fruits that develop from ovaries, enclosing seeds."
+        explanation: "All insects have exactly three pairs (six) of walking legs attached to the thorax."
     },
     {
-        question: "Which plant group has vascular tissue but does not produce seeds?",
-        options: ["Bryophytes", "Pteridophytes", "Gymnosperms", "Angiosperms"],
+        question: "Crustaceans are the only arthropods that typically have:",
+        options: ["Three body regions", "Two pairs of antennae", "Chelicerae", "Wings"],
         answer: "B",
-        explanation: "Pteridophytes (ferns and allies) have xylem and phloem (vascular tissue) but reproduce via spores, not seeds."
+        explanation: "Two pairs of antennae is unique to crustaceans among arthropods."
     },
     {
-        question: "The male gametophyte in seed plants is the",
-        options: ["ovule", "pollen grain", "embryo sac", "anther"],
+        question: "Millipedes belong to which class?",
+        options: ["Chilopoda", "Diplopoda", "Insecta", "Arachnida"],
         answer: "B",
-        explanation: "The pollen grain is the male gametophyte in seed plants, producing sperm cells that fertilize the egg within the ovule."
+        explanation: "Millipedes belong to class Diplopoda (two-footed per segment). Centipedes belong to Chilopoda."
     },
     {
-        question: "Which of the following is a gymnosperm?",
-        options: ["Mango tree", "Pine tree", "Rose bush", "Wheat plant"],
-        answer: "B",
-        explanation: "Pine trees are gymnosperms (conifers) with naked seeds exposed on cones. Mango, rose, and wheat are angiosperms."
+        question: "Centipedes belong to which class?",
+        options: ["Chilopoda", "Diplopoda", "Insecta", "Arachnida"],
+        answer: "A",
+        explanation: "Centipedes belong to class Chilopoda (one pair of legs per segment). Millipedes belong to Diplopoda."
     },
     {
-        question: "The process of pollen transfer from anther to stigma is called",
-        options: ["fertilization", "pollination", "germination", "dispersal"],
-        answer: "B",
-        explanation: "Pollination is the transfer of pollen grains from the anther (male part) to the stigma (female part) of a flower."
-    },
-    {
-        question: "Double fertilization is a unique feature of",
-        options: ["gymnosperms", "pteridophytes", "angiosperms", "bryophytes"],
+        question: "Which arthropod class is considered the most successful and diverse?",
+        options: ["Arachnida", "Crustacea", "Insecta", "Myriapoda"],
         answer: "C",
-        explanation: "Double fertilization occurs only in angiosperms, producing both a zygote (2n) and triploid endosperm (3n) for nutrition."
+        explanation: "Insects represent the most diverse group of animals on Earth, with over a million described species."
     },
     {
-        question: "Which plant tissue transports water and minerals from roots to leaves?",
-        options: ["Phloem", "Xylem", "Cambium", "Cortex"],
+        question: "Arachnids lack which of the following?",
+        options: ["Exoskeleton", "Antennae", "Jointed legs", "Segmented body"],
         answer: "B",
-        explanation: "Xylem transports water and dissolved minerals upward from roots to shoots. Phloem transports sugars from leaves to other plant parts."
+        explanation: "Arachnids have no antennae. They use chelicerae and pedipalps as sensory and feeding appendages instead."
     },
     {
-        question: "Monocotyledonous plants are characterized by",
-        options: ["tap root system", "net-like venation", "parallel venation", "two cotyledons"],
-        answer: "C",
-        explanation: "Monocots have parallel leaf venation, fibrous roots, flower parts in multiples of three, and one cotyledon in the seed."
-    },
-    {
-        question: "The female reproductive part of a flower is the",
-        options: ["stamen", "anther", "pistil/carpel", "filament"],
-        answer: "C",
-        explanation: "The pistil (or carpel) is the female reproductive organ, consisting of the stigma, style, and ovary containing ovules."
-    },
-    {
-        question: "Which of the following is a characteristic of dicotyledonous plants?",
-        options: ["Fibrous root system", "Parallel leaf venation", "Tap root system", "Flower parts in multiples of three"],
-        answer: "C",
-        explanation: "Dicots typically have a taproot system, net-like (reticulate) venation, flower parts in multiples of 4 or 5, and two cotyledons."
-    },
-    {
-        question: "The process by which plants lose water vapor through leaves is called",
-        options: ["guttation", "transpiration", "evaporation", "condensation"],
+        question: "The body of a crustacean is divided into:",
+        options: ["Head, thorax, abdomen", "Cephalothorax and abdomen", "Only head and thorax", "Only abdomen"],
         answer: "B",
-        explanation: "Transpiration is the loss of water vapor from plant aerial parts, mainly through stomata. It drives water transport and cools the plant."
+        explanation: "Most crustaceans have a fused head and thorax (cephalothorax) and a separate abdomen."
+    },
+    {
+        question: "Insects breathe through:",
+        options: ["Gills", "Book lungs", "Tracheae", "Skin"],
+        answer: "C",
+        explanation: "Insects breathe through a system of tracheae — small tubes that carry air directly to body tissues."
     },
 
-    // ==================== ANIMAL KINGDOM (Questions 61-75) ====================
+    // Spider questions
     {
-        question: "Which phylum is characterized by the presence of a notochord at some stage of development?",
-        options: ["Arthropoda", "Mollusca", "Chordata", "Annelida"],
-        answer: "C",
-        explanation: "Chordates possess a notochord, dorsal hollow nerve cord, pharyngeal slits, and post-anal tail at some life stage."
-    },
-    {
-        question: "Animals without a backbone are called",
-        options: ["vertebrates", "invertebrates", "chordates", "cephalochordates"],
+        question: "Which of these arthropods is known for spinning silk?",
+        options: ["Beetle", "Spider", "Centipede", "Crab"],
         answer: "B",
-        explanation: "Invertebrates lack a vertebral column (backbone). They include arthropods, mollusks, annelids, cnidarians, and many other groups."
+        explanation: "Spiders produce silk from spinnerets located at the posterior abdomen, used for webs, egg sacs, and prey wrapping."
     },
     {
-        question: "Which class of vertebrates has feathers and lays hard-shelled eggs?",
-        options: ["Mammalia", "Reptilia", "Amphibia", "Aves"],
+        question: "What is the primary mode of feeding in spiders?",
+        options: ["Chewing solid food", "Liquid feeding with fangs", "Filter feeding", "Photosynthesis"],
+        answer: "B",
+        explanation: "Spiders inject venom through their chelicerae (fangs), liquefy prey tissues, and suck up the liquid."
+    },
+    {
+        question: "What is the primary habitat of spiders?",
+        options: ["Aquatic", "Terrestrial", "Marine", "Aerial"],
+        answer: "B",
+        explanation: "Spiders are predominantly terrestrial organisms found in virtually every land habitat on Earth."
+    },
+    {
+        question: "Spiders have how many body regions?",
+        options: ["One", "Two (cephalothorax and abdomen)", "Three (head, thorax, abdomen)", "Four"],
+        answer: "B",
+        explanation: "Spiders, like all arachnids, have two body regions: the cephalothorax and the abdomen."
+    },
+    {
+        question: "Spiders lack which of the following?",
+        options: ["Exoskeleton", "Antennae", "Jointed legs", "Eyes"],
+        answer: "B",
+        explanation: "Spiders, like all arachnids, have no antennae. They use pedipalps and body hairs for sensing."
+    },
+    {
+        question: "The fangs of a spider are called:",
+        options: ["Pedipalps", "Chelicerae", "Mandibles", "Maxillae"],
+        answer: "B",
+        explanation: "Spider chelicerae are the fang-like mouthparts used to inject venom into prey."
+    },
+    {
+        question: "Spiders breathe using:",
+        options: ["Gills", "Book lungs or tracheae", "Spiracles only", "Skin"],
+        answer: "B",
+        explanation: "Most spiders use book lungs (unique lamellar organs), and some also have tracheae for gas exchange."
+    },
+    {
+        question: "The spinnerets of a spider are used for:",
+        options: ["Catching prey", "Producing silk", "Walking", "Feeding"],
+        answer: "B",
+        explanation: "Spinnerets are specialized abdominal appendages that spin silk from silk glands."
+    },
+    {
+        question: "Spiders are different from insects because spiders have:",
+        options: ["Wings", "Four pairs of legs (eight legs total)", "Three body regions", "One pair of antennae"],
+        answer: "B",
+        explanation: "Spiders have four pairs (8) of legs, while insects have three pairs (6). Spiders also lack wings and antennae."
+    },
+    {
+        question: "Which of the following is NOT an arachnid?",
+        options: ["Spider", "Scorpion", "Tick", "Centipede"],
         answer: "D",
-        explanation: "Aves (birds) are characterized by feathers, toothless beaks, hard-shelled eggs, and warm-blooded metabolism."
+        explanation: "Centipedes are myriapods (class Chilopoda), not arachnids. Spiders, scorpions, and ticks are all arachnids."
     },
     {
-        question: "Mammals are characterized by the presence of",
-        options: ["feathers", "scales", "mammary glands", "gills"],
-        answer: "C",
-        explanation: "Mammary glands produce milk to nourish young, a defining characteristic of mammals along with hair/fur and three middle ear bones."
-    },
-    {
-        question: "Which arthropod class includes spiders, scorpions, and ticks?",
-        options: ["Insecta", "Crustacea", "Arachnida", "Myriapoda"],
-        answer: "C",
-        explanation: "Arachnida have four pairs of legs, two body segments (cephalothorax and abdomen), and lack antennae. Examples include spiders and scorpions."
-    },
-    {
-        question: "Amphibians typically have",
-        options: ["dry scaly skin", "moist permeable skin", "feathers", "hair"],
+        question: "Spiders are beneficial to humans because they:",
+        options: ["Produce honey", "Eat harmful insects", "Pollinate flowers", "Make silk for clothing"],
         answer: "B",
-        explanation: "Amphibians have moist, glandular skin that is permeable to water and gases, allowing cutaneous respiration."
+        explanation: "Spiders are natural pest controllers, consuming mosquitoes, flies, and crop pests."
     },
     {
-        question: "Which of the following is a mollusk?",
-        options: ["Earthworm", "Snail", "Cockroach", "Starfish"],
+        question: "The pedipalps of a spider are used for:",
+        options: ["Walking", "Sensing and holding prey", "Spinning webs", "Breathing"],
         answer: "B",
-        explanation: "Snails are gastropod mollusks with a muscular foot and usually a coiled shell. Earthworms are annelids, cockroaches are arthropods."
+        explanation: "Pedipalps are leg-like appendages near the mouth used for sensing and manipulating prey."
     },
     {
-        question: "The process of shedding the exoskeleton in arthropods is called",
-        options: ["metamorphosis", "molting (ecdysis)", "fragmentation", "regeneration"],
-        answer: "B",
-        explanation: "Molting (ecdysis) is the shedding of the old exoskeleton to allow growth in arthropods, controlled by hormones like ecdysone."
-    },
-    {
-        question: "Which class of fish has a skeleton made of cartilage?",
-        options: ["Osteichthyes", "Chondrichthyes", "Agnatha", "Actinopterygii"],
-        answer: "B",
-        explanation: "Chondrichthyes (cartilaginous fish) include sharks, rays, and skates. Their skeletons are made of cartilage, not bone."
-    },
-    {
-        question: "Reptiles are ectothermic, meaning they",
-        options: ["generate internal heat", "rely on external heat sources", "have constant body temperature", "are cold-blooded"],
-        answer: "B",
-        explanation: "Ectothermic animals (reptiles, amphibians, fish) rely on external heat sources to regulate body temperature. They are often called 'cold-blooded'."
-    },
-    {
-        question: "The scientific study of insects is called",
-        options: ["Herpetology", "Ornithology", "Entomology", "Ichthyology"],
+        question: "How many pairs of walking legs does a spider have?",
+        options: ["Two pairs", "Three pairs", "Four pairs", "Five pairs"],
         answer: "C",
-        explanation: "Entomology is the study of insects. Herpetology (amphibians/reptiles), Ornithology (birds), Ichthyology (fish)."
+        explanation: "Spiders have four pairs (eight total) walking legs, characteristic of all arachnids."
     },
     {
-        question: "Which of the following is a characteristic of all chordates at some stage?",
-        options: ["Jaws", "Lungs", "Pharyngeal slits", "Paired fins"],
+        question: "Which of the following is TRUE about spiders?",
+        options: ["They have wings", "They have three body regions", "They have eight legs", "They have two pairs of antennae"],
         answer: "C",
-        explanation: "All chordates have pharyngeal slits at some developmental stage, which become gills in fish or contribute to ear/throat structures in tetrapods."
+        explanation: "Spiders have eight legs (four pairs), no wings, no antennae, and two body regions."
     },
     {
-        question: "Cnidarians (jellyfish, corals) possess specialized stinging cells called",
-        options: ["nematocysts", "cnidocytes", "both A and B", "spicules"],
+        question: "Which class do spiders belong to?",
+        options: ["Insecta", "Crustacea", "Arachnida", "Chilopoda"],
         answer: "C",
-        explanation: "Cnidocytes are specialized cells containing nematocysts (stinging organelles) used for prey capture and defense."
-    },
-    {
-        question: "Earthworms belong to which phylum?",
-        options: ["Nematoda", "Platyhelminthes", "Annelida", "Arthropoda"],
-        answer: "C",
-        explanation: "Earthworms are annelids (segmented worms) with a segmented body, closed circulatory system, and setae for locomotion."
-    },
-    {
-        question: "Which of the following is a warm-blooded (endothermic) vertebrate?",
-        options: ["Lizard", "Frog", "Eagle", "Tuna"],
-        answer: "C",
-        explanation: "Birds (eagles) and mammals are endothermic, maintaining constant body temperature internally. Lizards (reptiles), frogs (amphibians), and tuna (fish) are ectothermic."
+        explanation: "Spiders belong to class Arachnida, along with scorpions, ticks, and mites."
     },
 
-    // ==================== ECOLOGICAL ADAPTATIONS (Questions 76-85) ====================
+    // ==================== PROTOZOA (Questions 35-49, idx 34-48) ====================
+
+    // From PDF
     {
-        question: "Plants adapted to grow in water are called",
-        options: ["xerophytes", "hydrophytes", "halophytes", "mesophytes"],
+        question: "Which of these is an example of a ciliated protozoan?",
+        options: ["Amoeba", "Paramecium", "Giardia", "Plasmodium"],
         answer: "B",
-        explanation: "Hydrophytes (aquatic plants) have adaptations like air-filled tissues (aerenchyma), thin cuticles, and flexible stems for water environments."
+        explanation: "Paramecium is a classic ciliate, covered in cilia used for locomotion and feeding."
     },
     {
-        question: "Cacti are examples of",
-        options: ["hydrophytes", "xerophytes", "halophytes", "epiphytes"],
+        question: "Which of these protozoa moves using cilia?",
+        options: ["Amoeba", "Paramecium", "Giardia", "Plasmodium"],
         answer: "B",
-        explanation: "Xerophytes (desert plants) like cacti have adaptations such as thick cuticles, spines instead of leaves, water-storing stems, and deep roots."
+        explanation: "Paramecium uses thousands of coordinated cilia to swim through water."
     },
     {
-        question: "The thick waxy layer on the surface of xerophyte leaves is called the",
-        options: ["cuticle", "epidermis", "stomata", "trichome"],
+        question: "Which of these is an example of a flagellated protozoan?",
+        options: ["Paramecium", "Trypanosoma", "Entamoeba", "Plasmodium"],
+        answer: "B",
+        explanation: "Trypanosoma (cause of sleeping sickness) is a flagellate, using a single flagellum for locomotion."
+    },
+    {
+        question: "What type of locomotion does Giardia use?",
+        options: ["Pseudopodia", "Flagella", "Cilia", "None"],
+        answer: "B",
+        explanation: "Giardia is a flagellate with multiple flagella used for movement."
+    },
+    {
+        question: "True or False: Protozoa are classified based on their mode of locomotion.",
+        options: ["True", "False — by cell size", "False — by habitat", "True — but only in some systems"],
         answer: "A",
-        explanation: "A thick, waxy cuticle reduces water loss by evaporation, a key adaptation for plants in dry environments."
+        explanation: "Traditionally, protozoa are classified into groups (Sarcodina, Mastigophora, Ciliata, Sporozoa) based on locomotion mode."
     },
+
+    // Generated: Protozoa extra
     {
-        question: "Mangrove trees growing in saline water are examples of",
-        options: ["xerophytes", "hydrophytes", "halophytes", "mesophytes"],
+        question: "The class of protozoa that moves using cilia is called:",
+        options: ["Sarcodina", "Mastigophora", "Ciliata", "Sporozoa"],
         answer: "C",
-        explanation: "Halophytes are salt-tolerant plants. Mangroves have adaptations like salt-excreting glands, prop roots, and viviparous germination."
+        explanation: "Class Ciliata (Ciliophora) includes protozoa that use cilia for movement, such as Paramecium and Vorticella."
     },
     {
-        question: "The adaptation of animals to extreme cold environments includes",
-        options: ["thick fur/blubber", "large ears", "thin skin", "dark coloration"],
+        question: "Mastigophora is also called:",
+        options: ["Ciliates", "Flagellates", "Amoeboids", "Sporozoans"],
+        answer: "B",
+        explanation: "Mastigophora = flagellates. 'Mastigophora' comes from Greek 'mastix' (whip), referring to the flagellum."
+    },
+    {
+        question: "A kinetosome (or basal body) is found in which protozoan group?",
+        options: ["Amoeboids only", "Ciliates and flagellates", "Sporozoans only", "All protozoa equally"],
+        answer: "B",
+        explanation: "Kinetosomes (basal bodies) anchor and generate cilia and flagella; they are found in ciliates and flagellates."
+    },
+    {
+        question: "The kinetosome is responsible for:",
+        options: ["Feeding", "Movement of cilia or flagella", "Reproduction", "Digestion"],
+        answer: "B",
+        explanation: "The kinetosome (basal body) anchors cilia and flagella at the cell surface and drives their movement."
+    },
+    {
+        question: "Which protozoan class has cilia covering its entire body surface?",
+        options: ["Sarcodina", "Mastigophora", "Ciliata", "Sporozoa"],
+        answer: "C",
+        explanation: "Ciliata (ciliates) are covered with cilia all over the cell surface, used for locomotion and feeding."
+    },
+    {
+        question: "An example of a ciliate is:",
+        options: ["Amoeba", "Paramecium", "Trypanosoma", "Plasmodium"],
+        answer: "B",
+        explanation: "Paramecium is the most studied ciliate. Amoeba is Sarcodina; Trypanosoma is Mastigophora; Plasmodium is Sporozoa."
+    },
+    {
+        question: "Flagellated protozoa are classified under:",
+        options: ["Sarcodina", "Mastigophora", "Ciliata", "Sporozoa"],
+        answer: "B",
+        explanation: "Mastigophora (flagellates) includes Trypanosoma, Giardia, and Leishmania."
+    },
+    {
+        question: "The structure that produces the beating of cilia and flagella is the:",
+        options: ["Nucleus", "Kinetosome (basal body)", "Contractile vacuole", "Oral groove"],
+        answer: "B",
+        explanation: "The kinetosome (basal body) is the organelle that nucleates and controls the movement of cilia and flagella."
+    },
+    {
+        question: "Which protozoan group has no organelle for locomotion in the adult stage?",
+        options: ["Mastigophora", "Ciliata", "Sarcodina", "Sporozoa"],
+        answer: "D",
+        explanation: "Sporozoans (Apicomplexa) like Plasmodium lack locomotion organelles; they are all obligate parasites."
+    },
+    {
+        question: "Sporozoans are all:",
+        options: ["Free-living", "Parasitic", "Photosynthetic", "Marine"],
+        answer: "B",
+        explanation: "All sporozoans (Apicomplexa) are obligate intracellular parasites — Plasmodium (malaria), Toxoplasma, Cryptosporidium."
+    },
+
+    // ==================== PORIFERA & MOLLUSCA (Questions 50-58, idx 49-57) ====================
+
+    {
+        question: "What type of symmetry do most sponges exhibit?",
+        options: ["Radial", "Asymmetrical", "Bilateral", "No symmetry at all"],
+        answer: "B",
+        explanation: "Most sponges (phylum Porifera) are asymmetrical — they have no definite axis of symmetry."
+    },
+    {
+        question: "Which of these is a defining characteristic of the phylum Mollusca?",
+        options: ["Jointed appendages", "Soft body, often with a shell", "Segmented body", "Exoskeleton"],
+        answer: "B",
+        explanation: "Mollusca (Latin: soft) are defined by a soft, unsegmented body, often protected by a calcium carbonate shell."
+    },
+    {
+        question: "What is the function of the mantle in mollusks?",
+        options: ["Digestion", "Secretes the shell or protects organs", "Respiration", "Locomotion"],
+        answer: "B",
+        explanation: "The mantle secretes the shell and encloses the mantle cavity which houses the gills."
+    },
+    {
+        question: "Which of these is NOT a class of Mollusca?",
+        options: ["Gastropoda", "Bivalvia", "Cephalopoda", "Arthropoda"],
+        answer: "D",
+        explanation: "Arthropoda is a separate phylum. Gastropoda (snails), Bivalvia (clams), and Cephalopoda (octopus) are Mollusca classes."
+    },
+    {
+        question: "Which mollusk class includes animals with a single, coiled shell?",
+        options: ["Bivalvia", "Gastropoda", "Cephalopoda", "Polyplacophora"],
+        answer: "B",
+        explanation: "Gastropoda (snails, slugs) typically have a single coiled shell. 'Gastropod' means stomach-foot."
+    },
+    {
+        question: "Which class of Mollusca includes animals with a reduced or absent shell?",
+        options: ["Gastropoda", "Cephalopoda", "Bivalvia", "Polyplacophora"],
+        answer: "B",
+        explanation: "Cephalopods (octopus, squid, cuttlefish) have reduced internal shells or no shell at all."
+    },
+    {
+        question: "What is the rasping organ used by many mollusks for feeding called?",
+        options: ["Radula", "Mantle", "Siphon", "Gill"],
         answer: "A",
-        explanation: "Arctic animals (polar bears, seals) have thick fur and blubber for insulation, reducing heat loss in freezing temperatures."
+        explanation: "The radula is a tongue-like organ covered with tiny teeth used to scrape food. It is absent in bivalves."
     },
     {
-        question: "Camouflage in animals is an example of",
-        options: ["physiological adaptation", "structural adaptation", "behavioral adaptation", "reproductive adaptation"],
+        question: "True or False: The radula is present in all mollusks.",
+        options: ["True", "False — absent in bivalves", "True — but only in aquatic species", "False — absent in cephalopods"],
         answer: "B",
-        explanation: "Camouflage (cryptic coloration) is a structural adaptation that allows animals to blend with their environment, avoiding predators or ambushing prey."
+        explanation: "The radula is absent in Bivalvia (clams, mussels, oysters) which are filter feeders."
     },
     {
-        question: "The long neck of a giraffe is an adaptation for",
-        options: ["defense", "feeding on high vegetation", "swimming", "burrowing"],
-        answer: "B",
-        explanation: "The giraffe's long neck allows it to reach leaves on tall trees (acacia), reducing competition with other herbivores."
-    },
-    {
-        question: "Hibernation is a",
-        options: ["structural adaptation", "physiological adaptation", "behavioral adaptation", "reproductive adaptation"],
-        answer: "C",
-        explanation: "Hibernation is a behavioral adaptation where animals enter a dormant state to survive winter when food is scarce and temperatures are low."
-    },
-    {
-        question: "Which adaptation helps aquatic animals maintain buoyancy?",
-        options: ["Streamlined body", "Swim bladder", "Gills", "Scales"],
-        answer: "B",
-        explanation: "The swim bladder is a gas-filled organ in bony fish that helps control buoyancy, allowing them to maintain depth without expending energy."
-    },
-    {
-        question: "Epiphytic plants like orchids grow on trees to",
-        options: ["parasitize the host", "access sunlight", "absorb water from the tree", "obtain soil nutrients"],
-        answer: "B",
-        explanation: "Epiphytes grow on trees to reach sunlight in dense forests. They are not parasites; they obtain water and nutrients from rain and air."
+        question: "Which class of Mollusca includes animals with a tubular shell?",
+        options: ["Scaphopoda", "Bivalvia", "Gastropoda", "Cephalopoda"],
+        answer: "A",
+        explanation: "Scaphopoda (tusk shells) have a single tubular, slightly curved shell open at both ends."
     },
 
-    // ==================== PHYSIOLOGY - NUTRITION & RESPIRATION (86-95) ====================
+    // ==================== AVES (Questions 59-73, idx 58-72) ====================
+
+    // From PDF
     {
-        question: "Organisms that can synthesize their own food are called",
-        options: ["heterotrophs", "autotrophs", "saprophytes", "parasites"],
+        question: "Which animal is a member of the class Aves?",
+        options: ["Sparrow", "Salamander", "Tuna", "Crocodile"],
+        answer: "A",
+        explanation: "Sparrows are birds (class Aves). Salamanders are amphibians, tuna are fish, crocodiles are reptiles."
+    },
+    {
+        question: "Which class of vertebrates is known for endothermy (warm-bloodedness)?",
+        options: ["Reptilia", "Aves", "Amphibia", "Pisces"],
         answer: "B",
-        explanation: "Autotrophs (plants, algae, some bacteria) produce their own food through photosynthesis or chemosynthesis."
+        explanation: "Birds are endothermic, maintaining constant body temperature regardless of the environment."
     },
     {
-        question: "The process of breaking down glucose to release energy is called",
-        options: ["photosynthesis", "respiration", "fermentation", "digestion"],
+        question: "Which vertebrate class is characterized by the presence of feathers?",
+        options: ["Reptilia", "Aves", "Mammalia", "Amphibia"],
         answer: "B",
-        explanation: "Cellular respiration breaks down glucose to produce ATP (energy), carbon dioxide, and water. It occurs in mitochondria."
+        explanation: "Feathers are unique to birds (class Aves) and are not found in any other vertebrate class."
     },
     {
-        question: "Aerobic respiration requires",
-        options: ["carbon dioxide", "oxygen", "nitrogen", "hydrogen"],
+        question: "Which vertebrate group is oviparous and lays hard-shelled eggs?",
+        options: ["Amphibia", "Aves", "Mammalia", "Reptilia"],
         answer: "B",
-        explanation: "Aerobic respiration uses oxygen as the final electron acceptor in the electron transport chain, producing more ATP than anaerobic pathways."
+        explanation: "Birds lay hard-shelled (calcareous) eggs. Amphibians lay soft, jelly-coated eggs; most mammals are viviparous."
     },
     {
-        question: "The anaerobic breakdown of glucose without oxygen is called",
-        options: ["aerobic respiration", "fermentation", "photosynthesis", "oxidation"],
+        question: "Which vertebrate class includes animals with a four-chambered heart?",
+        options: ["Reptilia", "Aves", "Amphibia", "Pisces"],
         answer: "B",
-        explanation: "Fermentation (anaerobic respiration) breaks down glucose without oxygen, producing lactic acid (in animals) or ethanol and CO2 (in yeast)."
-    },
-    {
-        question: "The main organ for gaseous exchange in humans is the",
-        options: ["trachea", "bronchi", "lungs", "diaphragm"],
-        answer: "C",
-        explanation: "The lungs contain millions of alveoli where oxygen diffuses into blood and carbon dioxide diffuses out during gas exchange."
-    },
-    {
-        question: "In plants, gaseous exchange occurs mainly through",
-        options: ["roots", "stomata", "cuticle", "lenticels"],
-        answer: "B",
-        explanation: "Stomata (pores on leaves) are the primary sites for gas exchange (CO2 intake, O2 release) and transpiration in plants."
-    },
-    {
-        question: "Holozoic nutrition involves",
-        options: ["absorbing nutrients from dead matter", "ingesting solid food", "photosynthesis", "parasitic feeding"],
-        answer: "B",
-        explanation: "Holozoic nutrition is the ingestion of solid food particles, digestion, absorption, and egestion. Animals exhibit holozoic nutrition."
-    },
-    {
-        question: "Saprophytic nutrition is characteristic of",
-        options: ["green plants", "fungi and bacteria", "animals", "protozoa"],
-        answer: "B",
-        explanation: "Saprophytes (decomposers) obtain nutrients by breaking down dead organic matter externally and absorbing the products. Fungi and many bacteria are saprophytes."
-    },
-    {
-        question: "The human circulatory system is described as",
-        options: ["open", "closed", "single", "incomplete"],
-        answer: "B",
-        explanation: "Humans have a closed circulatory system where blood remains within vessels (arteries, veins, capillaries) and does not directly bathe organs."
-    },
-    {
-        question: "Hemoglobin is the oxygen-carrying protein found in",
-        options: ["plasma", "white blood cells", "red blood cells", "platelets"],
-        answer: "C",
-        explanation: "Hemoglobin in red blood cells binds oxygen in the lungs and releases it to tissues throughout the body, giving blood its red color."
+        explanation: "Birds have a four-chambered heart providing complete separation of oxygenated and deoxygenated blood."
     },
 
-    // ==================== EXCRETION, REPRODUCTION, GROWTH (96-100) ====================
+    // Generated: Aves wings and legs
     {
-        question: "The major nitrogenous waste product in humans is",
-        options: ["ammonia", "urea", "uric acid", "creatinine"],
+        question: "The wings of birds are mainly adapted for:",
+        options: ["Swimming", "Flight", "Walking", "Digging"],
         answer: "B",
-        explanation: "Humans excrete urea as the primary nitrogenous waste, produced in the liver via the ornithine cycle, which is less toxic than ammonia."
+        explanation: "Bird wings are modified forelimbs with a streamlined airfoil shape, primarily adapted for powered flight."
     },
     {
-        question: "Birds excrete nitrogenous waste as",
-        options: ["ammonia", "urea", "uric acid", "amino acids"],
+        question: "A bird that has long, strong legs with sharp claws is most likely adapted for:",
+        options: ["Swimming", "Perching", "Catching prey (hunting)", "Wading in water"],
         answer: "C",
-        explanation: "Birds and reptiles excrete uric acid as a white paste, conserving water since uric acid requires little water for elimination."
+        explanation: "Raptors (eagles, hawks) have powerful legs and sharp, curved talons for catching and gripping prey."
     },
     {
-        question: "The process of fertilization in humans occurs in the",
-        options: ["ovary", "uterus", "fallopian tube", "vagina"],
-        answer: "C",
-        explanation: "Fertilization typically occurs in the ampulla of the fallopian tube (oviduct), where the sperm meets the egg."
-    },
-    {
-        question: "The term for the development of a zygote into a multicellular organism is",
-        options: ["differentiation", "growth", "embryogenesis", "morphogenesis"],
-        answer: "C",
-        explanation: "Embryogenesis is the process by which the zygote undergoes cell division, differentiation, and organization to form an embryo."
-    },
-    {
-        question: "Metamorphosis is a process of",
-        options: ["cell division", "post-embryonic development", "senescence", "regeneration"],
+        question: "The wing of a bird is a modified:",
+        options: ["Hind limb", "Forelimb", "Tail", "Fin"],
         answer: "B",
-        explanation: "Metamorphosis is post-embryonic development where an organism undergoes dramatic physical changes, as seen in butterflies (caterpillar to adult) and frogs (tadpole to frog)."
+        explanation: "Bird wings evolved from forelimbs. The bones of the arm and hand are modified to support flight feathers."
+    },
+    {
+        question: "A bird with webbed feet is most likely adapted for:",
+        options: ["Perching on branches", "Swimming in water", "Running fast on land", "Catching fish from the air"],
+        answer: "B",
+        explanation: "Webbed feet (ducks, geese, swans) increase surface area for paddling through water."
+    },
+    {
+        question: "The legs of a perching bird (like a sparrow) are adapted to:",
+        options: ["Grasp branches firmly", "Swim quickly", "Run at high speed", "Dig for worms"],
+        answer: "A",
+        explanation: "Perching birds have a tendon lock mechanism — when the leg bends, toes automatically curl and grip branches."
+    },
+    {
+        question: "A bird with long legs and a long neck (like a heron) is adapted for:",
+        options: ["Hunting in shallow water", "Climbing trees", "Burrowing in soil", "Flying long distances"],
+        answer: "A",
+        explanation: "Herons wade in shallow water; long legs keep the body above water while the long neck strikes downward to catch fish."
+    },
+    {
+        question: "The wings of flightless birds like the ostrich are:",
+        options: ["Large and powerful", "Reduced and useless for flight", "Used for swimming", "Used for grasping prey"],
+        answer: "B",
+        explanation: "Flightless birds like ostriches and emus have vestigial wings not capable of powered flight."
+    },
+    {
+        question: "The strong, muscular legs of a roadrunner are adapted for:",
+        options: ["Perching", "Swimming", "Running fast on land", "Climbing"],
+        answer: "C",
+        explanation: "Roadrunners are cursorial (running) birds with powerful legs for chasing prey on the ground."
+    },
+    {
+        question: "A bird's wing produces lift during flight because of its:",
+        options: ["Flat shape", "Curved (airfoil) shape", "Heavy weight", "Sharp edge"],
+        answer: "B",
+        explanation: "The curved upper surface of a bird's wing forces air to travel faster over the top, creating lower pressure and lift."
+    },
+    {
+        question: "Birds that catch fish from the air (like ospreys) have:",
+        options: ["Webbed feet", "Sharp, curved talons", "Flat beaks", "Short legs"],
+        answer: "B",
+        explanation: "Ospreys and eagles have sharp, curved talons and rough toe pads for gripping slippery fish."
+    },
+
+    // ==================== PISCES (Questions 74-85, idx 73-84) ====================
+
+    // From PDF
+    {
+        question: "What is the primary respiratory organ in adult fish?",
+        options: ["Lungs", "Gills", "Trachea", "Skin"],
+        answer: "B",
+        explanation: "Fish use gills to extract dissolved oxygen from water. Lungfish are an exception, using both gills and primitive lungs."
+    },
+    {
+        question: "Which of these is a feature of the class Pisces?",
+        options: ["Mammary glands", "Fins", "Feathers", "Hair"],
+        answer: "B",
+        explanation: "Fins are the characteristic locomotory structures of fish, used for propulsion, steering, and balance."
+    },
+
+    // Generated: Pisces fins
+    {
+        question: "The caudal fin (tail fin) of a fish is mainly used for:",
+        options: ["Steering", "Propulsion (forward movement)", "Braking", "Attracting mates"],
+        answer: "B",
+        explanation: "The caudal fin provides the main thrust for forward movement by sweeping side to side."
+    },
+    {
+        question: "The pectoral fins of a fish are mainly used for:",
+        options: ["Swimming fast forward", "Steering and balancing", "Digging in mud", "Catching prey"],
+        answer: "B",
+        explanation: "Pectoral fins (behind the gills) are used for steering, braking, and fine maneuvering."
+    },
+    {
+        question: "The dorsal fin of a fish is mainly used for:",
+        options: ["Propulsion", "Stability (preventing rolling)", "Breathing", "Feeding"],
+        answer: "B",
+        explanation: "The dorsal fin acts like a keel, preventing the fish from rolling over and providing lateral stability."
+    },
+    {
+        question: "The pelvic fins of a fish are mainly used for:",
+        options: ["Moving forward", "Stopping and turning", "Balance and steering", "Attacking prey"],
+        answer: "C",
+        explanation: "Pelvic fins help with balance, steering, and vertical control of movement."
+    },
+    {
+        question: "The anal fin of a fish is mainly used for:",
+        options: ["Stability", "Fast swimming", "Sensing vibrations", "Breathing"],
+        answer: "A",
+        explanation: "The anal fin (on the ventral side near the tail) provides stability and helps prevent rolling."
+    },
+    {
+        question: "The fins of fish are supported by:",
+        options: ["Bones or cartilage", "Feathers", "Hair", "Scales only"],
+        answer: "A",
+        explanation: "Fins are supported by bony fin rays (in bony fish) or cartilaginous rays (in sharks and rays)."
+    },
+    {
+        question: "The caudal fin of a fast-swimming fish (like a tuna) is:",
+        options: ["Round and small", "Forked or crescent-shaped", "Flat and wide", "Absent"],
+        answer: "B",
+        explanation: "Fast swimmers like tuna have a deeply forked or lunate (crescent-shaped) caudal fin for efficient propulsion."
+    },
+    {
+        question: "In fish, fins help in all of the following EXCEPT:",
+        options: ["Locomotion", "Balance", "Breathing", "Steering"],
+        answer: "C",
+        explanation: "Breathing is done by gills, not fins. Fins serve locomotion, balance, and steering."
+    },
+    {
+        question: "A fish that lives in fast-moving water most likely has:",
+        options: ["Large, strong fins for swimming", "Very small or no fins", "Fins used only for walking", "No tail fin"],
+        answer: "A",
+        explanation: "Fish in fast currents need powerful fins to maintain position and navigate against strong water flow."
+    },
+    {
+        question: "The fin that is located on the back of a fish is the:",
+        options: ["Caudal fin", "Pectoral fin", "Dorsal fin", "Pelvic fin"],
+        answer: "C",
+        explanation: "The dorsal fin runs along the dorsal (back) surface of the fish and provides stability."
+    },
+
+    // ==================== TAXONOMY & CLASSIFICATION (Questions 86-100, idx 85-99) ====================
+
+    {
+        question: "The scientific name for humans is:",
+        options: ["Homo sapiens", "Panthera leo", "Canis familiaris", "Felis catus"],
+        answer: "A",
+        explanation: "Homo sapiens is the binomial scientific name for modern humans. 'Homo' is the genus, 'sapiens' means 'wise.'"
+    },
+    {
+        question: "The taxonomic rank below family is:",
+        options: ["Order", "Genus", "Species", "Class"],
+        answer: "B",
+        explanation: "Taxonomic hierarchy (broad to narrow): Kingdom → Phylum → Class → Order → Family → Genus → Species."
+    },
+    {
+        question: "A group of organisms capable of interbreeding and producing fertile offspring is called a:",
+        options: ["Genus", "Species", "Family", "Phylum"],
+        answer: "B",
+        explanation: "A species is the most fundamental unit of classification — members can interbreed and produce fertile offspring."
+    },
+    {
+        question: "Which taxon is the most specific (narrowest)?",
+        options: ["Kingdom", "Species", "Class", "Phylum"],
+        answer: "B",
+        explanation: "Species is the most specific rank. Kingdom is the broadest. The hierarchy narrows from Kingdom to Species."
+    },
+    {
+        question: "The process of grouping organisms based on shared characteristics is:",
+        options: ["Identification", "Classification", "Nomenclature", "Phylogeny"],
+        answer: "B",
+        explanation: "Classification (taxonomy) is the systematic grouping of organisms based on shared features and evolutionary relationships."
+    },
+    {
+        question: "What does the term 'phylogeny' refer to?",
+        options: ["Physical structure", "Evolutionary history", "Habitat preference", "Reproduction method"],
+        answer: "B",
+        explanation: "Phylogeny refers to the evolutionary history and relationships among organisms or groups of organisms."
+    },
+    {
+        question: "Which kingdom includes organisms that are multicellular and heterotrophic?",
+        options: ["Plantae", "Animalia", "Fungi", "Protista"],
+        answer: "B",
+        explanation: "Animalia consists of multicellular, heterotrophic organisms that obtain nutrients by ingesting other organisms."
+    },
+    {
+        question: "The scientific name must be written in:",
+        options: ["Italics", "Bold", "Underlined", "Capital letters throughout"],
+        answer: "A",
+        explanation: "Binomial names are written in italics (or underlined when handwritten). The genus is capitalized; the species is lowercase."
+    },
+    {
+        question: "Which level of classification is more inclusive than order?",
+        options: ["Class", "Family", "Genus", "Species"],
+        answer: "A",
+        explanation: "Class is above order in the hierarchy (Class → Order → Family). Class is more inclusive (contains more organisms)."
+    },
+    {
+        question: "Which kingdom contains organisms with cell walls made of chitin?",
+        options: ["Plantae", "Fungi", "Animalia", "Protista"],
+        answer: "B",
+        explanation: "Fungi have cell walls made of chitin, unlike plants which use cellulose."
+    },
+    {
+        question: "Which domain includes organisms with complex cells containing a nucleus?",
+        options: ["Bacteria", "Archaea", "Eukarya", "None of the above"],
+        answer: "C",
+        explanation: "Domain Eukarya includes all organisms with a true membrane-bound nucleus: protists, fungi, plants, and animals."
+    },
+    {
+        question: "What is the primary basis for modern taxonomic classification?",
+        options: ["Morphology", "Evolutionary relationships (phylogeny)", "Habitat", "Color"],
+        answer: "B",
+        explanation: "Modern taxonomy (cladistics) classifies organisms based on shared evolutionary ancestry rather than just appearance."
+    },
+    {
+        question: "Which taxon includes related genera?",
+        options: ["Family", "Order", "Class", "Phylum"],
+        answer: "A",
+        explanation: "A family groups together related genera. For example, family Felidae includes genera Felis, Panthera, and others."
+    },
+    {
+        question: "The study of the evolutionary relationships among organisms is:",
+        options: ["Systematics", "Ecology", "Physiology", "Biochemistry"],
+        answer: "A",
+        explanation: "Systematics encompasses the study of evolutionary diversity and relationships among living organisms."
+    },
+    {
+        question: "Which kingdom includes single-celled organisms with a nucleus?",
+        options: ["Monera", "Protista", "Fungi", "Plantae"],
+        answer: "B",
+        explanation: "Protista includes unicellular (and some multicellular) eukaryotic organisms like Amoeba, Paramecium, and algae."
     }
+
 ];
+// Total: 100 questions covering BIO 102 Animal Kingdom topics

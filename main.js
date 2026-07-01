@@ -166,14 +166,12 @@ document.addEventListener('DOMContentLoaded', function() {
         "BIO 102": {
             icon: "🔬",
             topics: [
-                { id: "viruses", name: "Viruses", description: "Structure, replication, and diseases", qCount: 15, startIdx: 0, endIdx: 15 },
-                { id: "bacteria", name: "Bacteria", description: "Classification, structure, and reproduction", qCount: 15, startIdx: 15, endIdx: 30 },
-                { id: "fungi", name: "Fungi", description: "Types, reproduction, and economic importance", qCount: 15, startIdx: 30, endIdx: 45 },
-                { id: "plant_kingdom", name: "Plant Kingdom", description: "Bryophytes, pteridophytes, gymnosperms, angiosperms", qCount: 15, startIdx: 45, endIdx: 60 },
-                { id: "animal_kingdom", name: "Animal Kingdom", description: "Invertebrates and vertebrates", qCount: 15, startIdx: 60, endIdx: 75 },
-                { id: "ecological_adaptations", name: "Ecological Adaptations", description: "Adaptations in plants and animals", qCount: 10, startIdx: 75, endIdx: 85 },
-                { id: "physiology", name: "Physiology", description: "Nutrition, respiration, circulation", qCount: 10, startIdx: 85, endIdx: 95 },
-                { id: "growth_reproduction", name: "Growth & Reproduction", description: "Development and reproduction", qCount: 5, startIdx: 95, endIdx: 100 }
+                { id: "arthropoda",        name: "Arthropoda & Arachnida",  description: "Arthropod classes, insects, arachnids, crustaceans, myriapods, spiders", qCount: 34, startIdx: 0,  endIdx: 34 },
+                { id: "protozoa",          name: "Protozoa",                description: "Classification, locomotion types, Ciliata, Mastigophora, Sporozoa",       qCount: 15, startIdx: 34, endIdx: 49 },
+                { id: "porifera_mollusca", name: "Porifera & Mollusca",     description: "Sponge symmetry, mollusk classes, mantle, radula, shell types",           qCount: 9,  startIdx: 49, endIdx: 58 },
+                { id: "aves",              name: "Aves (Birds)",            description: "Bird characteristics, wing adaptations, leg adaptations",                 qCount: 15, startIdx: 58, endIdx: 73 },
+                { id: "pisces",            name: "Pisces (Fish)",           description: "Fish features, functions of fins: caudal, dorsal, pectoral, pelvic",      qCount: 12, startIdx: 73, endIdx: 85 },
+                { id: "taxonomy",          name: "Taxonomy & Classification",description: "Binomial nomenclature, taxonomic ranks, kingdoms, domains, phylogeny",    qCount: 15, startIdx: 85, endIdx: 100 }
             ]
         },
         "BIO 108": { icon: "🧫", topics: [{ id: "all", name: "All Topics", description: "Complete practical biology", qCount: 100, startIdx: 0, endIdx: 100 }] },

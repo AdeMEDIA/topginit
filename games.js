@@ -53,14 +53,12 @@
             { id: 'judiciary_rights',          name: 'Judiciary & Rights',          startIdx: 80, endIdx: 90 }
         ],
         'BIO 102': [
-            { id: 'viruses',                name: 'Viruses',                   startIdx: 0,  endIdx: 15  },
-            { id: 'bacteria',               name: 'Bacteria',                  startIdx: 15, endIdx: 30  },
-            { id: 'fungi',                  name: 'Fungi',                     startIdx: 30, endIdx: 45  },
-            { id: 'plant_kingdom',          name: 'Plant Kingdom',             startIdx: 45, endIdx: 60  },
-            { id: 'animal_kingdom',         name: 'Animal Kingdom',            startIdx: 60, endIdx: 75  },
-            { id: 'ecological_adaptations', name: 'Ecological Adaptations',    startIdx: 75, endIdx: 85  },
-            { id: 'physiology',             name: 'Physiology',                startIdx: 85, endIdx: 95  },
-            { id: 'growth_reproduction',    name: 'Growth & Reproduction',     startIdx: 95, endIdx: 100 }
+            { id: 'arthropoda',        name: 'Arthropoda & Arachnida',   startIdx: 0,  endIdx: 34  },
+            { id: 'protozoa',          name: 'Protozoa',                  startIdx: 34, endIdx: 49  },
+            { id: 'porifera_mollusca', name: 'Porifera & Mollusca',       startIdx: 49, endIdx: 58  },
+            { id: 'aves',              name: 'Aves (Birds)',               startIdx: 58, endIdx: 73  },
+            { id: 'pisces',            name: 'Pisces (Fish)',              startIdx: 73, endIdx: 85  },
+            { id: 'taxonomy',          name: 'Taxonomy & Classification',  startIdx: 85, endIdx: 100 }
         ],
         'BIO 108': [
             { id: 'plant_anatomy',    name: 'Anatomy of Flowering Plants', startIdx: 0,  endIdx: 30  },
