@@ -71,12 +71,10 @@
             { id: 'dissection',       name: 'Dissection & Practical',      startIdx: 90, endIdx: 100 }
         ],
         'CHM 102': [
-            { id: 'amines_chemistry',     name: 'Amine Chemistry',           startIdx: 0,   endIdx: 31  },
-            { id: 'proteins_amino_ii',    name: 'Proteins & Amino Acids',    startIdx: 31,  endIdx: 56  },
-            { id: 'stereo_isomerism',     name: 'Isomerism & Stereochem',    startIdx: 56,  endIdx: 80  },
-            { id: 'alcohols_carbonyls',   name: 'Alcohols & Carbonyls',      startIdx: 80,  endIdx: 100 },
-            { id: 'applied_inorganic',    name: 'Applied & Inorganic',       startIdx: 100, endIdx: 105 },
-            { id: 'must_know',            name: 'Must Know ⭐',               startIdx: 100, endIdx: 167 }
+            { id: 'amines_chemistry',   name: 'Amine Chemistry',           startIdx: 0,  endIdx: 31  },
+            { id: 'proteins_amino_ii',  name: 'Proteins & Amino Acids',    startIdx: 31, endIdx: 56  },
+            { id: 'stereo_isomerism',   name: 'Isomerism & Stereochem',    startIdx: 56, endIdx: 80  },
+            { id: 'alcohols_carbonyls', name: 'Alcohols & Carbonyls',      startIdx: 80, endIdx: 100 }
         ],
         'GST 112': [
             { id: 'pre_colonial',              name: 'Pre-Colonial Nigeria',        startIdx: 0,  endIdx: 15 },

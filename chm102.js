@@ -7,1032 +7,613 @@ if (!window.questionBank) {
 
 window.questionBank["CHM 102"] = [
 
-    // ==================== AMINE CHEMISTRY (Questions 61-91, idx 60-90) ====================
+    // ==================== AMINE CHEMISTRY (Q1-31, idx 0-30) ====================
     {
         question: "Which of the following is true for the basicity of amines?",
-        options: ["Alkylamines are generally less basic than arylamines because nitrogen is sp hybridised", "Arylamines are generally more basic than alkylamines due to the aryl group", "Arylamines are generally less basic than alkylamines due to delocalisation of the lone pair into the benzene ring", "Alkylamines are generally less basic than arylamines because the lone pair on N in alkylamines is not delocalised"],
+        options: ["Alkyl amines are generally less basic than aryl amines because N is sp hybridised", "Aryl amines are generally more basic than alkyl amines due to the aryl group", "Aryl amines are generally less basic than alkyl amines due to delocalisation of the lone pair of electrons in the benzene ring", "Alkyl amines are generally less basic than aryl amines because the lone pair on N in aryl amines is not delocalised"],
         answer: "C",
-        explanation: "In aniline, the lone pair on N is delocalised into the benzene π-system, making it less available for protonation → arylamines are weaker bases than alkylamines."
+        explanation: "In arylamines (e.g. aniline), the lone pair on N is delocalised into the benzene π-system, making it LESS available to accept a proton. Hence arylamines are weaker bases than alkylamines."
     },
     {
         question: "How many structural isomers are possible for C₃H₉N?",
         options: ["4", "2", "5", "3"],
         answer: "A",
-        explanation: "C₃H₉N has 4 structural isomers: n-propylamine, isopropylamine (both 1°), ethylmethylamine (2°), and trimethylamine (3°)."
+        explanation: "C₃H₉N has 4 structural isomers: (1) n-propylamine CH₃CH₂CH₂NH₂ (1°), (2) isopropylamine (CH₃)₂CHNH₂ (1°), (3) ethylmethylamine CH₃CH₂NHCH₃ (2°), (4) trimethylamine (CH₃)₃N (3°)."
     },
     {
-        question: "Which of the following statements is incorrect for primary amines?",
-        options: ["On reaction with nitrous acid, alkylamines produce an alcohol", "On reaction with nitrous acid, arylamines produce phenol directly", "Alkylamines are more basic than ammonia", "Alkylamines are more basic than arylamines"],
+        question: "Which of the following is incorrect for primary amines?",
+        options: ["On reaction with nitrous acid, alkyl amines produce alcohol", "On reaction with nitrous acid, aryl amines produce phenol", "Alkyl amines are more basic than ammonia", "Alkyl amines are more basic than aryl amines"],
         answer: "B",
-        explanation: "Arylamines react with HNO₂ to give diazonium salts (ArN₂⁺), not phenol directly. Phenol results only after subsequent hydrolysis. Statement B is incorrect."
+        explanation: "Statement (b) is incorrect. Aryl primary amines + HNO₂ (cold, 0–5°C) produce diazonium salts (ArN₂⁺), NOT phenol directly. Phenol is obtained only on warming diazonium in water. Alkyl diazonium salts are unstable and give alcohol immediately."
     },
     {
         question: "Aniline (C₆H₅NH₂) is less basic than",
-        options: ["Benzylamine (C₆H₅CH₂NH₂)", "Triphenylamine ((C₆H₅)₃N)", "p-Nitroaniline", "Diphenylamine"],
+        options: ["Benzylamine (C₆H₅CH₂NH₂)", "Triphenylamine (C₆H₅)₃N", "p-Nitroaniline", "Diphenylamine (C₆H₅)₂NH"],
         answer: "A",
-        explanation: "Benzylamine is a primary aliphatic amine (pKa ≈ 9.3) — far more basic than aniline (pKa ≈ 4.6) whose lone pair is delocalised into the ring."
+        explanation: "In benzylamine, the N is NOT directly attached to the ring — the lone pair is not delocalised into the benzene ring, so it is fully available for protonation. Hence benzylamine (pKb ≈ 4.7) is a much stronger base than aniline (pKb ≈ 9.4)."
     },
     {
         question: "Which of the following is formed when an alkyl primary amine reacts with nitrous acid (HNO₂)?",
         options: ["Alkyl nitrite", "Secondary amine", "Nitroalkane", "Alcohol"],
         answer: "D",
-        explanation: "R-NH₂ + HNO₂ → R-N₂⁺ (unstable diazonium) → R-OH + N₂. The diazonium salt of an alkyl amine is too unstable and immediately decomposes to an alcohol."
+        explanation: "Alkyl primary amines + HNO₂ → unstable alkyldiazonium salt (RN₂⁺) → N₂ + carbocation → alcohol (R-OH). The reaction is not useful synthetically because the unstable diazonium immediately loses N₂."
     },
     {
         question: "In which of the following reactions does an amide get converted to an amine?",
-        options: ["Claisen condensation", "Hofmann degradation", "Kekule rearrangement", "Perkin reaction"],
+        options: ["Claisen", "Hoffmann", "Kekulé", "Perkin"],
         answer: "B",
-        explanation: "Hofmann degradation: RCONH₂ + Br₂ + 4KOH → RNH₂ + K₂CO₃ + 2KBr + 2H₂O. The product amine has one fewer carbon than the starting amide."
+        explanation: "The Hofmann degradation (Br₂/NaOH or Br₂/KOH) converts a primary amide RCONH₂ to a primary amine RNH₂ with one fewer carbon: RCONH₂ → RNH₂ + CO₂."
     },
     {
-        question: "Which of the following compounds gives a secondary amine on reduction with LiAlH₄?",
-        options: ["Methyl cyanide (CH₃CN)", "Nitroethane (CH₃CH₂NO₂)", "Methyl isocyanide (CH₃NC)", "Acetamide (CH₃CONH₂)"],
+        question: "Which compound on reduction with LiAlH₄ produces a secondary amine?",
+        options: ["Methylcyanide (CH₃CN)", "Nitroethane (CH₃CH₂NO₂)", "Methylisocyanide (CH₃NC)", "Acetamide (CH₃CONH₂)"],
         answer: "C",
-        explanation: "Methyl isocyanide (CH₃-N≡C) on reduction with LiAlH₄ gives CH₃NHCH₃ (dimethylamine), a secondary amine. Nitriles give primary amines."
+        explanation: "Methylisocyanide (CH₃-N≡C:) + 4[H] via LiAlH₄ → CH₃NHCH₃ (dimethylamine, a 2° amine). The isocyanide C provides the extra CH₂ that bonds to N. Nitriles, amides, and nitroalkanes all give primary amines."
     },
     {
-        question: "Which of the following is formed in the reaction of an aldehyde with a primary amine?",
-        options: ["Ketone", "Aromatic acid", "Schiff's base (imine)", "Carboxylic acid"],
+        question: "Which of the following is formed in the reaction of an aldehyde and a primary amine?",
+        options: ["Ketone", "Aromatic acid", "Schiff's base", "Carboxylic acid"],
         answer: "C",
-        explanation: "RCHO + R'NH₂ → RCH=NR' + H₂O. The product is a Schiff's base (imine), formed by condensation of the aldehyde carbonyl with the primary amine."
+        explanation: "Aldehyde + RNH₂ (primary amine) → hemiaminal (addition) → Schiff's base (R-CH=N-R') + H₂O (condensation). Schiff's bases (imines) are characteristic products of carbonyl compounds with primary amines."
     },
     {
-        question: "The amine formed from an amide by Hofmann degradation (Br₂/NaOH) has:",
-        options: ["The same number of carbon atoms as the amide", "One carbon atom fewer than the amide", "One more carbon atom than the amide", "Two more carbon atoms than the amide"],
+        question: "The amine formed from an amide by means of bromine and alkali (Hofmann degradation) has how many carbon atoms?",
+        options: ["Same number of C atoms as that of the amide", "One carbon atom fewer than that of the amide", "One more C atom than that of the amide", "Two more C atoms than that of the amide"],
         answer: "B",
-        explanation: "Hofmann degradation removes the carbonyl carbon as CO₂, giving a primary amine with n–1 carbons: e.g., CH₃CH₂CONH₂ → CH₃CH₂NH₂."
+        explanation: "Hofmann degradation: RCONH₂ + Br₂/NaOH → RNH₂ + CO₂ + NaBr + H₂O. The product amine (RNH₂) has ONE FEWER carbon than the starting amide (RCONH₂), because the carbonyl carbon is lost as CO₂."
     },
     {
-        question: "The compound X formed in CH₃CN → (Na/C₂H₅OH) → X is:",
-        options: ["CH₃CONH₂ (acetamide)", "CH₃CH₂NH₂ (ethylamine)", "C₂H₆ (ethane)", "CH₃NHCH₃ (dimethylamine)"],
+        question: "Which of the following options represents compound X in: CH₃CH₂CONH₂ + Br₂/NaOH → X?",
+        options: ["CH₃CONH₂", "CH₃CH₂NH₂", "C₂H₆", "CH₃NHCH₃"],
         answer: "B",
-        explanation: "Reduction of a nitrile (CH₃CN) with Na/ethanol gives a primary amine: CH₃CN + 4[H] → CH₃CH₂NH₂ (ethylamine)."
+        explanation: "Hofmann degradation of propionamide (CH₃CH₂CONH₂, 3C): Br₂/NaOH → CH₃CH₂NH₂ (ethylamine, 2C) + CO₂. The product amine has one fewer carbon than the amide."
     },
     {
-        question: "Ethylamine can be prepared by Hofmann degradation (Br₂ and caustic potash) of",
-        options: ["Acetamide (CH₃CONH₂)", "Formamide (HCONH₂)", "Propionamide (CH₃CH₂CONH₂)", "Methyl cyanide (CH₃CN)"],
+        question: "Ethylamine can be prepared by action of bromine and caustic potash on which compound?",
+        options: ["Acetamide", "Formamide", "Propionamide", "Methylcyanide"],
         answer: "C",
-        explanation: "Hofmann of propionamide (3C amide) removes one carbon → ethylamine (2C primary amine, CH₃CH₂NH₂)."
+        explanation: "Hofmann: propionamide (CH₃CH₂CONH₂, 3C) + Br₂/KOH → ethylamine (CH₃CH₂NH₂, 2C). Generally, if you want RNH₂ by Hofmann, start from an amide with one MORE carbon: (R+CO)NH₂."
     },
     {
-        question: "Reduction of nitroalkanes (R–NO₂) with H₂/Ni or Fe/HCl yields",
-        options: ["Alcohol", "Carboxylic acid", "Amine", "Diazo compound"],
+        question: "Reduction of nitroalkanes yields",
+        options: ["Alcohol", "Acid", "Amine", "Diazo compounds"],
         answer: "C",
-        explanation: "R–NO₂ + 6[H] → R–NH₂ + 2H₂O. Reduction of any nitro compound gives the corresponding primary amine."
+        explanation: "Nitroalkanes (R-NO₂) can be reduced to primary amines (R-NH₂) by catalytic hydrogenation (H₂/catalyst), LiAlH₄, or Fe/HCl (Baeyer reduction): R-NO₂ + 6[H] → R-NH₂ + 2H₂O."
     },
     {
-        question: "What is the name of the reaction in which acetamide (CH₃CONH₂) is converted to methylamine (CH₃NH₂) using Br₂ and NaOH?",
+        question: "What is the name of the reaction when acetamide changes into methylamine?",
         options: ["Huffman reaction", "Friedel-Crafts reaction", "Hofmann reaction", "Hinsberg reaction"],
         answer: "C",
-        explanation: "The Hofmann degradation converts an amide to an amine with one fewer carbon: CH₃CONH₂ → CH₃NH₂."
+        explanation: "Hofmann reaction (degradation): CH₃CONH₂ + Br₂/NaOH → CH₃NH₂ + CO₂. Acetamide (2C amide) → methylamine (1C amine). The Hinsberg test uses benzenesulfonyl chloride to distinguish 1°, 2°, 3° amines."
     },
     {
-        question: "When methyl iodide is heated with excess ammonia, the product obtained is",
-        options: ["Methylamine only", "Dimethylamine only", "Trimethylamine only", "A mixture of methylamine, dimethylamine, and trimethylamine"],
+        question: "When methyl iodide is heated with ammonia, what is the product obtained?",
+        options: ["Methylamine", "Dimethylamine", "Trimethylamine", "A mixture of methylamine, dimethylamine and trimethylamine"],
         answer: "D",
-        explanation: "Exhaustive alkylation: NH₃ → CH₃NH₂ → (CH₃)₂NH → (CH₃)₃N, giving a mixture of all three amines (plus tetramethylammonium iodide)."
+        explanation: "Alkylation of ammonia with alkyl halide gives ALL three classes: NH₃ + CH₃I → CH₃NH₂ → (CH₃)₂NH → (CH₃)₃N → (CH₃)₄N⁺I⁻. The reaction is not selective; you get a mixture unless excess NH₃ or excess CH₃I is used deliberately."
     },
     {
-        question: "Which of the following gives a secondary amine on reduction?",
-        options: ["Nitromethane (CH₃NO₂)", "Nitrobenzene (C₆H₅NO₂)", "Methyl isocyanide (CH₃NC)", "Methyl cyanide (CH₃CN)"],
+        question: "Which of the following compounds gives a secondary amine on reduction?",
+        options: ["Nitromethane (CH₃NO₂)", "Nitrobenzene (C₆H₅NO₂)", "Methylisocyanide (CH₃NC)", "Methylcyanide (CH₃CN)"],
         answer: "C",
-        explanation: "CH₃NC + 4[H] → CH₃NHCH₃ (dimethylamine, secondary). Nitriles and nitro compounds give primary amines on reduction."
+        explanation: "Methylisocyanide (CH₃NC) + LiAlH₄ → CH₃NHCH₃ (dimethylamine, a 2° amine). Nitriles (CN) and nitro compounds give PRIMARY amines; isocyanides (NC) give SECONDARY amines because N is bonded to both the original R group and the new CH₂ from reduction."
     },
     {
-        question: "When ethanol vapour is mixed with ammonia and passed over alumina (Al₂O₃) at high temperature, the product is",
-        options: ["C₂H₅NH₂ (ethylamine)", "C₂H₄ (ethene)", "C₂H₅OC₂H₅ (diethyl ether)", "CH₃OCH₃ (dimethyl ether)"],
+        question: "When ethanol is mixed with ammonia and passed over alumina at high temperature, the compound formed is",
+        options: ["C₂H₅NH₂ (ethylamine)", "C₂H₄ (ethylene)", "C₂H₅OC₂H₅ (diethyl ether)", "CH₃OCH₃ (dimethyl ether)"],
         answer: "A",
-        explanation: "C₂H₅OH + NH₃ → (Al₂O₃, heat) → C₂H₅NH₂ + H₂O. Alumina catalyses substitution of –OH by –NH₂."
+        explanation: "Passing alcohol + NH₃ vapours over hot Al₂O₃ catalyst: C₂H₅OH + NH₃ → C₂H₅NH₂ + H₂O. This is analogous to dehydration but instead of forming ether, the OH is replaced by NH₂."
     },
     {
-        question: "Among isomeric amines with formula C₃H₉N, which should be most volatile (lowest boiling point)?",
-        options: ["(CH₃)₃N (trimethylamine)", "CH₃CH₂CH₂NH₂ (n-propylamine)", "CH₃CH₂NHCH₃ (ethylmethylamine)", "None — all have identical boiling points"],
+        question: "Which of the following should be most volatile (lowest boiling point)?",
+        options: ["(CH₃)₃N (trimethylamine, 3° amine)", "CH₃CH₂CH₂NH₂ (n-propylamine, 1° amine)", "(CH₃)₂CHNH₂ (isopropylamine, 1° amine)", "CH₃CH₂NHCH₃ (ethylmethylamine, 2° amine)"],
         answer: "A",
-        explanation: "Tertiary amines have no N–H bonds, so they cannot H-bond with each other. This gives (CH₃)₃N the lowest boiling point (3°C) among the C₃H₉N isomers."
+        explanation: "Trimethylamine (3° amine) has NO N–H bonds and therefore CANNOT form hydrogen bonds. Its bp (3°C) is much lower than isomeric 1° amines (bp ≈ 48°C for propylamine) or 2° amines. Fewer N–H bonds → weaker intermolecular forces → lower bp."
     },
     {
-        question: "The nitrogen atom in an amino group (–NH₂) is hybridised as",
+        question: "The nitrogen atom of a primary amine group is ______ hybridised",
         options: ["sp", "sp²", "sp³", "sp³d"],
         answer: "C",
-        explanation: "Nitrogen in amines has a lone pair and three bonds; all four electron domains adopt sp³ hybridisation, giving a pyramidal geometry."
+        explanation: "Nitrogen in primary amines (R-NH₂) has 4 regions of electron density (3 bonds + 1 lone pair) → sp³ hybridisation → pyramidal geometry (bond angles ≈107°, slightly less than tetrahedral due to lone pair repulsion)."
     },
     {
-        question: "The formula C₃H₉N cannot represent",
+        question: "C₃H₉N cannot represent",
         options: ["A primary amine", "A secondary amine", "A tertiary amine", "A quaternary ammonium salt"],
         answer: "D",
-        explanation: "Quaternary ammonium salts have formula R₄N⁺X⁻. C₃H₉N (neutral) can represent 1°, 2°, or 3° amines, but NOT a quaternary salt (which would be C₃H₁₂N⁺ for N with 4 organic groups)."
+        explanation: "C₃H₉N can represent 1° (n-propylamine, isopropylamine), 2° (ethylmethylamine), and 3° (trimethylamine) neutral amines. A QUATERNARY ammonium salt (R₄N⁺X⁻) is an ionic species — a neutral molecular formula cannot represent an ionic salt."
     },
     {
-        question: "Which of the following IUPAC names is correct?",
-        options: ["(CH₃CH₂)₂NCH₃ = N-Ethyl-N-methylethanamine", "(CH₃)₃CNH₂ = 2,2-Dimethyl-N-propanamine", "CH₃NHCH(CH₃)₂ = Isopropylmethylamine", "(CH₃)₂CHNH₂ = propan-1-amine"],
-        answer: "A",
-        explanation: "(CH₃CH₂)₂NCH₃: parent = ethanamine, N-substituents = N-methyl and N-ethyl → N-Ethyl-N-methylethanamine. Options B, C, D contain incorrect IUPAC names."
+        question: "Identify the INCORRECTLY named compound",
+        options: ["(CH₃CH₂)₂NCH₃ = N-Ethyl-N-methylethanamine", "(CH₃)₃CNH₂ = 2-methylpropan-2-amine", "CH₃NHCH(CH₃)₂ = N-methylpropan-2-amine", "(CH₃)₂CHNH₂ = 2,2-Dimethyl-N-propanamine"],
+        answer: "D",
+        explanation: "(CH₃)₂CHNH₂ is isopropylamine; the correct IUPAC name is propan-2-amine (not '2,2-Dimethyl-N-propanamine'). Options A, B, C are all correctly named."
     },
     {
         question: "When excess ethyl iodide is treated with ammonia, the product is",
-        options: ["Ethylamine (C₂H₅NH₂)", "Diethylamine ((C₂H₅)₂NH)", "Triethylamine ((C₂H₅)₃N)", "Tetraethylammonium iodide [(C₂H₅)₄N]⁺I⁻"],
+        options: ["Ethylamine", "Diethylamine", "Triethylamine", "Tetraethylammonium iodide"],
         answer: "D",
-        explanation: "Exhaustive alkylation with excess alkyl halide drives the reaction all the way to the quaternary ammonium salt."
+        explanation: "Excess alkyl halide with NH₃ drives the reaction to the quaternary ammonium salt: NH₃ + excess C₂H₅I → (C₂H₅)₄N⁺I⁻ (tetraethylammonium iodide). Each alkylation step is faster on the less hindered amine."
     },
     {
-        question: "Secondary amines can be prepared by reduction of",
-        options: ["Nitro compounds (R–NO₂)", "N-Substituted amides (RCONHR)", "Isonitriles (R–NC)", "Nitriles (R–CN)"],
+        question: "Secondary amines can be prepared by",
+        options: ["Reduction of nitro compounds", "Oxidation of N-substituted amides", "Reduction of isonitriles (isocyanides)", "Reduction of nitriles"],
         answer: "C",
-        explanation: "R–NC + 4[H] → R–NHCH₃ (secondary amine). Reduction of nitriles gives primary amines; reduction of nitro compounds also gives primary amines."
+        explanation: "Isonitriles (R-NC) + 4[H] (LiAlH₄) → R-NH-CH₃ (secondary amine). Nitriles give primary amines; nitro compounds give primary amines; oxidation of N-substituted amides does not give secondary amines directly."
     },
     {
-        question: "Which of the following amides will give ethylamine (CH₃CH₂NH₂) on reaction with sodium hypobromite (NaOBr)?",
-        options: ["Butanamide (CH₃CH₂CH₂CONH₂)", "Propanamide (CH₃CH₂CONH₂)", "Acetamide (CH₃CONH₂)", "Benzamide (C₆H₅CONH₂)"],
+        question: "Which of the following amides will give ethylamine on reaction with sodium hypobromide (NaOBr)?",
+        options: ["Butanamide", "Propionamide", "Acetamide", "Benzamide"],
         answer: "B",
-        explanation: "Hofmann of propanamide (3C) removes one carbon → ethylamine (2C). Butanamide → propylamine; acetamide → methylamine."
+        explanation: "Hofmann degradation with NaOBr: propionamide (CH₃CH₂CONH₂, 3C) → ethylamine (CH₃CH₂NH₂, 2C). The product always has one fewer carbon than the starting amide."
     },
     {
         question: "Tertiary amines have the lowest boiling points among isomeric amines because",
-        options: ["They have the highest molecular mass", "They cannot form hydrogen bonds (no N–H)", "They are more polar in nature", "They are the most basic in nature"],
+        options: ["They have the highest molecular mass", "They do not form hydrogen bonds (no N–H)", "They are more polar in nature", "They are the most basic in nature"],
         answer: "B",
-        explanation: "Without N–H bonds, tertiary amines cannot H-bond with each other, so intermolecular forces are weaker → lower boiling points than 1° and 2° isomers."
+        explanation: "3° amines (R₃N) have NO N–H bonds → they CANNOT form intermolecular hydrogen bonds. Only weak van der Waals forces hold them together → lowest boiling points among isomeric amines."
     },
     {
-        question: "Primary and secondary amines can be distinguished from each other by reaction with",
-        options: ["Br₂/ROH", "HClO", "HNO₂ (nitrous acid)", "NH₃"],
+        question: "Primary and secondary amines are distinguished by",
+        options: ["Br₂/ROH", "HClO", "HNO₂", "NH₃"],
         answer: "C",
-        explanation: "With HNO₂: primary amines give unstable diazonium (→ alcohol + N₂); secondary amines give stable yellow N-nitroso compounds; tertiary amines show no visible reaction."
+        explanation: "HNO₂ (nitrous acid) test: 1° alkylamines → alcohol + N₂; 2° amines → yellow N-nitrosamine oil; 3° amines → soluble salt (no reaction visible at room temp). The Hinsberg test (C₆H₅SO₂Cl) also distinguishes all three classes."
     },
     {
-        question: "Arrange in increasing order of basicity: CH₃NH₂, (CH₃)₂NH, NH₃, C₆H₅NH₂",
+        question: "Arrange the following compounds in increasing order of basicity: CH₃NH₂, (CH₃)₂NH, NH₃, C₆H₅NH₂",
         options: ["C₆H₅NH₂ < NH₃ < (CH₃)₂NH < CH₃NH₂", "CH₃NH₂ < (CH₃)₂NH < NH₃ < C₆H₅NH₂", "C₆H₅NH₂ < NH₃ < CH₃NH₂ < (CH₃)₂NH", "(CH₃)₂NH < CH₃NH₂ < NH₃ < C₆H₅NH₂"],
         answer: "C",
-        explanation: "Aniline (pKa 4.6) < NH₃ (9.25) < methylamine (10.6) < dimethylamine (10.7). Arylamine weakest; secondary alkylamine strongest due to inductive electron donation."
+        explanation: "Basicity order: C₆H₅NH₂ (aniline, pKb 9.4) < NH₃ (pKb 4.74) < CH₃NH₂ (methylamine, pKb 3.36) < (CH₃)₂NH (dimethylamine, pKb 3.28). Electron-donating alkyl groups increase basicity; delocalisation in aniline decreases it."
     },
     {
-        question: "Among CH₃NH₂, C₂H₅NH₂, C₃H₇NH₂, and C₆H₅NH₂, which is the LEAST basic?",
-        options: ["CH₃NH₂", "C₂H₅NH₂", "C₃H₇NH₂", "C₆H₅NH₂ (aniline)"],
+        question: "Among C₃H₇NH₂, CH₃NH₂, C₂H₅NH₂, and C₆H₅NH₂, which is the least basic compound?",
+        options: ["CH₃NH₂", "C₂H₅NH₂", "C₃H₇NH₂", "C₆H₅NH₂"],
         answer: "D",
-        explanation: "Aniline's lone pair is delocalised into the benzene ring, making it far less basic (pKa 4.6) than any alkylamine (pKa 10–11)."
+        explanation: "C₆H₅NH₂ (aniline) is least basic. The lone pair on N is delocalised into the benzene ring (resonance) → less available for protonation. The alkylamines (CH₃NH₂, C₂H₅NH₂, C₃H₇NH₂) all have lone pairs NOT delocalised → more basic."
     },
     {
-        question: "Which of the following is amphoteric (can act as both an acid and a base) in nature?",
-        options: ["CH₃NH₂ (methylamine)", "CH₃NHCH₃ (dimethylamine)", "CH₃CONH₂ (acetamide)", "N,N-Dimethylmethylamine (trimethylamine)"],
+        question: "Which of the following is amphoteric in nature?",
+        options: ["CH₃NH₂ (methylamine)", "CH₃NHCH₃ (dimethylamine)", "CH₃CONH₂ (acetamide)", "C₆H₅NH₂ (aniline)"],
         answer: "C",
-        explanation: "Acetamide has an –NH₂ group (weakly basic) and a carbonyl that can accept protons or be hydrolysed to give acidic products → amphoteric character."
+        explanation: "Acetamide (CH₃CONH₂) is amphoteric — it has both acidic character (N–H can donate proton) and basic character (C=O and N lone pairs can accept proton). Simple amines are basic only; amino acids are also amphoteric."
     },
     {
-        question: "Which of the following will be INSOLUBLE in dilute HCl?",
-        options: ["C₆H₅NH₂ (aniline)", "(C₆H₅)₃N (triphenylamine)", "C₂H₅NH₂ (ethylamine)", "CH₃NHCH₃ (dimethylamine)"],
+        question: "Amines form salts with hydrochloric acid. Which of the following will be INSOLUBLE in dilute HCl?",
+        options: ["Aniline (C₆H₅NH₂)", "Triphenylamine (C₆H₅)₃N", "Ethylamine (C₂H₅NH₂)", "Dimethylamine (CH₃NHCH₃)"],
         answer: "B",
-        explanation: "Triphenylamine is an extremely weak base (lone pair delocalised across three rings, pKa ≈ −5) — it does not form stable salts with dilute HCl."
+        explanation: "Triphenylamine ((C₆H₅)₃N) has its lone pair so highly delocalised over three phenyl rings that it is essentially non-basic — it does NOT react with dilute HCl to form a soluble salt. Aniline, ethylamine, and dimethylamine all react with HCl to give soluble ammonium salts."
     },
     {
-        question: "Primary, secondary, and tertiary amines may be separated using",
-        options: ["Iodoform reaction", "Diethyl oxalate", "Benzene sulfonyl chloride (Hinsberg's reagent)", "Acetyl chloride"],
+        question: "Primary, secondary and tertiary amines may be separated by using",
+        options: ["Iodoform", "Diethyl oxalate", "Benzenesulphonyl chloride (Hinsberg's test)", "Acetyl chloride"],
         answer: "C",
-        explanation: "Hinsberg's test: 1° amines give sulfonamides soluble in NaOH; 2° amines give insoluble sulfonamides; 3° amines do not react."
+        explanation: "Hinsberg's test: 1° amines + C₆H₅SO₂Cl → sulfonamide (soluble in NaOH); 2° amines → sulfonamide (insoluble in NaOH); 3° amines → no reaction (insoluble). This classifies all three types."
     },
     {
         question: "The strongest base among the following is",
-        options: ["Aniline (C₆H₅NH₂)", "p-Phenylenediamine (p-H₂NC₆H₄NH₂)", "m-Nitroaniline (m-NO₂C₆H₄NH₂)", "Benzylamine (C₆H₅CH₂NH₂)"],
+        options: ["Aniline C₆H₅NH₂", "p-Aminoaniline (p-NH₂C₆H₄NH₂)", "m-Nitroaniline (m-NO₂C₆H₄NH₂)", "Benzylamine (C₆H₅CH₂NH₂)"],
         answer: "D",
-        explanation: "Benzylamine is a primary aliphatic amine (pKa ≈ 9.3). All arylamines are far weaker bases; m-nitroaniline is weakened further by the electron-withdrawing –NO₂ group."
+        explanation: "Benzylamine (C₆H₅CH₂NH₂) is the strongest base: the N is NOT directly on the ring, so the lone pair is NOT delocalised → pKb ≈ 4.7. m-Nitroaniline is weakest (electron-withdrawing NO₂). Aniline and p-aminoaniline are intermediate."
     },
 
-    // ==================== PROTEINS & AMINO ACIDS II (Questions 92-116, idx 91-115) ====================
+    // ==================== PROTEINS & AMINO ACIDS (Q32-56, idx 31-55) ====================
     {
-        question: "Proteins are a group of ________ found in all living matter",
+        question: "Proteins are a group of ______ found in all living matter",
         options: ["Amine-containing organic compounds", "Amine-containing inorganic compounds", "Nitrogen-containing organic compounds", "Nitrogen-containing inorganic compounds"],
         answer: "C",
-        explanation: "Proteins are high-molecular-mass nitrogen-containing organic polymers of amino acids. They are found in every living cell."
+        explanation: "Proteins are nitrogen-containing organic macromolecules made of amino acid residues linked by peptide bonds. They contain C, H, O, N (and often S), but are NOT inorganic compounds."
     },
     {
-        question: "The major elemental components of proteins include all of the following EXCEPT",
+        question: "The major components of protein include the following EXCEPT",
         options: ["Oxygen", "Nitrogen", "Hydrogen", "Chlorine"],
         answer: "D",
-        explanation: "Proteins are composed of C, H, O, N, and sometimes S. Chlorine is NOT a major constituent of protein molecules."
+        explanation: "Proteins are composed of C, H, O, N, and sometimes S (in cysteine/methionine). Chlorine is NOT a major component of proteins. Trace elements like Fe, Zn, Cu may be present in metalloproteins."
     },
     {
-        question: "The peptide linkage in proteins is between the",
-        options: ["Amino group and carboxyl group of opposite amino acids", "Amino group and carboxyl group of adjacent amino acids", "Amino group and carboxyl group of the same amino acid", "Two amino groups of similar amino acids"],
+        question: "The peptide linkage in protein is between",
+        options: ["The amino group and carboxylic acid group of opposite amino acids", "The amino group and carboxylic acid group of adjacent amino acids", "The amino group and carboxylic acid group of the same carbon amino acids", "The amino group and carboxylic acid group of similar amino acids"],
         answer: "B",
-        explanation: "The peptide bond (–CO–NH–) forms between the –COOH of one amino acid and the –NH₂ of the next (adjacent) amino acid in the chain, releasing water."
+        explanation: "A peptide bond forms between the –COOH of one amino acid and the –NH₂ of the NEXT (adjacent) amino acid in the chain, releasing water: –CO–NH– is the peptide linkage."
     },
     {
-        question: "The chemical and physical properties of a protein are derived mainly from",
-        options: ["The functional groups present in its amino acid side chains", "Its reaction potential", "Electronegative elements acting as substituents", "A hybrid of the properties of various amino acids"],
-        answer: "A",
-        explanation: "The R-groups (side chains) of constituent amino acids determine the protein's charge, polarity, H-bonding capacity, and ultimately its 3D structure and function."
-    },
-    {
-        question: "The simplest (monomeric) unit of protein is",
-        options: ["Nitrogen", "Amine", "Carboxylic acid", "Amino acid"],
+        question: "The chemical and physical properties of protein are derived from",
+        options: ["The functional groups present", "The reaction potential", "Electronegative elements acting as substituents", "A hybrid of properties of the various amino acid residues"],
         answer: "D",
-        explanation: "Amino acids (H₂N–CHR–COOH) are the monomers that polymerise via peptide bonds to build proteins."
+        explanation: "A protein's chemical and physical properties emerge from the combination of all its constituent amino acid residues — their R-group charges, polarity, size, and bonding capacity collectively determine folding, solubility, and reactivity."
     },
     {
-        question: "Amino acids have ________ characteristics",
-        options: ["Acidic only", "Basic only", "Neutral only", "Both acidic and basic (amphoteric)"],
+        question: "The simple (monomeric) unit of protein is",
+        options: ["Nitrogen atom", "Amine", "Carboxylic acid", "Amino acid"],
         answer: "D",
-        explanation: "Amino acids contain both an acidic –COOH group and a basic –NH₂ group, making them amphoteric. In solution they exist as zwitterions."
+        explanation: "Proteins are polymers; the monomer is the amino acid (H₂N-CHR-COOH). Different R groups distinguish the 20 standard amino acids. Peptide bonds link successive amino acid residues."
     },
     {
-        question: "The simplest amino acid (with –H as its side chain) is",
-        options: ["Glycine (H₂N–CH₂–COOH)", "Alanine", "Valine", "Cysteine"],
+        question: "Amino acids have ______ characteristics",
+        options: ["Acidic", "Basic", "Neutral", "Both acidic and basic (amphoteric)"],
+        answer: "D",
+        explanation: "Amino acids contain both –NH₂ (basic) and –COOH (acidic) groups → they are AMPHOTERIC. In solution they exist primarily as zwitterions (⁺H₃N–CHR–COO⁻) where the basic site is protonated and the acidic site is deprotonated."
+    },
+    {
+        question: "The simplest amino acid is",
+        options: ["Glycine", "Alanine", "Valine", "Cysteine"],
         answer: "A",
-        explanation: "Glycine (H₂N–CH₂–COOH) has hydrogen as its R-group — the only amino acid that is NOT chiral because C-2 carries two identical H atoms."
+        explanation: "Glycine (H₂N–CH₂–COOH) has the simplest R group = H. It has no chiral center (the only achiral amino acid among the 20 standard). All other amino acids have at least one substituent as the R group."
     },
     {
-        question: "The nature of an amino acid in aqueous solution is best described as",
-        options: ["Ambivalent", "Amphoteric (can donate or accept protons)", "Basic only", "Acidic only"],
+        question: "The nature of amino acids is",
+        options: ["Ambivalent", "Amphoteric", "Basic only", "Acidic only"],
         answer: "B",
-        explanation: "Amino acids are amphoteric: at low pH the –NH₂ is protonated (cation); at high pH –COOH is deprotonated (anion); at intermediate pH they exist as zwitterions."
+        explanation: "Amino acids are amphoteric — they can act as both acids (–COOH donates H⁺) and bases (–NH₂ accepts H⁺). At the isoelectric point (pI), they exist as electrically neutral zwitterions."
     },
     {
-        question: "The following are standard classifications of amino acids EXCEPT",
-        options: ["Aromatic amino acids", "Essential amino acids", "Non-essential amino acids", "Aliphatic amino acids"],
-        answer: "A",
-        explanation: "The primary classification in biochemistry is based on dietary requirement (essential vs non-essential) and on side-chain nature (acidic, basic, neutral). 'Aromatic' is a structural sub-category, not a primary class in most standard frameworks."
+        question: "The following are classes of amino acids EXCEPT",
+        options: ["Aromatic amino acids", "Essential amino acids", "Non-essential amino acids", "Alkyl amino acids"],
+        answer: "D",
+        explanation: "Standard classifications of amino acids include: essential vs non-essential; aromatic vs aliphatic; acidic, basic, or neutral (by R-group charge). 'Alkyl amino acids' is not a recognised standard classification."
     },
     {
-        question: "Examples of essential amino acids include all of the following EXCEPT",
+        question: "Examples of essential amino acids include the following EXCEPT",
         options: ["Lysine", "Glycine", "Histidine", "Valine"],
         answer: "B",
-        explanation: "Glycine is a non-essential amino acid — the human body can synthesise it. Lysine, histidine, and valine are among the nine essential amino acids."
+        explanation: "Glycine is a NON-ESSENTIAL amino acid — the body can synthesise it. The 9 essential amino acids (cannot be synthesised in the body) include: His, Ile, Leu, Lys, Met, Phe, Thr, Trp, Val."
     },
     {
-        question: "Examples of non-essential amino acids include all of the following EXCEPT",
+        question: "Examples of non-essential amino acids include the following EXCEPT",
         options: ["Alanine", "Glycine", "Proline", "Arginine"],
         answer: "D",
-        explanation: "Arginine is conditionally essential (cannot always be synthesised in adequate amounts, especially in neonates and during illness). Alanine, glycine, and proline are non-essential."
+        explanation: "Arginine is classified as CONDITIONALLY ESSENTIAL (required in the diet of infants and people under stress). Alanine, glycine, and proline are all non-essential — synthesised in adequate amounts by the body."
     },
     {
-        question: "Examples of neutral amino acids include all of the following EXCEPT",
+        question: "Examples of neutral amino acids include the following EXCEPT",
         options: ["Alanine", "Glycine", "Lysine", "Methionine"],
         answer: "C",
-        explanation: "Lysine (H₂N–(CH₂)₄–CH(NH₂)–COOH) has two amino groups → basic amino acid. Alanine, glycine, and methionine have one each of –NH₂ and –COOH → neutral."
+        explanation: "Lysine is a BASIC amino acid — it has an extra –NH₂ group in its side chain (ε-amino group), giving it 2 amino groups and 1 carboxylic acid. Alanine, glycine, and methionine all have neutral (non-charged) side chains."
     },
     {
-        question: "Acidic amino acids have ________ amino group(s)",
+        question: "Acidic amino acids have ______ amino group(s)",
         options: ["0", "1", "2", "3"],
         answer: "B",
-        explanation: "Acidic amino acids (e.g. aspartic acid, glutamic acid) have 1 amino group (–NH₂) but 2 carboxyl groups (–COOH), giving a net acidic character."
+        explanation: "Acidic amino acids (e.g. aspartic acid, glutamic acid) have 1 amino group (–NH₂) and 2 carboxylic acid groups (–COOH). The extra –COOH makes the side chain acidic (negatively charged at physiological pH)."
     },
     {
-        question: "Acidic amino acids have ________ carboxyl group(s)",
+        question: "Acidic amino acids have ______ carboxylic acid group(s)",
         options: ["0", "1", "2", "3"],
         answer: "C",
-        explanation: "Acidic amino acids such as aspartate and glutamate possess 2 –COOH groups (one α- and one side-chain carboxyl) and 1 –NH₂ group."
+        explanation: "Acidic amino acids (Asp and Glu) have 2 carboxylic acid groups — the α-COOH (backbone) plus an additional –COOH in the side chain. This second –COOH accounts for their acidic character."
     },
     {
-        question: "Basic amino acids have ________ amino group(s)",
+        question: "Basic amino acids have ______ amino group(s)",
         options: ["0", "1", "2", "3"],
         answer: "C",
-        explanation: "Basic amino acids (e.g. lysine) have 2 amino groups: the α-amino group and an additional basic group in the side chain (e.g. ε-amino of lysine)."
+        explanation: "Basic amino acids (e.g. lysine, arginine, histidine) have 2 amino groups — the α-NH₂ (backbone) and an additional basic group in the side chain (ε-NH₂ in lysine, guanidinium in arginine, imidazole in histidine)."
     },
     {
-        question: "Basic amino acids have ________ carboxyl group(s)",
+        question: "Basic amino acids have ______ carboxylic acid group(s)",
         options: ["0", "1", "2", "3"],
         answer: "B",
-        explanation: "Basic amino acids have 1 carboxyl group (the α-–COOH) and 2 or more amino groups, giving them a net positive charge at physiological pH."
+        explanation: "Basic amino acids have only 1 carboxylic acid group (the α-COOH). They have EXTRA amino groups (not extra COOH), which makes their side chains positively charged at physiological pH."
     },
     {
         question: "An example of a basic amino acid is",
         options: ["Alanine", "Proline", "Arginine", "Tyrosine"],
         answer: "C",
-        explanation: "Arginine contains a guanidinium group in its side chain (pKa ≈ 12.5), making it highly basic. Lysine and histidine are also basic amino acids."
+        explanation: "Arginine (Arg, R) is a basic amino acid with a guanidinium group in the side chain (pKa ≈ 12.5). Lysine (ε-NH₂) and Histidine (imidazole) are the other basic amino acids. Alanine and tyrosine are neutral; proline is a cyclic (imino) non-essential amino acid."
     },
     {
         question: "The major difference between essential and non-essential amino acids is that",
-        options: ["Essential amino acids can be synthesised in the body; non-essential cannot", "Essential amino acids cannot be synthesised in the body and must come from the diet; non-essential can be synthesised", "Essential amino acids cannot be obtained from diet; non-essential can", "Essential amino acids are synthesised only in vital organs"],
+        options: ["Essential amino acids can be synthesised in the body, while non-essential cannot", "Essential amino acids CANNOT be synthesised in the body, while non-essential ones can be synthesised", "Essential amino acids cannot be obtained from the diet, while non-essential ones can", "Essential amino acids can be synthesised in the vital organs only"],
         answer: "B",
-        explanation: "Essential amino acids are those the body cannot synthesise in sufficient quantities and must therefore be supplied through dietary protein."
+        explanation: "Essential amino acids MUST come from the diet — the body cannot synthesise them in adequate quantities. Non-essential amino acids can be synthesised by the body from other metabolic precursors."
     },
     {
         question: "An example of an aromatic amino acid is",
-        options: ["Tyrosine (4-hydroxyphenylalanine)", "Proline", "Arginine", "Methionine"],
+        options: ["Tyrosine", "Proline", "Arginine", "Methionine"],
         answer: "A",
-        explanation: "Tyrosine has a hydroxyl-substituted phenyl (aromatic) ring as its side chain. Phenylalanine and tryptophan are the other aromatic amino acids."
+        explanation: "Aromatic amino acids contain an aromatic ring in the side chain: Phenylalanine (benzene ring), Tyrosine (phenol ring), and Tryptophan (indole ring). Proline is cyclic aliphatic; arginine is basic; methionine is sulphur-containing."
     },
     {
-        question: "Which of the following amino acids contains an aromatic indole ring in its side chain?",
-        options: ["Tyrosine", "Phenylalanine", "Tryptophan", "Methionine"],
+        question: "An example of an amino acid whose side chain contains an aromatic indole ring is",
+        options: ["Tyrosine", "Proline", "Tryptophan", "Methionine"],
         answer: "C",
-        explanation: "Tryptophan's distinctive side chain contains an indole ring (a benzene ring fused to a pyrrole ring), making it the bulkiest of the standard aromatic amino acids."
+        explanation: "Tryptophan (Trp, W) contains an indole ring (benzene ring fused with pyrrole ring) in its side chain. Tyrosine has a phenol ring; phenylalanine has a benzene ring; proline is aliphatic cyclic."
     },
     {
-        question: "The following are forces that stabilise protein tertiary structure EXCEPT",
-        options: ["Hydrophobic interactions", "Hydrogen bonds", "Ionic (electrostatic) interactions", "Hydrophilic forces"],
+        question: "The following are forces that stabilise the structure of proteins EXCEPT",
+        options: ["Hydrophobic interactions", "Hydrogen bonds", "Ionic interactions (electrostatic)", "Hydrophilic forces"],
         answer: "D",
-        explanation: "'Hydrophilic forces' is not an independent stabilising interaction. Proteins are stabilised by hydrophobic interactions, H-bonds, ionic interactions, and disulfide bonds."
+        explanation: "'Hydrophilic forces' is not a recognised stabilising interaction for protein structure. Proteins are stabilised by: (1) hydrophobic interactions (non-polar side chains pack away from water), (2) H-bonds (especially in α-helices and β-sheets), (3) ionic/salt bridges, and (4) disulphide bonds (covalent)."
     },
     {
-        question: "One of the following conditions CANNOT denature a protein",
-        options: ["Heat", "High pressure", "Optimal (physiological) pH", "Ionising radiation"],
+        question: "One of the following CANNOT denature protein",
+        options: ["Heat", "High pressure", "Optimal pH", "Ionising radiation"],
         answer: "C",
-        explanation: "Optimal pH is the condition under which proteins are most stable. Extremes of pH, heat, high pressure, and radiation all disrupt non-covalent interactions and denature proteins."
+        explanation: "At OPTIMAL pH (the protein's pI or physiological pH), the protein is maximally stable — it is NOT denatured. Heat, extremes of pH, high pressure, heavy metals, detergents, and radiation all disrupt 3D structure and cause denaturation."
     },
     {
         question: "When a protein is denatured, it",
-        options: ["Becomes a compact coil", "Reverts to its native (natural) state", "Unfolds to a random coil with disrupted secondary/tertiary structure", "Becomes irreversibly hardened in all cases"],
+        options: ["Becomes a tightly coiled helix", "Reverts to its natural state", "Reverts to a random coil (unfolded) state", "Becomes permanently hard"],
         answer: "C",
-        explanation: "Denaturation unfolds the protein by breaking H-bonds, ionic bonds, and hydrophobic interactions — the peptide backbone remains intact but the 3D structure is lost."
+        explanation: "Denaturation disrupts the non-covalent interactions (H-bonds, hydrophobic, ionic) that maintain the 3D structure → the polypeptide unfolds to a random coil. Primary structure (sequence) is preserved. Some denaturation is reversible (renaturation)."
     },
     {
-        question: "One of the following is a standard chemical test for the presence of protein",
-        options: ["Biuret test", "Mellanine test", "Grignard test", "Adenosine test"],
+        question: "One of the following is a method for testing protein",
+        options: ["Biuret Test", "Melanin Test", "Grignard Test", "Adenosine Test"],
         answer: "A",
-        explanation: "The Biuret test: Cu²⁺ in alkaline solution reacts with peptide bonds (≥2 peptide links) to give a violet/purple colour."
+        explanation: "The Biuret test detects PEPTIDE BONDS (two or more): protein + CuSO₄/NaOH → purple/violet colour. The Ninhydrin test detects free amino acids. Grignard and adenosine tests are not protein tests."
     },
     {
-        question: "One of the following is NOT a method of protein purification",
-        options: ["Filtration", "Centrifugation", "Adsorption chromatography", "Halogenation"],
+        question: "One of the following is NOT a method of chemical purification",
+        options: ["Filtration", "Centrifugation", "Adsorption", "Halogenation"],
         answer: "D",
-        explanation: "Halogenation is a chemical reaction (adding halogens across bonds) — not a purification technique. Filtration, centrifugation, and chromatography are all purification methods."
+        explanation: "Halogenation is a CHEMICAL REACTION (addition of halogens to organic compounds) — it changes the compound, not purifies it. Filtration, centrifugation, and adsorption (chromatography) are all physical separation/purification methods."
     },
 
-    // ==================== ISOMERISM & STEREOCHEMISTRY (Questions 117-140, idx 116-139) ====================
+    // ==================== ISOMERISM & STEREOCHEMISTRY (Q57-80, idx 56-79) ====================
     {
-        question: "The compound NOT isomeric with diethyl ether (C₄H₁₀O) is",
-        options: ["n-Propyl methyl ether (CH₃OC₃H₇)", "1-Butanol (C₄H₉OH)", "2-Methyl-2-propanol ((CH₃)₃COH)", "Butanone (CH₃COC₂H₅, C₄H₈O)"],
+        question: "The compound which is NOT isomeric with diethyl ether (C₄H₁₀O) is",
+        options: ["n-Propyl methyl ether", "1-Butanol", "2-Methyl-2-propanol", "Butanone (CH₃COCH₂CH₃)"],
         answer: "D",
-        explanation: "Diethyl ether = C₄H₁₀O. Butanone = C₄H₈O — a different molecular formula (two fewer H). Options A, B, C are all C₄H₁₀O and are structural isomers."
+        explanation: "Diethyl ether = C₄H₁₀O. Butanone (methyl ethyl ketone) = C₄H₈O — one degree of unsaturation (C=O), different molecular formula from C₄H₁₀O. n-Propyl methyl ether, 1-butanol, and 2-methyl-2-propanol are all C₄H₁₀O → structural isomers."
     },
     {
-        question: "The maximum number of structural and geometric isomers for C₄H₈ (alkene) is",
+        question: "The maximum number of isomers for an alkene with molecular formula C₄H₈ is",
         options: ["2", "3", "4", "0"],
         answer: "C",
-        explanation: "C₄H₈ alkenes: but-1-ene, cis-but-2-ene, trans-but-2-ene, and 2-methylpropene = 4 isomers (3 structural + 2 geometric for but-2-ene)."
+        explanation: "C₄H₈ alkene isomers: (1) 1-butene (CH₂=CHCH₂CH₃), (2) cis-2-butene, (3) trans-2-butene, (4) 2-methylpropene/isobutylene ((CH₃)₂C=CH₂). Counting geometric isomers gives 4 total."
     },
     {
-        question: "Which of the following compounds will exhibit cis-trans (geometric) isomerism?",
-        options: ["2-Butene (CH₃CH=CHCH₃)", "2-Butyne (CH₃C≡CCH₃)", "2-Butanol", "Butanal"],
+        question: "Which of the following compounds will exhibit cis-trans (geometrical) isomerism?",
+        options: ["2-Butene (CH₃CH=CHCH₃)", "2-Butyne (CH₃C≡CCH₃)", "2-Butanol (CH₃CH(OH)CH₂CH₃)", "Butanal (CH₃CH₂CH₂CHO)"],
         answer: "A",
-        explanation: "2-Butene has two different groups on each sp² carbon (CH₃ and H on each carbon of C=C), so cis and trans isomers exist. Alkynes and sp³ carbons cannot show geometric isomerism."
+        explanation: "2-Butene: each carbon of the C=C has TWO DIFFERENT substituents (H and CH₃) → restricted rotation → cis and trans forms possible. 2-Butyne has a triple bond (no geometric isomerism). 2-Butanol and butanal have no C=C."
     },
     {
-        question: "The number of structural isomers of C₆H₁₄ (hexane) is",
+        question: "The number of structural isomers of C₆H₁₄ is",
         options: ["4", "5", "6", "7"],
         answer: "B",
-        explanation: "C₆H₁₄ has 5 isomers: n-hexane, 2-methylpentane, 3-methylpentane, 2,2-dimethylbutane, and 2,3-dimethylbutane."
+        explanation: "C₆H₁₄ (hexane) has 5 isomers: (1) n-hexane, (2) 2-methylpentane, (3) 3-methylpentane, (4) 2,2-dimethylbutane, (5) 2,3-dimethylbutane."
     },
     {
-        question: "Alkenes show geometric (cis-trans) isomerism due to",
-        options: ["Molecular asymmetry", "Free rotation around a single bond", "Resonance delocalisation", "Restricted rotation around the C=C double bond"],
+        question: "Alkenes show geometrical isomerism due to",
+        options: ["Asymmetry", "Rotation around a single bond", "Resonance", "Restricted rotation around a double bond"],
         answer: "D",
-        explanation: "The π-bond in C=C prevents free rotation, locking substituents on each carbon in fixed positions. When both carbons carry two different groups, cis and trans isomers result."
+        explanation: "The C=C double bond (σ + π) prevents free rotation. Each carbon of the double bond must have 2 DIFFERENT substituents for cis/trans isomerism to exist. The barrier to rotation (≈270 kJ/mol) is too high to overcome at room temperature."
     },
     {
-        question: "Keto-enol tautomerism is most readily observed in compounds containing",
-        options: ["A benzene ring only", "C=C double bonds with no carbonyl", "A carbonyl group with α-hydrogen atoms (C=O adjacent to CH)", "Saturated ethers"],
-        answer: "C",
-        explanation: "Keto-enol tautomerism requires a carbonyl group adjacent to a carbon bearing at least one hydrogen (α-H). The α-H migrates to the oxygen, giving the enol form."
+        question: "Keto-enol tautomerism is observed in compounds that have",
+        options: ["A carbonyl group with no α-hydrogen", "A carbonyl group (C=O) with at least one α-hydrogen atom", "Only aromatic ketones", "Only aliphatic esters"],
+        answer: "B",
+        explanation: "Keto-enol tautomerism requires a carbonyl compound (aldehyde or ketone) with at least one α-hydrogen (on the carbon adjacent to C=O). The α-H migrates to O: keto (C=O) ⇌ enol (C=C–OH). e.g. acetaldehyde, acetone."
     },
     {
-        question: "The number of isomeric alcohols with molecular formula C₄H₁₀O is",
+        question: "The number of isomeric alcohols having molecular formula C₄H₁₀O is",
         options: ["3", "4", "5", "6"],
         answer: "B",
-        explanation: "C₄H₁₀O alcohols: 1-butanol, 2-butanol, 2-methyl-1-propanol, 2-methyl-2-propanol = 4 structural isomers of alcohols (excluding ethers)."
+        explanation: "C₄H₁₀O alcohols: (1) 1-butanol (n-butanol) CH₃CH₂CH₂CH₂OH, (2) 2-butanol CH₃CH(OH)CH₂CH₃, (3) 2-methyl-1-propanol (CH₃)₂CHCH₂OH, (4) 2-methyl-2-propanol (tert-butanol) (CH₃)₃COH. Total = 4."
     },
     {
-        question: "Consider (2R,3R)-dibromobutane and (2S,3S)-dibromobutane. Which statement is correct?",
-        options: ["They are identical compounds", "They are diastereomers", "They are constitutional isomers", "They are enantiomers"],
+        question: "Compounds A = (2R,3R)-tartaric acid, B = (2S,3S)-tartaric acid, and C = meso-tartaric acid. The correct statement is",
+        options: ["A and B are identical", "A and B are diastereomers", "A and C are enantiomers", "A and B are enantiomers"],
         answer: "D",
-        explanation: "(2R,3R) and (2S,3S)-dibromobutane are non-superimposable mirror images — classic enantiomers. Both configurations are inverted, making them a mirror-image pair."
+        explanation: "(2R,3R) and (2S,3S)-tartaric acids are non-superimposable mirror images → ENANTIOMERS. The meso compound (C) has opposite configurations at C2 and C3 and an internal plane of symmetry → it is a diastereomer of A and B."
     },
     {
-        question: "How many optically active stereoisomers are possible for butane-2,3-diol?",
+        question: "How many optically ACTIVE stereoisomers are possible for butane-2,3-diol?",
         options: ["1", "2", "3", "4"],
         answer: "B",
-        explanation: "Butane-2,3-diol has three stereoisomers: (2R,3R), (2S,3S) (a pair of enantiomers — optically active), and (2R,3S) (meso — optically inactive). Only 2 are optically active."
+        explanation: "Butane-2,3-diol has 2 chiral centres: maximum 2² = 4 stereoisomers. However, (2R,3S) ≡ (2S,3R) because of internal symmetry → meso compound (optically INACTIVE). Optically ACTIVE forms: (2R,3R) and (2S,3S) = 2 enantiomers."
     },
     {
-        question: "An enantiomerically pure acid is treated with a racemic (50:50) mixture of an alcohol. The ester formed will be",
-        options: ["An optically active diastereomeric mixture", "A pure single enantiomer", "A meso compound", "A racemic mixture"],
+        question: "An enantiomerically pure acid is treated with a racemic mixture of an alcohol having one chiral carbon. The ester formed will be",
+        options: ["An optically active mixture (of diastereomers)", "A pure enantiomer", "A meso compound", "A racemic mixture"],
         answer: "A",
-        explanation: "Pure (R)-acid + racemic alcohol (50% R + 50% S) → (R,R)-ester + (R,S)-ester; these are diastereomers (different melting/boiling points) and the mixture is optically active."
+        explanation: "Pure R-acid + racemic alcohol (R + S) → two esters: (R-acid)(R-alcohol) and (R-acid)(S-alcohol). These are DIASTEREOMERS (different physical properties, both optically active but in different amounts) — an optically active mixture, NOT racemic."
     },
     {
         question: "The number of stereoisomers obtained by bromination of trans-2-butene is",
         options: ["1", "2", "3", "4"],
         answer: "A",
-        explanation: "Anti addition of Br₂ to trans-2-butene gives exclusively the meso-2,3-dibromobutane (one stereoisomer). The two bromines add to opposite faces, giving an internal plane of symmetry."
+        explanation: "Anti addition of Br₂ to trans-2-butene: the bromonium ion forms on one face; Br⁻ attacks from the opposite face. From trans-2-butene, anti addition gives only meso-2,3-dibromobutane (the two new C–Br bonds have opposite configurations that cancel). Product = 1 stereoisomer (meso compound)."
     },
     {
-        question: "Which of the following compounds exhibits optical stereoisomerism?",
+        question: "Which of the following compounds exhibits stereoisomerism?",
         options: ["2-Methylbutene-1", "3-Methylbutyne-1", "3-Methylbutanoic acid", "2-Methylbutanoic acid"],
         answer: "D",
-        explanation: "2-Methylbutanoic acid: CH₃CH₂CH(CH₃)COOH — C-2 is bonded to CH₃, C₂H₅, COOH, and H (four different groups) → chiral centre → optical isomers exist."
+        explanation: "2-Methylbutanoic acid (CH₃CH₂CH(CH₃)COOH): C3 has 4 different groups (H, CH₃, C₂H₅, COOH) → chiral centre → optical stereoisomerism (R and S enantiomers). The other compounds lack either a chiral centre or the geometric constraints for geometric isomerism."
     },
     {
-        question: "Which of the following will exhibit geometric (cis-trans) isomerism?",
-        options: ["1-Phenyl-2-butene (C₆H₅CH=CHCH₂CH₃)", "3-Phenyl-1-butene", "2-Phenyl-1-butene", "1,1-Diphenyl-1-propene"],
+        question: "Which of the following compounds will exhibit geometrical isomerism?",
+        options: ["1-Phenyl-2-butene", "3-Phenyl-1-butene", "2-Phenyl-1-butene", "1,1-Diphenyl-1-propene"],
         answer: "A",
-        explanation: "1-Phenyl-2-butene: C₆H₅CH=CHCH₂CH₃. C-1 carries C₆H₅ and H (two different groups); C-2 carries CH₂CH₃ and H (two different groups) → cis-trans isomers exist."
+        explanation: "1-Phenyl-2-butene: C₆H₅–CH=CH–CH₂CH₃. The double-bond carbons have C₆H₅/H and CH₂CH₃/H respectively — all four groups are different → cis/trans isomers possible. 1,1-Diphenyl-1-propene has 2 identical phenyl groups on one carbon → no geometric isomerism."
     },
     {
-        question: "Optical isomers that are non-superimposable mirror images are called",
+        question: "Optical isomers that are non-superimposable mirror images of each other are called",
         options: ["Tautomers", "Diastereomers", "Enantiomers", "Metamers"],
         answer: "C",
-        explanation: "Enantiomers are stereoisomers that are non-superimposable mirror images. They have identical physical properties except for the direction they rotate plane-polarised light."
+        explanation: "Enantiomers are pairs of optical isomers that are non-superimposable mirror images. They have identical physical properties (mp, bp, solubility) except for the DIRECTION of rotation of plane-polarised light (one is d/+, the other l/−)."
     },
     {
         question: "Enantiomers have which of the following characteristics?",
-        options: ["Rotate ordinary (unpolarised) light", "Have the same melting point as each other", "Are superimposable mirror images", "React with optically active molecules at the same rate"],
+        options: ["They rotate ordinary light in opposite directions", "They have the same melting point", "They are superimposable mirror images", "They react with optically active molecules at the same rate"],
         answer: "B",
-        explanation: "Enantiomers have identical physical properties (mp, bp, solubility) in achiral environments. They differ only in the direction (+ or −) they rotate plane-polarised light."
+        explanation: "Enantiomers have IDENTICAL physical properties (same mp, bp, density, solubility in achiral solvents). They DIFFER only in the direction they rotate plane-polarised light. They react at DIFFERENT rates with chiral reagents (enzymes, chiral acids/bases)."
     },
     {
         question: "Which of the following statements is FALSE about enantiomers?",
         options: ["They rotate plane-polarised light", "They are superimposable mirror images", "They are non-superimposable mirror images", "They have the same melting point"],
         answer: "B",
-        explanation: "Enantiomers are NON-superimposable mirror images — the defining property. 'Superimposable mirror images' would mean the molecules are identical (not enantiomers)."
+        explanation: "Enantiomers are NON-superimposable mirror images — they CANNOT be superimposed on each other (that is what makes them enantiomers). Statement (b) 'they are superimposable mirror images' is therefore FALSE."
     },
     {
-        question: "A meso compound is best described as",
-        options: ["An achiral molecule that contains chiral carbons (has an internal plane of symmetry)", "A chiral molecule with no stereocentres", "An optically active compound", "A compound that lacks any carbon stereocentres"],
-        answer: "A",
-        explanation: "A meso compound has two or more chiral centres but is achiral overall due to an internal plane (or centre) of symmetry. It is optically inactive despite having stereocentres."
+        question: "A meso compound is characterised by which of the following?",
+        options: ["It is an achiral molecule which contains chiral carbons", "It contains a plane of symmetry (or centre of symmetry)", "It is optically inactive despite having chiral centres", "All of the above"],
+        answer: "D",
+        explanation: "A meso compound: (1) contains chiral carbons but is ACHIRAL overall, (2) has an internal plane (or centre) of symmetry, and (3) is optically INACTIVE because the rotations from each chiral centre cancel. All three statements are true."
     },
     {
-        question: "Which of the following will be optically active?",
-        options: ["Propanoic acid (CH₃CH₂COOH)", "3-Chloropropanoic acid", "2-Chloropropanoic acid (CH₃CHClCOOH)", "3-Chloropropene"],
+        question: "Which of the following compounds will be optically active?",
+        options: ["Propanoic acid (CH₃CH₂COOH)", "3-Chloropropionic acid (ClCH₂CH₂COOH)", "2-Chloropropionic acid (CH₃CHClCOOH)", "3-Chloropropene (ClCH₂CH=CH₂)"],
         answer: "C",
-        explanation: "2-Chloropropanoic acid: C-2 carries CH₃, Cl, COOH, and H — four different groups → chiral centre → optically active. In options A, B, D there is no chiral centre."
+        explanation: "2-Chloropropionic acid: C2 bears Cl, CH₃, COOH, and H — 4 DIFFERENT groups → asymmetric (chiral) carbon → optically active. 3-Chloropropionic acid: C3 has 2 identical H atoms → NOT chiral. Propanoic acid has no chiral centre."
     },
     {
-        question: "2-Butanol (CH₃CH(OH)CH₂CH₃) is optically active because it contains",
-        options: ["An asymmetric (chiral) carbon at C-2", "A plane of symmetry", "A hydroxyl group", "A centre of symmetry"],
+        question: "2-Butanol is optically active because it contains",
+        options: ["An asymmetric (chiral) carbon", "A plane of symmetry", "A hydroxyl group", "A centre of symmetry"],
         answer: "A",
-        explanation: "C-2 of 2-butanol is bonded to CH₃, OH, C₂H₅, and H — all four groups are different → chiral centre → two non-superimposable mirror images (R and S)."
+        explanation: "2-Butanol: CH₃–CH(OH)–CH₂CH₃. C2 has 4 different groups: OH, CH₃, C₂H₅, H → it is an asymmetric carbon → the molecule is chiral → optically active. OH alone does not cause optical activity; chirality requires 4 DIFFERENT substituents."
     },
     {
         question: "Which of the following represents a racemic mixture?",
         options: ["75% (R)-2-butanol + 25% (S)-2-butanol", "25% (R)-2-butanol + 75% (S)-2-butanol", "50% (R)-2-butanol + 50% (S)-2-butanol", "35% (R)-2-butanol + 65% (S)-2-butanol"],
         answer: "C",
-        explanation: "A racemic mixture is exactly 50% (R) and 50% (S) enantiomer — the optical rotations cancel, giving zero net optical activity."
+        explanation: "A racemic mixture (racemate) contains EQUAL amounts (50%:50%) of both enantiomers. It is optically inactive (the rotations cancel). Any other ratio is an enantiomeric excess mixture and is optically active."
     },
     {
-        question: "Which physical property distinguishes (R)-2-butanol from (S)-2-butanol?",
+        question: "Consider (R)- and (S)-2-butanol. Which physical property DISTINGUISHES the two compounds?",
         options: ["Melting point", "Solubility in common solvents", "Rotation of plane-polarised light", "Infrared spectrum"],
         answer: "C",
-        explanation: "Enantiomers have identical mp, bp, and solubility in achiral solvents. The only physical difference is the direction (+/−) in which they rotate plane-polarised light."
+        explanation: "Enantiomers are identical in all physical properties (mp, bp, density, IR, NMR in achiral solvents) EXCEPT the direction of rotation of plane-polarised light: (R) and (S) rotate light by the same magnitude but in OPPOSITE directions."
     },
     {
-        question: "Which of the following statements is TRUE?",
-        options: ["All chiral molecules possess a plane of symmetry", "All achiral molecules are meso compounds", "A molecule with a single S-configuration stereocentre is always levorotatory", "A mixture of achiral compounds will be optically inactive"],
+        question: "Which of the following is a TRUE statement?",
+        options: ["All chiral molecules possess a plane of symmetry", "All achiral molecules are meso compounds", "All molecules with a single asymmetric centre of S configuration are levorotatory", "A mixture of achiral compounds will be optically inactive"],
         answer: "D",
-        explanation: "Achiral compounds have no net optical rotation. A mixture of achiral compounds therefore shows no optical activity. The other statements are all false."
+        explanation: "(D) is true: achiral compounds have no net optical rotation individually, so any mixture of them is also optically inactive. (A) is false — chiral molecules LACK planes of symmetry. (B) is false — most achiral molecules aren't meso. (C) is false — S configuration doesn't always mean (−)."
     },
     {
-        question: "Which statement is correct concerning a pair of enantiomers?",
-        options: ["They rotate plane-polarised light by the same magnitude but in opposite directions", "They rotate plane-polarised light by different magnitudes in opposite directions", "They rotate plane-polarised light by different magnitudes in the same direction", "They have different melting points"],
+        question: "Which of the following is correct concerning a pair of enantiomers?",
+        options: ["They rotate plane-polarised light by exactly the same amount but in opposite directions", "They rotate by differing amounts in opposite directions", "They rotate by differing amounts in the same direction", "They have different melting points"],
         answer: "A",
-        explanation: "Enantiomers are mirror images: one is (+) dextrorotatory, the other is (−) levorotatory, but the magnitudes of rotation (specific rotation) are identical."
+        explanation: "Enantiomers are mirror images: they rotate plane-polarised light by EQUAL magnitudes (same specific rotation value) but in OPPOSITE directions — one dextrorotatory (+) and the other levorotatory (−)."
     },
     {
-        question: "Which statement is correct about diastereomers?",
+        question: "Which of the statements is correct about diastereomers?",
         options: ["They are stereoisomers that are NOT enantiomers", "They are a pair of identical isomers", "They are a pair of isomers that are mirror images of each other", "All their asymmetric centres have the same configuration"],
         answer: "A",
-        explanation: "Diastereomers are stereoisomers that differ at one or more (but not all) stereocentres — they are not mirror images of each other and have different physical properties."
+        explanation: "Diastereomers are stereoisomers that are NOT mirror images of each other (unlike enantiomers). They have different physical properties (mp, bp, solubility). e.g., cis- and trans-2-butene; (2R,3R)- and (2R,3S)-tartaric acid."
     },
 
-    // ==================== ALCOHOLS, CARBONYLS & MISC (Questions 141-160, idx 140-159) ====================
+    // ==================== ALCOHOLS, CARBONYLS & MISC (Q81-100, idx 80-99) ====================
     {
-        question: "The compound CH₃CH(OH)CH₂CH₃ is",
-        options: ["Propanol", "1-Butanol", "2-Butanol (butan-2-ol)", "None of the above"],
+        question: "CH₃CH₂CH(OH)CH₃ is",
+        options: ["Propanol", "1-Butanol", "2-Butanol", "None of the above"],
         answer: "C",
-        explanation: "CH₃CH(OH)CH₂CH₃: the –OH is on C-2 of a 4-carbon chain → 2-butanol (butan-2-ol). It is a secondary alcohol."
+        explanation: "CH₃CH₂CH(OH)CH₃: the –OH is on C-2 of a 4-carbon chain → 2-butanol (butan-2-ol). It is a secondary alcohol because the carbon bearing –OH is attached to 2 other carbons."
     },
     {
-        question: "Dehydration of ethanol using conc. H₂SO₄ at 170°C produces",
-        options: ["Ethane", "Ethene (by elimination)", "Propanol", "H₂SO₃"],
+        question: "Dehydration of ethanol using conc. H₂SO₄ produces",
+        options: ["Ethane", "Ethene", "Propanol", "H₂SO₃"],
         answer: "B",
-        explanation: "At 170°C with excess H₂SO₄, ethanol undergoes elimination (E2): CH₃CH₂OH → CH₂=CH₂ + H₂O. At 140°C, ether forms instead."
+        explanation: "At 170°C with conc. H₂SO₄, ethanol undergoes INTRAMOLECULAR dehydration (elimination): C₂H₅OH → C₂H₄ (ethene) + H₂O. At 140°C, INTERMOLECULAR dehydration gives diethyl ether. The high temperature favours alkene."
     },
     {
-        question: "Isopropyl alcohol (2-propanol) is a structural isomer of",
-        options: ["1-Propanol (n-propanol)", "Propylamine", "Propanoic acid", "Propionaldehyde"],
+        question: "Isopropyl alcohol is a structural isomer of",
+        options: ["Propanol (1-propanol)", "Propylamine", "Propanoic acid", "Propanal"],
         answer: "A",
-        explanation: "Both 1-propanol (CH₃CH₂CH₂OH) and 2-propanol ((CH₃)₂CHOH) have the molecular formula C₃H₈O — they are structural (constitutional) isomers."
+        explanation: "Isopropyl alcohol = (CH₃)₂CHOH = 2-propanol = C₃H₇OH. 1-Propanol (propan-1-ol) = CH₃CH₂CH₂OH = C₃H₇OH. Both have the same molecular formula C₃H₈O but different structural arrangement → structural isomers."
     },
     {
-        question: "Methanol (CH₃OH) is classified as",
+        question: "Methanol is",
         options: ["A primary alcohol", "A dihydric alcohol", "A secondary alcohol", "A tertiary alcohol"],
         answer: "A",
-        explanation: "Methanol has –OH on a carbon bearing two H atoms (no other C). By definition it is a primary alcohol (the carbon bearing –OH is bonded to one C or none)."
+        explanation: "Methanol (CH₃OH): the –OH is attached to a carbon (C1) bearing 0 other carbons (or 3 H) → it is a PRIMARY alcohol. Dihydric alcohols have 2 OH groups (e.g. ethylene glycol); methanol has only 1."
     },
     {
-        question: "Triphenyl carbinol ((C₆H₅)₃COH) contains",
-        options: ["One phenyl group", "Two phenyl groups", "Three phenyl groups", "No phenyl groups"],
+        question: "Triphenylcarbinol has",
+        options: ["One phenyl group", "Two phenyl groups", "Three phenyl groups", "No phenyl group"],
         answer: "C",
-        explanation: "The prefix 'tri-phenyl' indicates three phenyl (C₆H₅–) groups. Triphenyl carbinol = (C₆H₅)₃C–OH, a tertiary alcohol."
+        explanation: "Triphenylcarbinol = (C₆H₅)₃COH. The prefix 'tri-phenyl' = THREE phenyl groups attached to the central carbinol carbon (the C–OH). It is a tertiary alcohol (the OH carbon is bonded to 3 carbons)."
     },
     {
-        question: "The reaction C₆H₅CH₂Cl + aq. NaOH → ? produces",
+        question: "C₆H₅CH₂Cl + aqueous NaOH produces",
         options: ["Benzyl alcohol (C₆H₅CH₂OH)", "Phenol (C₆H₅OH)", "Benzaldehyde (C₆H₅CHO)", "None of the above"],
         answer: "A",
-        explanation: "Benzyl chloride undergoes SN2 substitution with OH⁻: C₆H₅CH₂Cl + NaOH → C₆H₅CH₂OH + NaCl. The product is benzyl alcohol, NOT phenol."
+        explanation: "Benzyl chloride (C₆H₅CH₂Cl) undergoes nucleophilic substitution (SN1, benzylic carbocation) with aqueous NaOH: C₆H₅CH₂Cl + NaOH → C₆H₅CH₂OH (benzyl alcohol) + NaCl. The Cl is on the benzylic CH₂, not the ring."
     },
     {
-        question: "The reaction CH₃CHO + CH₃MgBr (followed by H₂O/H⁺ workup) yields",
-        options: ["A primary alcohol", "A secondary alcohol (2-propanol)", "A tertiary alcohol", "A dihydric alcohol"],
+        question: "CH₃CHO + CH₃MgBr → (then H₃O⁺ workup) yields",
+        options: ["Primary alcohol", "Secondary alcohol (2-propanol)", "Tertiary alcohol", "Dihydric alcohol"],
         answer: "B",
-        explanation: "Grignard addition to acetaldehyde: CH₃MgBr + CH₃CHO → CH₃CH(OH)CH₃ (2-propanol) after hydrolysis. The product is a secondary alcohol."
+        explanation: "Grignard addition: CH₃MgBr adds to CH₃CHO → CH₃CH(OMgBr)CH₃ → (H₃O⁺) → CH₃CH(OH)CH₃ = 2-propanol (isopropanol), a SECONDARY alcohol. When a Grignard adds to an aldehyde (except HCHO), the product is always a secondary alcohol."
     },
     {
-        question: "Ethanol, when fully oxidised with acidified KMnO₄, produces",
-        options: ["Ethanal (acetaldehyde)", "Ethanoic acid (acetic acid)", "Ethane", "Ethyne"],
+        question: "Ethanol when fully oxidised with acidified KMnO₄ produces",
+        options: ["Ethanal (acetaldehyde)", "Ethanoic acid (acetic acid)", "Ethane", "Ethanone"],
         answer: "B",
-        explanation: "Full oxidation: CH₃CH₂OH → [CH₃CHO] → CH₃COOH. Acidified KMnO₄ is a strong oxidant that carries primary alcohols all the way to carboxylic acids."
+        explanation: "Full oxidation of ethanol (primary alcohol) with strong oxidant (acidified KMnO₄): C₂H₅OH → CH₃COOH (ethanoic acid). First step: ethanol → ethanal (intermediate); second step: ethanal → ethanoic acid. KMnO₄ takes the reaction all the way to the acid."
     },
     {
-        question: "When a primary amine reacts with nitrous acid (HNO₂), the products include an alcohol, water, and",
-        options: ["Nitrogen oxide (NO)", "Hydrogen molecule (H₂)", "Dinitrogen tetroxide (N₂O₄)", "Nitrogen gas (N₂)"],
+        question: "When a primary amine is treated with nitrous acid (HNO₂), the organic products include a primary alcohol and nitrogen gas. What is the nitrogen-containing by-product gas?",
+        options: ["Nitrogen oxide (NO)", "Hydrogen (H₂)", "N₂O₄", "Nitrogen (N₂)"],
         answer: "D",
-        explanation: "R–NH₂ + HNO₂ → R–N₂⁺ (diazonium) → R–OH + N₂↑ + H₂O. The unstable alkyl diazonium salt releases N₂ gas."
+        explanation: "Alkyl primary amine + HNO₂ → unstable alkyldiazonium salt (RN₂⁺) → N₂↑ (nitrogen gas) + carbocation → alcohol (R-OH). The evolution of N₂ gas is the driving force for the reaction."
     },
     {
-        question: "The reaction C₂H₅–O–C₂H₅ + H₂O (acid catalysis) produces",
-        options: ["Butanol", "Propanol", "Ethanol", "None of the above"],
-        answer: "C",
-        explanation: "Acid hydrolysis of diethyl ether: (C₂H₅)₂O + H₂O → 2 C₂H₅OH. The product is ethanol (two moles per mole of ether)."
+        question: "C₂H₅–O–C₂H₅ + H₂O (acid-catalysed hydrolysis) produces",
+        options: ["Butanol", "Ethanol", "Propanol", "None of the above"],
+        answer: "B",
+        explanation: "Diethyl ether (C₂H₅OC₂H₅) + H₂O → acid hydrolysis → 2 C₂H₅OH (ethanol). The C–O bond is broken by the nucleophilic water. Product: 2 moles of ethanol per mole of ether."
     },
     {
-        question: "The reaction of LiAlH₄ with cyclopentanone is a reduction that produces",
-        options: ["Cyclopentanoic acid", "Cyclopentanal", "Cyclopentanol", "None of the above"],
-        answer: "C",
-        explanation: "LiAlH₄ reduces ketones to secondary alcohols: cyclopentanone → cyclopentanol (after aqueous workup)."
+        question: "The reaction between LiAlH₄ and cyclopentanone produces",
+        options: ["Cyclopentanol", "Cyclopentane", "Cyclopentene", "None of the above"],
+        answer: "A",
+        explanation: "LiAlH₄ reduces ketones to secondary alcohols: cyclopentanone (cyclic ketone) → cyclopentanol. LiAlH₄ provides H⁻ which adds to the carbonyl carbon; workup with H₂O/H⁺ gives the alcohol."
     },
     {
-        question: "Among LiAlH₄, H₂/Ni, and NaBH₄, which CANNOT simultaneously reduce both an isolated C=C double bond and an aldehyde group in the same molecule?",
+        question: "LiAlH₄, H₂/Ni, and NaBH₄ can reduce a carbonyl group. Which CANNOT simultaneously reduce both a C=C double bond and a C=O group?",
         options: ["LiAlH₄", "H₂/Ni", "NaBH₄", "None of the above"],
         answer: "C",
-        explanation: "NaBH₄ selectively reduces C=O groups but does NOT reduce isolated (non-conjugated) C=C double bonds. H₂/Ni and LiAlH₄ can reduce C=C (catalytic hydrogenation for H₂/Ni; conjugated C=C for LiAlH₄)."
+        explanation: "NaBH₄ is a SELECTIVE reducing agent — it reduces ONLY aldehydes and ketones (C=O), NOT isolated C=C double bonds. H₂/Ni (catalytic hydrogenation) reduces BOTH. LiAlH₄ reduces C=O and can reduce activated C=C (conjugated systems)."
     },
     {
-        question: "Which of the following is NOT true about Lucas reagent (HCl/ZnCl₂)?",
-        options: ["It is composed of HCl and ZnCl₂", "It is used to test for acidic compounds", "It is used to test for alcohols", "It distinguishes between primary, secondary, and tertiary alcohols"],
+        question: "Which of the following is NOT true about Lucas reagent?",
+        options: ["It is HCl/ZnCl₂", "It is a test for acids", "It is a test for alcohols", "It is a test for the type of alcohol (1°, 2°, 3°)"],
         answer: "B",
-        explanation: "Lucas reagent tests for alcohols (and their class), not for acids. 3° alcohols react immediately; 2° react within ~5 min; 1° only react on heating."
+        explanation: "Lucas reagent (conc. HCl + anhydrous ZnCl₂) tests for ALCOHOLS (not acids). 3° alcohols react immediately (turbidity), 2° alcohols react within 5 min, 1° alcohols do not react at room temperature. It does NOT test for acids."
     },
     {
-        question: "Acetone (CH₃COCH₃) is also named",
+        question: "Acetone is also known as",
         options: ["Ethanone", "Propanone", "Butanone", "Acetaldehyde"],
         answer: "B",
-        explanation: "Acetone = propanone by IUPAC nomenclature (3-carbon chain with ketone at C-2: CH₃–CO–CH₃)."
+        explanation: "Acetone (CH₃COCH₃) systematic name = propanone (3-carbon chain, ketone on C2). Ethanone would be 2C. Butanone (methyl ethyl ketone) is C₄. Acetaldehyde = ethanal (2C aldehyde)."
     },
     {
-        question: "The Clemmensen reduction (Zn-Hg / conc. HCl) converts a carbonyl compound (C=O) to",
-        options: ["An alkene (C=C)", "An alkyne (C≡C)", "An alcohol (C–OH)", "An alkane (CH₂)"],
+        question: "Clemmensen reduction (Zn-Hg/conc. HCl) converts a carbonyl compound to",
+        options: ["Alkene", "Alkyne", "Alcohol", "Alkane"],
         answer: "D",
-        explanation: "Clemmensen: C=O → –CH₂– (methylene group). The carbonyl is completely deoxygenated to give an alkane. Used under acidic conditions."
+        explanation: "Clemmensen reduction uses Zn amalgam in concentrated HCl: C=O → CH₂ (methylene). Carbonyl group is fully reduced to a CH₂ group (alkane), bypassing the alcohol. Used to convert aryl ketones to alkylbenzenes."
     },
     {
-        question: "The reaction of propanal (CH₃CH₂CHO) with hydrazine (NH₂NH₂) produces a condensation product called",
-        options: ["Propylhydrazone (CH₃CH₂CH=NNH₂)", "Dimethylhydrazone", "Dipropylhydrazine", "All of the above"],
+        question: "The reaction of propanal (CH₃CH₂CHO) and hydrazine (NH₂NH₂) gives a condensation product called",
+        options: ["Propylhydrazone", "Dimethylhydrazone", "Dipropylhydrazine", "All of the above"],
         answer: "A",
-        explanation: "RCHO + NH₂NH₂ → RCH=NNH₂ + H₂O. For propanal, the product is propionaldehyde hydrazone (propylhydrazone)."
+        explanation: "Propanal + NH₂NH₂ → CH₃CH₂CH=N–NH₂ (propylhydrazone) + H₂O. The product (C=N–NH₂, a hydrazone) is named after the parent aldehyde (propanal → propyl...). Hydrazones are used for characterisation of carbonyl compounds."
     },
     {
-        question: "In the presence of a strong base (NaOH), two molecules of the same aldehyde react to give",
-        options: ["An aldol (β-hydroxy aldehyde)", "Two molecules of alcohol", "A ketone", "A ketone and an aldehyde"],
+        question: "In the presence of a strong base, two molecules of an aldehyde react to give",
+        options: ["An aldol (β-hydroxyaldehyde)", "Two molecules of alcohols", "A ketone", "A ketone and an aldehyde"],
         answer: "A",
-        explanation: "The aldol reaction: 2 RCHO → (NaOH) → RCH(OH)CH(R)CHO. An α-carbon of one aldehyde adds to the carbonyl of another, forming a β-hydroxy aldehyde."
+        explanation: "Aldol reaction: 2 RCHO →(base)→ RCH(OH)CH(R)CHO (β-hydroxyaldehyde = aldol). This is an addition reaction involving the α-carbon of one aldehyde attacking the carbonyl carbon of another. On heating, it further condenses to an α,β-unsaturated aldehyde."
     },
     {
-        question: "In all condensation reactions of ammonia derivatives with carbonyl compounds, ________ is always formed as a by-product",
-        options: ["Ammonia", "Nitrogen gas", "Water", "Water and ammonia"],
+        question: "In all cases of reactions of ammonia derivatives (hydroxylamine, hydrazine, semicarbazide) with carbonyl compounds, ______ is always formed",
+        options: ["Ammonia", "Nitrogen", "Water", "Water and ammonia"],
         answer: "C",
-        explanation: "Condensation reactions between C=O compounds and H₂N–X reagents (hydroxylamine, hydrazine, semicarbazide, primary amines) always produce water as a by-product."
+        explanation: "All ammonia derivative + carbonyl condensation reactions follow nucleophilic addition then elimination: R₂C=O + H₂N–X → R₂C=N–X + H₂O. WATER is always the eliminated product (condensation = elimination of water)."
     },
     {
         question: "CH₃CH₂MgBr is an example of",
         options: ["A reducing agent", "A Grignard reagent", "An oxidising agent", "A dehydrating agent"],
         answer: "B",
-        explanation: "Grignard reagents (RMgX) are organomagnesium halides prepared from alkyl/aryl halides and magnesium in dry ether. They are powerful nucleophiles/bases."
+        explanation: "CH₃CH₂MgBr = ethylmagnesium bromide = a Grignard reagent (organometallic compound, R-Mg-X). Grignard reagents are powerful nucleophiles/carbanion equivalents. They are prepared by reaction of an alkyl halide with Mg in dry ether."
     },
     {
         question: "Hofmann degradation converts RCONH₂ to",
-        options: ["RNH₂ (primary amine with n–1 carbon atoms)", "R₂NH (secondary amine)", "R₃N (tertiary amine)", "None of the above"],
+        options: ["RNH₂ (primary amine)", "R₂NH (secondary amine)", "R₃N (tertiary amine)", "None of the above"],
         answer: "A",
-        explanation: "RCONH₂ + Br₂ + 4NaOH → RNH₂ + Na₂CO₃ + 2NaBr + 2H₂O. The carbonyl carbon is lost as CO₂, giving a primary amine with one fewer carbon."
-    },
-
-    // ==================== APPLIED & INORGANIC CHEMISTRY (Questions 161-165, idx 160-164) ====================
-    {
-        question: "Which transition metal is commonly used as a catalyst in the Haber process for the industrial synthesis of ammonia?",
-        options: ["Copper (Cu)", "Platinum (Pt)", "Iron (Fe)", "Nickel (Ni)"],
-        answer: "C",
-        explanation: "The Haber process: N₂ + 3H₂ ⇌ 2NH₃. Iron (Fe) with K₂O and Al₂O₃ promoters is the industrial catalyst, operating at ~450°C and 150–200 atm."
-    },
-    {
-        question: "What type of fuel is used in commercial jet (aircraft) engines?",
-        options: ["Petrol (gasoline)", "Diesel", "Natural gas (methane)", "Kerosene (Jet A / aviation turbine fuel)"],
-        answer: "D",
-        explanation: "Jet engines burn kerosene-based Jet A fuel (C₁₂–C₁₅ hydrocarbons). Kerosene has a higher flash point and energy density than petrol, making it suitable for aviation."
-    },
-    {
-        question: "Which gas is commonly used in oxy-acetylene welding?",
-        options: ["Methane (CH₄)", "Propane (C₃H₈)", "Acetylene/ethyne (C₂H₂)", "Hydrogen (H₂)"],
-        answer: "C",
-        explanation: "Oxy-acetylene welding burns C₂H₂ in O₂ to produce a flame reaching ~3500°C — hot enough to cut and weld steel. The reaction: 2C₂H₂ + 5O₂ → 4CO₂ + 2H₂O."
-    },
-    {
-        question: "Steel is widely used in construction and engineering primarily because of its",
-        options: ["Low density and extreme brittleness", "High electrical conductivity", "High ductility and malleability (can be drawn into wires and beaten into sheets)", "Natural resistance to corrosion without treatment"],
-        answer: "C",
-        explanation: "Steel (iron + carbon alloy) combines high tensile strength with ductility (can be drawn) and malleability (can be shaped). These mechanical properties make it ideal for structural applications."
-    },
-    {
-        question: "An ester is a derivative compound of",
-        options: ["Aldehyde", "Ketone", "Carboxylic acid (and an alcohol)", "Ether"],
-        answer: "C",
-        explanation: "Esters (RCOOR') are formed by the condensation of a carboxylic acid (RCOOH) with an alcohol (R'OH): RCOOH + R'OH ⇌ RCOOR' + H₂O. They are acyl derivatives of carboxylic acids."
-    },
-
-    // ==================== MUST KNOW — V1 INORGANIC, METALS & ESSENTIALS (idx 105-139) ====================
-    {
-        question: "A covalent bond is formed by",
-        options: ["sharing of electron pairs between atoms", "complete transfer of electrons from one atom to another", "electrostatic attraction between ions", "van der Waals forces only"],
-        answer: "A",
-        explanation: "Covalent bonds arise from the mutual sharing of one or more electron pairs between two atoms, resulting in a lower overall energy state."
-    },
-    {
-        question: "An ionic bond is formed by",
-        options: ["sharing of electrons between atoms", "complete transfer of electrons from one atom to another", "metallic bonding forces", "van der Waals forces"],
-        answer: "B",
-        explanation: "Ionic bonds result from the complete transfer of one or more electrons from a metal to a non-metal, forming cations and anions held together by electrostatic attraction."
-    },
-    {
-        question: "Electronegativity is the measure of",
-        options: ["an atom's ability to attract shared electrons towards itself", "atomic size", "atomic mass", "number of valence electrons"],
-        answer: "A",
-        explanation: "Electronegativity (Pauling scale) measures an atom's tendency to attract bonding electrons. Fluorine is the most electronegative (4.0), followed by O (3.5) and N/Cl (3.0)."
-    },
-    {
-        question: "The most electronegative element in the periodic table is",
-        options: ["Oxygen (O)", "Chlorine (Cl)", "Fluorine (F)", "Nitrogen (N)"],
-        answer: "C",
-        explanation: "Fluorine (F) has the highest electronegativity value of 4.0 on the Pauling scale. Its small atomic size and high effective nuclear charge make it strongly attract bonding electrons."
-    },
-    {
-        question: "Electronegativity across a period (left to right) in the periodic table",
-        options: ["Decreases steadily", "Increases steadily (more protons pull electrons more strongly)", "Remains constant", "First increases then decreases"],
-        answer: "B",
-        explanation: "Across a period, nuclear charge increases while atomic radius decreases, so atoms attract bonding electrons more strongly → electronegativity increases left to right."
-    },
-    {
-        question: "Electronegativity down a group in the periodic table",
-        options: ["Decreases (larger atoms attract shared electrons less effectively)", "Increases", "Remains constant", "First decreases then increases"],
-        answer: "A",
-        explanation: "Down a group, atomic radius increases and electrons are further from the nucleus, so the atom's ability to attract bonding electrons decreases → electronegativity decreases."
-    },
-    {
-        question: "A polar covalent bond occurs when",
-        options: ["electrons are shared equally between identical atoms", "electrons are shared unequally due to a difference in electronegativity", "electrons are transferred completely", "no electrons are shared"],
-        answer: "B",
-        explanation: "Polar covalent bonds have unequal electron sharing when Δelectronegativity ≈ 0.5–1.7. The more electronegative atom acquires a partial negative charge (δ⁻)."
-    },
-    {
-        question: "The inductive effect is defined as",
-        options: ["permanent polarization of electrons along a sigma (σ) bond chain", "delocalization of pi (π) electrons across conjugated systems", "transfer of protons between molecules", "formation of free radicals"],
-        answer: "A",
-        explanation: "The inductive effect is the through-bond transmission of partial charges due to electronegativity differences, transmitted along σ-bonds and decreasing with distance."
-    },
-    {
-        question: "Resonance in organic chemistry refers to",
-        options: ["delocalization of electrons across multiple atoms represented by several resonance structures", "bond breaking between atoms", "complete electron transfer forming ions", "proton transfer from one molecule to another"],
-        answer: "A",
-        explanation: "Resonance describes electron delocalization — no single Lewis structure is adequate; the true structure is a hybrid. Benzene is the classic example."
-    },
-    {
-        question: "Hückel's rule states that an aromatic compound must have",
-        options: ["4n+2 π electrons in a cyclic, planar, fully-conjugated ring (n = 0, 1, 2, …)", "only even number of carbon atoms", "only six π electrons always", "at least one benzene ring"],
-        answer: "A",
-        explanation: "Aromaticity requires: (1) cyclic, (2) planar, (3) fully conjugated, (4) 4n+2 π electrons. Benzene (n=1, 6π), naphthalene (n=2, 10π) are examples."
-    },
-    {
-        question: "The reactivity of alkali metals (Group IA) with water",
-        options: ["decreases down the group (Li most reactive)", "increases down the group (Li < Na < K < Rb < Cs)", "is the same for all alkali metals", "depends only on temperature"],
-        answer: "B",
-        explanation: "Reactivity increases down Group I as ionisation energy decreases: Li reacts slowly, Na vigorously, K catches fire, Rb and Cs explode on contact with water."
-    },
-    {
-        question: "Sodium (Na) reacts violently with",
-        options: ["Water only", "Water and alcohols only", "Oxygen and acids only", "Water, alcohols, and oxygen (all of the above)"],
-        answer: "D",
-        explanation: "Alkali metals react with water (2Na + 2H₂O → 2NaOH + H₂↑), alcohols (2Na + 2ROH → 2RONa + H₂↑), and oxygen (4Na + O₂ → 2Na₂O, or Na₂O₂ in excess O₂)."
-    },
-    {
-        question: "Calcium hydroxide solution (limewater) is used as a test for",
-        options: ["carbon dioxide — turns limewater milky (CaCO₃ precipitate)", "oxygen — reignites a glowing splint", "hydrogen — burns with a squeaky pop", "chlorine — bleaches damp litmus paper"],
-        answer: "A",
-        explanation: "CO₂ + Ca(OH)₂ → CaCO₃↓ (white/milky) + H₂O. Excess CO₂ dissolves CaCO₃: CaCO₃ + H₂O + CO₂ → Ca(HCO₃)₂ (solution clears)."
-    },
-    {
-        question: "The flame test for sodium gives a flame colour of",
-        options: ["Lilac/violet", "Yellow/orange", "Brick red", "Green"],
-        answer: "B",
-        explanation: "Sodium compounds produce a persistent yellow/orange flame due to the 3s → 3p electronic transition emitting light at 589 nm. Na is identified by this characteristic yellow colour."
-    },
-    {
-        question: "Alkali metals (Group IA) are stored in kerosene or oil because",
-        options: ["It improves their electrical conductivity", "They are too soft to handle with bare hands", "They react rapidly with moisture and oxygen in air, so must be excluded from both", "Kerosene reacts with them to form alloys"],
-        answer: "C",
-        explanation: "Na, K, Rb, Cs tarnish instantly in air and react violently with water. Storage under kerosene (or in dry inert gas for Rb/Cs) prevents contact with O₂ and H₂O."
-    },
-    {
-        question: "Group IIA elements (alkaline earth metals) have",
-        options: ["two valence electrons in the outer shell (ns² configuration)", "one valence electron", "seven valence electrons", "eight valence electrons (full outer shell)"],
-        answer: "A",
-        explanation: "Alkaline earth metals (Be, Mg, Ca, Sr, Ba, Ra) all have ns² configuration and lose two electrons to form M²⁺ ions."
-    },
-    {
-        question: "Group IVA elements (the carbon group) are",
-        options: ["C, Si, Ge, Sn, Pb", "C, N, O, F, Ne", "C, Si, P, S, Cl", "C, Si, Ge, As, Sb"],
-        answer: "A",
-        explanation: "Group 14 (IVA) runs from carbon to lead: C → Si → Ge → Sn → Pb. They have ns²np² valence configuration."
-    },
-    {
-        question: "The inert pair effect explains why",
-        options: ["heavier p-block elements (e.g. Tl, Pb, Bi) prefer an oxidation state two less than their group number", "noble gases are unreactive", "transition metals have variable oxidation states", "lanthanides have similar chemistry"],
-        answer: "A",
-        explanation: "In heavier p-block elements, the outermost s electrons become increasingly difficult to ionise (the 'inert pair'), so Tl⁺, Pb²⁺, and Bi³⁺ are more stable than their higher-valency counterparts."
-    },
-    {
-        question: "Silicon dioxide (SiO₂) is classified as",
-        options: ["a network covalent (macromolecular) solid with very high melting point", "an ionic solid", "a simple molecular solid", "a metallic solid"],
-        answer: "A",
-        explanation: "In SiO₂, each Si is tetrahedrally bonded to four O atoms, and each O bridges two Si atoms, forming an infinite three-dimensional covalent network — hence high mp (~1600°C)."
-    },
-    {
-        question: "Lead (Pb) in Group IVA most commonly exhibits the",
-        options: ["+2 oxidation state (Pb²⁺), due to the inert pair effect", "+4 oxidation state exclusively", "0 oxidation state (elemental lead is most stable)", "–4 oxidation state"],
-        answer: "A",
-        explanation: "Although Pb is in Group IVA (suggesting +4), the inert pair effect makes Pb²⁺ (losing only the 6p² electrons) more stable than Pb⁴⁺ (which would also lose the 6s² pair)."
-    },
-    {
-        question: "Transition metals are characterised by",
-        options: ["partially filled d-orbitals in the atom or in a common oxidation state", "completely filled d-orbitals only", "empty d-orbitals", "no d-orbitals"],
-        answer: "A",
-        explanation: "Elements with partially filled d-orbitals (groups 3–12, e.g. Fe, Cu, Mn) are transition metals. This gives them variable oxidation states, colour, and catalytic ability."
-    },
-    {
-        question: "Which property is most characteristic of transition metals?",
-        options: ["Variable oxidation states (multiple stable oxidation states)", "Fixed, single oxidation state like group I and II metals", "Low melting points and softness", "Gaseous state at room temperature"],
-        answer: "A",
-        explanation: "Transition metals exhibit variable oxidation states because the energy difference between (n–1)d and ns electrons is small (e.g. Fe²⁺/Fe³⁺, Cu⁺/Cu²⁺, Mn²⁺/Mn⁴⁺/Mn⁷⁺)."
-    },
-    {
-        question: "Most compounds of transition metals are",
-        options: ["coloured, due to d–d electron transitions in the crystal field", "colourless and white", "always black", "coloured only when dissolved in water"],
-        answer: "A",
-        explanation: "In a ligand (crystal) field, d-orbitals split into sets of different energy. Electrons absorb visible light to jump between split d-levels, giving the compound a complementary colour."
-    },
-    {
-        question: "A complex ion (coordination compound) consists of",
-        options: ["a central metal ion surrounded by ligands (Lewis bases) that donate electron pairs", "two metal ions bonded together", "a metal bonded only to water molecules", "cations without any accompanying anions"],
-        answer: "A",
-        explanation: "Example: [Cu(NH₃)₄]²⁺ — Cu²⁺ is the central metal ion, NH₃ molecules are ligands. Ligands coordinate to the metal via lone-pair donation."
-    },
-    {
-        question: "Ligands in a coordination compound are",
-        options: ["electron pair donors (Lewis bases) that coordinate to the central metal", "electron pair acceptors (Lewis acids)", "neutral atoms with no lone pairs", "always negatively charged anions"],
-        answer: "A",
-        explanation: "Ligands donate electron pairs to the central metal ion (a Lewis acid), forming dative (coordinate) covalent bonds. Examples: NH₃, H₂O, Cl⁻, CN⁻."
-    },
-    {
-        question: "The catalytic properties of transition metals are due to",
-        options: ["their variable oxidation states and ability to adsorb and activate reactant molecules on their surfaces", "their high melting points making them stable", "their low reactivity with most chemicals", "their diamagnetic properties"],
-        answer: "A",
-        explanation: "Transition metals (e.g. Fe in Haber process, Ni in hydrogenation, Pt in catalytic converters) adsorb reactants, weaken bonds, and provide alternative reaction pathways with lower activation energies."
-    },
-    {
-        question: "Which transition metal is present in haemoglobin and is essential for oxygen transport in blood?",
-        options: ["Copper (Cu)", "Iron (Fe)", "Zinc (Zn)", "Cobalt (Co)"],
-        answer: "B",
-        explanation: "Haemoglobin contains iron (Fe²⁺) at the centre of a porphyrin (haem) ring. Fe²⁺ reversibly binds O₂ for transport; Fe³⁺ (methaemoglobin) cannot carry O₂."
-    },
-    {
-        question: "The functional group of alcohols is",
-        options: ["–OH (hydroxyl group)", "–COOH (carboxyl)", "–CHO (aldehyde)", "–NH₂ (amino)"],
-        answer: "A",
-        explanation: "Alcohols are characterised by the –OH (hydroxyl) group attached to a saturated carbon. Primary: RCH₂OH; secondary: R₂CHOH; tertiary: R₃COH."
-    },
-    {
-        question: "The functional group of aldehydes is",
-        options: ["–CHO (a carbonyl group at the end of a carbon chain)", "–COOH", "–CO– (internal)", "–OH"],
-        answer: "A",
-        explanation: "Aldehydes have the –CHO group (RCHO): a carbonyl carbon bonded to at least one hydrogen. They are easily oxidised to carboxylic acids."
-    },
-    {
-        question: "The functional group of ketones is",
-        options: ["–CO– (a carbonyl group between two carbon atoms)", "–CHO", "–COOH", "–OH"],
-        answer: "A",
-        explanation: "Ketones have an internal C=O group flanked by two carbon substituents (RCOR'). Unlike aldehydes, ketones resist mild oxidation."
-    },
-    {
-        question: "Carboxylic acids contain the functional group",
-        options: ["–COOH (a carbonyl C=O and a hydroxyl –OH on the same carbon)", "–OH only", "–CHO only", "–COOR (ester linkage)"],
-        answer: "A",
-        explanation: "The carboxyl group (–COOH) makes carboxylic acids acidic: the O–H proton is released. Example: CH₃COOH (ethanoic/acetic acid, pKa 4.76)."
-    },
-    {
-        question: "Esters have the general functional group / formula",
-        options: ["–COO– (R–COO–R', derived from acid + alcohol)", "–COOH", "–CHO", "–OH"],
-        answer: "A",
-        explanation: "Esters (RCOOR') contain the –COO– linkage formed by condensation of a carboxylic acid (RCOOH) and an alcohol (R'OH): RCOOH + R'OH ⇌ RCOOR' + H₂O."
-    },
-    {
-        question: "Primary amines contain the functional group",
-        options: ["–NH₂ (amino group attached directly to carbon)", "–OH", "–COOH", "–SH (thiol)"],
-        answer: "A",
-        explanation: "Primary amines (RNH₂) have one –NH₂ group on carbon. They are derivatives of ammonia (NH₃) in which one H is replaced by an alkyl or aryl group."
-    },
-    {
-        question: "Benzene (C₆H₆) is an example of",
-        options: ["an aromatic hydrocarbon — cyclic, planar, 6 π electrons (Hückel, n=1)", "an aliphatic hydrocarbon", "an alkane (saturated)", "an alkene with simple double bonds"],
-        answer: "A",
-        explanation: "Benzene satisfies Hückel's rule (4×1+2=6 π electrons), is planar and fully conjugated. Its exceptional stability (resonance energy ~150 kJ/mol) is the hallmark of aromaticity."
-    },
-    {
-        question: "Alkanes (saturated hydrocarbons) are also called",
-        options: ["paraffins, because they are relatively unreactive", "olefins", "acetylenes", "aromatics"],
-        answer: "A",
-        explanation: "The common name 'paraffins' (Latin: parum affinis = little affinity) reflects alkanes' low reactivity. They undergo mainly free-radical substitution (e.g. with Cl₂ in light)."
-    },
-
-    // ==================== MANUAL TEXTBOOK ADDITIONS — CARBOHYDRATES, REACTIONS & MISC (idx 140-164) ====================
-
-    // --- CARBOHYDRATES ---
-    {
-        question: "The main form in which carbohydrates are transported in plants is",
-        options: ["Glucose", "Sucrose", "Maltose", "Lactose"],
-        answer: "B",
-        explanation: "Sucrose (glucose + fructose) is the main transport carbohydrate in plant phloem sap. Glucose is the metabolic fuel but travels as sucrose for long-distance translocation."
-    },
-    {
-        question: "The following sugars are disaccharides EXCEPT",
-        options: ["Glucose", "Sucrose", "Maltose", "Lactose"],
-        answer: "A",
-        explanation: "Glucose is a monosaccharide (single sugar unit). Sucrose (glucose + fructose), Maltose (glucose + glucose), and Lactose (glucose + galactose) are all disaccharides (two sugar units)."
-    },
-    {
-        question: "The following are reducing sugars EXCEPT",
-        options: ["Glucose", "Sucrose", "Maltose", "Lactose"],
-        answer: "B",
-        explanation: "Sucrose is non-reducing because both anomeric carbons are locked in the glycosidic bond — no free aldehyde or ketone group remains to reduce Benedict's/Fehling's reagent. Glucose, maltose, and lactose all have free anomeric –OH groups."
-    },
-    {
-        question: "A positive test to Benedict's reagent is indicated by colour change from",
-        options: ["Blue to brick-red", "Brick-red to blue", "Brick-red to brown", "Brown to blue"],
-        answer: "A",
-        explanation: "Benedict's reagent is blue (Cu²⁺). Reducing sugars reduce Cu²⁺ to Cu₂O, which is brick-red/orange-red. The test colour change is blue → brick-red (positive = reducing sugar present)."
-    },
-    {
-        question: "The enzyme responsible for fermentation of bread/dough in yeast is",
-        options: ["Zylose", "Ketose", "Zymase", "Yeastose"],
-        answer: "C",
-        explanation: "Zymase is the enzyme complex in yeast that converts glucose to ethanol and CO₂: C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂. The CO₂ causes dough to rise; ethanol is baked off."
-    },
-    {
-        question: "Glycogen is a branched biopolymer consisting of linear chains of ______ residues",
-        options: ["Glucose", "Maltose", "Fructose", "Sucrose"],
-        answer: "A",
-        explanation: "Glycogen is the animal storage polysaccharide made entirely of glucose units — α-1,4 bonds in chains and α-1,6 bonds at branch points. It is more highly branched than amylopectin."
-    },
-    {
-        question: "Cellulose has the following properties EXCEPT that it is",
-        options: ["A white solid", "Insoluble in water", "Insoluble in ordinary organic solvents", "Easily hydrolysed"],
-        answer: "D",
-        explanation: "Cellulose is NOT easily hydrolysed — the β-1,4-glycosidic bonds require cellulase enzymes (absent in humans) or harsh acid treatment. It is a white solid that is insoluble in water and most organic solvents."
-    },
-    {
-        question: "The enzyme (cellulase) that aids the hydrolysis of cellulose is found in",
-        options: ["Ants", "Termites", "Spiders", "Man"],
-        answer: "B",
-        explanation: "Termites harbour symbiotic gut microorganisms (protozoa and bacteria) that produce cellulase, allowing them to digest wood. Humans and most vertebrates cannot produce cellulase."
-    },
-    {
-        question: "The product of fermentation of maize (corn) is",
-        options: ["Ketone", "Carboxylic acid", "Alcohol (ethanol)", "Aldehyde"],
-        answer: "C",
-        explanation: "Fermentation: maize starch → glucose (amylase) → ethanol + CO₂ (zymase in yeast). This produces corn ethanol used as biofuel and in beverages."
-    },
-    {
-        question: "The following foods will turn blue-black with iodine solution EXCEPT",
-        options: ["Gari (cassava product)", "Guinea corn", "Ground nut (peanut)", "Guguru (popcorn)"],
-        answer: "C",
-        explanation: "Iodine turns blue-black with starch (amylose). Ground nuts (peanuts) are rich in fat and protein but NOT starch — they do NOT give a blue-black colour. Gari, guinea corn, and popcorn all contain starch."
-    },
-    {
-        question: "Starch is also called all of the following EXCEPT",
-        options: ["Amylum", "Amylose", "Amylopectin", "Pectin"],
-        answer: "D",
-        explanation: "Pectin is a different polysaccharide from plant cell walls/fruits — NOT a form of starch. Starch consists of amylose (linear, α-1,4) and amylopectin (branched, α-1,6). Amylum is the Latin/old name for starch."
-    },
-    {
-        question: "The following terms can be used to describe cellulose EXCEPT",
-        options: ["Polymer", "Biomass", "Biopolymer", "Bioenzyme"],
-        answer: "D",
-        explanation: "Cellulose is a polymer (long chain macromolecule), a biopolymer (biologically produced), and biomass (plant structural material). It is NOT a bioenzyme — enzymes are proteins, not polysaccharides."
-    },
-
-    // --- CARBONYLS & REACTIONS ---
-    {
-        question: "Which of the following is a method of preparing ketones?",
-        options: ["Oxidation of secondary alcohols", "Oxidation of primary alcohols", "Reduction of aldehydes", "Reduction of haloalkanes"],
-        answer: "A",
-        explanation: "Secondary alcohols (R–CHOH–R') are oxidised by KMnO₄ or K₂Cr₂O₇ to give ketones (R–CO–R'). Primary alcohols give aldehydes then acids; aldehydes reduce to primary alcohols, not ketones."
-    },
-    {
-        question: "The boiling point of tertiary butanol is 65°C while that of normal butanol is 88°C. The difference in their boiling points is due to",
-        options: ["Nucleophilicity", "Resonance", "Hydrogen bonding", "Isomerism"],
-        answer: "C",
-        explanation: "Both are alcohols and hydrogen-bond, but n-butanol (1-butanol) has an unhindered –OH → more extensive H-bonding → higher bp (88°C). t-Butanol's –OH is sterically shielded by three methyl groups → weaker H-bonding → lower bp (65°C)."
-    },
-    {
-        question: "CH₃–CH₂–CH₂–OH reacted with acidified KMnO₄ gives the primary oxidation product",
-        options: ["CH₃–CH₂–CH₃ (propane)", "CH₃–CH₂–CHO (propanal)", "CH₃–CH₂–COOH (propanoic acid)", "No reaction"],
-        answer: "B",
-        explanation: "Primary alcohols are first oxidised to aldehydes (RCHO). Under mild conditions or with the reaction stopped early, propanal (CH₃CH₂CHO) is obtained. Further strong oxidation with excess acidified KMnO₄ would give propanoic acid."
-    },
-    {
-        question: "The final product of aldol condensation of two molecules of an aldehyde is",
-        options: ["A β-hydroxyaldehyde", "An α,β-unsaturated aldehyde", "An α-hydroxyaldehyde", "A β-hydroxy acid"],
-        answer: "B",
-        explanation: "Aldol condensation: (1) Aldol addition → β-hydroxyaldehyde; (2) Dehydration (elimination of H₂O) → α,β-unsaturated aldehyde (enal). The FINAL condensation product is always the α,β-unsaturated carbonyl compound."
-    },
-    {
-        question: "Ketones are less susceptible to nucleophilic attack than aldehydes because",
-        options: ["Ketones are less stable than aldehydes", "Aldehydes are more stable than ketones", "The steric hindrance of the two alkyl groups of ketones reduces nucleophile access", "Ketones are more reactive"],
-        answer: "C",
-        explanation: "Ketones have TWO alkyl groups flanking the carbonyl carbon, creating steric hindrance that blocks nucleophilic approach. Aldehydes have only ONE alkyl group (and one H) → less hindered → more reactive toward nucleophilic addition."
-    },
-    {
-        question: "The carbonyl compounds that can be oxidised easily to form carboxylic acids are",
-        options: ["Ketones", "Aldehydes", "Haloalkanes", "Esters"],
-        answer: "B",
-        explanation: "Aldehydes (R–CHO) are readily oxidised to carboxylic acids (R–COOH) by Tollens', Fehling's, Benedict's, or KMnO₄. Ketones have no C–H on the carbonyl carbon and resist mild oxidation."
-    },
-
-    // --- ESTERIFICATION, ACIDS & MISC ---
-    {
-        question: "Saponification reaction is best described as",
-        options: ["A condensation reaction", "Acid-promoted hydrolysis", "Base-promoted hydrolysis (soap making)", "A neutralisation involving an acid and a base"],
-        answer: "C",
-        explanation: "Saponification is the alkaline hydrolysis of a fat/ester with NaOH or KOH → soap (fatty acid salt) + glycerol. The base is consumed as a reagent, not a catalyst."
-    },
-    {
-        question: "The products of the reaction: CH₃COOH + CH₃OH →(H⁺)→",
-        options: ["CH₃COOCH₃ + H₂O", "CH₃COCH₃ + H₂O", "CH₃CH₂CHO + H₂O", "CH₃CH₂CH₃ + H₂O"],
-        answer: "A",
-        explanation: "Fischer esterification: carboxylic acid + alcohol → ester + water (H⁺ catalyst). CH₃COOH (acetic acid) + CH₃OH (methanol) → CH₃COOCH₃ (methyl acetate) + H₂O."
-    },
-    {
-        question: "Identify the most acidic compound from the following",
-        options: ["ClCH₂COOH (chloroacetic acid)", "Cl₂CHCOOH (dichloroacetic acid)", "CH₃COOH (acetic acid)", "C₂H₅COOH (propanoic acid)"],
-        answer: "B",
-        explanation: "Electron-withdrawing Cl destabilises the neutral acid and stabilises the conjugate base (carboxylate) by inductive effect — more Cl atoms = stronger acid. Cl₂CHCOOH (pKa ≈ 1.48) > ClCH₂COOH (pKa ≈ 2.86) > CH₃COOH (pKa ≈ 4.76) > C₂H₅COOH (pKa ≈ 4.87)."
-    },
-    {
-        question: "The gas produced when sodium metal is dropped into ethanol is",
-        options: ["H₂", "O₂", "N₂", "CO₂"],
-        answer: "A",
-        explanation: "Na reacts with the hydroxyl group of alcohols similarly to water: 2Na + 2C₂H₅OH → 2C₂H₅ONa + H₂↑. Hydrogen gas is evolved and sodium ethoxide is formed."
-    },
-
-    // --- GRIGNARD & MECHANISMS ---
-    {
-        question: "A Grignard reagent (RMgX) when reacted with methanal (formaldehyde, HCHO) will yield",
-        options: ["Ethanol", "Secondary alcohol", "Tertiary alcohol", "Primary alcohol"],
-        answer: "D",
-        explanation: "RMgX + HCHO → R–CH₂–OMgX → (H₃O⁺) → R–CH₂–OH (primary alcohol, one carbon longer than R). Methanal (formaldehyde) is the simplest aldehyde and always gives primary alcohols with Grignard reagents."
-    },
-    {
-        question: "Compound 'A' undergoes cyanohydrin formation; on hydrolysis this gives lactic acid (CH₃CHOHCOOH). Compound 'A' is",
-        options: ["Formaldehyde (HCHO)", "Acetaldehyde (CH₃CHO)", "Benzaldehyde (C₆H₅CHO)", "Acetone (CH₃COCH₃)"],
-        answer: "B",
-        explanation: "Cyanohydrin: CH₃CHO + HCN → CH₃CH(OH)CN. Hydrolysis: CH₃CH(OH)CN + H₂O + H⁺ → CH₃CH(OH)COOH (lactic acid). Working back: A = acetaldehyde (ethanal)."
-    },
-
-    // --- AMINES & FUNCTIONAL GROUPS ---
-    {
-        question: "Which general class of compounds do amines belong to?",
-        options: ["Oxidising agents", "Dehydrating agents", "Reducing agents", "Bases"],
-        answer: "D",
-        explanation: "Amines are organic bases. The lone pair on nitrogen readily accepts protons: R–NH₂ + H⁺ → R–NH₃⁺. Basicity increases with electron-donating substituents and decreases with electron-withdrawing groups."
-    },
-    {
-        question: "When an amine reacts with a carboxylic acid and the mixture is heated, the product formed is",
-        options: ["Amine oxide", "Cyanoamine", "Amide", "Tertiary amine"],
-        answer: "C",
-        explanation: "R–NH₂ + R'COOH → [R'COONH₃R] (ammonium salt, cold) → R'CONHR + H₂O (amide, on heating). This condensation forms an amide bond (the same bond found in proteins as the peptide bond)."
-    },
-    {
-        question: "(CH₃CO)₂O is classified as",
-        options: ["An ether", "An ester", "An anhydride", "An amide"],
-        answer: "C",
-        explanation: "(CH₃CO)₂O is acetic anhydride (ethanoic anhydride). Acid anhydrides (R–CO–O–CO–R) are formed by removing water from two carboxylic acid molecules. It is a powerful acylating agent."
+        explanation: "Hofmann degradation: RCONH₂ + Br₂/NaOH → RNH₂ + CO₂ + NaBr + H₂O. The product is a PRIMARY AMINE (RNH₂) with one FEWER carbon than the amide. The carbonyl carbon is lost as CO₂."
     }
 ];
 
-// Total: 165 questions covering CHM 102 exam-relevant topics
-
+// Total: 100 questions covering CHM 102 exam-relevant topics

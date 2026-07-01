@@ -96,22 +96,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // ==================== COURSE DATABASE ====================
     const COURSES_DB = {
+        // ── ACTIVE (unlocked) ──
+        "MLS 102": { semester: "second", title: "MLS 102", level: "100L • History of Medical Laboratory Science", description: "History and development of MLS profession", icon: "📜", iconGradient: "linear-gradient(135deg, #06b6d4, #0891b2)", qCount: 100, locked: false, file: "mls102.js", bankKey: "MLS 102" },
+
+        // ── COMPLETED (locked) — second semester ──
+        "GST 102": { semester: "second", title: "GST 102", level: "100L • Use of English II", description: "Grammar, essay writing, communication and ICT basics", icon: "📝", iconGradient: "linear-gradient(135deg, #667eea, #764ba2)", qCount: 318, locked: true, file: "gst102.js", bankKey: "GST 102" },
+        "GST 104": { semester: "second", title: "GST 104", level: "100L • Nigeria Culture", description: "Nigerian history, culture and national development", icon: "🇳🇬", iconGradient: "linear-gradient(135deg, #f97316, #ea580c)", qCount: 100, locked: true, file: "gst112.js", bankKey: "GST 112" },
+        "MTH 102": { semester: "second", title: "MTH 102", level: "100L • Elementary Mathematics", description: "Calculus, vectors and differential equations", icon: "📐", iconGradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", qCount: 81, locked: true, file: "mth102.js", bankKey: "MTH 102" },
+        "CHM 102": { semester: "second", title: "CHM 102", level: "100L • General Chemistry II", description: "Chemical kinetics, equilibrium and organic chemistry", icon: "🧪", iconGradient: "linear-gradient(135deg, #f59e0b, #d97706)", qCount: 100, locked: true, file: "chm102.js", bankKey: "CHM 102" },
+        "BIO 102": { semester: "second", title: "BIO 102", level: "100L • General Biology II", description: "Diversity of life, plant and animal morphology", icon: "🔬", iconGradient: "linear-gradient(135deg, #10b981, #059669)", qCount: 100, locked: true, file: "bio102.js", bankKey: "BIO 102" },
+        "BIO 108": { semester: "second", title: "BIO 108", level: "100L • Biology Practical II", description: "Practical biology techniques and experiments", icon: "🧫", iconGradient: "linear-gradient(135deg, #14b8a6, #0d9488)", qCount: 100, locked: true, file: "bio108.js", bankKey: "BIO 108" },
+        "PHY 102": { semester: "second", title: "PHY 102", level: "100L • General Physics II", description: "Electricity, magnetism and modern physics", icon: "⚡", iconGradient: "linear-gradient(135deg, #ef4444, #dc2626)", qCount: 100, locked: true, file: "phy102.js", bankKey: "PHY 102" },
+        "COS 102": { semester: "second", title: "COS 102", level: "100L • Intro to Computing Science", description: "Computer science fundamentals and programming", icon: "💻", iconGradient: "linear-gradient(135deg, #3b82f6, #1d4ed8)", qCount: 100, locked: true, file: "cos102.js", bankKey: "COS 102" },
+        "MLS 104": { semester: "second", title: "MLS 104", level: "100L • Introduction to Biology of Diseases", description: "Disease mechanisms and pathology basics", icon: "🦠", iconGradient: "linear-gradient(135deg, #84cc16, #65a30d)", qCount: 100, locked: true, file: "mls104.js", bankKey: "MLS 104" },
+        "MCB 102": { semester: "second", title: "MCB 102", level: "100L • Introductory Microbiology", description: "Bacteria, viruses, fungi, protozoa and microbial disease", icon: "🔬", iconGradient: "linear-gradient(135deg, #22c55e, #16a34a)", qCount: 92, locked: true, file: "mcb102.js", bankKey: "MCB 102" },
+
+        // ── COMPLETED (locked) — first semester ──
         "GST 101": { semester: "first", title: "GST 101", level: "100L • Use of English", description: "Comprehensive English language and communication skills", icon: "📓", iconGradient: "linear-gradient(135deg, #667eea, #764ba2)", qCount: 339, locked: true, file: "gst101.js", bankKey: "GST 101" },
         "CSC 101": { semester: "first", title: "CSC 101", level: "100L • Intro to Computing", description: "Introduction to computer science and programming", icon: "💻", iconGradient: "linear-gradient(135deg, #3b82f6, #1d4ed8)", qCount: 100, locked: true, file: "csc.js", bankKey: "CSC 101" },
         "ENT 101": { semester: "first", title: "ENT 101", level: "100L • Entrepreneurship", description: "Business development and entrepreneurial skills", icon: "💼", iconGradient: "linear-gradient(135deg, #06b6d4, #0891b2)", qCount: 100, locked: true, file: "ent.js", bankKey: "ENT 101" },
-        "GST 103": { semester: "first", title: "GST 112", level: "100L • Use of Library", description: "History, culture and development of Nigeria", icon: "📖", iconGradient: "linear-gradient(135deg, #84cc16, #65a30d)", qCount: 100, locked: true, file: "gst112.js", bankKey: "GST 112" },
-       
-        "GST 102": { semester: "second", title: "GST 102", level: "100L • Use of English II", description: "Grammar, essay writing, communication and ICT basics", icon: "📝", iconGradient: "linear-gradient(135deg, #667eea, #764ba2)", qCount: 318, locked: false, file: "gst102.js", bankKey: "GST 102" },
-        "GST 104": { semester: "second", title: "GST 104", level: "100L • Nigeria Culture", description: "Nigerian history, culture and national development", icon: "🇳🇬", iconGradient: "linear-gradient(135deg, #f97316, #ea580c)", qCount: 100, locked: false, file: "gst112.js", bankKey: "GST 112" },
-        "MTH 102": { semester: "second", title: "MTH 102", level: "100L • Elementary Mathematics", description: "Calculus, vectors and differential equations", icon: "📐", iconGradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", qCount: 81, locked: false, file: "mth102.js", bankKey: "MTH 102" },
-        "CHM 102": { semester: "second", title: "CHM 102", level: "100L • General Chemistry II", description: "Chemical kinetics, equilibrium and organic chemistry", icon: "🧪", iconGradient: "linear-gradient(135deg, #f59e0b, #d97706)", qCount: 167, locked: false, file: "chm102.js", bankKey: "CHM 102" },
-        "MLS 102": { semester: "second", title: "MLS 102", level: "100L • History of Medical Laboratory Science", description: "History and development of MLS profession", icon: "📜", iconGradient: "linear-gradient(135deg, #06b6d4, #0891b2)", qCount: 100, locked: false, file: "mls102.js", bankKey: "MLS 102" },
-        "BIO 102": { semester: "second", title: "BIO 102", level: "100L • General Biology II", description: "Diversity of life, plant and animal morphology", icon: "🔬", iconGradient: "linear-gradient(135deg, #10b981, #059669)", qCount: 100, locked: false, file: "bio102.js", bankKey: "BIO 102" },
-        "BIO 108": { semester: "second", title: "BIO 108", level: "100L • Biology Practical II", description: "Practical biology techniques and experiments", icon: "🧫", iconGradient: "linear-gradient(135deg, #14b8a6, #0d9488)", qCount: 100, locked: false, file: "bio108.js", bankKey: "BIO 108" },
-        "PHY 102": { semester: "second", title: "PHY 102", level: "100L • General Physics II", description: "Electricity, magnetism and modern physics", icon: "⚡", iconGradient: "linear-gradient(135deg, #ef4444, #dc2626)", qCount: 100, locked: false, file: "phy102.js", bankKey: "PHY 102" },
-        "COS 102": { semester: "second", title: "COS 102", level: "100L • Intro to Computing Science", description: "Computer science fundamentals and programming", icon: "💻", iconGradient: "linear-gradient(135deg, #3b82f6, #1d4ed8)", qCount: 100, locked: false, file: "cos102.js", bankKey: "COS 102" },
-        "MLS 104": { semester: "second", title: "MLS 104", level: "100L • Introduction to Biology of Diseases", description: "Disease mechanisms and pathology basics", icon: "🦠", iconGradient: "linear-gradient(135deg, #84cc16, #65a30d)", qCount: 100, locked: false, file: "mls104.js", bankKey: "MLS 104" },
-        "MCB 102": { semester: "second", title: "MCB 102", level: "100L • Introductory Microbiology", description: "Bacteria, viruses, fungi, protozoa and microbial disease", icon: "🔬", iconGradient: "linear-gradient(135deg, #22c55e, #16a34a)", qCount: 92, locked: false, file: "mcb102.js", bankKey: "MCB 102" }
+        "GST 103": { semester: "first", title: "GST 112", level: "100L • Use of Library", description: "History, culture and development of Nigeria", icon: "📖", iconGradient: "linear-gradient(135deg, #84cc16, #65a30d)", qCount: 100, locked: true, file: "gst112.js", bankKey: "GST 112" }
     };
 
    // ==================== TOPICS & NOTES FOR EACH COURSE ====================
@@ -171,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function() {
             ]
         },
         "BIO 108": { icon: "🧫", topics: [{ id: "all", name: "All Topics", description: "Complete practical biology", qCount: 100, startIdx: 0, endIdx: 100 }] },
-        "CHM 102": { icon: "🧪", topics: [{ id: "all", name: "All Topics", description: "Complete chemistry II", qCount: 167, startIdx: 0, endIdx: 167 }] },
+        "CHM 102": { icon: "🧪", topics: [{ id: "all", name: "All Topics", description: "Complete chemistry II", qCount: 100, startIdx: 0, endIdx: 100 }] },
         "CHM 108": { icon: "⚗️", topics: [{ id: "all", name: "All Topics", description: "Complete practical chemistry", qCount: 100, startIdx: 0, endIdx: 100 }] },
         "PHY 102": { icon: "⚡", topics: [{ id: "all", name: "All Topics", description: "Complete physics II", qCount: 100, startIdx: 0, endIdx: 100 }] },
         "PHY 108": { icon: "📐", topics: [{ id: "all", name: "All Topics", description: "Complete practical physics", qCount: 100, startIdx: 0, endIdx: 100 }] },
@@ -259,12 +263,10 @@ document.addEventListener('DOMContentLoaded', function() {
   "CHM 102": {
       icon: "🧪",
       topics: [
-          { id: "amines_chemistry",     name: "Amine Chemistry",              description: "Basicity of amines, IUPAC naming, Hofmann, Hinsberg, Schiff's base, isonitriles, nitrous acid",          qCount: 31, startIdx: 0,   endIdx: 31  },
-          { id: "proteins_amino_ii",    name: "Proteins & Amino Acids",       description: "Amino acid classes, essential vs non-essential, acidic/basic/neutral AA, denaturation, Biuret test",      qCount: 25, startIdx: 31,  endIdx: 56  },
-          { id: "stereo_isomerism",     name: "Isomerism & Stereochemistry",  description: "Structural, geometric, optical isomers; chirality, enantiomers, diastereomers, meso, racemic mixtures",   qCount: 24, startIdx: 56,  endIdx: 80  },
-          { id: "alcohols_carbonyls",   name: "Alcohols, Carbonyls & Misc",   description: "Alcohol classes, dehydration, oxidation, Grignard reactions, Clemmensen, Lucas test, aldol reaction",    qCount: 20, startIdx: 80,  endIdx: 100 },
-          { id: "applied_inorganic",    name: "Applied & Inorganic",          description: "Transition metal catalysts, industrial processes, fuel types, welding, material properties, ester origin",  qCount: 5,  startIdx: 100, endIdx: 105 },
-          { id: "must_know",            name: "Must Know ⭐",                  description: "67 highest-yield exam topics: carbohydrates, bonding, metals, esterification, functional groups, IUPAC naming",  qCount: 67, startIdx: 100, endIdx: 167 }
+          { id: "amines_chemistry",   name: "Amine Chemistry",             description: "Basicity of amines, IUPAC naming, Hofmann, Hinsberg, Schiff's base, isonitriles, nitrous acid",        qCount: 31, startIdx: 0,  endIdx: 31  },
+          { id: "proteins_amino_ii",  name: "Proteins & Amino Acids",      description: "Amino acid classes, essential vs non-essential, acidic/basic/neutral AA, denaturation, Biuret test",    qCount: 25, startIdx: 31, endIdx: 56  },
+          { id: "stereo_isomerism",   name: "Isomerism & Stereochemistry", description: "Structural, geometric, optical isomers; chirality, enantiomers, diastereomers, meso, racemic mixtures", qCount: 24, startIdx: 56, endIdx: 80  },
+          { id: "alcohols_carbonyls", name: "Alcohols, Carbonyls & Misc",  description: "Alcohol classes, dehydration, oxidation, Grignard reactions, Clemmensen, Lucas test, aldol reaction",  qCount: 20, startIdx: 80, endIdx: 100 }
       ]
   },
     };
