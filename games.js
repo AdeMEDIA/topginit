@@ -110,13 +110,13 @@
             { id: 'advanced_topics',          name: 'Advanced Topics',             startIdx: 90, endIdx: 100 }
         ],
         'MLS 102': [
-            { id: 'evolution',                  name: 'Evolution of MLS Practice',       startIdx: 0,  endIdx: 15 },
-            { id: 'legislation',                name: 'Legislations Governing MLS',      startIdx: 15, endIdx: 30 },
-            { id: 'nomenclature',               name: 'Nomenclature & Certification',    startIdx: 30, endIdx: 45 },
-            { id: 'training_regulations',       name: 'Training Rules & Regulations',    startIdx: 45, endIdx: 60 },
-            { id: 'accreditation',              name: 'Programme Approval',              startIdx: 60, endIdx: 75 },
-            { id: 'professional_bodies',        name: 'Professional Bodies & Roles',     startIdx: 75, endIdx: 90 },
-            { id: 'international_contributions',name: 'International Contributions',     startIdx: 90, endIdx: 100 }
+            { id: 'evolution',            name: 'Evolution of MLS',         startIdx: 0,  endIdx: 10 },
+            { id: 'legislation',          name: 'MLS Legislation',           startIdx: 10, endIdx: 18 },
+            { id: 'nomenclature',         name: 'Nomenclature & Certs',      startIdx: 18, endIdx: 25 },
+            { id: 'training_regulations', name: 'Training Regulations',      startIdx: 25, endIdx: 32 },
+            { id: 'accreditation',        name: 'Accreditation',             startIdx: 32, endIdx: 40 },
+            { id: 'professional_bodies',  name: 'Professional Bodies',       startIdx: 40, endIdx: 60 },
+            { id: 'timeline',             name: 'Historical Timeline',       startIdx: 60, endIdx: 65 }
         ],
         'MLS 104': [
             { id: 'disease_concepts',     name: 'Basic Concepts of Disease',  startIdx: 0,  endIdx: 15  },

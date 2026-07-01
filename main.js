@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ==================== COURSE DATABASE ====================
     const COURSES_DB = {
         // ── ACTIVE (unlocked) ──
-        "MLS 102": { semester: "second", title: "MLS 102", level: "100L • History of Medical Laboratory Science", description: "History and development of MLS profession", icon: "📜", iconGradient: "linear-gradient(135deg, #06b6d4, #0891b2)", qCount: 100, locked: false, file: "mls102.js", bankKey: "MLS 102" },
+        "MLS 102": { semester: "second", title: "MLS 102", level: "100L • History of Medical Laboratory Science", description: "History and development of MLS profession", icon: "📜", iconGradient: "linear-gradient(135deg, #06b6d4, #0891b2)", qCount: 65, locked: false, file: "mls102.js", bankKey: "MLS 102" },
 
         // ── ACTIVE (unlocked) — second semester ──
         "BIO 102": { semester: "second", title: "BIO 102", level: "100L • General Biology II", description: "Diversity of life, plant and animal morphology", icon: "🔬", iconGradient: "linear-gradient(135deg, #10b981, #059669)", qCount: 100, locked: false, file: "bio102.js", bankKey: "BIO 102" },
@@ -185,13 +185,13 @@ document.addEventListener('DOMContentLoaded', function() {
        "MLS 102": {
     icon: "📜",
     topics: [
-        { id: "evolution", name: "Evolution of MLS Practice", description: "History and development of Medical Laboratory Science in Nigeria and worldwide", qCount: 15, startIdx: 0, endIdx: 15 },
-        { id: "legislation", name: "Legislations Governing MLS", description: "Laws, acts, and regulations for MLS practice in Nigeria", qCount: 15, startIdx: 15, endIdx: 30 },
-        { id: "nomenclature", name: "Nomenclature & Certification", description: "Certificates, diplomas, degrees, and titles at different times", qCount: 15, startIdx: 30, endIdx: 45 },
-        { id: "training_regulations", name: "Training Rules & Regulations", description: "Rules governing MLS education and training in Nigeria", qCount: 15, startIdx: 45, endIdx: 60 },
-        { id: "accreditation", name: "Programme Approval & Accreditation", description: "Processes for accrediting MLS programs", qCount: 15, startIdx: 60, endIdx: 75 },
-        { id: "professional_bodies", name: "Professional Bodies & Roles", description: "MLSCN, APHLN, NIMLT, and their functions", qCount: 15, startIdx: 75, endIdx: 90 },
-        { id: "international_contributions", name: "International Contributions", description: "Global pioneers and contributions to MLS", qCount: 10, startIdx: 90, endIdx: 100 }
+        { id: "evolution",           name: "Evolution of MLS Practice",       description: "History and development of Medical Laboratory Science in Nigeria and worldwide", qCount: 10, startIdx: 0,  endIdx: 10 },
+        { id: "legislation",         name: "Legislations Governing MLS",       description: "Laws, acts, and regulations for MLS practice in Nigeria",                      qCount: 8,  startIdx: 10, endIdx: 18 },
+        { id: "nomenclature",        name: "Nomenclature & Certification",     description: "Certificates, diplomas, degrees, and titles at different career stages",       qCount: 7,  startIdx: 18, endIdx: 25 },
+        { id: "training_regulations",name: "Training Rules & Regulations",     description: "Rules governing MLS education and training in Nigeria",                        qCount: 7,  startIdx: 25, endIdx: 32 },
+        { id: "accreditation",       name: "Programme Approval & Accreditation",description: "Processes for accrediting MLS programs",                                      qCount: 8,  startIdx: 32, endIdx: 40 },
+        { id: "professional_bodies", name: "Professional Bodies & Roles",      description: "MLSCN board, membership, indexing, internship, and prospects",                qCount: 20, startIdx: 40, endIdx: 60 },
+        { id: "timeline",            name: "Key Historical Timeline",          description: "Landmark dates in Nigeria's MLS history: 1920s, 1954, 1958, 1964, 1973",      qCount: 5,  startIdx: 60, endIdx: 65 }
     ]
 },
 
