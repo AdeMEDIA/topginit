@@ -419,7 +419,7 @@ window.questionBank["PHY 102"] = [
         explanation: "At resonance XL = XC, so the net reactance is zero. Z = R, φ = 0°, and PF = cos(0°) = 1."
     },
 
-    // ==================== LAST MINS MUST KNOW (idx 58-69) ====================
+    // ==================== LAST MINS MUST KNOW (idx 58-82, 25 questions) ====================
 
     // --- E = F/q ---
     {
@@ -435,7 +435,7 @@ window.questionBank["PHY 102"] = [
         explanation: "E = F/q = (6.0×10⁻⁸)/(3.0×10⁻⁸) = 2 N/C."
     },
 
-    // --- V = Ed ---
+    // --- V = Ed (Q13 from 150) ---
     {
         question: "Parallel plates are 12cm apart and an electron experiences a force F = 3.9×10⁻¹⁵N. What are E and V?",
         options: ["2.4×10⁴ Vm⁻¹ and 2.9×10³V", "3.5×10⁴ Vm⁻¹ and 2.7×10³V", "2.5×10⁵ Vm⁻¹ and 2.5×10²V", "4.5×10³ Vm⁻¹ and 5.0×10³V"],
@@ -479,7 +479,7 @@ window.questionBank["PHY 102"] = [
         explanation: "emf = IR = 1×10⁻³×6 = 6×10⁻³V; dB/dt = emf/(NA) = 6×10⁻³/(100×8×10⁻⁵) = 0.75 Ts⁻¹."
     },
 
-    // --- Mutual inductance (depth) ---
+    // --- Mutual inductance ---
     {
         question: "Mutual inductance between two coils depends on?",
         options: ["Permeability of medium", "Number of turns in each coil", "Cross-sectional area", "All of the above"],
@@ -505,13 +505,101 @@ window.questionBank["PHY 102"] = [
         options: ["0.0698 Nm", "0.60890 Nm", "0.27353 Nm", "0.19698 Nm"],
         answer: "D",
         explanation: "τ_max = NIAB; A = π(0.0325)² = 3.318×10⁻³m²; τ = 12×2.7×3.318×10⁻³×0.56 ≈ 0.197 Nm."
+    },
+
+    // --- Inductor calculations ---
+    {
+        question: "A coil has core length 200mm and L = 6mH. If the core length is doubled, what is the new inductance?",
+        options: ["3 mH", "12 mH", "24 mH", "48 mH"],
+        answer: "A",
+        explanation: "L = μ₀μr N²A/l — inductance is inversely proportional to length. Doubling l halves L: 6/2 = 3 mH."
+    },
+    {
+        question: "A solenoid has 250 turns, l = 20.0cm, A = 4.00×10⁻⁴m². What is its inductance?",
+        options: ["0.0157 mH", "15.7 mH", "0.157 mH", "0.157 H"],
+        answer: "C",
+        explanation: "L = μ₀N²A/l = 4π×10⁻⁷×250²×4×10⁻⁴/0.20 ≈ 1.57×10⁻⁴H = 0.157 mH."
+    },
+
+    // --- Capacitance ---
+    {
+        question: "Capacitance of a parallel plate capacitor is independent of?",
+        options: ["Distance between plates", "Area of plates", "Electric field between plates", "Dielectric material"],
+        answer: "C",
+        explanation: "C = ε₀A/d — capacitance depends on geometry (A, d) and dielectric (ε), but NOT on the electric field or charge stored."
+    },
+    {
+        question: "The algebraic sum of charges on the plates of a capacitor is?",
+        options: ["Equal to the capacitance", "Zero", "Equal to the voltage", "Infinite"],
+        answer: "B",
+        explanation: "One plate holds +Q and the other −Q. Algebraic sum = +Q + (−Q) = 0. The capacitor stores energy, not net charge."
+    },
+    {
+        question: "Another name for a capacitor is?",
+        options: ["Inductor", "Condenser", "Resistor", "Transistor"],
+        answer: "B",
+        explanation: "A capacitor was historically called a condenser (or condensor). Both refer to the same device that stores electric charge."
+    },
+    {
+        question: "The SI unit of capacitance is?",
+        options: ["Ohm", "Volt", "Farad", "Henry"],
+        answer: "C",
+        explanation: "Capacitance is measured in Farads (F). 1 F = 1 C/V. In practice, μF and pF are more common."
+    },
+    {
+        question: "Capacitors connected in series have?",
+        options: ["Same charge", "Same voltage", "Different charges", "Zero charge"],
+        answer: "A",
+        explanation: "In series, the same charge Q accumulates on each capacitor (charge is conserved at each junction). Voltages differ."
+    },
+
+    // --- Q = It ---
+    {
+        question: "The time integral of current ∫₀ᵗ i dt gives?",
+        options: ["Resistance", "Quantity of charge", "Current", "Potential difference"],
+        answer: "B",
+        explanation: "Q = ∫i dt = It (for constant I). Current is charge per unit time, so integrating current over time gives total charge."
+    },
+
+    // --- Permeability / Magnetic field ---
+    {
+        question: "The permeability of free space μ₀ has the value?",
+        options: ["8.85×10⁻¹² C²/Nm²", "9×10⁹ Nm²/C²", "4π×10⁻⁷ H/m", "1.6×10⁻¹⁹ C"],
+        answer: "C",
+        explanation: "μ₀ = 4π×10⁻⁷ H/m ≈ 1.257×10⁻⁶ H/m. It appears in Ampère's law and the Biot-Savart law."
+    },
+    {
+        question: "The magnetic field due to a long straight wire at distance r is?",
+        options: ["μ₀I/2πr", "μ₀I/πr", "μ₀I/4πr", "μ₀Ir"],
+        answer: "A",
+        explanation: "By Ampère's law: B = μ₀I/2πr. Field is tangential to circles centered on the wire, decreasing with distance."
+    },
+    {
+        question: "Magnetic flux φB through a loop is given by?",
+        options: ["∮B·dA", "∮B·dE", "∇·D", "∇·E"],
+        answer: "A",
+        explanation: "φB = ∮B·dA — the surface integral of the magnetic field over the area of the loop."
+    },
+
+    // --- Inductance unit / Solenoid ---
+    {
+        question: "The SI unit of inductance is?",
+        options: ["Farad", "Henry", "Tesla", "Weber"],
+        answer: "B",
+        explanation: "Inductance is measured in Henries (H). 1 H = 1 V·s/A. Named after Joseph Henry."
+    },
+    {
+        question: "The magnetic field inside a solenoid is?",
+        options: ["Zero", "Uniform", "Radial", "Circular"],
+        answer: "B",
+        explanation: "The field inside an ideal solenoid is uniform (B = μ₀nI) and parallel to the axis. Outside, B ≈ 0."
     }
 ];
 
-// Total: 70 questions
+// Total: 83 questions
 // idx 0-17:  Electrostatics (18 q) — Coulomb, E=F/q, Gauss, V=Ed, W=qV, Q=CV, conductors
 // idx 18-26: DC Circuits (9 q)     — Ohm, KCL, resistivity, sources of DC, J/C=Volt
 // idx 27-33: Magnetic Fields (7 q) — Lorentz, dipole, cyclotron, B facts
 // idx 34-48: EM Induction (15 q)   — inductance, E=½LI², self/mutual inductance, dB/dt, Faraday/Lenz
 // idx 49-57: AC Circuits (9 q)     — RMS, PF, phase, resonance, XL, XC
-// idx 58-69: Last Mins Must Know (12 q)
+// idx 58-82: Last Mins Must Know (25 q)

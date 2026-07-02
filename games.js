@@ -90,7 +90,7 @@
             { id: 'magnetic_fields', name: 'Magnetic Fields',           startIdx: 27, endIdx: 34 },
             { id: 'em_induction',    name: 'EM Induction',              startIdx: 34, endIdx: 49 },
             { id: 'ac_circuits',     name: 'AC Circuits',               startIdx: 49, endIdx: 58 },
-            { id: 'last_mins',       name: 'Last Mins Must Know',       startIdx: 58, endIdx: 70 }
+            { id: 'last_mins',       name: 'Last Mins Must Know',       startIdx: 58, endIdx: 83 }
         ],
         'COS 102': [
             { id: 'intro_computing',     name: 'Intro to Computing',          startIdx: 0,  endIdx: 15  },

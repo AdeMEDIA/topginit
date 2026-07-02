@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // ── ACTIVE (unlocked) — second semester ──
         "BIO 102": { semester: "second", title: "BIO 102", level: "100L • General Biology II", description: "Diversity of life, plant and animal morphology", icon: "🔬", iconGradient: "linear-gradient(135deg, #10b981, #059669)", qCount: 111, locked: false, file: "bio102.js", bankKey: "BIO 102" },
         "BIO 108": { semester: "second", title: "BIO 108", level: "100L • Biology Practical II", description: "Practical biology techniques and experiments", icon: "🧫", iconGradient: "linear-gradient(135deg, #14b8a6, #0d9488)", qCount: 100, locked: false, file: "bio108.js", bankKey: "BIO 108" },
-        "PHY 102": { semester: "second", title: "PHY 102", level: "100L • General Physics II", description: "Electricity, magnetism and modern physics", icon: "⚡", iconGradient: "linear-gradient(135deg, #ef4444, #dc2626)", qCount: 70, locked: false, file: "phy102.js", bankKey: "PHY 102" },
+        "PHY 102": { semester: "second", title: "PHY 102", level: "100L • General Physics II", description: "Electricity, magnetism and modern physics", icon: "⚡", iconGradient: "linear-gradient(135deg, #ef4444, #dc2626)", qCount: 83, locked: false, file: "phy102.js", bankKey: "PHY 102" },
         "COS 102": { semester: "second", title: "COS 102", level: "100L • Intro to Computing Science", description: "Computer science fundamentals and programming", icon: "💻", iconGradient: "linear-gradient(135deg, #3b82f6, #1d4ed8)", qCount: 100, locked: false, file: "cos102.js", bankKey: "COS 102" },
         "MLS 104": { semester: "second", title: "MLS 104", level: "100L • Introduction to Biology of Diseases", description: "Disease mechanisms and pathology basics", icon: "🦠", iconGradient: "linear-gradient(135deg, #84cc16, #65a30d)", qCount: 100, locked: false, file: "mls104.js", bankKey: "MLS 104" },
         "MCB 102": { semester: "second", title: "MCB 102", level: "100L • Introductory Microbiology", description: "Bacteria, viruses, fungi, protozoa and microbial disease", icon: "🔬", iconGradient: "linear-gradient(135deg, #22c55e, #16a34a)", qCount: 92, locked: false, file: "mcb102.js", bankKey: "MCB 102" },
@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function() {
         "BIO 108": { icon: "🧫", topics: [{ id: "all", name: "All Topics", description: "Complete practical biology", qCount: 100, startIdx: 0, endIdx: 100 }] },
         "CHM 102": { icon: "🧪", topics: [{ id: "all", name: "All Topics", description: "Complete chemistry II", qCount: 100, startIdx: 0, endIdx: 100 }] },
         "CHM 108": { icon: "⚗️", topics: [{ id: "all", name: "All Topics", description: "Complete practical chemistry", qCount: 100, startIdx: 0, endIdx: 100 }] },
-        "PHY 102": { icon: "⚡", topics: [{ id: "all", name: "All Topics", description: "Complete physics II", qCount: 70, startIdx: 0, endIdx: 70 }] },
+        "PHY 102": { icon: "⚡", topics: [{ id: "all", name: "All Topics", description: "Complete physics II", qCount: 83, startIdx: 0, endIdx: 83 }] },
         "PHY 108": { icon: "📐", topics: [{ id: "all", name: "All Topics", description: "Complete practical physics", qCount: 100, startIdx: 0, endIdx: 100 }] },
         "COS 102": { icon: "💻", topics: [{ id: "all", name: "All Topics", description: "Complete computing science", qCount: 100, startIdx: 0, endIdx: 100 }] },
        "MLS 102": {
@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { id: "magnetic_fields", name: "Magnetic Fields", description: "Lorentz force, magnetic dipole, cyclotron frequency", qCount: 7, startIdx: 27, endIdx: 34 },
         { id: "em_induction", name: "Electromagnetic Induction", description: "Faraday's law, Lenz's law, inductance, mutual inductance, transformers, dB/dt", qCount: 15, startIdx: 34, endIdx: 49 },
         { id: "ac_circuits", name: "AC Circuits", description: "Reactance, impedance, resonance, RMS, power factor, XL, XC", qCount: 9, startIdx: 49, endIdx: 58 },
-        { id: "last_mins", name: "Last Mins Must Know", description: "E=F/q, V=Ed, W=qV, cyclotron, dB/dt, mutual inductance, magnetic dipole", qCount: 12, startIdx: 58, endIdx: 70 }
+        { id: "last_mins", name: "Last Mins Must Know", description: "E=F/q, V=Ed, W=qV, cyclotron, dB/dt, mutual inductance, magnetic dipole, inductors, capacitors, permeability", qCount: 25, startIdx: 58, endIdx: 83 }
     ]
 },
 "COS 102": {
