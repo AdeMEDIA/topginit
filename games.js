@@ -85,11 +85,12 @@
             { id: 'judiciary_rights',          name: 'Judiciary & Rights',          startIdx: 80, endIdx: 90 }
         ],
         'PHY 102': [
-            { id: 'electrostatics',  name: 'Electrostatics',             startIdx: 0,  endIdx: 25  },
-            { id: 'dc_circuits',     name: 'DC Circuits',                startIdx: 25, endIdx: 40  },
-            { id: 'magnetic_fields', name: 'Magnetic Fields',            startIdx: 40, endIdx: 60  },
-            { id: 'em_induction',    name: 'Electromagnetic Induction',  startIdx: 60, endIdx: 80  },
-            { id: 'ac_circuits',     name: 'AC Circuits & EM Waves',     startIdx: 80, endIdx: 100 }
+            { id: 'electrostatics',  name: 'Electrostatics',             startIdx: 0,   endIdx: 25  },
+            { id: 'dc_circuits',     name: 'DC Circuits',                startIdx: 25,  endIdx: 40  },
+            { id: 'magnetic_fields', name: 'Magnetic Fields',            startIdx: 40,  endIdx: 60  },
+            { id: 'em_induction',    name: 'Electromagnetic Induction',  startIdx: 60,  endIdx: 80  },
+            { id: 'ac_circuits',     name: 'AC Circuits & EM Waves',     startIdx: 80,  endIdx: 100 },
+            { id: 'last_mins',       name: 'Last Mins Must Know',        startIdx: 100, endIdx: 112 }
         ],
         'COS 102': [
             { id: 'intro_computing',     name: 'Intro to Computing',          startIdx: 0,  endIdx: 15  },

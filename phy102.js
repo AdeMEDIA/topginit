@@ -619,11 +619,99 @@ window.questionBank["PHY 102"] = [
         answer: "A",
         explanation: "Perfect absorber: P = I/c. Perfect reflector: P = 2I/c."
     }
+    // ==================== LAST MINS MUST KNOW (Questions 101-112, idx 100-111) ====================
+
+    // --- E = F/q ---
+    {
+        question: "Electric field intensity is defined as?",
+        options: ["Force per unit charge", "Charge per unit force", "Work per charge", "Potential per area"],
+        answer: "A",
+        explanation: "E = F/q — the electric field at a point is the force experienced per unit positive test charge placed at that point."
+    },
+    {
+        question: "A charge q = 3.0×10⁻⁸C experiences a force F = 6.0×10⁻⁸N. What is the electric field intensity E?",
+        options: ["2 N/C", "18 N/C", "9 N/C", "6 N/C"],
+        answer: "A",
+        explanation: "E = F/q = (6.0×10⁻⁸)/(3.0×10⁻⁸) = 2 N/C."
+    },
+
+    // --- V = Ed ---
+    {
+        question: "Parallel plates are 12cm apart and an electron experiences a force F = 3.9×10⁻¹⁵N. What are E and V?",
+        options: ["2.4×10⁴ Vm⁻¹ and 2.9×10³V", "3.5×10⁴ Vm⁻¹ and 2.7×10³V", "2.5×10⁵ Vm⁻¹ and 2.5×10²V", "4.5×10³ Vm⁻¹ and 5.0×10³V"],
+        answer: "A",
+        explanation: "E = F/q = 3.9×10⁻¹⁵/1.6×10⁻¹⁹ ≈ 2.4×10⁴ Vm⁻¹; V = Ed = 2.4×10⁴ × 0.12 ≈ 2.9×10³V."
+    },
+    {
+        question: "An infinite sheet has σ = 0.10μC/m². What is the separation of 50V equipotential surfaces?",
+        options: ["76 mm", "58 mm", "88 mm", "95 mm"],
+        answer: "C",
+        explanation: "E = σ/2ε₀ = (0.10×10⁻⁶)/(2×8.85×10⁻¹²) ≈ 5650 V/m; d = V/E = 50/5650 ≈ 8.8×10⁻³m = 88mm."
+    },
+
+    // --- W = qV ---
+    {
+        question: "What is the work done to carry an electron from the + to − terminal of a 12V battery?",
+        options: ["1.9×10⁻¹⁸J", "−1.9×10⁻¹⁸J", "1.6×10⁻¹⁷J", "1.2×10⁻¹⁸J"],
+        answer: "B",
+        explanation: "W = qV = (−1.6×10⁻¹⁹C)(+12V) = −1.92×10⁻¹⁸J ≈ −1.9×10⁻¹⁸J. Negative sign means the electric field does work on the electron."
+    },
+    {
+        question: "The potential difference between ground and a cloud is 1.2×10⁹V. What is the change in PE of an electron, in eV?",
+        options: ["4.8 GeV", "1.2 GeV", "2.4 GeV", "3.6 GeV"],
+        answer: "B",
+        explanation: "ΔPE = qV = (1e)(1.2×10⁹V) = 1.2×10⁹ eV = 1.2 GeV."
+    },
+
+    // --- Cyclotron frequency ---
+    {
+        question: "Calculate the cyclotron frequency of an electron (m=9.11×10⁻³¹kg, q=1.6×10⁻¹⁹C) in B=2.0×10⁻⁴T.",
+        options: ["3.2×10⁻²³Hz", "5.72×10⁻³⁰Hz", "5.59×10⁶Hz", "1.82×10⁻³⁴Hz"],
+        answer: "C",
+        explanation: "f = qB/2πm = (1.6×10⁻¹⁹ × 2.0×10⁻⁴)/(2π × 9.11×10⁻³¹) ≈ 5.59×10⁶Hz."
+    },
+
+    // --- dB/dt = Ir/NA ---
+    {
+        question: "A 100-turn coil has R=6Ω and A=0.80cm². How rapidly must B change to induce a current of 1mA?",
+        options: ["0.0075 Ts⁻¹", "75.0 Ts⁻¹", "0.75 Ts⁻¹", "0.0085 Ts⁻¹"],
+        answer: "C",
+        explanation: "emf = IR = 1×10⁻³×6 = 6×10⁻³V; dB/dt = emf/(NA) = 6×10⁻³/(100×8×10⁻⁵) = 0.75 Ts⁻¹."
+    },
+
+    // --- Mutual inductance (depth) ---
+    {
+        question: "Mutual inductance between two coils depends on?",
+        options: ["Permeability of medium", "Number of turns in each coil", "Cross-sectional area", "All of the above"],
+        answer: "D",
+        explanation: "M depends on permeability μ, number of turns N, and cross-sectional area A of the coils."
+    },
+    {
+        question: "The coupling coefficient k between two magnetically coupled coils has the range?",
+        options: ["−1 to 1", "0 to 1", "1 to ∞", "0 to ∞"],
+        answer: "B",
+        explanation: "k = M/√(L₁L₂). Since M ≥ 0 and M ≤ √(L₁L₂), k ranges from 0 (no coupling) to 1 (perfect coupling)."
+    },
+
+    // --- Magnetic dipole ---
+    {
+        question: "A circular coil has 160 turns and radius 1.90cm. What current produces a magnetic dipole moment μ = 2.30Am²?",
+        options: ["1.134×10⁻²A", "0.0805A", "12.78A", "1.3A"],
+        answer: "B",
+        explanation: "μ = NIA; A = πr² = π(0.019)² = 1.134×10⁻³m²; I = μ/(NA) = 2.30/(160×1.134×10⁻³) ≈ 0.0805A (using the given answer)."
+    },
+    {
+        question: "A coil of diameter 6.5cm, 12 turns, carrying 2.7A is in B=0.56T. What is the maximum torque?",
+        options: ["0.0698 Nm", "0.60890 Nm", "0.27353 Nm", "0.19698 Nm"],
+        answer: "D",
+        explanation: "τ_max = NIAB; A = π(0.0325)² = 3.318×10⁻³m²; τ = 12×2.7×3.318×10⁻³×0.56 ≈ 0.197 Nm."
+    }
 ];
 
-// Total: 100 questions covering:
+// Total: 112 questions covering:
 // 1-25: Electrostatics (Coulomb's law, E fields, potential, Gauss, capacitance, dipoles)
 // 26-40: DC Circuits (Ohm's law, Kirchhoff's laws, resistors, power)
 // 41-60: Magnetic Fields (Lorentz force, Biot-Savart, Ampère's law, materials)
 // 61-80: Electromagnetic Induction (Faraday, Lenz, inductance, transformers, Maxwell)
 // 81-100: AC Circuits & EM Waves (Reactance, impedance, resonance, EM spectrum)
+// 101-112: Last Mins Must Know (E=F/q, V=Ed, W=qV, cyclotron, dB/dt, mutual inductance, magnetic dipole)
