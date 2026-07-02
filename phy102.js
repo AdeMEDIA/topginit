@@ -419,25 +419,17 @@ window.questionBank["PHY 102"] = [
         explanation: "At resonance XL = XC, so the net reactance is zero. Z = R, φ = 0°, and PF = cos(0°) = 1."
     },
 
-    // ==================== LAST MINS MUST KNOW (idx 58-82, 25 questions) ====================
 
-    // --- E = F/q ---
-    {
-        question: "Electric field intensity is defined as?",
-        options: ["Force per unit charge", "Charge per unit force", "Work per charge", "Potential per area"],
-        answer: "A",
-        explanation: "E = F/q — the electric field at a point is the force experienced per unit positive test charge placed at that point."
-    },
+    // ==================== LAST MINS MUST KNOW — PART A: CALCULATIONS (idx 58-68) ====================
+
     {
         question: "A charge q = 3.0×10⁻⁸C experiences a force F = 6.0×10⁻⁸N. What is the electric field intensity E?",
         options: ["2 N/C", "18 N/C", "9 N/C", "6 N/C"],
         answer: "A",
         explanation: "E = F/q = (6.0×10⁻⁸)/(3.0×10⁻⁸) = 2 N/C."
     },
-
-    // --- V = Ed (Q13 from 150) ---
     {
-        question: "Parallel plates are 12cm apart and an electron experiences a force F = 3.9×10⁻¹⁵N. What are E and V?",
+        question: "Parallel plates are 12cm apart and an electron experiences force F = 3.9×10⁻¹⁵N. What are E and V?",
         options: ["2.4×10⁴ Vm⁻¹ and 2.9×10³V", "3.5×10⁴ Vm⁻¹ and 2.7×10³V", "2.5×10⁵ Vm⁻¹ and 2.5×10²V", "4.5×10³ Vm⁻¹ and 5.0×10³V"],
         answer: "A",
         explanation: "E = F/q = 3.9×10⁻¹⁵/1.6×10⁻¹⁹ ≈ 2.4×10⁴ Vm⁻¹; V = Ed = 2.4×10⁴ × 0.12 ≈ 2.9×10³V."
@@ -446,15 +438,13 @@ window.questionBank["PHY 102"] = [
         question: "An infinite sheet has σ = 0.10μC/m². What is the separation of 50V equipotential surfaces?",
         options: ["76 mm", "58 mm", "88 mm", "95 mm"],
         answer: "C",
-        explanation: "E = σ/2ε₀ = (0.10×10⁻⁶)/(2×8.85×10⁻¹²) ≈ 5650 V/m; d = V/E = 50/5650 ≈ 8.8×10⁻³m = 88mm."
+        explanation: "E = σ/2ε₀ ≈ 5650 V/m; d = V/E = 50/5650 ≈ 88mm."
     },
-
-    // --- W = qV ---
     {
         question: "What is the work done to carry an electron from the + to − terminal of a 12V battery?",
         options: ["1.9×10⁻¹⁸J", "−1.9×10⁻¹⁸J", "1.6×10⁻¹⁷J", "1.2×10⁻¹⁸J"],
         answer: "B",
-        explanation: "W = qV = (−1.6×10⁻¹⁹C)(+12V) = −1.92×10⁻¹⁸J ≈ −1.9×10⁻¹⁸J. Negative sign means the electric field does work on the electron."
+        explanation: "W = qV = (−1.6×10⁻¹⁹)(+12) = −1.92×10⁻¹⁸J ≈ −1.9×10⁻¹⁸J."
     },
     {
         question: "The potential difference between ground and a cloud is 1.2×10⁹V. What is the change in PE of an electron, in eV?",
@@ -462,43 +452,23 @@ window.questionBank["PHY 102"] = [
         answer: "B",
         explanation: "ΔPE = qV = (1e)(1.2×10⁹V) = 1.2×10⁹ eV = 1.2 GeV."
     },
-
-    // --- Cyclotron frequency ---
     {
         question: "Calculate the cyclotron frequency of an electron (m=9.11×10⁻³¹kg, q=1.6×10⁻¹⁹C) in B=2.0×10⁻⁴T.",
         options: ["3.2×10⁻²³Hz", "5.72×10⁻³⁰Hz", "5.59×10⁶Hz", "1.82×10⁻³⁴Hz"],
         answer: "C",
         explanation: "f = qB/2πm = (1.6×10⁻¹⁹ × 2.0×10⁻⁴)/(2π × 9.11×10⁻³¹) ≈ 5.59×10⁶Hz."
     },
-
-    // --- dB/dt = Ir/NA ---
     {
         question: "A 100-turn coil has R=6Ω and A=0.80cm². How rapidly must B change to induce a current of 1mA?",
         options: ["0.0075 Ts⁻¹", "75.0 Ts⁻¹", "0.75 Ts⁻¹", "0.0085 Ts⁻¹"],
         answer: "C",
-        explanation: "emf = IR = 1×10⁻³×6 = 6×10⁻³V; dB/dt = emf/(NA) = 6×10⁻³/(100×8×10⁻⁵) = 0.75 Ts⁻¹."
+        explanation: "emf = IR = 6×10⁻³V; dB/dt = emf/(NA) = 6×10⁻³/(100×8×10⁻⁵) = 0.75 Ts⁻¹."
     },
-
-    // --- Mutual inductance ---
-    {
-        question: "Mutual inductance between two coils depends on?",
-        options: ["Permeability of medium", "Number of turns in each coil", "Cross-sectional area", "All of the above"],
-        answer: "D",
-        explanation: "M depends on permeability μ, number of turns N, and cross-sectional area A of the coils."
-    },
-    {
-        question: "The coupling coefficient k between two magnetically coupled coils has the range?",
-        options: ["−1 to 1", "0 to 1", "1 to ∞", "0 to ∞"],
-        answer: "B",
-        explanation: "k = M/√(L₁L₂). Since M ≥ 0 and M ≤ √(L₁L₂), k ranges from 0 (no coupling) to 1 (perfect coupling)."
-    },
-
-    // --- Magnetic dipole ---
     {
         question: "A circular coil has 160 turns and radius 1.90cm. What current produces a magnetic dipole moment μ = 2.30Am²?",
         options: ["1.134×10⁻²A", "0.0805A", "12.78A", "1.3A"],
         answer: "B",
-        explanation: "μ = NIA; A = πr² = π(0.019)² = 1.134×10⁻³m²; I = μ/(NA) = 2.30/(160×1.134×10⁻³) ≈ 0.0805A (using the given answer)."
+        explanation: "μ = NIA; A = π(0.019)² = 1.134×10⁻³m²; I = μ/(NA) ≈ 0.0805A."
     },
     {
         question: "A coil of diameter 6.5cm, 12 turns, carrying 2.7A is in B=0.56T. What is the maximum torque?",
@@ -506,13 +476,11 @@ window.questionBank["PHY 102"] = [
         answer: "D",
         explanation: "τ_max = NIAB; A = π(0.0325)² = 3.318×10⁻³m²; τ = 12×2.7×3.318×10⁻³×0.56 ≈ 0.197 Nm."
     },
-
-    // --- Inductor calculations ---
     {
         question: "A coil has core length 200mm and L = 6mH. If the core length is doubled, what is the new inductance?",
         options: ["3 mH", "12 mH", "24 mH", "48 mH"],
         answer: "A",
-        explanation: "L = μ₀μr N²A/l — inductance is inversely proportional to length. Doubling l halves L: 6/2 = 3 mH."
+        explanation: "L ∝ 1/l. Doubling l halves L: 6/2 = 3 mH."
     },
     {
         question: "A solenoid has 250 turns, l = 20.0cm, A = 4.00×10⁻⁴m². What is its inductance?",
@@ -521,85 +489,96 @@ window.questionBank["PHY 102"] = [
         explanation: "L = μ₀N²A/l = 4π×10⁻⁷×250²×4×10⁻⁴/0.20 ≈ 1.57×10⁻⁴H = 0.157 mH."
     },
 
-    // --- Capacitance ---
+    // ==================== LAST MINS MUST KNOW — PART B: NORMAL (idx 69-80) ====================
+
+    // --- Lenz's law ---
+    {
+        question: "Lenz's law is a consequence of?",
+        options: ["Conservation of energy", "Conservation of charge", "Newton's law", "Ohm's law"],
+        answer: "A",
+        explanation: "The induced current opposes the change in flux — if it aided the change, energy would be created from nothing, violating conservation of energy."
+    },
+
+    // --- Coulomb's law ---
+    {
+        question: "Coulomb's law states that the force between two point charges is proportional to?",
+        options: ["r", "1/r²", "r²", "1/r"],
+        answer: "B",
+        explanation: "F = kq₁q₂/r² — force is inversely proportional to the square of the distance between the charges."
+    },
+
+    // --- Capacitors ---
+    {
+        question: "Another name for a capacitor is?",
+        options: ["Inductor", "Condenser", "Resistor", "Transistor"],
+        answer: "B",
+        explanation: "A capacitor was historically called a condenser (or condensor). Both names refer to the same charge-storing device."
+    },
     {
         question: "Capacitance of a parallel plate capacitor is independent of?",
         options: ["Distance between plates", "Area of plates", "Electric field between plates", "Dielectric material"],
         answer: "C",
-        explanation: "C = ε₀A/d — capacitance depends on geometry (A, d) and dielectric (ε), but NOT on the electric field or charge stored."
+        explanation: "C = ε₀A/d — capacitance depends on area, separation, and dielectric, but NOT on the electric field or charge stored."
     },
     {
         question: "The algebraic sum of charges on the plates of a capacitor is?",
         options: ["Equal to the capacitance", "Zero", "Equal to the voltage", "Infinite"],
         answer: "B",
-        explanation: "One plate holds +Q and the other −Q. Algebraic sum = +Q + (−Q) = 0. The capacitor stores energy, not net charge."
-    },
-    {
-        question: "Another name for a capacitor is?",
-        options: ["Inductor", "Condenser", "Resistor", "Transistor"],
-        answer: "B",
-        explanation: "A capacitor was historically called a condenser (or condensor). Both refer to the same device that stores electric charge."
+        explanation: "One plate holds +Q and the other −Q. Algebraic sum = +Q + (−Q) = 0."
     },
     {
         question: "The SI unit of capacitance is?",
         options: ["Ohm", "Volt", "Farad", "Henry"],
         answer: "C",
-        explanation: "Capacitance is measured in Farads (F). 1 F = 1 C/V. In practice, μF and pF are more common."
+        explanation: "Capacitance is measured in Farads (F). 1 F = 1 C/V."
     },
     {
         question: "Capacitors connected in series have?",
         options: ["Same charge", "Same voltage", "Different charges", "Zero charge"],
         answer: "A",
-        explanation: "In series, the same charge Q accumulates on each capacitor (charge is conserved at each junction). Voltages differ."
+        explanation: "In series, the same charge Q accumulates on each capacitor. Voltages across them differ."
     },
 
-    // --- Q = It ---
-    {
-        question: "The time integral of current ∫₀ᵗ i dt gives?",
-        options: ["Resistance", "Quantity of charge", "Current", "Potential difference"],
-        answer: "B",
-        explanation: "Q = ∫i dt = It (for constant I). Current is charge per unit time, so integrating current over time gives total charge."
-    },
-
-    // --- Permeability / Magnetic field ---
-    {
-        question: "The permeability of free space μ₀ has the value?",
-        options: ["8.85×10⁻¹² C²/Nm²", "9×10⁹ Nm²/C²", "4π×10⁻⁷ H/m", "1.6×10⁻¹⁹ C"],
-        answer: "C",
-        explanation: "μ₀ = 4π×10⁻⁷ H/m ≈ 1.257×10⁻⁶ H/m. It appears in Ampère's law and the Biot-Savart law."
-    },
-    {
-        question: "The magnetic field due to a long straight wire at distance r is?",
-        options: ["μ₀I/2πr", "μ₀I/πr", "μ₀I/4πr", "μ₀Ir"],
-        answer: "A",
-        explanation: "By Ampère's law: B = μ₀I/2πr. Field is tangential to circles centered on the wire, decreasing with distance."
-    },
-    {
-        question: "Magnetic flux φB through a loop is given by?",
-        options: ["∮B·dA", "∮B·dE", "∇·D", "∇·E"],
-        answer: "A",
-        explanation: "φB = ∮B·dA — the surface integral of the magnetic field over the area of the loop."
-    },
-
-    // --- Inductance unit / Solenoid ---
+    // --- Inductance ---
     {
         question: "The SI unit of inductance is?",
         options: ["Farad", "Henry", "Tesla", "Weber"],
         answer: "B",
-        explanation: "Inductance is measured in Henries (H). 1 H = 1 V·s/A. Named after Joseph Henry."
+        explanation: "Inductance is measured in Henries (H). 1 H = 1 V·s/A."
     },
     {
-        question: "The magnetic field inside a solenoid is?",
-        options: ["Zero", "Uniform", "Radial", "Circular"],
+        question: "Mutual inductance between two coils depends on?",
+        options: ["Permeability of medium", "Number of turns in each coil", "Cross-sectional area", "All of the above"],
+        answer: "D",
+        explanation: "M = μN₁N₂A/l — it depends on permeability μ, number of turns N, and cross-sectional area A."
+    },
+    {
+        question: "The coupling coefficient k between two magnetically coupled coils has the range?",
+        options: ["−1 to 1", "0 to 1", "1 to ∞", "0 to ∞"],
         answer: "B",
-        explanation: "The field inside an ideal solenoid is uniform (B = μ₀nI) and parallel to the axis. Outside, B ≈ 0."
+        explanation: "k = M/√(L₁L₂). Since M ≥ 0 and M ≤ √(L₁L₂), k ranges from 0 (no coupling) to 1 (perfect coupling)."
+    },
+
+    // --- Transformers ---
+    {
+        question: "A transformer works by the principle of?",
+        options: ["Self induction", "Mutual induction", "Resistance", "Capacitance"],
+        answer: "B",
+        explanation: "Changing current in the primary coil induces emf in the secondary via mutual induction."
+    },
+    {
+        question: "A transformer has Vp=120V, Np=200, Ns=50, secondary load=100Ω. What is the primary current?",
+        options: ["0.075 Ω", "0.075 A", "0.0075 A", "0.065 A"],
+        answer: "B",
+        explanation: "Vs = 120×50/200 = 30V; Is = 30/100 = 0.3A; Ip = Is×Ns/Np = 0.3×50/200 = 0.075A."
     }
 ];
 
-// Total: 83 questions
-// idx 0-17:  Electrostatics (18 q) — Coulomb, E=F/q, Gauss, V=Ed, W=qV, Q=CV, conductors
-// idx 18-26: DC Circuits (9 q)     — Ohm, KCL, resistivity, sources of DC, J/C=Volt
-// idx 27-33: Magnetic Fields (7 q) — Lorentz, dipole, cyclotron, B facts
-// idx 34-48: EM Induction (15 q)   — inductance, E=½LI², self/mutual inductance, dB/dt, Faraday/Lenz
-// idx 49-57: AC Circuits (9 q)     — RMS, PF, phase, resonance, XL, XC
-// idx 58-82: Last Mins Must Know (25 q)
+// Total: 81 questions
+// idx 0-17:  Electrostatics (18 q)
+// idx 18-26: DC Circuits (9 q)
+// idx 27-33: Magnetic Fields (7 q)
+// idx 34-48: EM Induction (15 q)
+// idx 49-57: AC Circuits (9 q)
+// idx 58-68: Last Mins — Calculations (11 q)
+// idx 69-80: Last Mins — Normal: Lenz, Coulomb, Capacitors, Inductance, Transformers (12 q)
