@@ -571,14 +571,26 @@ window.questionBank["PHY 102"] = [
         options: ["0.075 Ω", "0.075 A", "0.0075 A", "0.065 A"],
         answer: "B",
         explanation: "Vs = 120×50/200 = 30V; Is = 30/100 = 0.3A; Ip = Is×Ns/Np = 0.3×50/200 = 0.075A."
+    },
+    {
+        question: "Hysteresis loss in a transformer is caused by?",
+        options: ["Leakage of magnetic flux", "Eddy currents in the core", "Repeated reversal of magnetisation of the core", "High resistance of the coil wire"],
+        answer: "C",
+        explanation: "Hysteresis loss occurs because energy is needed to repeatedly reverse the magnetic domains in the iron core each AC cycle. It is reduced by using soft iron cores."
+    },
+    {
+        question: "Hysteresis loss in a transformer can be minimised by?",
+        options: ["Using wire of low resistance", "Laminating the iron core", "Designing an efficient core", "Using soft iron cores"],
+        answer: "D",
+        explanation: "Soft iron has a narrow hysteresis loop, so less energy is lost per cycle reversing its magnetisation. Lamination reduces eddy currents, not hysteresis."
     }
 ];
 
-// Total: 81 questions
+// Total: 83 questions
 // idx 0-17:  Electrostatics (18 q)
 // idx 18-26: DC Circuits (9 q)
 // idx 27-33: Magnetic Fields (7 q)
 // idx 34-48: EM Induction (15 q)
 // idx 49-57: AC Circuits (9 q)
 // idx 58-68: Last Mins — Calculations (11 q)
-// idx 69-80: Last Mins — Normal: Lenz, Coulomb, Capacitors, Inductance, Transformers (12 q)
+// idx 69-82: Last Mins — Normal: Lenz, Coulomb, Capacitors, Inductance, Transformers (14 q)

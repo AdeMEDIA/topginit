@@ -91,7 +91,7 @@
             { id: 'em_induction',    name: 'EM Induction',              startIdx: 34, endIdx: 49 },
             { id: 'ac_circuits',     name: 'AC Circuits',               startIdx: 49, endIdx: 58 },
             { id: 'last_mins_calc',   name: 'Last Mins — Calculations',  startIdx: 58, endIdx: 69 },
-            { id: 'last_mins_normal', name: 'Last Mins — Normal',         startIdx: 69, endIdx: 81 }
+            { id: 'last_mins_normal', name: 'Last Mins — Normal',         startIdx: 69, endIdx: 83 }
         ],
         'COS 102': [
             { id: 'intro_computing',     name: 'Intro to Computing',          startIdx: 0,  endIdx: 15  },
