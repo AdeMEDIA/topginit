@@ -618,7 +618,8 @@ window.questionBank["PHY 102"] = [
         options: ["P = I/c", "P = 2I/c", "P = I/c²", "P = 2I/c²"],
         answer: "A",
         explanation: "Perfect absorber: P = I/c. Perfect reflector: P = 2I/c."
-    }
+    },
+
     // ==================== LAST MINS MUST KNOW (Questions 101-112, idx 100-111) ====================
 
     // --- E = F/q ---
