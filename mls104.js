@@ -386,10 +386,43 @@ window.questionBank["MLS 104"] = [
         options: ["Reservoir", "Portal of exit", "Susceptible host", "Antibody titre"],
         answer: "D",
         explanation: "The chain of infection has 6 links: Infectious agent → Reservoir → Portal of exit → Mode of transmission → Portal of entry → Susceptible host. Antibody titre is not a link."
+    },
+
+    // ==================== SECTION 9: ADAPTIVE IMMUNITY AGAINST PARASITES (idx 60-64) ====================
+
+    {
+        question: "Which antibody class binds to helminths and recruits eosinophils for their destruction?",
+        options: ["IgM", "IgE", "IgD", "IgA"],
+        answer: "B",
+        explanation: "IgE attaches to helminths (worms), and its Fc region binds to eosinophils, triggering degranulation — a process called Antibody-Dependent Cellular Cytotoxicity (ADCC)."
+    },
+    {
+        question: "Which antibodies help neutralize protozoan parasites?",
+        options: ["IgE and IgM", "IgG and IgA", "IgD and IgE", "IgM only"],
+        answer: "B",
+        explanation: "IgG neutralizes protozoa in blood/tissues and activates complement; IgA protects mucosal surfaces. Both play key roles against protozoa like Plasmodium and Giardia."
+    },
+    {
+        question: "The Th1 immune response (IFN-γ) is important for controlling which type of parasites?",
+        options: ["Helminths (worms)", "Intracellular parasites like Leishmania and Plasmodium", "Ectoparasites like lice", "Tapeworms only"],
+        answer: "B",
+        explanation: "Th1 cells secrete IFN-γ, which activates macrophages to kill intracellular parasites. Leishmania and the liver stage of Plasmodium are controlled by this pathway."
+    },
+    {
+        question: "The Th2 response helps fight helminths mainly by promoting:",
+        options: ["Neutrophil activation", "T-cell proliferation", "Eosinophil activation", "Antibody class switching to IgM"],
+        answer: "C",
+        explanation: "Th2 cytokines (IL-4, IL-5, IL-13) drive IgE production and eosinophil activation. Eosinophils release toxic granules that kill helminth worms."
+    },
+    {
+        question: "Which cytokines are characteristic of the Th2 response against helminths?",
+        options: ["IFN-γ and TNF-α", "IL-4, IL-5 and IL-13", "IL-2 and IL-12", "IL-6 and IL-8"],
+        answer: "B",
+        explanation: "IL-4 promotes IgE class switching, IL-5 activates eosinophils, and IL-13 promotes mucus production and smooth muscle contraction — all key anti-helminth mechanisms."
     }
 ];
 
-// Total: 60 questions
+// Total: 65 questions
 // idx 0-19:  Concept & Classification of Diseases (20 q)
 // idx 20-29: Effects of Radiation (10 q)
 // idx 30-34: Morphological Changes — LM & EM (5 q)

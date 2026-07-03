@@ -125,7 +125,7 @@
             { id: 'morphological',    name: 'Morphological Changes (LM & EM)',    startIdx: 30, endIdx: 35 },
             { id: 'cellular_changes', name: 'Pathological Cellular Changes',      startIdx: 35, endIdx: 45 },
             { id: 'normal_flora',     name: 'Normal Flora',                       startIdx: 45, endIdx: 50 },
-            { id: 'defense_path',     name: 'Defense, Pathogenicity & Transmission', startIdx: 50, endIdx: 60 }
+            { id: 'defense_path',     name: 'Defense, Pathogenicity & Transmission', startIdx: 50, endIdx: 65 }
         ]
     };
 
