@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
         "BIO 102": { semester: "second", title: "BIO 102", level: "100L • General Biology II", description: "Diversity of life, plant and animal morphology", icon: "🔬", iconGradient: "linear-gradient(135deg, #10b981, #059669)", qCount: 111, locked: false, file: "bio102.js", bankKey: "BIO 102" },
         "BIO 108": { semester: "second", title: "BIO 108", level: "100L • Biology Practical II", description: "Practical biology techniques and experiments", icon: "🧫", iconGradient: "linear-gradient(135deg, #14b8a6, #0d9488)", qCount: 100, locked: false, file: "bio108.js", bankKey: "BIO 108" },
         "PHY 102": { semester: "second", title: "PHY 102", level: "100L • General Physics II", description: "Electricity, magnetism and modern physics", icon: "⚡", iconGradient: "linear-gradient(135deg, #ef4444, #dc2626)", qCount: 83, locked: false, file: "phy102.js", bankKey: "PHY 102" },
-        "COS 102": { semester: "second", title: "COS 102", level: "100L • Intro to Computing Science", description: "Computer science fundamentals and programming", icon: "💻", iconGradient: "linear-gradient(135deg, #3b82f6, #1d4ed8)", qCount: 100, locked: false, file: "cos102.js", bankKey: "COS 102" },
+        "COS 102": { semester: "second", title: "COS 102", level: "100L • Intro to Computing Science", description: "Computer science fundamentals and programming", icon: "💻", iconGradient: "linear-gradient(135deg, #3b82f6, #1d4ed8)", qCount: 45, locked: false, file: "cos102.js", bankKey: "COS 102" },
         "MLS 104": { semester: "second", title: "MLS 104", level: "100L • Introduction to Biology of Diseases", description: "Disease mechanisms and pathology basics", icon: "🦠", iconGradient: "linear-gradient(135deg, #84cc16, #65a30d)", qCount: 65, locked: false, file: "mls104.js", bankKey: "MLS 104" },
         "MCB 102": { semester: "second", title: "MCB 102", level: "100L • Introductory Microbiology", description: "Bacteria, viruses, fungi, protozoa and microbial disease", icon: "🔬", iconGradient: "linear-gradient(135deg, #22c55e, #16a34a)", qCount: 92, locked: false, file: "mcb102.js", bankKey: "MCB 102" },
 
@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', function() {
         "CHM 108": { icon: "⚗️", topics: [{ id: "all", name: "All Topics", description: "Complete practical chemistry", qCount: 100, startIdx: 0, endIdx: 100 }] },
         "PHY 102": { icon: "⚡", topics: [{ id: "all", name: "All Topics", description: "Complete physics II", qCount: 83, startIdx: 0, endIdx: 83 }] },
         "PHY 108": { icon: "📐", topics: [{ id: "all", name: "All Topics", description: "Complete practical physics", qCount: 100, startIdx: 0, endIdx: 100 }] },
-        "COS 102": { icon: "💻", topics: [{ id: "all", name: "All Topics", description: "Complete computing science", qCount: 100, startIdx: 0, endIdx: 100 }] },
+        "COS 102": { icon: "💻", topics: [{ id: "all", name: "All Topics", description: "Complete computing science", qCount: 45, startIdx: 0, endIdx: 45 }] },
        "MLS 102": {
     icon: "📜",
     topics: [
@@ -243,12 +243,11 @@ document.addEventListener('DOMContentLoaded', function() {
 "COS 102": {
     icon: "💻",
     topics: [
-        { id: "intro_computing", name: "Introduction to Computing", description: "Computer basics, software/hardware, problem classification", qCount: 15, startIdx: 0, endIdx: 15 },
-        { id: "solvability", name: "Solvable & Unsolvable Problems", description: "Computability, complexity, halting problem, NP-complete", qCount: 10, startIdx: 15, endIdx: 25 },
-        { id: "problem_techniques", name: "Problem Solving Techniques", description: "Abstraction, analogy, brainstorming, divide and conquer, heuristics", qCount: 20, startIdx: 25, endIdx: 45 },
-        { id: "solution_design", name: "Solution Formulation & Design", description: "Flowcharts, pseudocode, decision trees, decision tables", qCount: 20, startIdx: 45, endIdx: 65 },
-        { id: "implementation", name: "Implementation & Evaluation", description: "Coding, testing, debugging, refinement, maintenance", qCount: 15, startIdx: 65, endIdx: 80 },
-        { id: "programming_basics", name: "Programming Concepts", description: "Variables, data types, loops, conditionals, functions, Python/C", qCount: 20, startIdx: 80, endIdx: 100 }
+        { id: "flowcharts",    name: "Flowcharts & Algorithms",          description: "Flowchart symbols, types, algorithm properties, finiteness", qCount: 8,  startIdx: 0,  endIdx: 8  },
+        { id: "basic_syntax",  name: "BASIC / QBASIC Syntax",            description: "Data types, keywords, SQR(), LET, CLS, REM, file extension, UCASE$", qCount: 14, startIdx: 8,  endIdx: 22 },
+        { id: "arrays",        name: "Arrays & DIM",                     description: "DIM statement, subscripts, elements, traversal, 1D and 2D arrays", qCount: 8,  startIdx: 22, endIdx: 30 },
+        { id: "control",       name: "Control Structures & Code Output",  description: "FOR/NEXT, WHILE/WEND, GOTO, STEP, flags, tracing program output", qCount: 9,  startIdx: 30, endIdx: 39 },
+        { id: "errors_lang",   name: "Errors, Languages & Concepts",     description: "Logic/syntax/runtime errors, debugging, low-level languages, recursion, Sub vs Function", qCount: 6,  startIdx: 39, endIdx: 45 }
     ]
 },
 "BIO 108": {

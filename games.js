@@ -94,12 +94,11 @@
             { id: 'last_mins_normal', name: 'Last Mins — Normal',         startIdx: 69, endIdx: 83 }
         ],
         'COS 102': [
-            { id: 'intro_computing',     name: 'Intro to Computing',          startIdx: 0,  endIdx: 15  },
-            { id: 'solvability',         name: 'Solvable & Unsolvable',       startIdx: 15, endIdx: 25  },
-            { id: 'problem_techniques',  name: 'Problem Solving Techniques',  startIdx: 25, endIdx: 45  },
-            { id: 'solution_design',     name: 'Solution Formulation',        startIdx: 45, endIdx: 65  },
-            { id: 'implementation',      name: 'Implementation & Evaluation', startIdx: 65, endIdx: 80  },
-            { id: 'programming_basics',  name: 'Programming Concepts',        startIdx: 80, endIdx: 100 }
+            { id: 'flowcharts',   name: 'Flowcharts & Algorithms',         startIdx: 0,  endIdx: 8  },
+            { id: 'basic_syntax', name: 'BASIC / QBASIC Syntax',           startIdx: 8,  endIdx: 22 },
+            { id: 'arrays',       name: 'Arrays & DIM',                    startIdx: 22, endIdx: 30 },
+            { id: 'control',      name: 'Control Structures & Code Output', startIdx: 30, endIdx: 39 },
+            { id: 'errors_lang',  name: 'Errors, Languages & Concepts',    startIdx: 39, endIdx: 45 }
         ],
         'MTH 102': [
             { id: 'functions',                name: 'Functions & Graphs',          startIdx: 0,  endIdx: 15  },

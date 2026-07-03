@@ -1,9 +1,9 @@
 // ==================== SERVICE WORKER FOR CBT APP ====================
 // Enables offline access and faster loading
 
-const CACHE_NAME = 'topg-cbt-v30';
-const STATIC_CACHE = 'topg-static-v30';
-const DYNAMIC_CACHE = 'topg-dynamic-v30';
+const CACHE_NAME = 'topg-cbt-v31';
+const STATIC_CACHE = 'topg-static-v31';
+const DYNAMIC_CACHE = 'topg-dynamic-v31';
 
 // Files to cache immediately on install
 const STATIC_ASSETS = [
