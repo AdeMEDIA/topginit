@@ -287,12 +287,214 @@ window.questionBank["COS 102"] = [
         options: ["Sub-Algorithm", "Recursion", "Polish notation", "Traversal algorithm"],
         answer: "B",
         explanation: "Recursion is when a function or algorithm calls itself as part of its own definition. Each call works on a smaller sub-problem until a base case is reached."
+    },
+
+    // ==================== MUST KNOW (idx 45-77) ====================
+
+    {
+        question: "Efficiency of an algorithm is measured by",
+        options: ["Size", "Time and Space", "Speed only", "Memory only"],
+        answer: "B",
+        explanation: "Algorithm efficiency is measured by time complexity (how long it takes) and space complexity (how much memory it uses)."
+    },
+    {
+        question: "The diamond symbol in a DFD/flowchart represents",
+        options: ["Input", "Process", "Decision", "Output"],
+        answer: "C",
+        explanation: "The diamond (rhombus) symbol is the decision symbol — it represents a Yes/No or True/False branch point in a flowchart."
+    },
+    {
+        question: "The output of the rectangle program (A = L * B) is",
+        options: ["Length", "Width", "Area", "Perimeter"],
+        answer: "C",
+        explanation: "A = L × B is the formula for Area of a rectangle (Length × Breadth). The output/result of this computation is the Area."
+    },
+    {
+        question: "The property that differentiates an algorithm from a program is",
+        options: ["Definiteness", "Input", "Output", "Processing"],
+        answer: "A",
+        explanation: "Definiteness means every step of the algorithm is precisely and unambiguously defined. This strict precision is what formally distinguishes an algorithm from a loosely written program."
+    },
+    {
+        question: "The keyword used to return a value is",
+        options: ["SUB", "PROCEDURE", "RETURN", "MODULE"],
+        answer: "C",
+        explanation: "RETURN is the keyword used inside a function to send a value back to the caller. A SUB/procedure does not return a value."
+    },
+    {
+        question: "The error that produces wrong output but the program still runs is",
+        options: ["Syntax error", "Semantic error", "Logical error", "Runtime error"],
+        answer: "C",
+        explanation: "A logical (logic) error allows the program to compile and run without crashing, but produces incorrect results because the algorithm or formula is wrong."
+    },
+    {
+        question: "The optional keyword in a FOR/NEXT loop is",
+        options: ["FOR", "STEP", "NEXT", "TO"],
+        answer: "B",
+        explanation: "STEP (and its value) is optional — when omitted, the loop counter increments by 1 by default. FOR, TO, and NEXT are required."
+    },
+    {
+        question: "Which is NOT an array operation?",
+        options: ["Traversal", "Insertion", "Update", "Index"],
+        answer: "D",
+        explanation: "Index is a position reference, not an operation performed on an array. Array operations include traversal, insertion, deletion, update, and search."
+    },
+    {
+        question: "DIM N(30) contains how many elements",
+        options: ["10", "20", "31", "30"],
+        answer: "D",
+        explanation: "DIM N(30) declares 30 elements (indices 1 to 30 under the standard exam convention). Strict zero-indexing would give 31, but exam papers key 30."
+    },
+    {
+        question: "The connector symbol is used to",
+        options: ["Start program", "Join flowchart parts", "Input data", "Stop program"],
+        answer: "B",
+        explanation: "The connector (small circle) symbol joins separate parts of a flowchart, especially when the chart continues on a different page."
+    },
+    {
+        question: "An example of a string variable name is",
+        options: ["AREA", "A$", "LENGTH", "All of the above"],
+        answer: "B",
+        explanation: "In BASIC, a string variable is identified by a dollar sign ($) suffix, e.g. A$ or NAME$. AREA and LENGTH are numeric variable names."
+    },
+    {
+        question: "The fastest and most efficient language is",
+        options: ["Assembly language", "Machine language", "High level language", "QBASIC"],
+        answer: "B",
+        explanation: "Machine language (binary code) is directly executed by the CPU without translation, making it the fastest. Assembly is close but still needs an assembler."
+    },
+    {
+        question: "The keyword that terminates a program is",
+        options: ["REM", "DIM", "END", "INPUT"],
+        answer: "C",
+        explanation: "The END statement stops execution of a BASIC program. REM is for comments, DIM declares arrays, and INPUT reads data from the user."
+    },
+    {
+        question: "The data type used for subscripts is",
+        options: ["String", "Integer", "Double", "Boolean"],
+        answer: "B",
+        explanation: "Array subscripts (indices) are always whole numbers, so the Integer data type is used. You cannot have a fractional index like A(2.5)."
+    },
+    {
+        question: "The smallest unit of program testing is",
+        options: ["Prototype", "Module", "Algorithm", "Compiler"],
+        answer: "B",
+        explanation: "A module (or unit) is the smallest testable component of a program. Unit testing verifies each module works correctly in isolation."
+    },
+    {
+        question: "Each item in an array is called",
+        options: ["Data", "Element", "Index", "Variable"],
+        answer: "B",
+        explanation: "Each individual value stored at a position in an array is called an element. The position number used to access it is the index (subscript)."
+    },
+    {
+        question: "One advantage of binary search is",
+        options: ["Works on unsorted data", "Faster search", "No need for sorting", "Uses recursion only"],
+        answer: "B",
+        explanation: "Binary search is much faster than linear search — it halves the search space each step, giving O(log n) time. It requires sorted data, so A and C are wrong."
+    },
+    {
+        question: "A procedure that calls itself is",
+        options: ["Loop", "Recursion", "Iteration", "Selection"],
+        answer: "B",
+        explanation: "Recursion is the technique where a function calls itself to solve a smaller version of the same problem, with a base case to stop the calls."
+    },
+    {
+        question: "The GOTO statement is used for",
+        options: ["Input", "Output", "Branching", "Loop termination"],
+        answer: "C",
+        explanation: "GOTO is an unconditional branching statement — it transfers control directly to a specified line number without any condition."
+    },
+    {
+        question: "Array elements are identified using",
+        options: ["Superscript", "Subscript", "Manuscript", "PostScript"],
+        answer: "B",
+        explanation: "A subscript (index) is the number in brackets that identifies which element of an array is being referenced, e.g. X(3) has subscript 3."
+    },
+    {
+        question: "Which of the following is NOT a system description tool?",
+        options: ["Flowchart", "Data Flow Diagram", "System design report", "Decision table"],
+        answer: "C",
+        explanation: "Flowcharts, Data Flow Diagrams (DFDs), and Decision tables are all recognized system description tools. A 'system design report' is a document, not a description tool."
+    },
+    {
+        question: "The storage area name in memory is",
+        options: ["Data type", "Variable", "Statement", "Constant"],
+        answer: "B",
+        explanation: "A variable is a named storage location in memory that holds a value which can change during program execution."
+    },
+    {
+        question: "A graphical representation of an algorithm is called",
+        options: ["Pseudocode", "Charts", "Flowchart", "Graphical chart"],
+        answer: "C",
+        explanation: "A flowchart uses standard shapes (oval, diamond, rectangle, parallelogram) to visually represent the logic and steps of an algorithm."
+    },
+    {
+        question: "The FOR/NEXT and WHILE/WEND structures are examples of",
+        options: ["Selection", "Sequential", "Repetition", "Array"],
+        answer: "C",
+        explanation: "FOR/NEXT and WHILE/WEND are repetition (loop/iteration) control structures — they repeat a block of statements multiple times."
+    },
+    {
+        question: "A procedure that returns no value is called",
+        options: ["Function", "Sub procedure", "Module", "Object"],
+        answer: "B",
+        explanation: "A Sub procedure (subroutine) performs actions but does NOT return a value. A Function performs actions AND returns a value to the caller."
+    },
+    {
+        question: "DIM P(2,10) contains how many elements?",
+        options: ["12", "22", "30", "20"],
+        answer: "D",
+        explanation: "DIM P(2,10) creates a 2×10 two-dimensional array = 20 elements (using the exam convention of multiplying the two dimensions)."
+    },
+    {
+        question: "Printing all array elements is called",
+        options: ["Transferring", "Updating", "Sorting", "Searching"],
+        answer: "A",
+        explanation: "The correct term is Traversal (traversing). 'Transferring' is listed here as the closest intended answer — it refers to going through and printing each element one by one."
+    },
+    {
+        question: "Variable names must not contain",
+        options: ["Letters", "Numbers", "Reserved words", "Characters"],
+        answer: "C",
+        explanation: "Variable names must not be (or contain) reserved words/keywords like PRINT, INPUT, END — these are part of the language syntax and are reserved."
+    },
+    {
+        question: "The line range of executable statements in the program is",
+        options: ["10-50", "20-60", "10-60", "20-100"],
+        answer: "B",
+        explanation: "In the referenced program, line 10 is a REM comment (non-executable). Executable statements run from line 20 (COUNT=10) through line 60 (WEND), giving a range of 20–60."
+    },
+    {
+        question: "The QBASIC equivalent of the square root of x is",
+        options: ["SQR(x)", "SQRT(x)", "POW(x)", "ROOT(x)"],
+        answer: "A",
+        explanation: "In QBASIC, the square root function is SQR() — not SQRT() as in many other languages. E.g. SQR(16) returns 4."
+    },
+    {
+        question: "The control structure type FOR/NEXT is",
+        options: ["Sequential", "Selection", "Repetition", "Conditional"],
+        answer: "C",
+        explanation: "FOR/NEXT is a count-controlled repetition (loop) structure — it repeats its body a fixed number of times based on a counter variable."
+    },
+    {
+        question: "External entities in a system are",
+        options: ["Data stores", "Objects the system interacts with", "Internal processes", "Variables"],
+        answer: "B",
+        explanation: "In a Data Flow Diagram (DFD), external entities (sources/sinks) are people, systems, or organizations outside the system boundary that provide or receive data."
+    },
+    {
+        question: "The second step in solving a programming problem is",
+        options: ["Documentation", "Coding", "Problem Analysis", "Algorithm development"],
+        answer: "C",
+        explanation: "The standard steps are: (1) Problem Definition → (2) Problem Analysis → (3) Algorithm Development → (4) Coding → (5) Testing → (6) Documentation."
     }
 ];
 
-// Total: 45 questions
+// Total: 78 questions
 // idx 0-7:   Flowcharts & Algorithms (8 q)
 // idx 8-21:  BASIC / QBASIC Syntax (14 q)
 // idx 22-29: Arrays & DIM (8 q)
 // idx 30-38: Control Structures & Code Output (9 q)
 // idx 39-44: Errors, Languages & Concepts (6 q)
+// idx 45-77: Must Know (33 q)

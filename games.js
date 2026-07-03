@@ -98,7 +98,8 @@
             { id: 'basic_syntax', name: 'BASIC / QBASIC Syntax',           startIdx: 8,  endIdx: 22 },
             { id: 'arrays',       name: 'Arrays & DIM',                    startIdx: 22, endIdx: 30 },
             { id: 'control',      name: 'Control Structures & Code Output', startIdx: 30, endIdx: 39 },
-            { id: 'errors_lang',  name: 'Errors, Languages & Concepts',    startIdx: 39, endIdx: 45 }
+            { id: 'errors_lang',  name: 'Errors, Languages & Concepts',    startIdx: 39, endIdx: 45 },
+            { id: 'must_know',    name: 'Must Know',                       startIdx: 45, endIdx: 78 }
         ],
         'MTH 102': [
             { id: 'functions',                name: 'Functions & Graphs',          startIdx: 0,  endIdx: 15  },
