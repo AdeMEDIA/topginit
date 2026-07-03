@@ -3,604 +3,398 @@ if (!window.questionBank) {
 }
 
 window.questionBank["MLS 104"] = [
-  {
-    "question": "What is the basic structural and functional unit of life and disease?",
-    "options": ["Tissue", "Organ", "Cell", "Molecule"],
-    "answer": "C",
-    "explanation": "The cell is the fundamental unit that can be affected by disease processes."
-  },
-  {
-    "question": "Which of the following are the four cardinal signs of inflammation?",
-    "options": ["Fever, cough, headache, fatigue", "Redness, heat, swelling, pain", "Nausea, vomiting, diarrhea, cramps", "Rash, itching, numbness, tingling"],
-    "answer": "B",
-    "explanation": "Rubor (redness), calor (heat), tumor (swelling), and dolor (pain) are the classic signs of inflammation."
-  },
-  {
-    "question": "A disorder that is present from birth, whether inherited or caused by environment, is called:",
-    "options": ["Acquired", "Congenital", "Infectious", "Metabolic"],
-    "answer": "B",
-    "explanation": "Congenital disorders exist at or before birth, as opposed to acquired disorders which develop later."
-  },
-  {
-    "question": "Which term describes a decrease in the size of cells, leading to reduced organ size?",
-    "options": ["Hypertrophy", "Hyperplasia", "Atrophy", "Aplasia"],
-    "answer": "C",
-    "explanation": "Atrophy is the shrinkage of cells due to reduced workload, nutrition, or blood supply."
-  },
-  {
-    "question": "What is the term for programmed cell death, a normal part of development and homeostasis?",
-    "options": ["Necrosis", "Senescence", "Apoptosis", "Oncogenesis"],
-    "answer": "C",
-    "explanation": "Apoptosis is orderly, programmed cell death; necrosis is pathological, unorganized cell death."
-  },
-  {
-    "question": "An increase in the SIZE of individual cells leading to organ enlargement is called:",
-    "options": ["Hyperplasia", "Hypertrophy", "Metaplasia", "Dysplasia"],
-    "answer": "B",
-    "explanation": "Hypertrophy is cell enlargement; hyperplasia is an increase in the number of cells."
-  },
-  {
-    "question": "Which term refers to the process by which normal cells transform into cancer cells?",
-    "options": ["Necrosis", "Senescence", "Oncogenesis", "Atrophy"],
-    "answer": "C",
-    "explanation": "Oncogenesis (or carcinogenesis) is the multi-step process of cancer development."
-  },
-  {
-    "question": "Which of the following is an example of an infectious disease agent?",
-    "options": ["Cholesterol crystal", "Uric acid", "Plasmodium falciparum", "Lead toxin"],
-    "answer": "C",
-    "explanation": "Plasmodium falciparum is a parasitic protozoan that causes malaria (infectious disease)."
-  },
-  {
-    "question": "The body's natural defense mechanisms against pathogens include all EXCEPT:",
-    "options": ["Skin", "Stomach acid", "Autoimmunity", "Phagocytes"],
-    "answer": "C",
-    "explanation": "Autoimmunity (immune system attacking self) is a disorder, not a beneficial defense mechanism."
-  },
-  {
-    "question": "What is a metabolic disorder?",
-    "options": ["Bacterial infection", "Viral illness", "Disturbance of normal chemical processes in the body", "Traumatic injury"],
-    "answer": "C",
-    "explanation": "Metabolic disorders disrupt normal biochemistry, e.g., diabetes mellitus or phenylketonuria."
-  },
-  {
-    "question": "Accumulation of abnormal amounts of substances inside or outside cells is called:",
-    "options": ["Atrophy", "Hyperplasia", "Accumulation of metabolites", "Aplasia"],
-    "answer": "C",
-    "explanation": "This refers to storage diseases or infiltrations like fatty liver or amyloidosis."
-  },
-  {
-    "question": "The process of replacement of damaged tissue by fibrous connective tissue is called:",
-    "options": ["Regeneration", "Fibrosis", "Inflammation", "Senescence"],
-    "answer": "B",
-    "explanation": "Fibrosis forms scar tissue, which is non-functional but provides structural integrity."
-  },
-  {
-    "question": "Which of the following is a primary cause of cell disorder?",
-    "options": ["Regular exercise", "Balanced diet", "Environmental toxins", "Adequate sleep"],
-    "answer": "C",
-    "explanation": "Environmental toxins (e.g., heavy metals, pollutants) are external agents that cause cell damage."
-  },
-  {
-    "question": "Which type of immunity is present at birth and provides immediate but non-specific defense?",
-    "options": ["Adaptive immunity", "Innate immunity", "Autoimmunity", "Humoral immunity"],
-    "answer": "B",
-    "explanation": "Innate immunity includes barriers, phagocytes, and inflammation; it does not require prior exposure."
-  },
-  {
-    "question": "An example of an immune disorder where the body attacks its own tissues is:",
-    "options": ["Common cold", "Type 1 Diabetes Mellitus", "Malaria", "Fracture"],
-    "answer": "B",
-    "explanation": "Type 1 DM is autoimmune (immune system destroys pancreatic beta cells)."
-  },
-  {
-    "question": "The process of complete restoration of normal tissue architecture after injury is called:",
-    "options": ["Fibrosis", "Repair", "Regeneration", "Necrosis"],
-    "answer": "C",
-    "explanation": "Regeneration replaces damaged tissue with identical functional cells (e.g., liver regeneration)."
-  },
-  {
-    "question": "Which of the following is a difference between infectious and non-infectious diseases?",
-    "options": ["Both are caused by pathogens", "Infectious diseases are communicable; non-infectious are not", "Both are genetic", "Non-infectious diseases spread by coughing"],
-    "answer": "B",
-    "explanation": "Infectious diseases can spread from host to host; non-infectious diseases (e.g., diabetes) cannot."
-  },
-  {
-    "question": "What is the biological effect of radiation at the cellular level?",
-    "options": ["Increased cell division", "DNA damage and cell death", "Enhanced metabolism", "No effect"],
-    "answer": "B",
-    "explanation": "Ionizing radiation causes DNA breaks, mutations, and can lead to cell death or cancer."
-  },
-  {
-    "question": "The failure of an organ to develop during embryonic growth is termed:",
-    "options": ["Atrophy", "Hypertrophy", "Aplasia", "Necrosis"],
-    "answer": "C",
-    "explanation": "Aplasia means complete or partial lack of organ development (e.g., aplastic anemia)."
-  },
-  {
-    "question": "Which of the following is a pathogenicity factor that helps bacteria cause disease?",
-    "options": ["Ribosomes", "Toxins", "Nucleus", "Cell membrane"],
-    "answer": "B",
-    "explanation": "Toxins (exotoxins/endotoxins) directly damage host tissues and are key virulence factors."
-  },
-  {
-    "question": "What is the term for the aging process of cells?",
-    "options": ["Apoptosis", "Necrosis", "Senescence", "Atrophy"],
-    "answer": "C",
-    "explanation": "Senescence refers to cellular aging and eventual cessation of division."
-  },
-  {
-    "question": "Which of the following is an example of a congenital disease?",
-    "options": ["Sickle cell anemia", "Malaria", "HIV/AIDS", "Tuberculosis"],
-    "answer": "A",
-    "explanation": "Sickle cell anemia is inherited and present from birth."
-  },
-  {
-    "question": "An increase in the NUMBER of cells in an organ is called:",
-    "options": ["Hypertrophy", "Hyperplasia", "Atrophy", "Metaplasia"],
-    "answer": "B",
-    "explanation": "Hyperplasia is an increase in cell number through mitosis."
-  },
-  {
-    "question": "Which type of cell death is associated with inflammation and tissue damage?",
-    "options": ["Apoptosis", "Necrosis", "Autophagy", "Senescence"],
-    "answer": "B",
-    "explanation": "Necrosis releases cellular contents, triggering inflammation."
-  },
-  {
-    "question": "Normal flora refers to:",
-    "options": ["Pathogenic bacteria", "Microorganisms that normally live on/in the body without causing disease", "Dead cells", "Viruses only"],
-    "answer": "B",
-    "explanation": "Normal flora are commensal microorganisms that provide benefits like preventing pathogen overgrowth."
-  },
-  {
-    "question": "Which of the following is a mechanical defense mechanism of the body?",
-    "options": ["Antibodies", "Skin", "T cells", "Cytokines"],
-    "answer": "B",
-    "explanation": "The skin is a physical barrier preventing pathogen entry."
-  },
-  {
-    "question": "What is a pathogen?",
-    "options": ["A beneficial microbe", "A disease-causing microorganism", "A type of antibody", "A white blood cell"],
-    "answer": "B",
-    "explanation": "A pathogen is any organism that can cause disease (e.g., bacteria, viruses, fungi, parasites)."
-  },
-  {
-    "question": "Which of the following is a chemical defense mechanism?",
-    "options": ["Hair", "Mucus", "Stomach acid (HCl)", "Skin layers"],
-    "answer": "C",
-    "explanation": "Stomach acid kills ingested pathogens chemically."
-  },
-  {
-    "question": "The process by which white blood cells engulf and destroy pathogens is called:",
-    "options": ["Phagocytosis", "Pinocytosis", "Exocytosis", "Apoptosis"],
-    "answer": "A",
-    "explanation": "Phagocytosis means 'cell eating' and is performed by macrophages and neutrophils."
-  },
-  {
-    "question": "Which immune cells produce antibodies?",
-    "options": ["T cells", "B cells", "Macrophages", "Neutrophils"],
-    "answer": "B",
-    "explanation": "B lymphocytes (B cells) differentiate into plasma cells that secrete antibodies."
-  },
-  {
-    "question": "Antibodies are also known as:",
-    "options": ["Antigens", "Immunoglobulins", "Cytokines", "Interferons"],
-    "answer": "B",
-    "explanation": "Immunoglobulins (Ig) is the scientific term for antibodies."
-  },
-  {
-    "question": "Which of the following is an autoimmune disease?",
-    "options": ["HIV/AIDS", "Rheumatoid arthritis", "Common cold", "Chickenpox"],
-    "answer": "B",
-    "explanation": "Rheumatoid arthritis is caused by the immune system attacking joint tissues."
-  },
-  {
-    "question": "What is the term for a hypersensitivity reaction to a harmless substance?",
-    "options": ["Autoimmunity", "Allergy", "Immunodeficiency", "Inflammation"],
-    "answer": "B",
-    "explanation": "Allergy is an overreaction of the immune system to allergens like pollen or peanuts."
-  },
-  {
-    "question": "Which of the following is an example of malnutrition?",
-    "options": ["Obesity", "Kwashiorkor", "Marasmus", "All of the above"],
-    "answer": "D",
-    "explanation": "Obesity (over-nutrition), Kwashiorkor (protein deficiency), and Marasmus (total calorie deficiency) are all forms of malnutrition."
-  },
-  {
-    "question": "Which vitamin deficiency causes scurvy?",
-    "options": ["Vitamin A", "Vitamin C", "Vitamin D", "Vitamin B12"],
-    "answer": "B",
-    "explanation": "Scurvy results from vitamin C (ascorbic acid) deficiency."
-  },
-  {
-    "question": "Rickets is caused by deficiency of which vitamin?",
-    "options": ["Vitamin A", "Vitamin C", "Vitamin D", "Vitamin E"],
-    "answer": "C",
-    "explanation": "Vitamin D deficiency causes rickets in children (soft, weak bones)."
-  },
-  {
-    "question": "Which of the following is a trauma-induced cell injury?",
-    "options": ["Fracture", "Viral infection", "Bacterial toxin", "Autoimmunity"],
-    "answer": "A",
-    "explanation": "A bone fracture is physical trauma causing cell and tissue damage."
-  },
-  {
-    "question": "What is the term for the spread of cancer to distant sites?",
-    "options": ["Metastasis", "Invasion", "Hyperplasia", "Dysplasia"],
-    "answer": "A",
-    "explanation": "Metastasis is the hallmark of malignant cancer spread."
-  },
-  {
-    "question": "Which term describes abnormal, disorganized growth of cells?",
-    "options": ["Metaplasia", "Dysplasia", "Hypertrophy", "Atrophy"],
-    "answer": "B",
-    "explanation": "Dysplasia is pre-cancerous; cells vary in size, shape, and organization."
-  },
-  {
-    "question": "The replacement of one differentiated cell type with another is called:",
-    "options": ["Metaplasia", "Dysplasia", "Anaplasia", "Neoplasia"],
-    "answer": "A",
-    "explanation": "Metaplasia is reversible replacement (e.g., smokers' respiratory epithelium)."
-  },
-  {
-    "question": "Which of the following is a biological toxin?",
-    "options": ["Lead", "Mercury", "Botulinum toxin", "Asbestos"],
-    "answer": "C",
-    "explanation": "Botulinum toxin is produced by the bacterium Clostridium botulinum."
-  },
-  {
-    "question": "What is the study of the causes of disease called?",
-    "options": ["Pathology", "Etiology", "Epidemiology", "Morphology"],
-    "answer": "B",
-    "explanation": "Etiology specifically refers to the cause or origin of disease."
-  },
-  {
-    "question": "The study of the mechanisms of disease development is called:",
-    "options": ["Etiology", "Pathogenesis", "Prognosis", "Diagnosis"],
-    "answer": "B",
-    "explanation": "Pathogenesis describes the step-by-step development of disease."
-  },
-  {
-    "question": "What is a sign of disease?",
-    "options": ["Subjective feeling reported by patient", "Objective finding observed by clinician", "Patient's description of pain", "Family history"],
-    "answer": "B",
-    "explanation": "A sign is measurable (e.g., fever, rash, high blood pressure); a symptom is felt (e.g., pain, nausea)."
-  },
-  {
-    "question": "Which of the following is an example of a symptom?",
-    "options": ["Temperature of 39°C", "Headache", "Swollen ankle", "Pus drainage"],
-    "answer": "B",
-    "explanation": "Headache is a subjective symptom; the others are objective signs."
-  },
-  {
-    "question": "Which of the following is an example of atmospheric pollution causing disease?",
-    "options": ["Smog causing asthma", "Cholera from water", "Salmonella from food", "HIV from blood"],
-    "answer": "A",
-    "explanation": "Air pollution (smog, particulate matter) causes respiratory diseases like asthma and COPD."
-  },
-  {
-    "question": "What is the term for disease caused by medical treatment?",
-    "options": ["Idiopathic", "Iatrogenic", "Nosocomial", "Zoonotic"],
-    "answer": "B",
-    "explanation": "Iatrogenic disease is caused unintentionally by medical intervention (e.g., side effects)."
-  },
-  {
-    "question": "Which of the following is a zoonotic disease?",
-    "options": ["Diabetes", "Rabies", "Sickle cell anemia", "Asthma"],
-    "answer": "B",
-    "explanation": "Rabies is transmitted from animals (dogs, bats) to humans."
-  },
-  {
-    "question": "Which type of radiation is most harmful to cells?",
-    "options": ["Radio waves", "Visible light", "Ionizing radiation (X-rays, gamma)", "Microwaves"],
-    "answer": "C",
-    "explanation": "Ionizing radiation has enough energy to remove electrons and damage DNA."
-  },
-  {
-    "question": "UV radiation from the sun primarily damages which cellular component?",
-    "options": ["Mitochondria", "DNA", "Ribosomes", "Cell membrane"],
-    "answer": "B",
-    "explanation": "UV light causes thymine dimers in DNA, leading to mutations and skin cancer."
-  },
-  {
-    "question": "Which of the following is an intracellular accumulation?",
-    "options": ["Fatty liver", "Gallstone", "Kidney stone", "Atherosclerotic plaque"],
-    "answer": "A",
-    "explanation": "Fat accumulation (steatosis) occurs inside hepatocytes."
-  },
-  {
-    "question": "What is the name for a new, abnormal growth of tissue?",
-    "options": ["Neoplasm", "Necrosis", "Atrophy", "Dystrophy"],
-    "answer": "A",
-    "explanation": "Neoplasm means 'new growth' and can be benign or malignant."
-  },
-  {
-    "question": "Which of the following is a benign tumor?",
-    "options": ["Lipoma", "Carcinoma", "Sarcoma", "Leukemia"],
-    "answer": "A",
-    "explanation": "Lipoma is a benign fatty tumor; the others are malignant."
-  },
-  {
-    "question": "What is the suffix for a malignant tumor of epithelial origin?",
-    "options": ["-oma", "-sarcoma", "-carcinoma", "-blastoma"],
-    "answer": "C",
-    "explanation": "Carcinoma arises from epithelial cells (e.g., adenocarcinoma, squamous cell carcinoma)."
-  },
-  {
-    "question": "What is the suffix for a malignant tumor of connective tissue origin?",
-    "options": ["-oma", "-sarcoma", "-carcinoma", "-blastoma"],
-    "answer": "B",
-    "explanation": "Sarcoma arises from mesenchyme (bone, muscle, fat, e.g., osteosarcoma)."
-  },
-  {
-    "question": "Which of the following is a chronic inflammatory disease?",
-    "options": ["Common cold", "Rheumatoid arthritis", "Appendicitis", "Meningitis"],
-    "answer": "B",
-    "explanation": "Rheumatoid arthritis is chronic; the others are typically acute."
-  },
-  {
-    "question": "What is the first stage of wound healing?",
-    "options": ["Proliferation", "Remodeling", "Inflammation", "Maturation"],
-    "answer": "C",
-    "explanation": "Inflammation is the immediate response to injury, clearing debris and initiating repair."
-  },
-  {
-    "question": "Which cell type is primarily responsible for collagen deposition in wound healing?",
-    "options": ["Fibroblast", "Neutrophil", "Macrophage", "Lymphocyte"],
-    "answer": "A",
-    "explanation": "Fibroblasts produce collagen and extracellular matrix."
-  },
-  {
-    "question": "What is the term for excessive scar formation that extends beyond original wound boundaries?",
-    "options": ["Atrophic scar", "Keloid", "Contracture", "Fibrosis"],
-    "answer": "B",
-    "explanation": "Keloids are more common in darker skin types and can be itchy or painful."
-  },
-  {
-    "question": "Which of the following is a bacterial infection?",
-    "options": ["Influenza", "HIV", "Tuberculosis", "Malaria"],
-    "answer": "C",
-    "explanation": "Tuberculosis is caused by Mycobacterium tuberculosis (bacterium)."
-  },
-  {
-    "question": "Which of the following is a viral infection?",
-    "options": ["Cholera", "COVID-19", "Ringworm", "Amoebiasis"],
-    "answer": "B",
-    "explanation": "COVID-19 is caused by SARS-CoV-2, a virus."
-  },
-  {
-    "question": "Which of the following is a fungal infection?",
-    "options": ["Tinea pedis (athlete's foot)", "Giardiasis", "Syphilis", "Chlamydia"],
-    "answer": "A",
-    "explanation": "Athlete's foot is caused by dermatophyte fungi."
-  },
-  {
-    "question": "Which of the following is a parasitic infection?",
-    "options": ["Strep throat", "Ringworm", "Malaria", "Herpes"],
-    "answer": "C",
-    "explanation": "Malaria is caused by Plasmodium parasites (protozoa)."
-  },
-  {
-    "question": "What is the term for a disease that can be transmitted from person to person?",
-    "options": ["Communicable", "Non-communicable", "Idiopathic", "Iatrogenic"],
-    "answer": "A",
-    "explanation": "Communicable (contagious) diseases spread via direct or indirect contact."
-  },
-  {
-    "question": "Which of the following is a non-communicable disease?",
-    "options": ["Measles", "Hypertension", "COVID-19", "Tuberculosis"],
-    "answer": "B",
-    "explanation": "Hypertension (high blood pressure) is not infectious and cannot be transmitted."
-  },
-  {
-    "question": "The period between infection and appearance of symptoms is called:",
-    "options": ["Incubation period", "Prodromal period", "Convalescence", "Acute phase"],
-    "answer": "A",
-    "explanation": "During incubation, the pathogen multiplies but no symptoms are present."
-  },
-  {
-    "question": "What is a vector in disease transmission?",
-    "options": ["A hospital", "An animal that transmits pathogens", "A vaccine", "An antibiotic"],
-    "answer": "B",
-    "explanation": "Examples include mosquitoes (malaria), ticks (Lyme disease), and rats (plague)."
-  },
-  {
-    "question": "Which of the following is a prion disease?",
-    "options": ["Mad Cow Disease (BSE)", "Ebola", "Polio", "Tetanus"],
-    "answer": "A",
-    "explanation": "Prions are misfolded proteins causing spongiform encephalopathies."
-  },
-  {
-    "question": "The fifth cardinal sign of inflammation sometimes added is:",
-    "options": ["Fever", "Loss of function", "Bleeding", "Numbness"],
-    "answer": "B",
-    "explanation": "'Functio laesa' (loss of function) is the fifth sign, attributed to Virchow."
-  },
-  {
-    "question": "Which chemical mediator causes vasodilation and increased permeability in inflammation?",
-    "options": ["Histamine", "Insulin", "Testosterone", "Thyroxine"],
-    "answer": "A",
-    "explanation": "Histamine released by mast cells causes redness and swelling."
-  },
-  {
-    "question": "Which white blood cell is the first to arrive at an inflammatory site?",
-    "options": ["Lymphocyte", "Neutrophil", "Monocyte", "Eosinophil"],
-    "answer": "B",
-    "explanation": "Neutrophils are the primary responders to acute inflammation."
-  },
-  {
-    "question": "Chronic inflammation is characterized by predominance of which cells?",
-    "options": ["Neutrophils", "Macrophages and lymphocytes", "Eosinophils", "Basophils"],
-    "answer": "B",
-    "explanation": "Mononuclear cells (macrophages, lymphocytes, plasma cells) dominate chronic inflammation."
-  },
-  {
-    "question": "Which of the following is a systemic effect of inflammation?",
-    "options": ["Local swelling", "Fever", "Redness", "Pain"],
-    "answer": "B",
-    "explanation": "Fever is a systemic (whole-body) response; the others are local."
-  },
-  {
-    "question": "Pyrogens are substances that cause:",
-    "options": ["Swelling", "Fever", "Pain", "Redness"],
-    "answer": "B",
-    "explanation": "Pyrogens (e.g., IL-1, TNF) act on the hypothalamus to raise body temperature."
-  },
-  {
-    "question": "What is the main intracellular organelle affected by hypoxia (lack of oxygen)?",
-    "options": ["Nucleus", "Mitochondria", "Ribosome", "Golgi apparatus"],
-    "answer": "B",
-    "explanation": "Mitochondria require oxygen for ATP production; hypoxia impairs this."
-  },
-  {
-    "question": "Reperfusion injury refers to:",
-    "options": ["Damage during oxygen lack", "Damage when blood supply is restored", "Damage from toxins", "Damage from radiation"],
-    "answer": "B",
-    "explanation": "Restoring oxygen can paradoxically increase injury via free radicals."
-  },
-  {
-    "question": "Which of the following is an example of free radical injury?",
-    "options": ["Ischemia-reperfusion", "Viral infection", "Bacterial toxin", "Genetic mutation"],
-    "answer": "A",
-    "explanation": "Free radicals (reactive oxygen species) are key mediators of reperfusion injury."
-  },
-  {
-    "question": "What is the main function of antioxidants?",
-    "options": ["Cause free radicals", "Neutralize free radicals", "Increase oxidative stress", "Damage DNA"],
-    "answer": "B",
-    "explanation": "Antioxidants (e.g., vitamin C, E) protect cells from oxidative damage."
-  },
-  {
-    "question": "Which of the following is a genetic disease?",
-    "options": ["Cystic fibrosis", "Tetanus", "Cholera", "Ringworm"],
-    "answer": "A",
-    "explanation": "Cystic fibrosis is caused by mutations in the CFTR gene."
-  },
-  {
-    "question": "A disease with no known cause is called:",
-    "options": ["Iatrogenic", "Idiopathic", "Nosocomial", "Zoonotic"],
-    "answer": "B",
-    "explanation": "'Idiopathic' means 'of unknown cause' (e.g., idiopathic pulmonary fibrosis)."
-  },
-  {
-    "question": "Which of the following is an example of a physical agent causing cell injury?",
-    "options": ["Bacteria", "Virus", "Heat burn", "Toxin"],
-    "answer": "C",
-    "explanation": "Heat (thermal injury) is a physical agent; bacteria and viruses are biological; toxins are chemical."
-  },
-  {
-    "question": "What is the process of cellular adaptation to increased workload called?",
-    "options": ["Injury", "Hypertrophy", "Necrosis", "Apoptosis"],
-    "answer": "B",
-    "explanation": "Hypertrophy is an adaptive response (e.g., muscle enlargement with exercise)."
-  },
-  {
-    "question": "The complete destruction of all microorganisms is called:",
-    "options": ["Disinfection", "Sterilization", "Sanitization", "Antisepsis"],
-    "answer": "B",
-    "explanation": "Sterilization kills all microbes, including spores."
-  },
-  {
-    "question": "Which of the following is a sterilization method?",
-    "options": ["Autoclaving", "Hand washing", "Wiping with alcohol", "Vacuuming"],
-    "answer": "A",
-    "explanation": "Autoclaving uses steam under pressure to achieve sterilization."
-  },
-  {
-    "question": "What is a hospital-acquired infection called?",
-    "options": ["Community-acquired", "Nosocomial", "Zoonotic", "Congenital"],
-    "answer": "B",
-    "explanation": "Nosocomial infections occur in healthcare facilities (e.g., MRSA, C. diff)."
-  },
-  {
-    "question": "Standard precautions include all EXCEPT:",
-    "options": ["Hand hygiene", "Wearing gloves", "Sharing needles", "Using masks"],
-    "answer": "C",
-    "explanation": "Needles must never be shared; use single-use sterile needles."
-  },
-  {
-    "question": "What is the recommended method for hand hygiene?",
-    "options": ["Quick rinse", "Alcohol-based hand rub or soap and water", "Wiping on lab coat", "No washing needed"],
-    "answer": "B",
-    "explanation": "Alcohol rub or soap/water for at least 20 seconds is effective."
-  },
-  {
-    "question": "Which immune disorder involves excessive response to self-antigens?",
-    "options": ["Immunodeficiency", "Autoimmunity", "Allergy", "Immunoproliferative"],
-    "answer": "B",
-    "explanation": "Autoimmunity is a failure of self-tolerance."
-  },
-  {
-    "question": "Which of the following is an example of an immunodeficiency disorder?",
-    "options": ["Lupus", "HIV/AIDS", "Rheumatoid arthritis", "Type 1 diabetes"],
-    "answer": "B",
-    "explanation": "HIV causes secondary immunodeficiency by destroying CD4+ T cells."
-  },
-  {
-    "question": "What is an opportunistic infection?",
-    "options": ["Infection in a healthy person", "Infection that takes advantage of weakened immunity", "Infection from animals", "Infection from food"],
-    "answer": "B",
-    "explanation": "Opportunistic infections occur when the immune system is compromised (e.g., Pneumocystis in AIDS)."
-  },
-  {
-    "question": "Which of the following is a primary lymphoid organ?",
-    "options": ["Spleen", "Lymph node", "Bone marrow", "Tonsil"],
-    "answer": "C",
-    "explanation": "Bone marrow (and thymus) are primary lymphoid organs where immune cells develop."
-  },
-  {
-    "question": "T cells mature in which organ?",
-    "options": ["Bone marrow", "Thymus", "Spleen", "Liver"],
-    "answer": "B",
-    "explanation": "The thymus is the site of T lymphocyte maturation."
-  },
-  {
-    "question": "B cells mature in which organ?",
-    "options": ["Thymus", "Bone marrow", "Spleen", "Lymph node"],
-    "answer": "B",
-    "explanation": "B cells mature in the bone marrow (B for bursa/bone marrow)."
-  },
-  {
-    "question": "Which antibody is the first to appear during an immune response?",
-    "options": ["IgG", "IgM", "IgA", "IgE"],
-    "answer": "B",
-    "explanation": "IgM is produced first, then class switching occurs to IgG, IgA, etc."
-  },
-  {
-    "question": "Which antibody is most abundant in serum?",
-    "options": ["IgM", "IgG", "IgA", "IgD"],
-    "answer": "B",
-    "explanation": "IgG constitutes about 75-80% of serum immunoglobulins."
-  },
-  {
-    "question": "Which antibody is involved in allergic reactions?",
-    "options": ["IgG", "IgM", "IgA", "IgE"],
-    "answer": "D",
-    "explanation": "IgE binds to mast cells and triggers histamine release in allergies."
-  },
-  {
-    "question": "Which antibody is found in secretions like saliva and breast milk?",
-    "options": ["IgG", "IgM", "IgA", "IgE"],
-    "answer": "C",
-    "explanation": "Secretory IgA provides mucosal immunity."
-  },
-  {
-    "question": "The process of coating a pathogen with antibody to enhance phagocytosis is called:",
-    "options": ["Neutralization", "Opsonization", "Agglutination", "Lysis"],
-    "answer": "B",
-    "explanation": "Opsonization 'tags' pathogens for easier engulfment by phagocytes."
-  },
-  {
-    "question": "What is a cytokine?",
-    "options": ["A type of bacteria", "A signaling protein of the immune system", "A virus", "An antibody"],
-    "answer": "B",
-    "explanation": "Cytokines (e.g., interleukins, interferons) regulate immune responses."
-  },
-  {
-    "question": "Which of the following is an anti-inflammatory cytokine?",
-    "options": ["TNF-alpha", "IL-1", "IL-10", "IL-6"],
-    "answer": "C",
-    "explanation": "IL-10 suppresses inflammatory responses."
-  }
+
+    // ==================== SECTION 1: CONCEPT & CLASSIFICATION OF DISEASES (idx 0-19) ====================
+
+    {
+        question: "What is a disease?",
+        options: ["A permanent genetic trait", "Any abnormal condition affecting the structure or function of an organism", "A type of beneficial microorganism", "A normal aging process"],
+        answer: "B",
+        explanation: "A disease is any abnormal condition that impairs the normal structure or function of an organism, whether caused by infection, genetics, environment or lifestyle."
+    },
+    {
+        question: "Which of the following is NOT a cause of disease?",
+        options: ["Genetic mutations", "Nutritional deficiencies", "Environmental exposure", "Normal flora balance"],
+        answer: "D",
+        explanation: "Normal flora balance is a healthy state — normal flora protect against pathogens. Disease arises when this balance is disrupted, not from the balance itself."
+    },
+    {
+        question: "Diseases are classified based on all of these criteria EXCEPT:",
+        options: ["Cause", "Mode of transmission", "Colour of the patient", "Organ system affected"],
+        answer: "C",
+        explanation: "Classification of disease is based on cause (etiology), mode of transmission, organ system involved, duration, etc. Skin colour is not a classification criterion."
+    },
+    {
+        question: "Which is an example of a bacterial infectious disease?",
+        options: ["Malaria", "Tuberculosis", "Ringworm", "COVID-19"],
+        answer: "B",
+        explanation: "Tuberculosis (TB) is caused by Mycobacterium tuberculosis, a bacterium. Malaria is parasitic, ringworm is fungal, and COVID-19 is viral."
+    },
+    {
+        question: "Which is an example of a viral infection?",
+        options: ["Cholera", "Athlete's foot", "HIV/AIDS", "Schistosomiasis"],
+        answer: "C",
+        explanation: "HIV/AIDS is caused by the Human Immunodeficiency Virus. Cholera is bacterial, athlete's foot is fungal, and schistosomiasis is parasitic."
+    },
+    {
+        question: "Athlete's foot and ringworm are examples of:",
+        options: ["Bacterial infections", "Viral infections", "Fungal infections", "Parasitic infections"],
+        answer: "C",
+        explanation: "Both athlete's foot (Tinea pedis) and ringworm (Tinea corporis) are caused by dermatophyte fungi, making them fungal infections."
+    },
+    {
+        question: "Malaria and Schistosomiasis are caused by:",
+        options: ["Bacteria", "Viruses", "Fungi", "Parasites"],
+        answer: "D",
+        explanation: "Malaria is caused by Plasmodium protozoa (transmitted by Anopheles mosquito); Schistosomiasis by Schistosoma flatworms — both are parasites."
+    },
+    {
+        question: "Which is a non-communicable (non-infectious) disease?",
+        options: ["Influenza", "Hypertension", "Cholera", "Tuberculosis"],
+        answer: "B",
+        explanation: "Hypertension (high blood pressure) is a non-communicable disease — it cannot be transmitted from person to person. The others are infectious."
+    },
+    {
+        question: "Sickle Cell Anemia and Down Syndrome are examples of:",
+        options: ["Genetic disorders", "Lifestyle diseases", "Deficiency diseases", "Autoimmune diseases"],
+        answer: "A",
+        explanation: "Sickle Cell Anemia is a single-gene (point mutation) disorder and Down Syndrome is a chromosomal disorder — both are classified as genetic disorders."
+    },
+    {
+        question: "Turner Syndrome and Klinefelter Syndrome are classified as:",
+        options: ["Single-gene disorders", "Chromosomal disorders", "Deficiency diseases", "Degenerative diseases"],
+        answer: "B",
+        explanation: "Turner (45,X) and Klinefelter (47,XXY) syndromes result from abnormal chromosome numbers — they are chromosomal (numerical) disorders."
+    },
+    {
+        question: "Scurvy results from a deficiency of:",
+        options: ["Vitamin D", "Iron", "Vitamin C", "Iodine"],
+        answer: "C",
+        explanation: "Scurvy is caused by Vitamin C (ascorbic acid) deficiency, which impairs collagen synthesis, leading to bleeding gums and poor wound healing."
+    },
+    {
+        question: "Goiter is caused by a deficiency of:",
+        options: ["Iron", "Iodine", "Vitamin C", "Vitamin D"],
+        answer: "B",
+        explanation: "Iodine deficiency prevents synthesis of thyroid hormones, causing the thyroid gland to enlarge — a condition called goiter."
+    },
+    {
+        question: "A disease where the immune system attacks the body's own tissues is:",
+        options: ["Deficiency disease", "Autoimmune disease", "Infectious disease", "Genetic disease"],
+        answer: "B",
+        explanation: "In autoimmune diseases, the immune system loses self-tolerance and attacks host tissues, treating them as foreign antigens."
+    },
+    {
+        question: "Which is an example of an autoimmune disease?",
+        options: ["Rheumatoid Arthritis", "Scurvy", "Malaria", "Goiter"],
+        answer: "A",
+        explanation: "Rheumatoid Arthritis is autoimmune — the immune system attacks the synovial joints. Other examples include Type 1 Diabetes and Lupus."
+    },
+    {
+        question: "Osteoarthritis and Macular Degeneration are examples of:",
+        options: ["Autoimmune diseases", "Degenerative diseases", "Deficiency diseases", "Infectious diseases"],
+        answer: "B",
+        explanation: "Degenerative diseases involve progressive deterioration of tissues. Osteoarthritis (joint cartilage) and Macular Degeneration (retina) both involve tissue breakdown."
+    },
+    {
+        question: "Malaria is transmitted by which mode?",
+        options: ["Airborne", "Waterborne", "Vector-borne", "Bloodborne only"],
+        answer: "C",
+        explanation: "Malaria is vector-borne: transmitted via the bite of the female Anopheles mosquito carrying Plasmodium parasites."
+    },
+    {
+        question: "A disease that develops suddenly and lasts a short period is:",
+        options: ["Chronic", "Subacute", "Acute", "Degenerative"],
+        answer: "C",
+        explanation: "Acute diseases have a rapid onset and short duration (e.g. flu, food poisoning). Chronic diseases persist for 3 months or more."
+    },
+    {
+        question: "Which is an example of a chronic disease?",
+        options: ["Common Cold", "Food Poisoning", "Diabetes", "Acute Appendicitis"],
+        answer: "C",
+        explanation: "Diabetes mellitus is a chronic disease requiring long-term management. The others are short-duration (acute) conditions."
+    },
+    {
+        question: "Asthma, COPD and Pneumonia affect which system?",
+        options: ["Cardiovascular", "Respiratory", "Neurological", "Endocrine"],
+        answer: "B",
+        explanation: "Asthma (airway inflammation), COPD (obstructive lung disease), and Pneumonia (lung infection) all primarily affect the respiratory system."
+    },
+    {
+        question: "Diabetes Mellitus and thyroid disorders are classified as:",
+        options: ["Musculoskeletal diseases", "Gastrointestinal diseases", "Endocrine diseases", "Neurological diseases"],
+        answer: "C",
+        explanation: "The endocrine system regulates hormones. Diabetes involves insulin (pancreas) and thyroid disorders involve thyroid hormones — both are endocrine diseases."
+    },
+
+    // ==================== SECTION 2: EFFECTS OF RADIATION (idx 20-29) ====================
+
+    {
+        question: "Which type of radiation has enough energy to remove electrons from atoms?",
+        options: ["Non-ionizing", "Ionizing", "Microwave", "Radio wave"],
+        answer: "B",
+        explanation: "Ionizing radiation (X-rays, gamma rays, alpha, beta, neutrons) carries enough energy to eject electrons from atoms, creating ions and causing biological damage."
+    },
+    {
+        question: "Which particles have low penetration but cause severe localized damage?",
+        options: ["Alpha particles", "Beta particles", "Gamma rays", "Neutrons"],
+        answer: "A",
+        explanation: "Alpha particles are heavy and stopped by paper or skin, but if inhaled or ingested, they deposit all energy locally, causing severe cellular damage."
+    },
+    {
+        question: "The breaking of chemical bonds in molecules due to radiation is called:",
+        options: ["Ionization", "Radiolysis", "Apoptosis", "Oxidation"],
+        answer: "B",
+        explanation: "Radiolysis is the decomposition (bond-breaking) of molecules — especially water — by ionizing radiation, producing reactive free radicals."
+    },
+    {
+        question: "Which is a reactive oxygen species (ROS) produced by water radiolysis?",
+        options: ["Hydroxyl radical (•OH)", "Glucose", "Sodium ion", "Lactic acid"],
+        answer: "A",
+        explanation: "Radiolysis of water (H₂O) produces the highly reactive hydroxyl radical (•OH), which can damage DNA, proteins and lipids."
+    },
+    {
+        question: "Cells are MOST sensitive to radiation in which cell cycle phases?",
+        options: ["G0 and G1", "S phase only", "G2 and M", "None"],
+        answer: "C",
+        explanation: "Cells are most radiosensitive in G2 (pre-mitotic) and M (mitosis) phases when DNA cannot be efficiently repaired before division."
+    },
+    {
+        question: "The most severe form of radiation DNA damage is:",
+        options: ["Single-strand breaks", "Double-strand breaks", "Base modification", "Crosslinking"],
+        answer: "B",
+        explanation: "Double-strand breaks (DSBs) are the most lethal form of radiation damage because both DNA strands are severed, making faithful repair difficult."
+    },
+    {
+        question: "Which repair mechanism fixes double-strand breaks using a sister chromatid?",
+        options: ["Base Excision Repair", "Nucleotide Excision Repair", "Homologous Recombination", "Radiolysis"],
+        answer: "C",
+        explanation: "Homologous Recombination uses the intact sister chromatid as a template to faithfully repair double-strand breaks — it is an error-free repair pathway."
+    },
+    {
+        question: "Which is NOT one of the three principles of radiation protection?",
+        options: ["Shielding", "Distance", "Time limitation", "Vaccination"],
+        answer: "D",
+        explanation: "The three principles of radiation protection are: Time (minimize exposure time), Distance (increase distance from source), and Shielding (use barriers). Vaccination is not one."
+    },
+    {
+        question: "Radiation therapy works mainly by:",
+        options: ["Boosting immunity", "Damaging the DNA of cancer cells", "Feeding tumor cells", "Neutralizing toxins"],
+        answer: "B",
+        explanation: "Radiotherapy targets rapidly dividing cancer cells by causing irreparable DNA damage (especially double-strand breaks), leading to cell death."
+    },
+    {
+        question: "UV radiation is an example of which radiation type?",
+        options: ["Ionizing", "Non-ionizing", "Alpha", "Gamma"],
+        answer: "B",
+        explanation: "UV radiation lacks sufficient energy to ionize atoms — it is non-ionizing. However, it can still damage DNA by forming pyrimidine dimers."
+    },
+
+    // ==================== SECTION 3: MORPHOLOGICAL CHANGES (LM & EM) (idx 30-34) ====================
+
+    {
+        question: "The light microscope can magnify specimens up to about:",
+        options: ["10×", "100×", "1000–1500×", "1–2 nm resolution"],
+        answer: "C",
+        explanation: "A light microscope achieves up to 1000–1500× total magnification using visible light, with a resolution limit of about 200 nm."
+    },
+    {
+        question: "Which microscope provides 3D surface details?",
+        options: ["TEM", "SEM", "Light microscope", "Fluorescence microscope"],
+        answer: "B",
+        explanation: "The Scanning Electron Microscope (SEM) scans the surface of a specimen with electrons to produce detailed 3D surface images."
+    },
+    {
+        question: "Under the microscope, apoptosis is characterized by:",
+        options: ["Cell swelling and rupture", "Cell shrinkage and chromatin condensation", "Cytoplasmic leakage", "Inflammatory infiltration"],
+        answer: "B",
+        explanation: "Apoptosis (programmed cell death) shows cell shrinkage, chromatin condensation (pyknosis), and formation of apoptotic bodies — without inflammation."
+    },
+    {
+        question: "In H&E staining, the nuclei typically appear:",
+        options: ["Red", "Green", "Blue", "Yellow"],
+        answer: "C",
+        explanation: "In Haematoxylin and Eosin (H&E) staining, haematoxylin stains nuclei blue/purple; eosin stains cytoplasm and extracellular matrix pink/red."
+    },
+    {
+        question: "Which EM change is seen in mitochondria during cell injury?",
+        options: ["Chromatin condensation", "Swelling and cristae disruption", "Microvilli loss", "Ribosome detachment"],
+        answer: "B",
+        explanation: "Under EM, injured mitochondria show swelling (increased permeability) and disruption of cristae (inner membrane folds), indicating impaired energy production."
+    },
+
+    // ==================== SECTION 4: PATHOLOGICAL CELLULAR CHANGES (idx 35-44) ====================
+
+    {
+        question: "A decrease in cell size and function is called:",
+        options: ["Hypertrophy", "Hyperplasia", "Atrophy", "Aplasia"],
+        answer: "C",
+        explanation: "Atrophy is the reduction in cell size and function due to decreased workload, poor nutrition, loss of innervation, or reduced blood supply."
+    },
+    {
+        question: "An increase in the NUMBER of cells is termed:",
+        options: ["Hypertrophy", "Hyperplasia", "Atrophy", "Necrosis"],
+        answer: "B",
+        explanation: "Hyperplasia is an increase in the number of cells in a tissue or organ, which may be physiological (e.g. uterine growth in pregnancy) or pathological."
+    },
+    {
+        question: "An increase in the SIZE of cells without increase in number is:",
+        options: ["Hyperplasia", "Hypertrophy", "Aplasia", "Atrophy"],
+        answer: "B",
+        explanation: "Hypertrophy is cellular enlargement. Classic example: skeletal muscle hypertrophy from exercise, or cardiac muscle hypertrophy due to pressure overload."
+    },
+    {
+        question: "Cardiac enlargement due to hypertension is an example of:",
+        options: ["Atrophy", "Hyperplasia", "Pathological hypertrophy", "Aplasia"],
+        answer: "C",
+        explanation: "The heart enlarges (myocyte hypertrophy) in response to the increased workload from chronic hypertension — this is pathological hypertrophy."
+    },
+    {
+        question: "Failure of an organ or tissue to develop properly is called:",
+        options: ["Atrophy", "Aplasia", "Hyperplasia", "Hypertrophy"],
+        answer: "B",
+        explanation: "Aplasia is the failure of a tissue or organ to develop (e.g. aplastic anemia — failure of bone marrow to produce blood cells)."
+    },
+    {
+        question: "The correct order of the stages of oncogenesis is:",
+        options: ["Promotion → Initiation → Progression", "Initiation → Promotion → Progression", "Progression → Promotion → Initiation", "Initiation → Progression → Promotion"],
+        answer: "B",
+        explanation: "Oncogenesis proceeds: Initiation (DNA mutation by carcinogen) → Promotion (clonal expansion of mutated cells) → Progression (malignant transformation)."
+    },
+    {
+        question: "Which tumor type is slow-growing and non-invasive?",
+        options: ["Malignant", "Metastatic", "Benign", "Carcinoma"],
+        answer: "C",
+        explanation: "Benign tumors are well-differentiated, slow-growing, encapsulated, and do not invade surrounding tissues or metastasize."
+    },
+    {
+        question: "Caseous (cheese-like) necrosis is characteristically seen in:",
+        options: ["Heart attack", "Stroke", "Tuberculosis", "Pancreatitis"],
+        answer: "C",
+        explanation: "Caseous necrosis produces a soft, white, cheese-like appearance. It is the hallmark necrotic pattern of tuberculosis (TB) infection."
+    },
+    {
+        question: "Liquefactive necrosis commonly occurs in the:",
+        options: ["Heart", "Brain", "Limbs", "Breast"],
+        answer: "B",
+        explanation: "The brain undergoes liquefactive necrosis because its high fat and low protein content makes it susceptible to enzymatic liquefaction after infarction."
+    },
+    {
+        question: "Which is a feature of apoptosis (programmed cell death)?",
+        options: ["Causes inflammation", "Involves activation of caspases", "Results from trauma", "Membrane rupture"],
+        answer: "B",
+        explanation: "Apoptosis is mediated by caspase proteases. It is orderly, energy-dependent, and does NOT cause inflammation — unlike necrosis."
+    },
+
+    // ==================== SECTION 5: NORMAL FLORA (idx 45-49) ====================
+
+    {
+        question: "A relationship where both the host and microbe benefit is:",
+        options: ["Commensalism", "Mutualism", "Opportunism", "Parasitism"],
+        answer: "B",
+        explanation: "In mutualism, both parties benefit. For example, gut bacteria synthesize vitamins (benefit to host) while receiving nutrients and shelter (benefit to microbe)."
+    },
+    {
+        question: "Microorganisms that permanently colonize the body are:",
+        options: ["Transient flora", "Resident flora", "Pathogens", "Vectors"],
+        answer: "B",
+        explanation: "Resident (permanent) flora are stably established in normal body sites. Transient flora are temporary colonizers that do not establish permanently."
+    },
+    {
+        question: "The dominant bacterium of normal skin flora is:",
+        options: ["Escherichia coli", "Staphylococcus epidermidis", "Streptococcus mutans", "Lactobacillus"],
+        answer: "B",
+        explanation: "Staphylococcus epidermidis is the predominant commensal bacterium on human skin. It competes with pathogens and is generally non-pathogenic."
+    },
+    {
+        question: "Which organism dominates the vagina and maintains an acidic pH?",
+        options: ["Candida albicans", "Escherichia coli", "Lactobacillus", "Bacteroides"],
+        answer: "C",
+        explanation: "Lactobacillus species produce lactic acid, maintaining vaginal pH below 4.5 — this acidity prevents overgrowth of pathogens like Candida and BV-associated bacteria."
+    },
+    {
+        question: "Overgrowth of which organism causes severe diarrhea after antibiotics disrupt gut flora?",
+        options: ["Clostridioides difficile", "Staphylococcus epidermidis", "Lactobacillus", "Bacteroides"],
+        answer: "A",
+        explanation: "C. difficile (formerly Clostridium difficile) overgrows when antibiotics eliminate competing gut flora, producing toxins that cause pseudomembranous colitis."
+    },
+
+    // ==================== SECTION 6: NATURAL DEFENSE MECHANISM (idx 50-54) ====================
+
+    {
+        question: "Which belongs to the FIRST line of defense?",
+        options: ["Phagocytosis", "Skin and mucous membranes", "Antibody production", "Interferons"],
+        answer: "B",
+        explanation: "The first line of defense is the physical/chemical barrier: intact skin, mucous membranes, cilia, stomach acid. Phagocytosis and antibodies are 2nd/3rd line."
+    },
+    {
+        question: "Which enzyme in tears and saliva breaks bacterial cell walls?",
+        options: ["Urease", "Lysozyme", "Hyaluronidase", "Amylase"],
+        answer: "B",
+        explanation: "Lysozyme is an antimicrobial enzyme found in tears, saliva, and nasal secretions. It cleaves peptidoglycan in bacterial cell walls, causing lysis."
+    },
+    {
+        question: "The first phagocytic responders to bacteria are:",
+        options: ["Neutrophils", "B cells", "Plasma cells", "Eosinophils"],
+        answer: "A",
+        explanation: "Neutrophils are the most abundant leukocytes and are the first to migrate to sites of infection, engulfing and destroying bacteria via phagocytosis."
+    },
+    {
+        question: "Antiviral proteins produced by infected cells are called:",
+        options: ["Antibodies", "Interferons", "Histamines", "Cytokines only"],
+        answer: "B",
+        explanation: "Interferons (IFN-α, IFN-β, IFN-γ) are signaling proteins secreted by virus-infected cells that warn neighboring cells and activate antiviral defenses."
+    },
+    {
+        question: "Cytotoxic T cells (CD8+) function to:",
+        options: ["Produce antibodies", "Kill infected or cancerous cells", "Maintain acidic pH", "Trap dust particles"],
+        answer: "B",
+        explanation: "CD8+ cytotoxic T lymphocytes (CTLs) recognize MHC I-presented antigens on infected or malignant cells and induce apoptosis via perforin/granzyme pathways."
+    },
+
+    // ==================== SECTION 7: PATHOGENICITY (idx 55-58) ====================
+
+    {
+        question: "Pathogens that cause disease only in immunocompromised individuals are:",
+        options: ["True pathogens", "Opportunistic pathogens", "Facultative pathogens", "Commensals"],
+        answer: "B",
+        explanation: "Opportunistic pathogens (e.g. Pneumocystis jirovecii, Candida) normally cause no disease in healthy hosts but exploit weakened immune defenses."
+    },
+    {
+        question: "Pathogens that require a host cell to survive and reproduce are:",
+        options: ["Facultative pathogens", "Obligate intracellular pathogens", "Opportunistic pathogens", "Transient flora"],
+        answer: "B",
+        explanation: "Obligate intracellular pathogens (e.g. Rickettsia, Chlamydia, all viruses) cannot replicate outside a living host cell — they depend on host cell machinery."
+    },
+    {
+        question: "Which is a virulence factor used to attach to host cells?",
+        options: ["Adhesion factors (pili, fimbriae)", "Interferons", "Lysozyme", "Antibodies"],
+        answer: "A",
+        explanation: "Pili and fimbriae are surface appendages that allow bacteria to adhere to host cell receptors — a key first step in establishing infection."
+    },
+    {
+        question: "Endotoxins (LPS) are released mainly when:",
+        options: ["Bacteria attach to cells", "Gram-negative bacteria die", "A biofilm forms", "Antibodies bind"],
+        answer: "B",
+        explanation: "Endotoxins (lipopolysaccharide, LPS) are part of the Gram-negative outer membrane. They are released when bacteria are lysed (killed), triggering fever and septic shock."
+    },
+
+    // ==================== SECTION 8: TRANSMISSION OF INFECTION (idx 59) ====================
+
+    {
+        question: "Which is NOT part of the chain of infection?",
+        options: ["Reservoir", "Portal of exit", "Susceptible host", "Antibody titre"],
+        answer: "D",
+        explanation: "The chain of infection has 6 links: Infectious agent → Reservoir → Portal of exit → Mode of transmission → Portal of entry → Susceptible host. Antibody titre is not a link."
+    }
 ];
+
+// Total: 60 questions
+// idx 0-19:  Concept & Classification of Diseases (20 q)
+// idx 20-29: Effects of Radiation (10 q)
+// idx 30-34: Morphological Changes — LM & EM (5 q)
+// idx 35-44: Pathological Cellular Changes (10 q)
+// idx 45-49: Normal Flora (5 q)
+// idx 50-54: Natural Defense Mechanism (5 q)
+// idx 55-58: Pathogenicity (4 q)
+// idx 59:    Transmission of Infection (1 q)

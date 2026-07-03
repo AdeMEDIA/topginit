@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
         "BIO 108": { semester: "second", title: "BIO 108", level: "100L • Biology Practical II", description: "Practical biology techniques and experiments", icon: "🧫", iconGradient: "linear-gradient(135deg, #14b8a6, #0d9488)", qCount: 100, locked: false, file: "bio108.js", bankKey: "BIO 108" },
         "PHY 102": { semester: "second", title: "PHY 102", level: "100L • General Physics II", description: "Electricity, magnetism and modern physics", icon: "⚡", iconGradient: "linear-gradient(135deg, #ef4444, #dc2626)", qCount: 83, locked: false, file: "phy102.js", bankKey: "PHY 102" },
         "COS 102": { semester: "second", title: "COS 102", level: "100L • Intro to Computing Science", description: "Computer science fundamentals and programming", icon: "💻", iconGradient: "linear-gradient(135deg, #3b82f6, #1d4ed8)", qCount: 100, locked: false, file: "cos102.js", bankKey: "COS 102" },
-        "MLS 104": { semester: "second", title: "MLS 104", level: "100L • Introduction to Biology of Diseases", description: "Disease mechanisms and pathology basics", icon: "🦠", iconGradient: "linear-gradient(135deg, #84cc16, #65a30d)", qCount: 100, locked: false, file: "mls104.js", bankKey: "MLS 104" },
+        "MLS 104": { semester: "second", title: "MLS 104", level: "100L • Introduction to Biology of Diseases", description: "Disease mechanisms and pathology basics", icon: "🦠", iconGradient: "linear-gradient(135deg, #84cc16, #65a30d)", qCount: 60, locked: false, file: "mls104.js", bankKey: "MLS 104" },
         "MCB 102": { semester: "second", title: "MCB 102", level: "100L • Introductory Microbiology", description: "Bacteria, viruses, fungi, protozoa and microbial disease", icon: "🔬", iconGradient: "linear-gradient(135deg, #22c55e, #16a34a)", qCount: 92, locked: false, file: "mcb102.js", bankKey: "MCB 102" },
 
         // ── COMPLETED (locked) — second semester ──
@@ -197,13 +197,12 @@ document.addEventListener('DOMContentLoaded', function() {
 "MLS 104": {
     icon: "🦠",
     topics: [
-        { id: "disease_concepts", name: "Basic Concepts of Disease", description: "Congenital, acquired, infectious, non-infectious diseases", qCount: 15, startIdx: 0, endIdx: 15 },
-        { id: "cell_injury", name: "Cell Injury & Disorders", description: "Mechanisms of cell injury, primary causes of cell disorders", qCount: 15, startIdx: 15, endIdx: 30 },
-        { id: "infectious_diseases", name: "Infectious Diseases", description: "Bacterial, viral, fungal, and parasitic infections", qCount: 20, startIdx: 30, endIdx: 50 },
-        { id: "immune_system", name: "Immune System & Components", description: "Immunity, immune response, and related disorders", qCount: 15, startIdx: 50, endIdx: 65 },
-        { id: "disease_mechanisms", name: "Pathophysiology of Diseases", description: "Mechanisms of acute infections, disease progression", qCount: 10, startIdx: 65, endIdx: 75 },
-        { id: "laboratory_diagnosis", name: "Laboratory Diagnosis", description: "Microscopy, techniques for disease detection", qCount: 15, startIdx: 75, endIdx: 90 },
-        { id: "prevention_control", name: "Prevention & Control", description: "Sanitation, hygiene, antibiotics, public health measures", qCount: 10, startIdx: 90, endIdx: 100 }
+        { id: "disease_concepts",    name: "Concept & Classification of Diseases", description: "Infectious, genetic, autoimmune, degenerative, deficiency, chronic and acute diseases", qCount: 20, startIdx: 0,  endIdx: 20 },
+        { id: "radiation",           name: "Effects of Radiation",                  description: "Ionizing vs non-ionizing, radiolysis, DNA damage, repair mechanisms, radiation protection", qCount: 10, startIdx: 20, endIdx: 30 },
+        { id: "morphological",       name: "Morphological Changes (LM & EM)",       description: "Light and electron microscopy, apoptosis vs necrosis, H&E staining, cell injury changes", qCount: 5,  startIdx: 30, endIdx: 35 },
+        { id: "cellular_changes",    name: "Pathological Cellular Changes",          description: "Atrophy, hypertrophy, hyperplasia, aplasia, oncogenesis, necrosis types, apoptosis",    qCount: 10, startIdx: 35, endIdx: 45 },
+        { id: "normal_flora",        name: "Normal Flora",                           description: "Resident vs transient flora, mutualism, skin/vaginal/gut flora, dysbiosis",              qCount: 5,  startIdx: 45, endIdx: 50 },
+        { id: "defense_path",        name: "Defense, Pathogenicity & Transmission",  description: "Lines of defense, lysozyme, interferons, virulence factors, chain of infection",        qCount: 10, startIdx: 50, endIdx: 60 }
     ]
 },
 "MCB 102": {

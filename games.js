@@ -120,13 +120,12 @@
             { id: 'timeline',             name: 'Historical Timeline',       startIdx: 60, endIdx: 65 }
         ],
         'MLS 104': [
-            { id: 'disease_concepts',     name: 'Basic Concepts of Disease',  startIdx: 0,  endIdx: 15  },
-            { id: 'cell_injury',          name: 'Cell Injury & Disorders',    startIdx: 15, endIdx: 30  },
-            { id: 'infectious_diseases',  name: 'Infectious Diseases',        startIdx: 30, endIdx: 50  },
-            { id: 'immune_system',        name: 'Immune System',              startIdx: 50, endIdx: 65  },
-            { id: 'disease_mechanisms',   name: 'Pathophysiology',            startIdx: 65, endIdx: 75  },
-            { id: 'laboratory_diagnosis', name: 'Laboratory Diagnosis',       startIdx: 75, endIdx: 90  },
-            { id: 'prevention_control',   name: 'Prevention & Control',       startIdx: 90, endIdx: 100 }
+            { id: 'disease_concepts', name: 'Concept & Classification',           startIdx: 0,  endIdx: 20 },
+            { id: 'radiation',        name: 'Effects of Radiation',               startIdx: 20, endIdx: 30 },
+            { id: 'morphological',    name: 'Morphological Changes (LM & EM)',    startIdx: 30, endIdx: 35 },
+            { id: 'cellular_changes', name: 'Pathological Cellular Changes',      startIdx: 35, endIdx: 45 },
+            { id: 'normal_flora',     name: 'Normal Flora',                       startIdx: 45, endIdx: 50 },
+            { id: 'defense_path',     name: 'Defense, Pathogenicity & Transmission', startIdx: 50, endIdx: 60 }
         ]
     };
 
