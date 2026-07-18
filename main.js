@@ -96,21 +96,44 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // ==================== COURSE DATABASE ====================
     const COURSES_DB = {
-        "GST 101": { semester: "first", title: "GST 101", level: "100L • Use of English", description: "Comprehensive English language and communication skills", icon: "📓", iconGradient: "linear-gradient(135deg, #667eea, #764ba2)", qCount: 339, locked: true, file: "gst101.js", bankKey: "GST 101" },
-        "CSC 101": { semester: "first", title: "CSC 101", level: "100L • Intro to Computing", description: "Introduction to computer science and programming", icon: "💻", iconGradient: "linear-gradient(135deg, #3b82f6, #1d4ed8)", qCount: 100, locked: true, file: "csc.js", bankKey: "CSC 101" },
-        "ENT 101": { semester: "first", title: "ENT 101", level: "100L • Entrepreneurship", description: "Business development and entrepreneurial skills", icon: "💼", iconGradient: "linear-gradient(135deg, #06b6d4, #0891b2)", qCount: 100, locked: true, file: "ent.js", bankKey: "ENT 101" },
-        "GST 103": { semester: "first", title: "GST 112", level: "100L • Use of Library", description: "History, culture and development of Nigeria", icon: "📖", iconGradient: "linear-gradient(135deg, #84cc16, #65a30d)", qCount: 100, locked: true, file: "gst112.js", bankKey: "GST 112" },
-       
-        "GST 102": { semester: "second", title: "GST 102", level: "100L • Use of English II", description: "Grammar, essay writing, communication and ICT basics", icon: "📝", iconGradient: "linear-gradient(135deg, #667eea, #764ba2)", qCount: 318, locked: false, file: "gst102.js", bankKey: "GST 102" },
-        "GST 104": { semester: "second", title: "GST 104", level: "100L • Nigeria Culture", description: "Nigerian history, culture and national development", icon: "🇳🇬", iconGradient: "linear-gradient(135deg, #f97316, #ea580c)", qCount: 100, locked: false, file: "gst112.js", bankKey: "GST 112" },
-        "MTH 102": { semester: "second", title: "MTH 102", level: "100L • Elementary Mathematics", description: "Calculus, vectors and differential equations", icon: "📐", iconGradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", qCount: 81, locked: false, file: "mth102.js", bankKey: "MTH 102" },
-        "CHM 102": { semester: "second", title: "CHM 102", level: "100L • General Chemistry II", description: "Chemical kinetics, equilibrium and organic chemistry", icon: "🧪", iconGradient: "linear-gradient(135deg, #f59e0b, #d97706)", qCount: 60, locked: false, file: "chm102.js", bankKey: "CHM 102" },
-        "MLS 102": { semester: "second", title: "MLS 102", level: "100L • History of Medical Laboratory Science", description: "History and development of MLS profession", icon: "📜", iconGradient: "linear-gradient(135deg, #06b6d4, #0891b2)", qCount: 100, locked: false, file: "mls102.js", bankKey: "MLS 102" },
-        "BIO 102": { semester: "second", title: "BIO 102", level: "100L • General Biology II", description: "Diversity of life, plant and animal morphology", icon: "🔬", iconGradient: "linear-gradient(135deg, #10b981, #059669)", qCount: 100, locked: false, file: "bio102.js", bankKey: "BIO 102" },
-        "BIO 108": { semester: "second", title: "BIO 108", level: "100L • Biology Practical II", description: "Practical biology techniques and experiments", icon: "🧫", iconGradient: "linear-gradient(135deg, #14b8a6, #0d9488)", qCount: 100, locked: false, file: "bio108.js", bankKey: "BIO 108" },
-        "PHY 102": { semester: "second", title: "PHY 102", level: "100L • General Physics II", description: "Electricity, magnetism and modern physics", icon: "⚡", iconGradient: "linear-gradient(135deg, #ef4444, #dc2626)", qCount: 100, locked: false, file: "phy102.js", bankKey: "PHY 102" },
-        "COS 102": { semester: "second", title: "COS 102", level: "100L • Intro to Computing Science", description: "Computer science fundamentals and programming", icon: "💻", iconGradient: "linear-gradient(135deg, #3b82f6, #1d4ed8)", qCount: 100, locked: false, file: "cos102.js", bankKey: "COS 102" },
-        "MLS 104": { semester: "second", title: "MLS 104", level: "100L • Introduction to Biology of Diseases", description: "Disease mechanisms and pathology basics", icon: "🦠", iconGradient: "linear-gradient(135deg, #84cc16, #65a30d)", qCount: 100, locked: false, file: "mls104.js", bankKey: "MLS 104" }
+        // ── 100L ACTIVE (unlocked) ──
+        "MLS 102": { ylevel: "100", semester: "second", title: "MLS 102", level: "100L • History of Medical Laboratory Science", description: "History and development of MLS profession", icon: "📜", iconGradient: "linear-gradient(135deg, #06b6d4, #0891b2)", qCount: 65, locked: false, file: "mls102.js", bankKey: "MLS 102" },
+
+        // ── 100L ACTIVE (unlocked) — second semester ──
+        "BIO 102": { ylevel: "100", semester: "second", title: "BIO 102", level: "100L • General Biology II", description: "Diversity of life, plant and animal morphology", icon: "🔬", iconGradient: "linear-gradient(135deg, #10b981, #059669)", qCount: 111, locked: false, file: "bio102.js", bankKey: "BIO 102" },
+        "BIO 108": { ylevel: "100", semester: "second", title: "BIO 108", level: "100L • Biology Practical II", description: "Practical biology techniques and experiments", icon: "🧫", iconGradient: "linear-gradient(135deg, #14b8a6, #0d9488)", qCount: 100, locked: false, file: "bio108.js", bankKey: "BIO 108" },
+        "PHY 102": { ylevel: "100", semester: "second", title: "PHY 102", level: "100L • General Physics II", description: "Electricity, magnetism and modern physics", icon: "⚡", iconGradient: "linear-gradient(135deg, #ef4444, #dc2626)", qCount: 83, locked: false, file: "phy102.js", bankKey: "PHY 102" },
+        "COS 102": { ylevel: "100", semester: "second", title: "COS 102", level: "100L • Intro to Computing Science", description: "Computer science fundamentals and programming", icon: "💻", iconGradient: "linear-gradient(135deg, #3b82f6, #1d4ed8)", qCount: 78, locked: false, file: "cos102.js", bankKey: "COS 102" },
+        "MLS 104": { ylevel: "100", semester: "second", title: "MLS 104", level: "100L • Introduction to Biology of Diseases", description: "Disease mechanisms and pathology basics", icon: "🦠", iconGradient: "linear-gradient(135deg, #84cc16, #65a30d)", qCount: 65, locked: false, file: "mls104.js", bankKey: "MLS 104" },
+        "MCB 102": { ylevel: "100", semester: "second", title: "MCB 102", level: "100L • Introductory Microbiology", description: "Bacteria, viruses, fungi, protozoa and microbial disease", icon: "🔬", iconGradient: "linear-gradient(135deg, #22c55e, #16a34a)", qCount: 92, locked: false, file: "mcb102.js", bankKey: "MCB 102" },
+
+        // ── 100L COMPLETED (locked) — second semester ──
+        "GST 102": { ylevel: "100", semester: "second", title: "GST 102", level: "100L • Use of English II", description: "Grammar, essay writing, communication and ICT basics", icon: "📝", iconGradient: "linear-gradient(135deg, #667eea, #764ba2)", qCount: 318, locked: true, file: "gst102.js", bankKey: "GST 102" },
+        "GST 104": { ylevel: "100", semester: "second", title: "GST 104", level: "100L • Nigeria Culture", description: "Nigerian history, culture and national development", icon: "🇳🇬", iconGradient: "linear-gradient(135deg, #f97316, #ea580c)", qCount: 100, locked: true, file: "gst112.js", bankKey: "GST 112" },
+        "MTH 102": { ylevel: "100", semester: "second", title: "MTH 102", level: "100L • Elementary Mathematics", description: "Calculus, vectors and differential equations", icon: "📐", iconGradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", qCount: 81, locked: true, file: "mth102.js", bankKey: "MTH 102" },
+        "CHM 102": { ylevel: "100", semester: "second", title: "CHM 102", level: "100L • General Chemistry II", description: "Chemical kinetics, equilibrium and organic chemistry", icon: "🧪", iconGradient: "linear-gradient(135deg, #f59e0b, #d97706)", qCount: 100, locked: true, file: "chm102.js", bankKey: "CHM 102" },
+
+        // ── 100L COMPLETED (locked) — first semester ──
+        "GST 101": { ylevel: "100", semester: "first", title: "GST 101", level: "100L • Use of English", description: "Comprehensive English language and communication skills", icon: "📓", iconGradient: "linear-gradient(135deg, #667eea, #764ba2)", qCount: 339, locked: true, file: "gst101.js", bankKey: "GST 101" },
+        "CSC 101": { ylevel: "100", semester: "first", title: "CSC 101", level: "100L • Intro to Computing", description: "Introduction to computer science and programming", icon: "💻", iconGradient: "linear-gradient(135deg, #3b82f6, #1d4ed8)", qCount: 100, locked: true, file: "csc.js", bankKey: "CSC 101" },
+        "ENT 101": { ylevel: "100", semester: "first", title: "ENT 101", level: "100L • Entrepreneurship", description: "Business development and entrepreneurial skills", icon: "💼", iconGradient: "linear-gradient(135deg, #06b6d4, #0891b2)", qCount: 100, locked: true, file: "ent.js", bankKey: "ENT 101" },
+        "GST 103": { ylevel: "100", semester: "first", title: "GST 112", level: "100L • Use of Library", description: "History, culture and development of Nigeria", icon: "📖", iconGradient: "linear-gradient(135deg, #84cc16, #65a30d)", qCount: 100, locked: true, file: "gst112.js", bankKey: "GST 112" },
+
+        // ── 200L — second semester (coming soon) ──
+        "200L-BCH 202": { ylevel: "200", semester: "second", title: "BCH 202", level: "200L • General Biochemistry II", description: "Metabolism, enzymes, vitamins and bioenergetics", icon: "🧬", iconGradient: "linear-gradient(135deg, #f43f5e, #e11d48)", qCount: 0, locked: true, file: "", bankKey: "BCH 202" },
+        "200L-MCB 202": { ylevel: "200", semester: "second", title: "MCB 202", level: "200L • General Microbiology II", description: "Microbial genetics, virology, immunology and control", icon: "🦠", iconGradient: "linear-gradient(135deg, #22c55e, #15803d)", qCount: 0, locked: true, file: "", bankKey: "MCB 202" },
+        "200L-MLS 202": { ylevel: "200", semester: "second", title: "MLS 202", level: "200L • Medical Laboratory Practice II", description: "Laboratory procedures, safety and quality control", icon: "🔬", iconGradient: "linear-gradient(135deg, #06b6d4, #0284c7)", qCount: 0, locked: true, file: "", bankKey: "MLS 202" },
+        "200L-PHS 202": { ylevel: "200", semester: "second", title: "PHS 202", level: "200L • Human Physiology II", description: "Cardiovascular, respiratory and renal physiology", icon: "❤️", iconGradient: "linear-gradient(135deg, #ef4444, #b91c1c)", qCount: 0, locked: true, file: "", bankKey: "PHS 202" },
+        "200L-ANA 202": { ylevel: "200", semester: "second", title: "ANA 202", level: "200L • Human Anatomy II", description: "Gross anatomy, neuroanatomy and histology", icon: "🫀", iconGradient: "linear-gradient(135deg, #8b5cf6, #6d28d9)", qCount: 0, locked: true, file: "", bankKey: "ANA 202" },
+        "200L-GST 202": { ylevel: "200", semester: "second", title: "GST 202", level: "200L • Peace & Conflict Resolution", description: "Conflict management, peace studies and diplomacy", icon: "🕊️", iconGradient: "linear-gradient(135deg, #f59e0b, #d97706)", qCount: 0, locked: true, file: "", bankKey: "GST 202" },
+
+        // ── 200L — first semester (coming soon) ──
+        "200L-BCH 201": { ylevel: "200", semester: "first", title: "BCH 201", level: "200L • General Biochemistry I", description: "Amino acids, proteins, carbohydrates and lipids", icon: "🧬", iconGradient: "linear-gradient(135deg, #f43f5e, #e11d48)", qCount: 0, locked: true, file: "", bankKey: "BCH 201" },
+        "200L-MCB 201": { ylevel: "200", semester: "first", title: "MCB 201", level: "200L • General Microbiology I", description: "Microbial diversity, growth and metabolism", icon: "🦠", iconGradient: "linear-gradient(135deg, #22c55e, #15803d)", qCount: 0, locked: true, file: "", bankKey: "MCB 201" },
+        "200L-MLS 201": { ylevel: "200", semester: "first", title: "MLS 201", level: "200L • Medical Laboratory Practice I", description: "Basic lab techniques, microscopy and specimen collection", icon: "🔬", iconGradient: "linear-gradient(135deg, #06b6d4, #0284c7)", qCount: 0, locked: true, file: "", bankKey: "MLS 201" },
+        "200L-PHS 201": { ylevel: "200", semester: "first", title: "PHS 201", level: "200L • Human Physiology I", description: "Cell physiology, nervous system and muscle function", icon: "❤️", iconGradient: "linear-gradient(135deg, #ef4444, #b91c1c)", qCount: 0, locked: true, file: "", bankKey: "PHS 201" },
+        "200L-ANA 201": { ylevel: "200", semester: "first", title: "ANA 201", level: "200L • Human Anatomy I", description: "Skeletal system, joints, muscles and surface anatomy", icon: "🫀", iconGradient: "linear-gradient(135deg, #8b5cf6, #6d28d9)", qCount: 0, locked: true, file: "", bankKey: "ANA 201" },
+        "200L-GST 201": { ylevel: "200", semester: "first", title: "GST 201", level: "200L • Entrepreneurship II", description: "Business planning, financing and enterprise management", icon: "💼", iconGradient: "linear-gradient(135deg, #f59e0b, #d97706)", qCount: 0, locked: true, file: "", bankKey: "GST 201" }
     };
 
    // ==================== TOPICS & NOTES FOR EACH COURSE ====================
@@ -159,78 +182,89 @@ document.addEventListener('DOMContentLoaded', function() {
         "BIO 102": {
             icon: "🔬",
             topics: [
-                { id: "viruses", name: "Viruses", description: "Structure, replication, and diseases", qCount: 15, startIdx: 0, endIdx: 15 },
-                { id: "bacteria", name: "Bacteria", description: "Classification, structure, and reproduction", qCount: 15, startIdx: 15, endIdx: 30 },
-                { id: "fungi", name: "Fungi", description: "Types, reproduction, and economic importance", qCount: 15, startIdx: 30, endIdx: 45 },
-                { id: "plant_kingdom", name: "Plant Kingdom", description: "Bryophytes, pteridophytes, gymnosperms, angiosperms", qCount: 15, startIdx: 45, endIdx: 60 },
-                { id: "animal_kingdom", name: "Animal Kingdom", description: "Invertebrates and vertebrates", qCount: 15, startIdx: 60, endIdx: 75 },
-                { id: "ecological_adaptations", name: "Ecological Adaptations", description: "Adaptations in plants and animals", qCount: 10, startIdx: 75, endIdx: 85 },
-                { id: "physiology", name: "Physiology", description: "Nutrition, respiration, circulation", qCount: 10, startIdx: 85, endIdx: 95 },
-                { id: "growth_reproduction", name: "Growth & Reproduction", description: "Development and reproduction", qCount: 5, startIdx: 95, endIdx: 100 }
+                { id: "arthropoda",        name: "Arthropoda & Arachnida",  description: "Arthropod classes, insects, arachnids, crustaceans, myriapods, spiders", qCount: 34,  startIdx: 0,   endIdx: 34  },
+                { id: "protozoa",          name: "Protozoa",                description: "Classification, locomotion types, Ciliata, Mastigophora, Sporozoa",       qCount: 15,  startIdx: 34,  endIdx: 49  },
+                { id: "porifera_mollusca", name: "Porifera & Mollusca",     description: "Sponge symmetry, mollusk classes, mantle, radula, shell types",           qCount: 9,   startIdx: 49,  endIdx: 58  },
+                { id: "aves",              name: "Aves (Birds)",            description: "Bird characteristics, wing adaptations, leg adaptations",                 qCount: 15,  startIdx: 58,  endIdx: 73  },
+                { id: "pisces",            name: "Pisces (Fish)",           description: "Fish features, functions of fins: caudal, dorsal, pectoral, pelvic",      qCount: 12,  startIdx: 73,  endIdx: 85  },
+                { id: "taxonomy",          name: "Taxonomy & Classification",description: "Binomial nomenclature, taxonomic ranks, kingdoms, domains, phylogeny",    qCount: 15,  startIdx: 85,  endIdx: 100 },
+                { id: "last_mins",         name: "Last Mins Must Know",     description: "Coelenterata body wall, symmetry, insect orders, cephalopod circulation, fish species, primitive Mollusca", qCount: 11, startIdx: 100, endIdx: 111 }
             ]
         },
         "BIO 108": { icon: "🧫", topics: [{ id: "all", name: "All Topics", description: "Complete practical biology", qCount: 100, startIdx: 0, endIdx: 100 }] },
-        "CHM 102": { icon: "🧪", topics: [{ id: "all", name: "All Topics", description: "Complete chemistry II", qCount: 60, startIdx: 0, endIdx: 60 }] },
+        "CHM 102": { icon: "🧪", topics: [{ id: "all", name: "All Topics", description: "Complete chemistry II", qCount: 100, startIdx: 0, endIdx: 100 }] },
         "CHM 108": { icon: "⚗️", topics: [{ id: "all", name: "All Topics", description: "Complete practical chemistry", qCount: 100, startIdx: 0, endIdx: 100 }] },
-        "PHY 102": { icon: "⚡", topics: [{ id: "all", name: "All Topics", description: "Complete physics II", qCount: 100, startIdx: 0, endIdx: 100 }] },
+        "PHY 102": { icon: "⚡", topics: [{ id: "all", name: "All Topics", description: "Complete physics II", qCount: 83, startIdx: 0, endIdx: 83 }] },
         "PHY 108": { icon: "📐", topics: [{ id: "all", name: "All Topics", description: "Complete practical physics", qCount: 100, startIdx: 0, endIdx: 100 }] },
-        "COS 102": { icon: "💻", topics: [{ id: "all", name: "All Topics", description: "Complete computing science", qCount: 100, startIdx: 0, endIdx: 100 }] },
+        "COS 102": { icon: "💻", topics: [{ id: "all", name: "All Topics", description: "Complete computing science", qCount: 78, startIdx: 0, endIdx: 78 }] },
        "MLS 102": {
     icon: "📜",
     topics: [
-        { id: "evolution", name: "Evolution of MLS Practice", description: "History and development of Medical Laboratory Science in Nigeria and worldwide", qCount: 15, startIdx: 0, endIdx: 15 },
-        { id: "legislation", name: "Legislations Governing MLS", description: "Laws, acts, and regulations for MLS practice in Nigeria", qCount: 15, startIdx: 15, endIdx: 30 },
-        { id: "nomenclature", name: "Nomenclature & Certification", description: "Certificates, diplomas, degrees, and titles at different times", qCount: 15, startIdx: 30, endIdx: 45 },
-        { id: "training_regulations", name: "Training Rules & Regulations", description: "Rules governing MLS education and training in Nigeria", qCount: 15, startIdx: 45, endIdx: 60 },
-        { id: "accreditation", name: "Programme Approval & Accreditation", description: "Processes for accrediting MLS programs", qCount: 15, startIdx: 60, endIdx: 75 },
-        { id: "professional_bodies", name: "Professional Bodies & Roles", description: "MLSCN, APHLN, NIMLT, and their functions", qCount: 15, startIdx: 75, endIdx: 90 },
-        { id: "international_contributions", name: "International Contributions", description: "Global pioneers and contributions to MLS", qCount: 10, startIdx: 90, endIdx: 100 }
+        { id: "evolution",           name: "Evolution of MLS Practice",       description: "History and development of Medical Laboratory Science in Nigeria and worldwide", qCount: 10, startIdx: 0,  endIdx: 10 },
+        { id: "legislation",         name: "Legislations Governing MLS",       description: "Laws, acts, and regulations for MLS practice in Nigeria",                      qCount: 8,  startIdx: 10, endIdx: 18 },
+        { id: "nomenclature",        name: "Nomenclature & Certification",     description: "Certificates, diplomas, degrees, and titles at different career stages",       qCount: 7,  startIdx: 18, endIdx: 25 },
+        { id: "training_regulations",name: "Training Rules & Regulations",     description: "Rules governing MLS education and training in Nigeria",                        qCount: 7,  startIdx: 25, endIdx: 32 },
+        { id: "accreditation",       name: "Programme Approval & Accreditation",description: "Processes for accrediting MLS programs",                                      qCount: 8,  startIdx: 32, endIdx: 40 },
+        { id: "professional_bodies", name: "Professional Bodies & Roles",      description: "MLSCN board, membership, indexing, internship, and prospects",                qCount: 20, startIdx: 40, endIdx: 60 },
+        { id: "timeline",            name: "Key Historical Timeline",          description: "Landmark dates in Nigeria's MLS history: 1920s, 1954, 1958, 1964, 1973",      qCount: 5,  startIdx: 60, endIdx: 65 }
     ]
 },
 
 "MLS 104": {
     icon: "🦠",
     topics: [
-        { id: "disease_concepts", name: "Basic Concepts of Disease", description: "Congenital, acquired, infectious, non-infectious diseases", qCount: 15, startIdx: 0, endIdx: 15 },
-        { id: "cell_injury", name: "Cell Injury & Disorders", description: "Mechanisms of cell injury, primary causes of cell disorders", qCount: 15, startIdx: 15, endIdx: 30 },
-        { id: "infectious_diseases", name: "Infectious Diseases", description: "Bacterial, viral, fungal, and parasitic infections", qCount: 20, startIdx: 30, endIdx: 50 },
-        { id: "immune_system", name: "Immune System & Components", description: "Immunity, immune response, and related disorders", qCount: 15, startIdx: 50, endIdx: 65 },
-        { id: "disease_mechanisms", name: "Pathophysiology of Diseases", description: "Mechanisms of acute infections, disease progression", qCount: 10, startIdx: 65, endIdx: 75 },
-        { id: "laboratory_diagnosis", name: "Laboratory Diagnosis", description: "Microscopy, techniques for disease detection", qCount: 15, startIdx: 75, endIdx: 90 },
-        { id: "prevention_control", name: "Prevention & Control", description: "Sanitation, hygiene, antibiotics, public health measures", qCount: 10, startIdx: 90, endIdx: 100 }
+        { id: "disease_concepts",    name: "Concept & Classification of Diseases", description: "Infectious, genetic, autoimmune, degenerative, deficiency, chronic and acute diseases", qCount: 20, startIdx: 0,  endIdx: 20 },
+        { id: "radiation",           name: "Effects of Radiation",                  description: "Ionizing vs non-ionizing, radiolysis, DNA damage, repair mechanisms, radiation protection", qCount: 10, startIdx: 20, endIdx: 30 },
+        { id: "morphological",       name: "Morphological Changes (LM & EM)",       description: "Light and electron microscopy, apoptosis vs necrosis, H&E staining, cell injury changes", qCount: 5,  startIdx: 30, endIdx: 35 },
+        { id: "cellular_changes",    name: "Pathological Cellular Changes",          description: "Atrophy, hypertrophy, hyperplasia, aplasia, oncogenesis, necrosis types, apoptosis",    qCount: 10, startIdx: 35, endIdx: 45 },
+        { id: "normal_flora",        name: "Normal Flora",                           description: "Resident vs transient flora, mutualism, skin/vaginal/gut flora, dysbiosis",              qCount: 5,  startIdx: 45, endIdx: 50 },
+        { id: "defense_path",        name: "Defense, Pathogenicity & Transmission",  description: "Lines of defense, lysozyme, interferons, virulence factors, chain of infection, adaptive immunity against parasites", qCount: 15, startIdx: 50, endIdx: 65 }
+    ]
+},
+"MCB 102": {
+    icon: "🔬",
+    topics: [
+        { id: "intro_history",            name: "Introduction & History",         description: "Definition, history of microbiology and pioneering scientists",      qCount: 15, startIdx: 0,  endIdx: 15 },
+        { id: "spontaneous_generation",   name: "Spontaneous Generation",         description: "The debate, key experiments and disproving abiogenesis",              qCount: 12, startIdx: 15, endIdx: 27 },
+        { id: "germ_theory",              name: "Germ Theory & Koch's Postulate", description: "Pasteur's germ theory and Koch's postulates for disease causation",   qCount: 11, startIdx: 27, endIdx: 38 },
+        { id: "microbe_characteristics",  name: "Characteristics of Microbes",    description: "Unique features, structure and classification of microorganisms",     qCount: 10, startIdx: 38, endIdx: 48 },
+        { id: "microbial_growth",         name: "Microbial Growth Phases",        description: "Lag, log, stationary and death phases of microbial growth",          qCount: 9,  startIdx: 48, endIdx: 57 },
+        { id: "economic_fungi",           name: "Economic Importance of Fungi",   description: "Beneficial and harmful roles of fungi in industry and health",        qCount: 19, startIdx: 57, endIdx: 76 },
+        { id: "economic_bacteria",        name: "Economic Importance of Bacteria",description: "Uses and harms of bacteria in food, medicine and environment",        qCount: 16, startIdx: 76, endIdx: 92 }
     ]
 },
 "MTH 102": {
     icon: "📐",
     topics: [
-        { id: "functions", name: "Functions & Graphs", description: "Domain, range, types of functions, graph sketching", qCount: 15, startIdx: 0, endIdx: 15 },
-        { id: "limits", name: "Limits & Continuity", description: "Limit laws, continuity, asymptotes", qCount: 10, startIdx: 15, endIdx: 25 },
-        { id: "differentiation", name: "Differentiation", description: "Derivatives, rules, chain rule, implicit differentiation", qCount: 20, startIdx: 25, endIdx: 45 },
-        { id: "applications_derivatives", name: "Applications of Derivatives", description: "Tangents, optimization, curve sketching", qCount: 10, startIdx: 45, endIdx: 55 },
-        { id: "integration", name: "Integration", description: "Indefinite integrals, substitution, integration by parts", qCount: 20, startIdx: 55, endIdx: 75 },
-        { id: "definite_integrals", name: "Definite Integrals", description: "Area, volume, trapezoidal rule, Simpson's rule", qCount: 15, startIdx: 75, endIdx: 90 },
-        { id: "advanced_topics", name: "Advanced Topics", description: "L'Hôpital's rule, MVT, sequences, series", qCount: 10, startIdx: 90, endIdx: 100 }
+        { id: "functions", name: "Functions & Mappings", description: "Evaluation, inverse, composition, injective/surjective, floor/ceiling, domain, range", qCount: 11, startIdx: 0,  endIdx: 11 },
+        { id: "limits", name: "Limits & Continuity", description: "Limit definition, limits at infinity, singularities, discontinuities, asymptotes", qCount: 11, startIdx: 11, endIdx: 22 },
+        { id: "differentiation", name: "Differentiation", description: "Power, chain, product, quotient rules; trig, log, exponential, inverse trig derivatives", qCount: 18, startIdx: 22, endIdx: 40 },
+        { id: "applications_derivatives", name: "Applications of Derivatives", description: "Tangent lines, maxima/minima, stationary points, velocity", qCount: 6,  startIdx: 40, endIdx: 46 },
+        { id: "integration", name: "Integration", description: "Standard integrals, substitution, integration by parts, definite integrals", qCount: 20, startIdx: 46, endIdx: 66 },
+        { id: "trig_functions", name: "Trig Functions & Identities", description: "All 6 trig derivatives & integrals, Pythagorean identities, double-angle formulas", qCount: 15, startIdx: 66, endIdx: 81 }
     ]
 },
 "PHY 102": {
     icon: "⚡",
     topics: [
-        { id: "electrostatics", name: "Electrostatics", description: "Coulomb's law, electric field, potential, Gauss's law", qCount: 25, startIdx: 0, endIdx: 25 },
-        { id: "dc_circuits", name: "DC Circuits", description: "Ohm's law, Kirchhoff's laws, resistors, power", qCount: 15, startIdx: 25, endIdx: 40 },
-        { id: "magnetic_fields", name: "Magnetic Fields", description: "Lorentz force, Biot-Savart, Ampère's law, magnetic materials", qCount: 20, startIdx: 40, endIdx: 60 },
-        { id: "em_induction", name: "Electromagnetic Induction", description: "Faraday's law, Lenz's law, inductance, transformers, Maxwell's equations", qCount: 20, startIdx: 60, endIdx: 80 },
-        { id: "ac_circuits", name: "AC Circuits & EM Waves", description: "Reactance, impedance, resonance, EM spectrum", qCount: 20, startIdx: 80, endIdx: 100 }
+        { id: "electrostatics", name: "Electrostatics", description: "Coulomb's law, electric field, potential, Gauss's law, capacitance", qCount: 18, startIdx: 0, endIdx: 18 },
+        { id: "dc_circuits", name: "DC Circuits", description: "Ohm's law, Kirchhoff's laws, resistivity, sources of DC, Volt=J/C", qCount: 9, startIdx: 18, endIdx: 27 },
+        { id: "magnetic_fields", name: "Magnetic Fields", description: "Lorentz force, magnetic dipole, cyclotron frequency", qCount: 7, startIdx: 27, endIdx: 34 },
+        { id: "em_induction", name: "Electromagnetic Induction", description: "Faraday's law, Lenz's law, inductance, mutual inductance, transformers, dB/dt", qCount: 15, startIdx: 34, endIdx: 49 },
+        { id: "ac_circuits", name: "AC Circuits", description: "Reactance, impedance, resonance, RMS, power factor, XL, XC", qCount: 9, startIdx: 49, endIdx: 58 },
+        { id: "last_mins_calc", name: "Last Mins — Calculations", description: "E=F/q, V=Ed, W=qV, cyclotron, dB/dt, magnetic dipole, inductor calculations", qCount: 11, startIdx: 58, endIdx: 69 },
+        { id: "last_mins_normal", name: "Last Mins — Normal", description: "Lenz's law, Coulomb's law, Capacitors, Inductance, Transformers", qCount: 14, startIdx: 69, endIdx: 83 }
     ]
 },
 "COS 102": {
     icon: "💻",
     topics: [
-        { id: "intro_computing", name: "Introduction to Computing", description: "Computer basics, software/hardware, problem classification", qCount: 15, startIdx: 0, endIdx: 15 },
-        { id: "solvability", name: "Solvable & Unsolvable Problems", description: "Computability, complexity, halting problem, NP-complete", qCount: 10, startIdx: 15, endIdx: 25 },
-        { id: "problem_techniques", name: "Problem Solving Techniques", description: "Abstraction, analogy, brainstorming, divide and conquer, heuristics", qCount: 20, startIdx: 25, endIdx: 45 },
-        { id: "solution_design", name: "Solution Formulation & Design", description: "Flowcharts, pseudocode, decision trees, decision tables", qCount: 20, startIdx: 45, endIdx: 65 },
-        { id: "implementation", name: "Implementation & Evaluation", description: "Coding, testing, debugging, refinement, maintenance", qCount: 15, startIdx: 65, endIdx: 80 },
-        { id: "programming_basics", name: "Programming Concepts", description: "Variables, data types, loops, conditionals, functions, Python/C", qCount: 20, startIdx: 80, endIdx: 100 }
+        { id: "flowcharts",    name: "Flowcharts & Algorithms",          description: "Flowchart symbols, types, algorithm properties, finiteness", qCount: 8,  startIdx: 0,  endIdx: 8  },
+        { id: "basic_syntax",  name: "BASIC / QBASIC Syntax",            description: "Data types, keywords, SQR(), LET, CLS, REM, file extension, UCASE$", qCount: 14, startIdx: 8,  endIdx: 22 },
+        { id: "arrays",        name: "Arrays & DIM",                     description: "DIM statement, subscripts, elements, traversal, 1D and 2D arrays", qCount: 8,  startIdx: 22, endIdx: 30 },
+        { id: "control",       name: "Control Structures & Code Output",  description: "FOR/NEXT, WHILE/WEND, GOTO, STEP, flags, tracing program output", qCount: 9,  startIdx: 30, endIdx: 39 },
+        { id: "errors_lang",   name: "Errors, Languages & Concepts",     description: "Logic/syntax/runtime errors, debugging, low-level languages, recursion, Sub vs Function", qCount: 6,  startIdx: 39, endIdx: 45 },
+        { id: "must_know",     name: "Must Know",                        description: "Key exam questions: algorithms, BASIC, arrays, loops, flowcharts, DFDs, errors", qCount: 33, startIdx: 45, endIdx: 78 }
     ]
 },
 "BIO 108": {
@@ -247,15 +281,10 @@ document.addEventListener('DOMContentLoaded', function() {
   "CHM 102": {
       icon: "🧪",
       topics: [
-          { id: "esters_hydrolysis",    name: "Esters & Saponification",      description: "Esterification, saponification, acid anhydrides, acyl chlorides, soap",                                      qCount: 10, startIdx: 0,  endIdx: 10 },
-          { id: "carbonyl_chemistry",   name: "Carbonyl Chemistry",           description: "Aldehydes, ketones, Clemmensen, Wolff-Kishner, iodoform, aldol, nucleophilic addition",                     qCount: 10, startIdx: 10, endIdx: 20 },
-          { id: "amines_misc",          name: "Amines, Amides & Misc",        description: "Hofmann degradation, NaBH₄ limits, decarboxylation, urea, polymers, LiAlH₄",                              qCount: 8,  startIdx: 20, endIdx: 28 },
-          { id: "carbohydrates",        name: "Carbohydrates",                description: "Reducing/non-reducing sugars, Benedict's test, fermentation, glycogen, starch vs cellulose",               qCount: 8,  startIdx: 28, endIdx: 36 },
-          { id: "proteins_amino_acids", name: "Proteins & Amino Acids",       description: "Denaturation, disulfide bonds, zwitterions, isoelectric point, peptide bonds",                             qCount: 6,  startIdx: 36, endIdx: 42 },
-          { id: "benzene_reactions",    name: "Benzene & Misc Reactions",     description: "Friedel-Crafts acylation, Tollens', KMnO₄ oxidation, iodoform, azeotrope, amide formation",               qCount: 8,  startIdx: 42, endIdx: 50 },
-          { id: "isomerism",            name: "Isomerism",                    description: "Structural isomers, functional group isomers, geometric (cis-trans) isomerism",                            qCount: 3,  startIdx: 50, endIdx: 53 },
-          { id: "enantiomers",          name: "Enantiomers & Chirality",      description: "Chiral centres, non-superimposable mirror images, optical rotation of polarised light",                    qCount: 3,  startIdx: 53, endIdx: 56 },
-          { id: "epoxides",             name: "Epoxides",                     description: "Oxirane ring, peracid synthesis, acid-catalysed and base-catalysed ring opening, trans/cis diols",        qCount: 4,  startIdx: 56, endIdx: 60 }
+          { id: "amines_chemistry",   name: "Amine Chemistry",             description: "Basicity of amines, IUPAC naming, Hofmann, Hinsberg, Schiff's base, isonitriles, nitrous acid",        qCount: 31, startIdx: 0,  endIdx: 31  },
+          { id: "proteins_amino_ii",  name: "Proteins & Amino Acids",      description: "Amino acid classes, essential vs non-essential, acidic/basic/neutral AA, denaturation, Biuret test",    qCount: 25, startIdx: 31, endIdx: 56  },
+          { id: "stereo_isomerism",   name: "Isomerism & Stereochemistry", description: "Structural, geometric, optical isomers; chirality, enantiomers, diastereomers, meso, racemic mixtures", qCount: 24, startIdx: 56, endIdx: 80  },
+          { id: "alcohols_carbonyls", name: "Alcohols, Carbonyls & Misc",  description: "Alcohol classes, dehydration, oxidation, Grignard reactions, Clemmensen, Lucas test, aldol reaction",  qCount: 20, startIdx: 80, endIdx: 100 }
       ]
   },
     };
@@ -3078,50 +3107,63 @@ document.addEventListener('DOMContentLoaded', function() {
 
     integration: `
         <div class="definition-box">
-            <strong>📌 The Big Idea:</strong> Integration is the reverse of differentiation. Always add +C for indefinite integrals (because constants disappear when you differentiate).
+            <strong>📌 The Big Idea:</strong> Integration is the reverse of differentiation. Always add +C for indefinite integrals. For definite integrals: ∫ₐᵇ f(x) dx = F(b) − F(a) (no +C needed).
         </div>
 
-        <h4>🔥 Must-Know Integral Rules</h4>
+        <h4>🔥 Must-Memorize Rules</h4>
         <ul>
-            <li><strong>Power Rule:</strong> ∫ xⁿ dx = xⁿ⁺¹/(n+1) + C &nbsp; <em>(add 1 to power, divide by new power)</em></li>
-            <li><strong>1/x Rule:</strong> ∫ 1/x dx = ln|x| + C</li>
-            <li><strong>eˣ Rule:</strong> ∫ eˣ dx = eˣ + C</li>
-            <li><strong>aˣ Rule:</strong> ∫ aˣ dx = aˣ / ln a + C</li>
-            <li><strong>sin Rule:</strong> ∫ sin x dx = −cos x + C</li>
-            <li><strong>cos Rule:</strong> ∫ cos x dx = sin x + C</li>
-            <li><strong>sec² Rule:</strong> ∫ sec² x dx = tan x + C</li>
-            <li><strong>ln Trick:</strong> ∫ f'(x)/f(x) dx = ln|f(x)| + C &nbsp; <strong>← key CBT trick!</strong>
-                <ul><li>Check: is numerator = derivative of denominator? → answer is ln|denominator|</li></ul>
-            </li>
-            <li><strong>arctan:</strong> ∫ 1/(1+x²) dx = arctan x + C</li>
+            <li><strong>Power Rule:</strong> ∫ xⁿ dx = xⁿ⁺¹/(n+1) + C</li>
+            <li><strong>∫ 1/x dx = ln|x| + C</strong></li>
+            <li><strong>∫ eˣ dx = eˣ + C</strong></li>
+            <li><strong>∫ aˣ dx = aˣ / ln a + C</strong></li>
+            <li><strong>∫ sin x dx = −cos x + C</strong></li>
+            <li><strong>∫ cos x dx = sin x + C</strong></li>
+            <li><strong>∫ sec² x dx = tan x + C</strong></li>
+            <li><strong>∫ tan x dx = −ln|cos x| + C = ln|sec x| + C</strong></li>
+            <li><strong>∫ 1/(1+x²) dx = arctan x + C</strong></li>
         </ul>
 
-        <h4>📊 Integration by Substitution (u-sub)</h4>
+        <h4>🔥 CBT Pattern Shortcuts — Must Memorize</h4>
+        <ul>
+            <li><strong>f'(x)/f(x) pattern → ln|f(x)| + C</strong>
+                <ul><li>Check: is numerator the derivative of denominator? → answer is ln|denominator| + C</li>
+                <li>e.g. ∫ (12x²+10)/(4x³+10x+5) dx → 12x²+10 = derivative of 4x³+10x+5 ✓ → <strong>ln|4x³+10x+5| + C</strong></li></ul>
+            </li>
+            <li><strong>f'(x)·sin(f(x)) → −cos(f(x)) + C</strong>
+                <ul><li>e.g. ∫ (2x+1)sin(x²+x+1) dx → derivative of x²+x+1 = 2x+1 ✓ → <strong>−cos(x²+x+1) + C</strong></li></ul>
+            </li>
+            <li><strong>f'(x)·cos(f(x)) → sin(f(x)) + C</strong>
+                <ul><li>e.g. ∫ 2x·cos(x²) dx → 2x = derivative of x² ✓ → <strong>sin(x²) + C</strong></li></ul>
+            </li>
+            <li><strong>∫ sin(ax+b) dx = −(1/a)cos(ax+b) + C</strong>
+                <ul><li>e.g. ∫ 3sin(2x+3) dx = 3 × [−(1/2)cos(2x+3)] = <strong>−(3/2)cos(2x+3) + C</strong></li></ul>
+            </li>
+            <li><strong>∫ cos(ax+b) dx = (1/a)sin(ax+b) + C</strong></li>
+        </ul>
+
+        <h4>📊 u-Substitution (when you see a composite function)</h4>
         <ol>
             <li>Let u = inner function</li>
-            <li>Find du/dx, rearrange to get dx</li>
-            <li>Substitute, integrate, substitute back</li>
+            <li>Find du, substitute everything, integrate, sub back</li>
         </ol>
-        <p><em>Example: ∫ 2x(x²+1)⁴ dx → let u = x²+1, du = 2x dx → ∫ u⁴ du = u⁵/5 = (x²+1)⁵/5 + C</em></p>
+        <p><em>∫ 2x(x²+1)⁴ dx → u = x²+1, du = 2x dx → ∫ u⁴ du = u⁵/5 + C = (x²+1)⁵/5 + C</em></p>
+        <p><em>∫ sin x cos x dx → u = sin x, du = cos x dx → ∫ u du = u²/2 + C = sin²x/2 + C</em></p>
+
+        <h4>📊 Definite Integrals</h4>
+        <ol>
+            <li>Integrate normally (find F(x))</li>
+            <li>Answer = F(upper) − F(lower) — no +C</li>
+        </ol>
+        <ul>
+            <li><strong>∫₀¹ x² dx = [x³/3]₀¹ = 1/3 − 0 = 1/3</strong></li>
+            <li><strong>∫₀^(π/2) sin x dx = [−cos x]₀^(π/2) = −cos(π/2) + cos(0) = 0 + 1 = 1</strong></li>
+            <li><strong>∫₀^π sin x dx = [−cos x]₀^π = −(−1) − (−1) = 2</strong></li>
+            <li><strong>∫₁² 1/x dx = ln 2 − ln 1 = ln 2</strong></li>
+        </ul>
 
         <h4>📊 Integration by Parts</h4>
-        <p><strong>∫ u dv = uv − ∫ v du</strong></p>
-        <p><em>Use when integrating a product like x·eˣ or x·ln x</em></p>
-        <p><em>Example: ∫ x eˣ dx → u=x, dv=eˣdx → v=eˣ → xeˣ − ∫eˣdx = xeˣ − eˣ + C</em></p>
-
-        <h4>🧮 CBT Examples</h4>
-        <ul>
-            <li><strong>∫ x dx = x²/2 + C</strong></li>
-            <li><strong>∫ (3x² + 2x) dx = x³ + x² + C</strong></li>
-            <li><strong>∫ cos x dx = sin x + C</strong></li>
-            <li><strong>∫ sin x dx = −cos x + C</strong></li>
-            <li><strong>∫ (12x² + 10)/(4x³ + 10x + 5) dx:</strong>
-                <ul>
-                    <li>Check: derivative of (4x³+10x+5) = 12x²+10 ✓ &nbsp; (numerator = derivative of denominator)</li>
-                    <li>Answer: <strong>ln|4x³ + 10x + 5| + C</strong></li>
-                </ul>
-            </li>
-        </ul>
+        <p><strong>∫ u dv = uv − ∫ v du</strong> — use for products like x·eˣ, x·ln x</p>
+        <p><em>∫ x eˣ dx → u=x, dv=eˣdx → xeˣ − eˣ + C</em></p>
     `,
     
     definite_integrals: `
@@ -3213,6 +3255,300 @@ document.addEventListener('DOMContentLoaded', function() {
         <h4>Discontinuity</h4>
         <ul>
             <li>Set denominator = 0, solve for x → that's where the function breaks</li>
+        </ul>
+    `,
+
+    trig_functions: `
+        <div class="definition-box">
+            <strong>📌 The Big Idea:</strong> There are 6 trig functions. Every one has a derivative and an integral — memorise all 6 pairs. Trig identities let you simplify before differentiating or integrating.
+        </div>
+
+        <h4>🔥 All 6 Trig Derivatives — Must Memorise</h4>
+        <ul>
+            <li>d/dx(sin x) = <strong>cos x</strong></li>
+            <li>d/dx(cos x) = <strong>−sin x</strong></li>
+            <li>d/dx(tan x) = <strong>sec²x</strong></li>
+            <li>d/dx(cot x) = <strong>−csc²x</strong> &nbsp; <em>(negative version of tan's derivative)</em></li>
+            <li>d/dx(sec x) = <strong>sec x tan x</strong> &nbsp; <em>('sec keeps itself, times tan')</em></li>
+            <li>d/dx(csc x) = <strong>−csc x cot x</strong> &nbsp; <em>(same pattern but negative)</em></li>
+        </ul>
+
+        <h4>🔥 All 6 Trig Integrals — Must Memorise</h4>
+        <ul>
+            <li>∫ sin x dx = <strong>−cos x + C</strong></li>
+            <li>∫ cos x dx = <strong>sin x + C</strong></li>
+            <li>∫ sec²x dx = <strong>tan x + C</strong></li>
+            <li>∫ csc²x dx = <strong>−cot x + C</strong></li>
+            <li>∫ sec x tan x dx = <strong>sec x + C</strong></li>
+            <li>∫ csc x cot x dx = <strong>−csc x + C</strong></li>
+            <li>∫ tan x dx = <strong>−ln|cos x| + C = ln|sec x| + C</strong> &nbsp; <em>(f'/f trick: tan = sin/cos)</em></li>
+            <li>∫ cot x dx = <strong>ln|sin x| + C</strong> &nbsp; <em>(cot = cos/sin → f'/f)</em></li>
+        </ul>
+
+        <h4>🔥 Chain Rule with Trig</h4>
+        <ul>
+            <li>d/dx(sin(ax)) = <strong>a·cos(ax)</strong></li>
+            <li>d/dx(cos(ax)) = <strong>−a·sin(ax)</strong></li>
+            <li>d/dx(sin²x) = 2sin x cos x = <strong>sin 2x</strong></li>
+            <li>d/dx(tan²x) = <strong>2tan x sec²x</strong></li>
+        </ul>
+
+        <h4>📋 Pythagorean Identities — Must Know</h4>
+        <ul>
+            <li><strong>sin²x + cos²x = 1</strong> &nbsp; (the master identity)</li>
+            <li><strong>1 + tan²x = sec²x</strong> &nbsp; (divide by cos²x)</li>
+            <li><strong>1 + cot²x = csc²x</strong> &nbsp; (divide by sin²x)</li>
+        </ul>
+
+        <h4>📋 Double-Angle Formulas</h4>
+        <ul>
+            <li><strong>sin 2x = 2sin x cos x</strong></li>
+            <li><strong>cos 2x = cos²x − sin²x = 2cos²x − 1 = 1 − 2sin²x</strong> &nbsp; <em>(three forms, all equal)</em></li>
+        </ul>
+    `
+},
+"MCB 102": {
+    intro_history: `
+        <h4>🔬 Introduction & History of Microbiology</h4>
+
+        <div class="definition-box">
+            <strong>📌 Quick Definition:</strong>
+            <ul>
+                <li><strong>Microbiology</strong> = study of microscopic forms of life (bacteria, viruses, fungi, protozoa, algae).</li>
+                <li><strong>Microbes</strong> are invisible to the naked eye — need a microscope.</li>
+            </ul>
+        </div>
+
+        <h4>🏆 Key Scientists — memorise these!</h4>
+        <table class="notes-table">
+            <tr><th>Scientist</th><th>Contribution</th><th>Year</th></tr>
+            <tr><td>Antonie van Leeuwenhoek</td><td>First to observe bacteria ("animalcules") with single-lens microscope</td><td>1676</td></tr>
+            <tr><td>Louis Pasteur</td><td>Disproved spontaneous generation; germ theory; pasteurisation; vaccines</td><td>1850s–1880s</td></tr>
+            <tr><td>Robert Koch</td><td>Koch's postulates; proved specific microbes cause specific diseases</td><td>1876–1884</td></tr>
+            <tr><td>Robert Hooke</td><td>First to use the word "cell"; observed cells in cork (1665)</td><td>1665</td></tr>
+            <tr><td>Joseph Lister</td><td>Antiseptic surgery using carbolic acid</td><td>1867</td></tr>
+            <tr><td>Alexander Fleming</td><td>Discovered penicillin (first antibiotic)</td><td>1928</td></tr>
+            <tr><td>Edward Jenner</td><td>First vaccine (smallpox/cowpox)</td><td>1796</td></tr>
+            <tr><td>Dmitri Ivanovsky</td><td>First evidence of viruses (tobacco mosaic disease)</td><td>1892</td></tr>
+        </table>
+
+        <div class="key-point">
+            <strong>💡 Trick:</strong> Leeuwenhoek = first to SEE bacteria. Pasteur = germ theory. Koch = postulates. Fleming = penicillin. These four come up every exam.
+        </div>
+
+        <h4>📋 Branches of Microbiology</h4>
+        <ul>
+            <li><strong>Bacteriology</strong> — bacteria</li>
+            <li><strong>Virology</strong> — viruses</li>
+            <li><strong>Mycology</strong> — fungi</li>
+            <li><strong>Protozoology</strong> — protozoa</li>
+            <li><strong>Phycology / Algology</strong> — algae</li>
+            <li><strong>Immunology</strong> — immune system</li>
+            <li><strong>Epidemiology</strong> — disease spread in populations</li>
+        </ul>
+    `,
+
+    spontaneous_generation: `
+        <h4>🧫 Spontaneous Generation</h4>
+
+        <div class="definition-box">
+            <strong>📌 What it is:</strong> The old belief that living things arise from non-living matter (e.g., maggots from meat, frogs from mud). Also called <strong>abiogenesis</strong>.
+        </div>
+
+        <h4>⚔️ The Debate — Who said what</h4>
+        <table class="notes-table">
+            <tr><th>Scientist</th><th>Side</th><th>Experiment</th></tr>
+            <tr><td>Francesco Redi (1668)</td><td>Against</td><td>Covered vs uncovered meat → maggots only on uncovered = flies lay eggs</td></tr>
+            <tr><td>John Needham (1748)</td><td>For</td><td>Boiled broth in sealed flasks → still grew microbes → "life force"</td></tr>
+            <tr><td>Lazzaro Spallanzani (1768)</td><td>Against</td><td>Properly sealed + boiled broth → no growth. (Needham said he killed the "life force")</td></tr>
+            <tr><td>Louis Pasteur (1859)</td><td>Against (FINAL)</td><td><strong>Swan-neck flask</strong>: boiled broth + curved neck → no growth unless neck broken. SETTLED the debate.</td></tr>
+        </table>
+
+        <div class="key-point">
+            <strong>💡 Trick:</strong> Pasteur's swan-neck flask = the experiment that ended the debate. Air could enter but dust/microbes couldn't reach the broth. When neck was broken, broth grew cloudy. Exam loves this.
+        </div>
+
+        <h4>📌 Key Terms</h4>
+        <ul>
+            <li><strong>Abiogenesis</strong> = spontaneous generation (life from non-life)</li>
+            <li><strong>Biogenesis</strong> = life only comes from existing life (what we believe now)</li>
+            <li><strong>Pasteurisation</strong> = mild heat to kill pathogens in food/drinks (not the same as sterilisation)</li>
+        </ul>
+    `,
+
+    germ_theory: `
+        <h4>🦠 Germ Theory & Koch's Postulates</h4>
+
+        <div class="definition-box">
+            <strong>📌 Germ Theory (Pasteur):</strong> Specific microorganisms (germs) cause specific infectious diseases. This replaced the old "miasma" theory (bad air causes disease).
+        </div>
+
+        <h4>✅ Koch's Postulates — 4 steps, memorise order</h4>
+        <ol>
+            <li>The microorganism must be found in <strong>all diseased organisms</strong> but NOT in healthy ones.</li>
+            <li>The microorganism must be <strong>isolated</strong> from the diseased organism and grown in <strong>pure culture</strong>.</li>
+            <li>The cultured microorganism must <strong>cause disease</strong> when introduced into a healthy organism.</li>
+            <li>The microorganism must be <strong>re-isolated</strong> from the experimentally diseased organism and shown to be identical to the original.</li>
+        </ol>
+
+        <div class="key-point">
+            <strong>💡 Trick:</strong> Find → Isolate → Infect → Re-isolate. That's the 4-step chain. If any step fails, Koch's postulates are NOT fulfilled.
+        </div>
+
+        <h4>📋 Koch's Work</h4>
+        <ul>
+            <li>Proved <em>Bacillus anthracis</em> causes <strong>anthrax</strong> (1876)</li>
+            <li>Proved <em>Mycobacterium tuberculosis</em> causes <strong>tuberculosis</strong> (1882)</li>
+            <li>Introduced use of <strong>solid agar</strong> culture media (credited to Fannie Hesse/Richard Petri)</li>
+            <li>Developed <strong>staining techniques</strong> for bacteria</li>
+        </ul>
+
+        <h4>⚠️ Limitations of Koch's Postulates</h4>
+        <ul>
+            <li>Does NOT apply to viruses (can't grow in pure culture)</li>
+            <li>Some people carry pathogens but show no disease (asymptomatic carriers)</li>
+            <li>Some diseases are caused by multiple organisms</li>
+        </ul>
+    `,
+
+    microbe_characteristics: `
+        <h4>🔬 Characteristics of Microorganisms</h4>
+
+        <div class="definition-box">
+            <strong>📌 General Characteristics of ALL Microbes:</strong>
+            <ul>
+                <li>Microscopic (too small to see with naked eye)</li>
+                <li>Ubiquitous (found everywhere — soil, water, air, body)</li>
+                <li>Reproduce rapidly</li>
+                <li>Show great metabolic diversity</li>
+            </ul>
+        </div>
+
+        <h4>📊 Major Groups — Quick Comparison</h4>
+        <table class="notes-table">
+            <tr><th>Group</th><th>Cell Type</th><th>Has Nucleus?</th><th>Example</th></tr>
+            <tr><td>Bacteria</td><td>Prokaryote</td><td>No</td><td>E. coli, Salmonella</td></tr>
+            <tr><td>Fungi</td><td>Eukaryote</td><td>Yes</td><td>Rhizopus, Aspergillus, Candida</td></tr>
+            <tr><td>Protozoa</td><td>Eukaryote</td><td>Yes</td><td>Plasmodium, Amoeba</td></tr>
+            <tr><td>Algae</td><td>Eukaryote</td><td>Yes</td><td>Chlamydomonas, Spirogyra</td></tr>
+            <tr><td>Viruses</td><td>Acellular</td><td>No</td><td>Influenza, HIV, SARS-CoV-2</td></tr>
+        </table>
+
+        <div class="key-point">
+            <strong>💡 Trick:</strong> Only bacteria are prokaryotes. Viruses are NOT cells at all — they're acellular (no cell structure). Everything else (fungi, protozoa, algae) = eukaryotes.
+        </div>
+
+        <h4>📋 Bacterial Shapes (Morphology)</h4>
+        <ul>
+            <li><strong>Cocci</strong> — spherical (e.g., Staphylococcus, Streptococcus)</li>
+            <li><strong>Bacilli</strong> — rod-shaped (e.g., E. coli, Bacillus)</li>
+            <li><strong>Spirilla</strong> — spiral/helical (e.g., Helicobacter pylori)</li>
+            <li><strong>Vibrio</strong> — comma-shaped (e.g., Vibrio cholerae)</li>
+        </ul>
+    `,
+
+    microbial_growth: `
+        <h4>📈 Microbial Growth Phases</h4>
+
+        <div class="definition-box">
+            <strong>📌 Growth = increase in cell number</strong>, not cell size. Bacteria reproduce by <strong>binary fission</strong>.
+        </div>
+
+        <h4>🔄 The 4 Phases — Must Know All 4</h4>
+        <table class="notes-table">
+            <tr><th>Phase</th><th>What Happens</th><th>Key Feature</th></tr>
+            <tr><td>1. Lag Phase</td><td>Bacteria adjusting to new environment. No division yet.</td><td>Synthesis of enzymes, RNA — preparation stage</td></tr>
+            <tr><td>2. Log Phase (Exponential)</td><td>Rapid cell division. Population doubles every generation time.</td><td>Fastest growth; most metabolically active; best time to study bacteria</td></tr>
+            <tr><td>3. Stationary Phase</td><td>Growth = Death rate. Population stays constant.</td><td>Nutrients depleted, waste builds up</td></tr>
+            <tr><td>4. Death Phase (Decline)</td><td>Death rate > Growth rate. Population falls.</td><td>Toxic waste kills cells; nutrient exhaustion</td></tr>
+        </table>
+
+        <div class="key-point">
+            <strong>💡 Trick:</strong> Lag → Log → Stationary → Death. Remember: "Let Logs Stay Dead." In the log phase, bacteria are at peak activity — antibiotics work best here.
+        </div>
+
+        <h4>📌 Key Terms</h4>
+        <ul>
+            <li><strong>Generation time</strong> = time for population to double (E. coli ≈ 20 min)</li>
+            <li><strong>Binary fission</strong> = one cell splits into two equal cells</li>
+            <li><strong>Colony</strong> = visible mass of bacteria grown from a single cell on solid media</li>
+            <li><strong>Culture media</strong> = nutrients used to grow bacteria in the lab</li>
+        </ul>
+    `,
+
+    economic_fungi: `
+        <h4>🍄 Economic Importance of Fungi</h4>
+
+        <div class="definition-box">
+            <strong>📌 Fungi are eukaryotes</strong> that are saprophytes (feed on dead organic matter). They reproduce by spores. Major groups: Zygomycetes, Ascomycetes, Basidiomycetes, Deuteromycetes.
+        </div>
+
+        <h4>✅ Beneficial Uses of Fungi</h4>
+        <table class="notes-table">
+            <tr><th>Use</th><th>Fungus</th><th>Product/Role</th></tr>
+            <tr><td>Bread making</td><td>Saccharomyces cerevisiae (yeast)</td><td>Fermentation → CO₂ makes bread rise</td></tr>
+            <tr><td>Alcohol production</td><td>Saccharomyces cerevisiae</td><td>Ferments sugars → ethanol (beer, wine)</td></tr>
+            <tr><td>Cheese making</td><td>Penicillium roqueforti / P. camemberti</td><td>Ripening and flavouring of cheese</td></tr>
+            <tr><td>Antibiotics</td><td>Penicillium notatum (Fleming)</td><td>Produces penicillin</td></tr>
+            <tr><td>Soy sauce / tempeh</td><td>Aspergillus sojae / Rhizopus</td><td>Fermented food products</td></tr>
+            <tr><td>Citric acid</td><td>Aspergillus niger</td><td>Used in food and beverages</td></tr>
+            <tr><td>Decomposition</td><td>Various saprophytic fungi</td><td>Recycle nutrients in ecosystem</td></tr>
+            <tr><td>Food itself</td><td>Agaricus (mushroom)</td><td>Edible mushrooms</td></tr>
+        </table>
+
+        <h4>❌ Harmful Effects of Fungi</h4>
+        <ul>
+            <li><strong>Diseases in humans:</strong> Ringworm (Tinea), Candidiasis (Candida albicans), Athlete's foot, Histoplasmosis</li>
+            <li><strong>Diseases in plants:</strong> Damping off (Pythium), Blight, Mildew, Rust — destroy crops</li>
+            <li><strong>Food spoilage:</strong> Aspergillus, Rhizopus, Mucor spoil stored food</li>
+            <li><strong>Mycotoxins:</strong> Aflatoxin (from Aspergillus flavus) — contaminates groundnuts/maize; can cause liver cancer</li>
+            <li><strong>Wood rot:</strong> Fungi destroy timber and wooden structures</li>
+        </ul>
+
+        <div class="key-point">
+            <strong>💡 Trick:</strong> Aspergillus = aflatoxin + citric acid + food spoilage. Penicillium = penicillin antibiotic + cheese. Saccharomyces = yeast = bread + alcohol. These three come up most.
+        </div>
+    `,
+
+    economic_bacteria: `
+        <h4>🦠 Economic Importance of Bacteria</h4>
+
+        <div class="definition-box">
+            <strong>📌 Bacteria are prokaryotes.</strong> They are both enormously useful and dangerously harmful to humans.
+        </div>
+
+        <h4>✅ Beneficial Uses of Bacteria</h4>
+        <table class="notes-table">
+            <tr><th>Use</th><th>Bacterium</th><th>Role</th></tr>
+            <tr><td>Nitrogen fixation</td><td>Rhizobium (in legume roots), Azotobacter</td><td>Convert N₂ gas → ammonia → soil fertility</td></tr>
+            <tr><td>Yoghurt/Cheese</td><td>Lactobacillus, Streptococcus thermophilus</td><td>Ferment lactose → lactic acid</td></tr>
+            <tr><td>Vinegar</td><td>Acetobacter aceti</td><td>Oxidise ethanol → acetic acid</td></tr>
+            <tr><td>Antibiotics</td><td>Streptomyces</td><td>Produces streptomycin, tetracycline, erythromycin</td></tr>
+            <tr><td>Sewage treatment</td><td>Mixed bacteria</td><td>Break down organic waste</td></tr>
+            <tr><td>Bioremediation</td><td>Various</td><td>Clean up oil spills, toxic waste</td></tr>
+            <tr><td>Biotechnology</td><td>E. coli (engineered)</td><td>Produces insulin, growth hormones, vaccines</td></tr>
+            <tr><td>Decomposition</td><td>Saprophytic bacteria</td><td>Recycle dead organic matter</td></tr>
+        </table>
+
+        <h4>❌ Harmful Effects of Bacteria</h4>
+        <ul>
+            <li><strong>Food poisoning:</strong> Salmonella typhi (typhoid), Clostridium botulinum (botulism), Staphylococcus aureus</li>
+            <li><strong>Respiratory diseases:</strong> Mycobacterium tuberculosis (TB), Streptococcus pneumoniae (pneumonia)</li>
+            <li><strong>STIs:</strong> Neisseria gonorrhoeae (gonorrhoea), Treponema pallidum (syphilis)</li>
+            <li><strong>Plant diseases:</strong> Agrobacterium (crown gall), Erwinia (soft rot)</li>
+            <li><strong>Food spoilage:</strong> Pseudomonas, Clostridium spoil meat, canned food</li>
+        </ul>
+
+        <div class="key-point">
+            <strong>💡 Trick:</strong> Rhizobium = nitrogen fixation in legumes (most common exam Q). Lactobacillus = yoghurt. Streptomyces = antibiotic source (NOT Penicillium — that's a fungus). E. coli = lab workhorse for biotech.
+        </div>
+
+        <h4>📌 Nitrogen Cycle — Quick Summary</h4>
+        <ul>
+            <li><strong>Nitrogen fixation:</strong> Rhizobium/Azotobacter → N₂ → NH₃</li>
+            <li><strong>Nitrification:</strong> Nitrosomonas → NH₃ → NO₂⁻; Nitrobacter → NO₂⁻ → NO₃⁻</li>
+            <li><strong>Denitrification:</strong> Pseudomonas → NO₃⁻ back to N₂ gas</li>
+            <li><strong>Ammonification:</strong> Decomposers break down proteins → NH₃</li>
         </ul>
     `
 },
@@ -4147,13 +4483,13 @@ print(result)  # Output: 8
         if (topicId === 'all') {
             currentTopics = ['all'];
         } else {
-            if (currentTopics.includes('all')) currentTopics = [];
-            if (currentTopics.includes(topicId)) {
-                currentTopics = currentTopics.filter(id => id !== topicId);
+            // Exclusive single-select: clicking a topic selects ONLY that topic.
+            // Clicking the already-selected topic resets to All.
+            if (currentTopics.length === 1 && currentTopics[0] === topicId) {
+                currentTopics = ['all'];
             } else {
-                currentTopics.push(topicId);
+                currentTopics = [topicId];
             }
-            if (currentTopics.length === 0) currentTopics = ['all'];
         }
         updateTopicSelectionUI();
     }
@@ -4173,10 +4509,10 @@ print(result)  # Output: 8
     function renderCourses() {
         const grid = document.getElementById('coursesGrid');
         if (!grid) return;
-        
-        const semesterCourses = Object.values(COURSES_DB).filter(c => c.semester === currentSemester);
+
+        const semesterCourses = Object.values(COURSES_DB).filter(c => c.semester === currentSemester && (c.ylevel || "100") === currentLevel);
         document.getElementById('semesterTitle').innerText = currentSemester === "first" ? "First Semester" : "Second Semester";
-        document.getElementById('activeSemesterBadge').innerText = currentSemester === "first" ? "1st Semester" : "2nd Semester";
+        document.getElementById('activeSemesterBadge').innerText = currentLevel + "L • " + (currentSemester === "first" ? "1st Sem" : "2nd Sem");
         document.getElementById('coursesCountInfo').innerText = `${semesterCourses.length} courses available`;
         
         grid.innerHTML = '';
@@ -4209,6 +4545,7 @@ print(result)  # Output: 8
 
     // ==================== GLOBAL STATE ====================
     let currentSemester = "second";
+    let currentLevel = "100";
     let currentCourse = "";
     let currentCourseKey = "";
     let currentTopics = [];
@@ -4224,6 +4561,7 @@ print(result)  # Output: 8
     let selectedTimerMinutes = 20;
     let currentExamQuestions = [];
     let isExamActive = false;
+    let isPracticeMode = false;
 
     window.questionBank = window.questionBank || {};
 
@@ -4262,11 +4600,53 @@ print(result)  # Output: 8
         document.getElementById('selectedCourseName').innerText = currentCourse;
         document.getElementById('selectedTopicInfo').innerHTML = `Selected: ${topicNames} <span style="color:#4F6809;">(${currentQuestions.length} questions)</span>`;
         
+        // Show mode selection modal instead of jumping straight to question count
+        document.getElementById('modeModalIcon').innerText = COURSE_TOPICS[currentCourse]?.icon || '📚';
+        document.getElementById('modeModalCourse').innerText = currentCourse;
+        document.getElementById('modeModalTopic').innerText = topicNames + ` (${currentQuestions.length} questions available)`;
         document.getElementById('topicPage').style.display = 'none';
-        document.getElementById('questionCountPage').style.display = 'block';
+        document.getElementById('modeSelectModal').style.display = 'flex';
         forceScrollToTop();
     }
-    
+
+    window.selectExamMode = function() {
+        isPracticeMode = false;
+        document.getElementById('modeSelectModal').style.display = 'none';
+        document.getElementById('questionCountPage').style.display = 'block';
+        forceScrollToTop();
+    };
+
+    window.selectPracticeMode = function() {
+        isPracticeMode = true;
+        document.getElementById('modeSelectModal').style.display = 'none';
+        // Skip question count / timer page — load ALL questions immediately
+        currentQuestionIndex = 0;
+        answers = {};
+        isReviewMode = false;
+        isExamActive = true;
+        initialTime = 0;
+        timeRemaining = 0;
+        const _letters = ['A','B','C','D'];
+        let qs = shuffleArray([...currentQuestions]);
+        currentExamQuestions = qs.map(q => {
+            const correctLetter = (typeof q.answer === 'number') ? _letters[q.answer] : q.answer;
+            const correctText = q.options[_letters.indexOf(correctLetter)];
+            const shuffledOpts = shuffleArray([...q.options]);
+            const newCorrectLetter = _letters[shuffledOpts.indexOf(correctText)];
+            return { ...q, options: shuffledOpts, answer: newCorrectLetter };
+        });
+        window.startExamFromInstructions();
+    };
+
+    window.closeModeModal = function() {
+        document.getElementById('modeSelectModal').style.display = 'none';
+        // Reset selection so the user can pick again cleanly
+        currentTopics = ['all'];
+        updateTopicSelectionUI();
+        document.getElementById('topicPage').style.display = 'block';
+        forceScrollToTop();
+    };
+
     async function loadQuestionBank(courseTitle) {
         const course = COURSES_DB[courseTitle];
         if (!course || !course.file) return false;
@@ -4333,7 +4713,13 @@ print(result)  # Output: 8
             document.getElementById('totalQuestionsDisplay').innerText = currentExamQuestions.length;
             
             const submitBtn = document.querySelector('button[onclick=\"submitExam()\"]');
-            if (submitBtn) submitBtn.style.display = 'block';
+            if (submitBtn) {
+                submitBtn.style.display = 'block';
+                const span = submitBtn.querySelector('span');
+                if (span) span.textContent = isPracticeMode ? 'End Practice' : 'Submit';
+            }
+            const practiceBadge = document.getElementById('practiceModeBadge');
+            if (practiceBadge) practiceBadge.style.display = isPracticeMode ? 'inline-flex' : 'none';
             
             const reviewBackBtn = document.getElementById('reviewBackBtn');
             if (reviewBackBtn) reviewBackBtn.style.display = 'none';
@@ -4342,7 +4728,13 @@ print(result)  # Output: 8
             
             blockBodyScroll();
             loadQuestion();
-            startTimer();
+            const timerContainer = document.getElementById('timerContainer');
+            if (isPracticeMode) {
+                if (timerContainer) timerContainer.style.display = 'none';
+            } else {
+                if (timerContainer) timerContainer.style.display = '';
+                startTimer();
+            }
             updateProgressBar();
         }, 1200);
     };
@@ -4442,14 +4834,15 @@ print(result)  # Output: 8
         }
     });
     
-    function saveAnswer() { 
-        const selected = document.querySelector('input[name="answer"]:checked'); 
+    function saveAnswer() {
+        if (isPracticeMode) return; // answers stored immediately on click in practice mode
+        const selected = document.querySelector('input[name="answer"]:checked');
         if (selected) answers[currentQuestionIndex + 1] = selected.value;
         updateProgressBar();
     }
-    
+
     function selectOptionLetter(letter) {
-        if (isReviewMode) return;
+        if (isReviewMode || isPracticeMode) return;
         const option = document.querySelector(`#optionsContainer input[name="answer"][value="${letter}"]`);
         if (!option) return;
         option.checked = true;
@@ -4477,36 +4870,134 @@ print(result)  # Output: 8
         // Normalise answer: support legacy integer format (0→A, 1→B, 2→C, 3→D)
         const correctAnswer = (typeof q.answer === 'number') ? letters[q.answer] : q.answer;
 
-        q.options.forEach((opt, idx) => {
-            const letter = letters[idx];
+        if (isPracticeMode) {
             const userAns = answers[currentQuestionIndex + 1];
-            const lbl = document.createElement('label');
-            lbl.className = 'option';
-            if (isReviewMode) {
-                if (letter === correctAnswer) lbl.classList.add('correct');
-                if (userAns === letter && userAns !== correctAnswer) lbl.classList.add('wrong');
-                if (userAns === letter) lbl.classList.add('user-selected');
+            const alreadyAnswered = !!userAns;
+            q.options.forEach((opt, idx) => {
+                const letter = letters[idx];
+                const div = document.createElement('div');
+                div.className = 'option practice-option';
+                div.dataset.letter = letter;
+                if (alreadyAnswered) {
+                    div.classList.add('practice-locked');
+                    if (letter === correctAnswer) div.classList.add('correct');
+                    if (userAns === letter && letter !== correctAnswer) div.classList.add('wrong');
+                    const icon = letter === correctAnswer
+                        ? '<span class="opt-result-icon correct-icon">✓</span>'
+                        : (userAns === letter ? '<span class="opt-result-icon wrong-icon">✗</span>' : '');
+                    div.innerHTML = `<span class="opt-letter-circle">${letter}</span><span class="opt-text">${opt}</span>${icon}`;
+                } else {
+                    div.innerHTML = `<span class="opt-letter-circle">${letter}</span><span class="opt-text">${opt}</span>`;
+                    div.addEventListener('click', () => practiceSelectAnswer(letter, correctAnswer, q));
+                }
+                container.appendChild(div);
+            });
+            const expBox = document.getElementById('explanationBox');
+            const expContent = document.getElementById('explanationContent');
+            if (alreadyAnswered && q.explanation) {
+                expBox.style.display = 'block';
+                expContent.innerHTML = formatPracticeExplanation(q.explanation, userAns === correctAnswer);
+                expBox.classList.remove('correct', 'wrong');
+                expBox.classList.add(userAns === correctAnswer ? 'correct' : 'wrong');
+            } else {
+                expBox.style.display = 'none';
             }
-            lbl.innerHTML = `<input type="radio" name="answer" value="${letter}" ${isReviewMode ? 'disabled' : ''} ${userAns === letter ? 'checked' : ''}><span>${letter}. ${opt}</span>`;
-            container.appendChild(lbl);
-        });
-
-        const expBox = document.getElementById('explanationBox');
-        const expContent = document.getElementById('explanationContent');
-        if (isReviewMode && q.explanation) {
-            expBox.style.display = 'block';
-            expContent.innerText = q.explanation;
-            const userAns = answers[currentQuestionIndex + 1];
-            expBox.classList.remove('correct', 'wrong');
-            if (userAns === correctAnswer) expBox.classList.add('correct');
-            else expBox.classList.add('wrong');
         } else {
-            expBox.style.display = 'none';
+            q.options.forEach((opt, idx) => {
+                const letter = letters[idx];
+                const userAns = answers[currentQuestionIndex + 1];
+                const lbl = document.createElement('label');
+                lbl.className = 'option';
+                if (isReviewMode) {
+                    if (letter === correctAnswer) lbl.classList.add('correct');
+                    if (userAns === letter && userAns !== correctAnswer) lbl.classList.add('wrong');
+                    if (userAns === letter) lbl.classList.add('user-selected');
+                }
+                lbl.innerHTML = `<input type="radio" name="answer" value="${letter}" ${isReviewMode ? 'disabled' : ''} ${userAns === letter ? 'checked' : ''}><span>${letter}. ${opt}</span>`;
+                container.appendChild(lbl);
+            });
+            const expBox = document.getElementById('explanationBox');
+            const expContent = document.getElementById('explanationContent');
+            if (isReviewMode && q.explanation) {
+                expBox.style.display = 'block';
+                expContent.innerText = q.explanation;
+                const userAns = answers[currentQuestionIndex + 1];
+                expBox.classList.remove('correct', 'wrong');
+                if (userAns === correctAnswer) expBox.classList.add('correct');
+                else expBox.classList.add('wrong');
+            } else {
+                expBox.style.display = 'none';
+            }
         }
 
         updateQuestionGrid();
     }
     
+    function practiceSelectAnswer(clickedLetter, correctAnswer, currentQ) {
+        if (answers[currentQuestionIndex + 1]) return; // already answered, ignore
+        answers[currentQuestionIndex + 1] = clickedLetter;
+        updateProgressBar();
+        updateQuestionGrid();
+
+        // Re-render options in revealed/locked state
+        const container = document.getElementById('optionsContainer');
+        container.innerHTML = '';
+        currentQ.options.forEach((opt, idx) => {
+            const letter = ['A','B','C','D'][idx];
+            const div = document.createElement('div');
+            div.className = 'option practice-option practice-locked';
+            div.dataset.letter = letter;
+            let icon = '';
+            if (letter === correctAnswer) {
+                div.classList.add('correct');
+                icon = '<span class="opt-result-icon correct-icon">✓</span>';
+            } else if (letter === clickedLetter) {
+                div.classList.add('wrong');
+                icon = '<span class="opt-result-icon wrong-icon">✗</span>';
+            }
+            div.innerHTML = `<span class="opt-letter-circle">${letter}</span><span class="opt-text">${opt}</span>${icon}`;
+            container.appendChild(div);
+        });
+
+        // Show explanation
+        const expBox = document.getElementById('explanationBox');
+        const expContent = document.getElementById('explanationContent');
+        if (currentQ.explanation) {
+            expBox.style.display = 'block';
+            expContent.innerHTML = formatPracticeExplanation(currentQ.explanation, clickedLetter === correctAnswer);
+            expBox.classList.remove('correct', 'wrong');
+            expBox.classList.add(clickedLetter === correctAnswer ? 'correct' : 'wrong');
+        }
+
+        // If last question, style "Next" as "Finish"
+        const isLast = currentQuestionIndex + 1 === currentExamQuestions.length;
+        const nextNavBtn = document.querySelector('.nav-buttons .nav-btn:last-child');
+        if (nextNavBtn) {
+            if (isLast) {
+                nextNavBtn.textContent = 'Finish ✓';
+                nextNavBtn.style.cssText = 'background:linear-gradient(135deg,#22c55e,#16a34a);color:#fff;font-weight:700;border-color:transparent;';
+            } else {
+                nextNavBtn.textContent = 'Next →';
+                nextNavBtn.style.cssText = '';
+            }
+        }
+
+        // Scroll explanation into view
+        setTimeout(() => {
+            const examPage = document.getElementById('examPage');
+            if (examPage) examPage.scrollTo({ top: examPage.scrollHeight, behavior: 'smooth' });
+        }, 120);
+    }
+
+    function formatPracticeExplanation(text, isCorrect) {
+        const headerText = isCorrect ? '✓ Correct! Here\'s why:' : '✗ Incorrect. Here\'s the solution:';
+        const headerClass = isCorrect ? 'correct-header' : 'wrong-header';
+        const formatted = String(text)
+            .replace(/\n/g, '<br>')
+            .replace(/→/g, '<span class="step-arrow">→</span>');
+        return `<div class="practice-exp-header ${headerClass}">${headerText}</div><div class="practice-exp-body">${formatted}</div>`;
+    }
+
     function updateQuestionGrid() {
         const total = getTotalQuestions();
         const grid = document.getElementById('questionGrid');
@@ -4520,7 +5011,7 @@ print(result)  # Output: 8
             if (i === currentQuestionIndex + 1) div.classList.add('active');
             if (answers[i]) div.classList.add('answered');
             else div.classList.add('unanswered');
-            if (isReviewMode && answers[i]) {
+            if ((isReviewMode || isPracticeMode) && answers[i]) {
                 const qIdx = i - 1;
                 const isCorrect = answers[i] === currentExamQuestions[qIdx]?.answer;
                 if (isCorrect) div.classList.add('review-correct');
@@ -4546,6 +5037,7 @@ print(result)  # Output: 8
     window.nextPage = function(e) { saveAnswer(); const newIdx = Math.min(getTotalQuestions() - 1, (Math.floor(currentQuestionIndex / 10) + 1) * 10); if (newIdx > currentQuestionIndex) { currentQuestionIndex = newIdx; loadQuestion(); } };
     
     window.submitExam = function() {
+        if (isPracticeMode) { finalizeExam(); return; }
         saveAnswer();
         if (isReviewMode) { finalizeExam(); return; }
         const total = getTotalQuestions();
@@ -4651,10 +5143,30 @@ print(result)  # Output: 8
         document.getElementById('resultPage').style.display = 'block';
         isExamActive = false;
         restoreBodyScroll();
-        
+
+        // Customise result page for practice vs exam mode
+        const reviewBtn = document.getElementById('reviewBtn');
+        const practiceAgainBtn = document.getElementById('practiceAgainBtn');
+        const resultH2 = document.querySelector('#resultPage h2');
+        if (resultH2) resultH2.textContent = isPracticeMode ? 'Practice Complete!' : 'Exam Completed';
+        if (reviewBtn) reviewBtn.style.display = isPracticeMode ? 'none' : '';
+        if (practiceAgainBtn) practiceAgainBtn.style.display = isPracticeMode ? '' : 'none';
+
         // Force scroll to top of result page
         forceScrollToTop();
     }
+
+    window.practiceAgain = function() {
+        isExamActive = false;
+        isReviewMode = false;
+        isPracticeMode = false;
+        document.getElementById('resultPage').style.display = 'none';
+        // Reset topic selection to default (All) so page is fresh
+        currentTopics = ['all'];
+        updateTopicSelectionUI();
+        document.getElementById('topicPage').style.display = 'block';
+        forceScrollToTop();
+    };
     
     function showExamLeaveModal() {
         const modal = document.getElementById('examNavModal');
@@ -4691,7 +5203,7 @@ print(result)  # Output: 8
     if (backToTopicsBtn) {
         backToTopicsBtn.addEventListener('click', () => {
             document.getElementById('questionCountPage').style.display = 'none';
-            document.getElementById('topicPage').style.display = 'block';
+            document.getElementById('modeSelectModal').style.display = 'flex';
             forceScrollToTop();
         });
     }
@@ -4739,6 +5251,19 @@ print(result)  # Output: 8
                 currentSemester = sem;
                 document.querySelectorAll('.semester-option').forEach(o => o.classList.remove('active'));
                 opt.classList.add('active');
+                renderCourses();
+            });
+        });
+    }
+
+    function initLevelFilter() {
+        document.querySelectorAll('.level-chip[data-level]').forEach(chip => {
+            chip.addEventListener('click', () => {
+                const lvl = chip.getAttribute('data-level');
+                if (lvl === currentLevel) return;
+                currentLevel = lvl;
+                document.querySelectorAll('.level-chip[data-level]').forEach(c => c.classList.remove('active'));
+                chip.classList.add('active');
                 renderCourses();
             });
         });
@@ -4818,6 +5343,7 @@ print(result)  # Output: 8
     
     renderCourses();
     initSemesterToggle();
+    initLevelFilter();
     
     // Initialize resources toggle when DOM is ready
     if (document.readyState === 'loading') {

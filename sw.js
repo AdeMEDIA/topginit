@@ -1,9 +1,9 @@
 // ==================== SERVICE WORKER FOR CBT APP ====================
 // Enables offline access and faster loading
 
-const CACHE_NAME = 'topg-cbt-v17';
-const STATIC_CACHE = 'topg-static-v17';
-const DYNAMIC_CACHE = 'topg-dynamic-v17';
+const CACHE_NAME = 'topg-cbt-v33';
+const STATIC_CACHE = 'topg-static-v33';
+const DYNAMIC_CACHE = 'topg-dynamic-v33';
 
 // Files to cache immediately on install
 const STATIC_ASSETS = [
@@ -25,6 +25,7 @@ const STATIC_ASSETS = [
   '/mls102.js',
   '/mls104.js',
   '/gst112.js',
+  '/mcb102.js',
   '/games.js',
   '/firebase-config.js',
   '/test.jpeg',
@@ -35,7 +36,7 @@ const STATIC_ASSETS = [
 const COURSE_FILES = [
   '/bio102.js', '/chm102.js', '/mth102.js', '/phy102.js',
   '/cos102.js', '/mls102.js', '/mls104.js', '/gst112.js',
-  '/bio108.js', '/chm108.js', '/phy108.js'
+  '/bio108.js', '/chm108.js', '/phy108.js', '/mcb102.js'
 ];
 
 // Install event - cache static assets

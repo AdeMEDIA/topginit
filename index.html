@@ -134,6 +134,39 @@
             </div>
         </div>
 
+        <!-- ==================== MODE SELECTION MODAL ==================== -->
+        <div class="mode-modal-overlay" id="modeSelectModal" style="display:none">
+            <div class="mode-modal-card">
+                <div class="mode-modal-header">
+                    <div class="mode-modal-icon" id="modeModalIcon">📚</div>
+                    <h2 class="mode-modal-course" id="modeModalCourse">Course</h2>
+                    <p class="mode-modal-topic" id="modeModalTopic">All Topics</p>
+                </div>
+                <div class="mode-modal-divider"></div>
+                <h3 class="mode-modal-title">Choose Mode</h3>
+                <p class="mode-modal-subtitle">How would you like to study today?</p>
+                <div class="mode-options">
+                    <button class="mode-btn mode-exam" onclick="selectExamMode()">
+                        <span class="mode-btn-icon">📝</span>
+                        <div class="mode-btn-info">
+                            <span class="mode-btn-title">Exam Mode</span>
+                            <span class="mode-btn-desc">Timed exam — submit at the end, then review corrections</span>
+                        </div>
+                        <span class="mode-btn-arrow">›</span>
+                    </button>
+                    <button class="mode-btn mode-practice" onclick="selectPracticeMode()">
+                        <span class="mode-btn-icon">📖</span>
+                        <div class="mode-btn-info">
+                            <span class="mode-btn-title">Practice Mode</span>
+                            <span class="mode-btn-desc">Instant correction after each answer with full step-by-step solutions</span>
+                        </div>
+                        <span class="mode-btn-arrow">›</span>
+                    </button>
+                </div>
+                <button class="mode-back-btn" onclick="closeModeModal()">← Back to Topics</button>
+            </div>
+        </div>
+
         <!-- ==================== QUESTION COUNT SELECTION PAGE ==================== -->
         <div class="question-count-selection" id="questionCountPage" style="display:none">
             <button class="back-btn" id="backToTopics">← Back to Topics</button>
@@ -168,6 +201,7 @@
         <div class="exam-container" id="examPage" style="display:none">
             <div class="exam-header">
                 <h2 class="exam-title" id="examTitle">BIO 102</h2>
+                <span class="practice-badge" id="practiceModeBadge" style="display:none">📖 Practice</span>
                 <p class="exam-subtitle">Question <span id="currentQ">1</span> of <span id="totalQuestionsDisplay">0</span></p>
                 <div class="exam-progress-bar-wrapper">
                     <div class="exam-progress-bar" id="examProgressBar" style="width: 0%"></div>
@@ -243,6 +277,7 @@
             <div class="result-actions">
                 <button class="btn secondary" id="resultBackToCourses">Back to Courses</button>
                 <button id="reviewBtn" class="btn primary" onclick="showCorrections()">Review Corrections</button>
+                <button id="practiceAgainBtn" class="btn primary practice-again-btn" onclick="practiceAgain()" style="display:none">Practice Again</button>
             </div>
         </div>
         

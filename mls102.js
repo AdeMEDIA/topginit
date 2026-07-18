@@ -378,5 +378,37 @@ window.questionBank["MLS 102"] = [
         options: ["too many teaching hospitals", "overcrowded hospitals and lack of structured supervision", "excess reagents", "low student enrollment"],
         answer: "B",
         explanation: "High patient volumes often mean students become spectators, and senior staff may be too busy to teach properly."
+    },
+
+    // ==================== KEY HISTORICAL TIMELINE (Questions 61-65) ====================
+    {
+        question: "Organized laboratory services in Nigeria first emerged during the",
+        options: ["1910s", "1920s", "1930s", "1940s"],
+        answer: "B",
+        explanation: "The 1920s marked the beginning of organized laboratory services in Nigeria, when colonial hospital facilities started maintaining basic pathology sections."
+    },
+    {
+        question: "The Federal College of Medical Laboratory Science and Technology in Nigeria was established in",
+        options: ["1948", "1954", "1960", "1965"],
+        answer: "B",
+        explanation: "The Federal College of Medical Laboratory Science and Technology was established in 1954 as the first institution dedicated to formal MLS training in Nigeria."
+    },
+    {
+        question: "Formal, structured training of Medical Laboratory Technicians (MLTs) in Nigeria began in",
+        options: ["1950", "1954", "1958", "1964"],
+        answer: "C",
+        explanation: "1958 marks the start of formal structured training programs for MLTs in Nigeria, standardizing entry into the profession."
+    },
+    {
+        question: "The Association of Medical Laboratory Scientists of Nigeria (AMLSN) was founded in",
+        options: ["1958", "1964", "1968", "1973"],
+        answer: "B",
+        explanation: "AMLSN was formed in 1964 as the professional association representing medical laboratory scientists in Nigeria, advocating for their interests and professional standards."
+    },
+    {
+        question: "Advanced professional and specialization programs in Medical Laboratory Science in Nigeria were significantly expanded in",
+        options: ["1965", "1968", "1973", "1980"],
+        answer: "C",
+        explanation: "1973 saw the expansion of advanced professional training in MLS, including postgraduate-level programs and specialist pathways in Nigeria."
     }
 ];

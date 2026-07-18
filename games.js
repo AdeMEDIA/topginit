@@ -53,14 +53,13 @@
             { id: 'judiciary_rights',          name: 'Judiciary & Rights',          startIdx: 80, endIdx: 90 }
         ],
         'BIO 102': [
-            { id: 'viruses',                name: 'Viruses',                   startIdx: 0,  endIdx: 15  },
-            { id: 'bacteria',               name: 'Bacteria',                  startIdx: 15, endIdx: 30  },
-            { id: 'fungi',                  name: 'Fungi',                     startIdx: 30, endIdx: 45  },
-            { id: 'plant_kingdom',          name: 'Plant Kingdom',             startIdx: 45, endIdx: 60  },
-            { id: 'animal_kingdom',         name: 'Animal Kingdom',            startIdx: 60, endIdx: 75  },
-            { id: 'ecological_adaptations', name: 'Ecological Adaptations',    startIdx: 75, endIdx: 85  },
-            { id: 'physiology',             name: 'Physiology',                startIdx: 85, endIdx: 95  },
-            { id: 'growth_reproduction',    name: 'Growth & Reproduction',     startIdx: 95, endIdx: 100 }
+            { id: 'arthropoda',        name: 'Arthropoda & Arachnida',   startIdx: 0,   endIdx: 34  },
+            { id: 'protozoa',          name: 'Protozoa',                  startIdx: 34,  endIdx: 49  },
+            { id: 'porifera_mollusca', name: 'Porifera & Mollusca',       startIdx: 49,  endIdx: 58  },
+            { id: 'aves',              name: 'Aves (Birds)',               startIdx: 58,  endIdx: 73  },
+            { id: 'pisces',            name: 'Pisces (Fish)',              startIdx: 73,  endIdx: 85  },
+            { id: 'taxonomy',          name: 'Taxonomy & Classification',  startIdx: 85,  endIdx: 100 },
+            { id: 'last_mins',         name: 'Last Mins Must Know',        startIdx: 100, endIdx: 111 }
         ],
         'BIO 108': [
             { id: 'plant_anatomy',    name: 'Anatomy of Flowering Plants', startIdx: 0,  endIdx: 30  },
@@ -71,15 +70,10 @@
             { id: 'dissection',       name: 'Dissection & Practical',      startIdx: 90, endIdx: 100 }
         ],
         'CHM 102': [
-            { id: 'esters_hydrolysis',    name: 'Esters & Saponification',  startIdx: 0,  endIdx: 10 },
-            { id: 'carbonyl_chemistry',   name: 'Carbonyl Chemistry',       startIdx: 10, endIdx: 20 },
-            { id: 'amines_misc',          name: 'Amines & Amides',          startIdx: 20, endIdx: 28 },
-            { id: 'carbohydrates',        name: 'Carbohydrates',            startIdx: 28, endIdx: 36 },
-            { id: 'proteins_amino_acids', name: 'Proteins & Amino Acids',   startIdx: 36, endIdx: 42 },
-            { id: 'benzene_reactions',    name: 'Benzene & Misc Reactions', startIdx: 42, endIdx: 50 },
-            { id: 'isomerism',            name: 'Isomerism',                startIdx: 50, endIdx: 53 },
-            { id: 'enantiomers',          name: 'Enantiomers & Chirality',  startIdx: 53, endIdx: 56 },
-            { id: 'epoxides',             name: 'Epoxides',                 startIdx: 56, endIdx: 60 }
+            { id: 'amines_chemistry',   name: 'Amine Chemistry',           startIdx: 0,  endIdx: 31  },
+            { id: 'proteins_amino_ii',  name: 'Proteins & Amino Acids',    startIdx: 31, endIdx: 56  },
+            { id: 'stereo_isomerism',   name: 'Isomerism & Stereochem',    startIdx: 56, endIdx: 80  },
+            { id: 'alcohols_carbonyls', name: 'Alcohols & Carbonyls',      startIdx: 80, endIdx: 100 }
         ],
         'GST 112': [
             { id: 'pre_colonial',              name: 'Pre-Colonial Nigeria',        startIdx: 0,  endIdx: 15 },
@@ -91,19 +85,21 @@
             { id: 'judiciary_rights',          name: 'Judiciary & Rights',          startIdx: 80, endIdx: 90 }
         ],
         'PHY 102': [
-            { id: 'electrostatics',  name: 'Electrostatics',             startIdx: 0,  endIdx: 25  },
-            { id: 'dc_circuits',     name: 'DC Circuits',                startIdx: 25, endIdx: 40  },
-            { id: 'magnetic_fields', name: 'Magnetic Fields',            startIdx: 40, endIdx: 60  },
-            { id: 'em_induction',    name: 'Electromagnetic Induction',  startIdx: 60, endIdx: 80  },
-            { id: 'ac_circuits',     name: 'AC Circuits & EM Waves',     startIdx: 80, endIdx: 100 }
+            { id: 'electrostatics',  name: 'Electrostatics',            startIdx: 0,  endIdx: 18 },
+            { id: 'dc_circuits',     name: 'DC Circuits',               startIdx: 18, endIdx: 27 },
+            { id: 'magnetic_fields', name: 'Magnetic Fields',           startIdx: 27, endIdx: 34 },
+            { id: 'em_induction',    name: 'EM Induction',              startIdx: 34, endIdx: 49 },
+            { id: 'ac_circuits',     name: 'AC Circuits',               startIdx: 49, endIdx: 58 },
+            { id: 'last_mins_calc',   name: 'Last Mins — Calculations',  startIdx: 58, endIdx: 69 },
+            { id: 'last_mins_normal', name: 'Last Mins — Normal',         startIdx: 69, endIdx: 83 }
         ],
         'COS 102': [
-            { id: 'intro_computing',     name: 'Intro to Computing',          startIdx: 0,  endIdx: 15  },
-            { id: 'solvability',         name: 'Solvable & Unsolvable',       startIdx: 15, endIdx: 25  },
-            { id: 'problem_techniques',  name: 'Problem Solving Techniques',  startIdx: 25, endIdx: 45  },
-            { id: 'solution_design',     name: 'Solution Formulation',        startIdx: 45, endIdx: 65  },
-            { id: 'implementation',      name: 'Implementation & Evaluation', startIdx: 65, endIdx: 80  },
-            { id: 'programming_basics',  name: 'Programming Concepts',        startIdx: 80, endIdx: 100 }
+            { id: 'flowcharts',   name: 'Flowcharts & Algorithms',         startIdx: 0,  endIdx: 8  },
+            { id: 'basic_syntax', name: 'BASIC / QBASIC Syntax',           startIdx: 8,  endIdx: 22 },
+            { id: 'arrays',       name: 'Arrays & DIM',                    startIdx: 22, endIdx: 30 },
+            { id: 'control',      name: 'Control Structures & Code Output', startIdx: 30, endIdx: 39 },
+            { id: 'errors_lang',  name: 'Errors, Languages & Concepts',    startIdx: 39, endIdx: 45 },
+            { id: 'must_know',    name: 'Must Know',                       startIdx: 45, endIdx: 78 }
         ],
         'MTH 102': [
             { id: 'functions',                name: 'Functions & Graphs',          startIdx: 0,  endIdx: 15  },
@@ -115,22 +111,21 @@
             { id: 'advanced_topics',          name: 'Advanced Topics',             startIdx: 90, endIdx: 100 }
         ],
         'MLS 102': [
-            { id: 'evolution',                  name: 'Evolution of MLS Practice',       startIdx: 0,  endIdx: 15 },
-            { id: 'legislation',                name: 'Legislations Governing MLS',      startIdx: 15, endIdx: 30 },
-            { id: 'nomenclature',               name: 'Nomenclature & Certification',    startIdx: 30, endIdx: 45 },
-            { id: 'training_regulations',       name: 'Training Rules & Regulations',    startIdx: 45, endIdx: 60 },
-            { id: 'accreditation',              name: 'Programme Approval',              startIdx: 60, endIdx: 75 },
-            { id: 'professional_bodies',        name: 'Professional Bodies & Roles',     startIdx: 75, endIdx: 90 },
-            { id: 'international_contributions',name: 'International Contributions',     startIdx: 90, endIdx: 100 }
+            { id: 'evolution',            name: 'Evolution of MLS',         startIdx: 0,  endIdx: 10 },
+            { id: 'legislation',          name: 'MLS Legislation',           startIdx: 10, endIdx: 18 },
+            { id: 'nomenclature',         name: 'Nomenclature & Certs',      startIdx: 18, endIdx: 25 },
+            { id: 'training_regulations', name: 'Training Regulations',      startIdx: 25, endIdx: 32 },
+            { id: 'accreditation',        name: 'Accreditation',             startIdx: 32, endIdx: 40 },
+            { id: 'professional_bodies',  name: 'Professional Bodies',       startIdx: 40, endIdx: 60 },
+            { id: 'timeline',             name: 'Historical Timeline',       startIdx: 60, endIdx: 65 }
         ],
         'MLS 104': [
-            { id: 'disease_concepts',     name: 'Basic Concepts of Disease',  startIdx: 0,  endIdx: 15  },
-            { id: 'cell_injury',          name: 'Cell Injury & Disorders',    startIdx: 15, endIdx: 30  },
-            { id: 'infectious_diseases',  name: 'Infectious Diseases',        startIdx: 30, endIdx: 50  },
-            { id: 'immune_system',        name: 'Immune System',              startIdx: 50, endIdx: 65  },
-            { id: 'disease_mechanisms',   name: 'Pathophysiology',            startIdx: 65, endIdx: 75  },
-            { id: 'laboratory_diagnosis', name: 'Laboratory Diagnosis',       startIdx: 75, endIdx: 90  },
-            { id: 'prevention_control',   name: 'Prevention & Control',       startIdx: 90, endIdx: 100 }
+            { id: 'disease_concepts', name: 'Concept & Classification',           startIdx: 0,  endIdx: 20 },
+            { id: 'radiation',        name: 'Effects of Radiation',               startIdx: 20, endIdx: 30 },
+            { id: 'morphological',    name: 'Morphological Changes (LM & EM)',    startIdx: 30, endIdx: 35 },
+            { id: 'cellular_changes', name: 'Pathological Cellular Changes',      startIdx: 35, endIdx: 45 },
+            { id: 'normal_flora',     name: 'Normal Flora',                       startIdx: 45, endIdx: 50 },
+            { id: 'defense_path',     name: 'Defense, Pathogenicity & Transmission', startIdx: 50, endIdx: 65 }
         ]
     };
 
