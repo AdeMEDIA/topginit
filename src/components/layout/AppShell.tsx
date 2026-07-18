@@ -1,9 +1,19 @@
+import { useEffect } from 'react'
 import { Outlet } from 'react-router-dom'
 import { Header } from './Header'
 import { BottomNav } from './BottomNav'
 import { Sidebar } from './Sidebar'
+import { recordActivity } from '@/services/streak'
+import { useAuthStore } from '@/stores/authStore'
 
 export function AppShell() {
+  const { updateUser } = useAuthStore()
+
+  useEffect(() => {
+    const s = recordActivity()
+    updateUser({ streak: s.current, lastActive: new Date().toISOString() })
+  }, [])
+
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950 flex">
       <Sidebar />
