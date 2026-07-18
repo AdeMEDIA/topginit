@@ -17,6 +17,7 @@ export interface User {
     notifications: boolean
   }
   onboardingComplete: boolean
+  achievements?: string[]
 }
 
 export type AuthUser = Pick<User, 'id' | 'name' | 'email'>

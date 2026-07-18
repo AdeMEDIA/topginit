@@ -6,23 +6,34 @@ import { Card } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { Badge } from '@/components/ui/Badge'
 import { ProgressRing } from '@/components/ui/ProgressRing'
+import { AchievementToast, useAchievementToasts } from '@/components/ui/AchievementToast'
 import { formatTime, getGrade } from '@/lib/utils'
 import type { ExamResult } from '@/types/exam'
 import type { Question } from '@/types/question'
 
-interface LocationState { result: ExamResult; questions: Question[] }
+interface LocationState { result: ExamResult; questions: Question[]; newAchievements?: string[] }
 
 export function ResultPage() {
   const location = useLocation()
   const navigate = useNavigate()
-  const state = location.state as LocationState | null
+  const routeState = location.state as LocationState | null
+  const toasts = useAchievementToasts()
+  const [initialized, setInitialized] = useState(false)
 
-  if (!state?.result) {
+  const result = routeState?.result ?? null
+  const questions = routeState?.questions ?? []
+  const newAchievements = routeState?.newAchievements ?? []
+
+  if (!initialized && newAchievements.length) {
+    setInitialized(true)
+    toasts.push(newAchievements)
+  }
+
+  if (!result) {
     navigate('/app/practice')
     return null
   }
 
-  const { result, questions } = state
   const grade = getGrade(result.score)
 
   return (
@@ -78,6 +89,8 @@ export function ResultPage() {
           </div>
         </div>
       )}
+
+      {toasts.current && <AchievementToast message={toasts.current} onDone={toasts.pop} />}
     </div>
   )
 }

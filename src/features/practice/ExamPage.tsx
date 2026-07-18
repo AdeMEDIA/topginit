@@ -6,7 +6,10 @@ import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
 import { getCourseById } from '@/data/courses'
 import { loadQuestions, getQuestionSlice } from '@/services/questions'
-import { saveResult } from '@/services/db'
+import { saveResult, getResults } from '@/services/db'
+import { getGameResults } from '@/services/games'
+import { getStreak } from '@/services/streak'
+import { ACHIEVEMENTS, checkAchievements } from '@/data/achievements'
 import { useAuthStore } from '@/stores/authStore'
 import { useExam } from '@/hooks/useExam'
 import { formatTime, cn } from '@/lib/utils'
@@ -56,11 +59,20 @@ export function ExamPage() {
 
   const onFinish = useCallback((result: NonNullable<ReturnType<typeof useExam>['result']>) => {
     saveResult(result)
-    updateUser({
-      xp: (user?.xp ?? 0) + result.correct * 10 + 50,
-      coins: (user?.coins ?? 0) + 5,
-    })
-    navigate(`/app/result/${result.id}`, { state: { result, questions } })
+    const newXp = (user?.xp ?? 0) + result.correct * 10 + 50
+    updateUser({ xp: newXp, coins: (user?.coins ?? 0) + 5 })
+
+    const streakData = getStreak()
+    const newAchievements = checkAchievements(
+      { results: [...getResults(), result], gameResults: getGameResults(), streak: streakData.current, xp: newXp },
+      user?.achievements ?? [],
+    )
+    if (newAchievements.length) {
+      updateUser({ achievements: [...(user?.achievements ?? []), ...newAchievements] })
+    }
+    const newNames = newAchievements.map(id => ACHIEVEMENTS.find(a => a.id === id)?.name).filter(Boolean) as string[]
+
+    navigate(`/app/result/${result.id}`, { state: { result, questions, newAchievements: newNames } })
   }, [user, updateUser, navigate, questions])
 
   if (!questions || !config) {

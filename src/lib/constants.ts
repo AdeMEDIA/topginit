@@ -9,6 +9,8 @@ export const STORAGE_KEYS = {
   PROGRESS: 'topg_progress',
   RESULTS: 'topg_results',
   STREAK: 'topg_streak',
+  GAME_RESULTS: 'topg_game_results',
+  DAILY_PLAYED: 'topg_daily_played',
 } as const
 
 export const LEVELS = ['100', '200', '300', '400', '500'] as const
