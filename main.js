@@ -96,28 +96,44 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // ==================== COURSE DATABASE ====================
     const COURSES_DB = {
-        // ── ACTIVE (unlocked) ──
-        "MLS 102": { semester: "second", title: "MLS 102", level: "100L • History of Medical Laboratory Science", description: "History and development of MLS profession", icon: "📜", iconGradient: "linear-gradient(135deg, #06b6d4, #0891b2)", qCount: 65, locked: false, file: "mls102.js", bankKey: "MLS 102" },
+        // ── 100L ACTIVE (unlocked) ──
+        "MLS 102": { ylevel: "100", semester: "second", title: "MLS 102", level: "100L • History of Medical Laboratory Science", description: "History and development of MLS profession", icon: "📜", iconGradient: "linear-gradient(135deg, #06b6d4, #0891b2)", qCount: 65, locked: false, file: "mls102.js", bankKey: "MLS 102" },
 
-        // ── ACTIVE (unlocked) — second semester ──
-        "BIO 102": { semester: "second", title: "BIO 102", level: "100L • General Biology II", description: "Diversity of life, plant and animal morphology", icon: "🔬", iconGradient: "linear-gradient(135deg, #10b981, #059669)", qCount: 111, locked: false, file: "bio102.js", bankKey: "BIO 102" },
-        "BIO 108": { semester: "second", title: "BIO 108", level: "100L • Biology Practical II", description: "Practical biology techniques and experiments", icon: "🧫", iconGradient: "linear-gradient(135deg, #14b8a6, #0d9488)", qCount: 100, locked: false, file: "bio108.js", bankKey: "BIO 108" },
-        "PHY 102": { semester: "second", title: "PHY 102", level: "100L • General Physics II", description: "Electricity, magnetism and modern physics", icon: "⚡", iconGradient: "linear-gradient(135deg, #ef4444, #dc2626)", qCount: 83, locked: false, file: "phy102.js", bankKey: "PHY 102" },
-        "COS 102": { semester: "second", title: "COS 102", level: "100L • Intro to Computing Science", description: "Computer science fundamentals and programming", icon: "💻", iconGradient: "linear-gradient(135deg, #3b82f6, #1d4ed8)", qCount: 78, locked: false, file: "cos102.js", bankKey: "COS 102" },
-        "MLS 104": { semester: "second", title: "MLS 104", level: "100L • Introduction to Biology of Diseases", description: "Disease mechanisms and pathology basics", icon: "🦠", iconGradient: "linear-gradient(135deg, #84cc16, #65a30d)", qCount: 65, locked: false, file: "mls104.js", bankKey: "MLS 104" },
-        "MCB 102": { semester: "second", title: "MCB 102", level: "100L • Introductory Microbiology", description: "Bacteria, viruses, fungi, protozoa and microbial disease", icon: "🔬", iconGradient: "linear-gradient(135deg, #22c55e, #16a34a)", qCount: 92, locked: false, file: "mcb102.js", bankKey: "MCB 102" },
+        // ── 100L ACTIVE (unlocked) — second semester ──
+        "BIO 102": { ylevel: "100", semester: "second", title: "BIO 102", level: "100L • General Biology II", description: "Diversity of life, plant and animal morphology", icon: "🔬", iconGradient: "linear-gradient(135deg, #10b981, #059669)", qCount: 111, locked: false, file: "bio102.js", bankKey: "BIO 102" },
+        "BIO 108": { ylevel: "100", semester: "second", title: "BIO 108", level: "100L • Biology Practical II", description: "Practical biology techniques and experiments", icon: "🧫", iconGradient: "linear-gradient(135deg, #14b8a6, #0d9488)", qCount: 100, locked: false, file: "bio108.js", bankKey: "BIO 108" },
+        "PHY 102": { ylevel: "100", semester: "second", title: "PHY 102", level: "100L • General Physics II", description: "Electricity, magnetism and modern physics", icon: "⚡", iconGradient: "linear-gradient(135deg, #ef4444, #dc2626)", qCount: 83, locked: false, file: "phy102.js", bankKey: "PHY 102" },
+        "COS 102": { ylevel: "100", semester: "second", title: "COS 102", level: "100L • Intro to Computing Science", description: "Computer science fundamentals and programming", icon: "💻", iconGradient: "linear-gradient(135deg, #3b82f6, #1d4ed8)", qCount: 78, locked: false, file: "cos102.js", bankKey: "COS 102" },
+        "MLS 104": { ylevel: "100", semester: "second", title: "MLS 104", level: "100L • Introduction to Biology of Diseases", description: "Disease mechanisms and pathology basics", icon: "🦠", iconGradient: "linear-gradient(135deg, #84cc16, #65a30d)", qCount: 65, locked: false, file: "mls104.js", bankKey: "MLS 104" },
+        "MCB 102": { ylevel: "100", semester: "second", title: "MCB 102", level: "100L • Introductory Microbiology", description: "Bacteria, viruses, fungi, protozoa and microbial disease", icon: "🔬", iconGradient: "linear-gradient(135deg, #22c55e, #16a34a)", qCount: 92, locked: false, file: "mcb102.js", bankKey: "MCB 102" },
 
-        // ── COMPLETED (locked) — second semester ──
-        "GST 102": { semester: "second", title: "GST 102", level: "100L • Use of English II", description: "Grammar, essay writing, communication and ICT basics", icon: "📝", iconGradient: "linear-gradient(135deg, #667eea, #764ba2)", qCount: 318, locked: true, file: "gst102.js", bankKey: "GST 102" },
-        "GST 104": { semester: "second", title: "GST 104", level: "100L • Nigeria Culture", description: "Nigerian history, culture and national development", icon: "🇳🇬", iconGradient: "linear-gradient(135deg, #f97316, #ea580c)", qCount: 100, locked: true, file: "gst112.js", bankKey: "GST 112" },
-        "MTH 102": { semester: "second", title: "MTH 102", level: "100L • Elementary Mathematics", description: "Calculus, vectors and differential equations", icon: "📐", iconGradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", qCount: 81, locked: true, file: "mth102.js", bankKey: "MTH 102" },
-        "CHM 102": { semester: "second", title: "CHM 102", level: "100L • General Chemistry II", description: "Chemical kinetics, equilibrium and organic chemistry", icon: "🧪", iconGradient: "linear-gradient(135deg, #f59e0b, #d97706)", qCount: 100, locked: true, file: "chm102.js", bankKey: "CHM 102" },
+        // ── 100L COMPLETED (locked) — second semester ──
+        "GST 102": { ylevel: "100", semester: "second", title: "GST 102", level: "100L • Use of English II", description: "Grammar, essay writing, communication and ICT basics", icon: "📝", iconGradient: "linear-gradient(135deg, #667eea, #764ba2)", qCount: 318, locked: true, file: "gst102.js", bankKey: "GST 102" },
+        "GST 104": { ylevel: "100", semester: "second", title: "GST 104", level: "100L • Nigeria Culture", description: "Nigerian history, culture and national development", icon: "🇳🇬", iconGradient: "linear-gradient(135deg, #f97316, #ea580c)", qCount: 100, locked: true, file: "gst112.js", bankKey: "GST 112" },
+        "MTH 102": { ylevel: "100", semester: "second", title: "MTH 102", level: "100L • Elementary Mathematics", description: "Calculus, vectors and differential equations", icon: "📐", iconGradient: "linear-gradient(135deg, #8b5cf6, #7c3aed)", qCount: 81, locked: true, file: "mth102.js", bankKey: "MTH 102" },
+        "CHM 102": { ylevel: "100", semester: "second", title: "CHM 102", level: "100L • General Chemistry II", description: "Chemical kinetics, equilibrium and organic chemistry", icon: "🧪", iconGradient: "linear-gradient(135deg, #f59e0b, #d97706)", qCount: 100, locked: true, file: "chm102.js", bankKey: "CHM 102" },
 
-        // ── COMPLETED (locked) — first semester ──
-        "GST 101": { semester: "first", title: "GST 101", level: "100L • Use of English", description: "Comprehensive English language and communication skills", icon: "📓", iconGradient: "linear-gradient(135deg, #667eea, #764ba2)", qCount: 339, locked: true, file: "gst101.js", bankKey: "GST 101" },
-        "CSC 101": { semester: "first", title: "CSC 101", level: "100L • Intro to Computing", description: "Introduction to computer science and programming", icon: "💻", iconGradient: "linear-gradient(135deg, #3b82f6, #1d4ed8)", qCount: 100, locked: true, file: "csc.js", bankKey: "CSC 101" },
-        "ENT 101": { semester: "first", title: "ENT 101", level: "100L • Entrepreneurship", description: "Business development and entrepreneurial skills", icon: "💼", iconGradient: "linear-gradient(135deg, #06b6d4, #0891b2)", qCount: 100, locked: true, file: "ent.js", bankKey: "ENT 101" },
-        "GST 103": { semester: "first", title: "GST 112", level: "100L • Use of Library", description: "History, culture and development of Nigeria", icon: "📖", iconGradient: "linear-gradient(135deg, #84cc16, #65a30d)", qCount: 100, locked: true, file: "gst112.js", bankKey: "GST 112" }
+        // ── 100L COMPLETED (locked) — first semester ──
+        "GST 101": { ylevel: "100", semester: "first", title: "GST 101", level: "100L • Use of English", description: "Comprehensive English language and communication skills", icon: "📓", iconGradient: "linear-gradient(135deg, #667eea, #764ba2)", qCount: 339, locked: true, file: "gst101.js", bankKey: "GST 101" },
+        "CSC 101": { ylevel: "100", semester: "first", title: "CSC 101", level: "100L • Intro to Computing", description: "Introduction to computer science and programming", icon: "💻", iconGradient: "linear-gradient(135deg, #3b82f6, #1d4ed8)", qCount: 100, locked: true, file: "csc.js", bankKey: "CSC 101" },
+        "ENT 101": { ylevel: "100", semester: "first", title: "ENT 101", level: "100L • Entrepreneurship", description: "Business development and entrepreneurial skills", icon: "💼", iconGradient: "linear-gradient(135deg, #06b6d4, #0891b2)", qCount: 100, locked: true, file: "ent.js", bankKey: "ENT 101" },
+        "GST 103": { ylevel: "100", semester: "first", title: "GST 112", level: "100L • Use of Library", description: "History, culture and development of Nigeria", icon: "📖", iconGradient: "linear-gradient(135deg, #84cc16, #65a30d)", qCount: 100, locked: true, file: "gst112.js", bankKey: "GST 112" },
+
+        // ── 200L — second semester (coming soon) ──
+        "200L-BCH 202": { ylevel: "200", semester: "second", title: "BCH 202", level: "200L • General Biochemistry II", description: "Metabolism, enzymes, vitamins and bioenergetics", icon: "🧬", iconGradient: "linear-gradient(135deg, #f43f5e, #e11d48)", qCount: 0, locked: true, file: "", bankKey: "BCH 202" },
+        "200L-MCB 202": { ylevel: "200", semester: "second", title: "MCB 202", level: "200L • General Microbiology II", description: "Microbial genetics, virology, immunology and control", icon: "🦠", iconGradient: "linear-gradient(135deg, #22c55e, #15803d)", qCount: 0, locked: true, file: "", bankKey: "MCB 202" },
+        "200L-MLS 202": { ylevel: "200", semester: "second", title: "MLS 202", level: "200L • Medical Laboratory Practice II", description: "Laboratory procedures, safety and quality control", icon: "🔬", iconGradient: "linear-gradient(135deg, #06b6d4, #0284c7)", qCount: 0, locked: true, file: "", bankKey: "MLS 202" },
+        "200L-PHS 202": { ylevel: "200", semester: "second", title: "PHS 202", level: "200L • Human Physiology II", description: "Cardiovascular, respiratory and renal physiology", icon: "❤️", iconGradient: "linear-gradient(135deg, #ef4444, #b91c1c)", qCount: 0, locked: true, file: "", bankKey: "PHS 202" },
+        "200L-ANA 202": { ylevel: "200", semester: "second", title: "ANA 202", level: "200L • Human Anatomy II", description: "Gross anatomy, neuroanatomy and histology", icon: "🫀", iconGradient: "linear-gradient(135deg, #8b5cf6, #6d28d9)", qCount: 0, locked: true, file: "", bankKey: "ANA 202" },
+        "200L-GST 202": { ylevel: "200", semester: "second", title: "GST 202", level: "200L • Peace & Conflict Resolution", description: "Conflict management, peace studies and diplomacy", icon: "🕊️", iconGradient: "linear-gradient(135deg, #f59e0b, #d97706)", qCount: 0, locked: true, file: "", bankKey: "GST 202" },
+
+        // ── 200L — first semester (coming soon) ──
+        "200L-BCH 201": { ylevel: "200", semester: "first", title: "BCH 201", level: "200L • General Biochemistry I", description: "Amino acids, proteins, carbohydrates and lipids", icon: "🧬", iconGradient: "linear-gradient(135deg, #f43f5e, #e11d48)", qCount: 0, locked: true, file: "", bankKey: "BCH 201" },
+        "200L-MCB 201": { ylevel: "200", semester: "first", title: "MCB 201", level: "200L • General Microbiology I", description: "Microbial diversity, growth and metabolism", icon: "🦠", iconGradient: "linear-gradient(135deg, #22c55e, #15803d)", qCount: 0, locked: true, file: "", bankKey: "MCB 201" },
+        "200L-MLS 201": { ylevel: "200", semester: "first", title: "MLS 201", level: "200L • Medical Laboratory Practice I", description: "Basic lab techniques, microscopy and specimen collection", icon: "🔬", iconGradient: "linear-gradient(135deg, #06b6d4, #0284c7)", qCount: 0, locked: true, file: "", bankKey: "MLS 201" },
+        "200L-PHS 201": { ylevel: "200", semester: "first", title: "PHS 201", level: "200L • Human Physiology I", description: "Cell physiology, nervous system and muscle function", icon: "❤️", iconGradient: "linear-gradient(135deg, #ef4444, #b91c1c)", qCount: 0, locked: true, file: "", bankKey: "PHS 201" },
+        "200L-ANA 201": { ylevel: "200", semester: "first", title: "ANA 201", level: "200L • Human Anatomy I", description: "Skeletal system, joints, muscles and surface anatomy", icon: "🫀", iconGradient: "linear-gradient(135deg, #8b5cf6, #6d28d9)", qCount: 0, locked: true, file: "", bankKey: "ANA 201" },
+        "200L-GST 201": { ylevel: "200", semester: "first", title: "GST 201", level: "200L • Entrepreneurship II", description: "Business planning, financing and enterprise management", icon: "💼", iconGradient: "linear-gradient(135deg, #f59e0b, #d97706)", qCount: 0, locked: true, file: "", bankKey: "GST 201" }
     };
 
    // ==================== TOPICS & NOTES FOR EACH COURSE ====================
@@ -4493,10 +4509,10 @@ print(result)  # Output: 8
     function renderCourses() {
         const grid = document.getElementById('coursesGrid');
         if (!grid) return;
-        
-        const semesterCourses = Object.values(COURSES_DB).filter(c => c.semester === currentSemester);
+
+        const semesterCourses = Object.values(COURSES_DB).filter(c => c.semester === currentSemester && (c.ylevel || "100") === currentLevel);
         document.getElementById('semesterTitle').innerText = currentSemester === "first" ? "First Semester" : "Second Semester";
-        document.getElementById('activeSemesterBadge').innerText = currentSemester === "first" ? "1st Semester" : "2nd Semester";
+        document.getElementById('activeSemesterBadge').innerText = currentLevel + "L • " + (currentSemester === "first" ? "1st Sem" : "2nd Sem");
         document.getElementById('coursesCountInfo').innerText = `${semesterCourses.length} courses available`;
         
         grid.innerHTML = '';
@@ -4529,6 +4545,7 @@ print(result)  # Output: 8
 
     // ==================== GLOBAL STATE ====================
     let currentSemester = "second";
+    let currentLevel = "100";
     let currentCourse = "";
     let currentCourseKey = "";
     let currentTopics = [];
@@ -5238,6 +5255,19 @@ print(result)  # Output: 8
             });
         });
     }
+
+    function initLevelFilter() {
+        document.querySelectorAll('.level-chip[data-level]').forEach(chip => {
+            chip.addEventListener('click', () => {
+                const lvl = chip.getAttribute('data-level');
+                if (lvl === currentLevel) return;
+                currentLevel = lvl;
+                document.querySelectorAll('.level-chip[data-level]').forEach(c => c.classList.remove('active'));
+                chip.classList.add('active');
+                renderCourses();
+            });
+        });
+    }
     
     window.toggleMenu = function() {
         const navRight = document.getElementById('navRight');
@@ -5313,6 +5343,7 @@ print(result)  # Output: 8
     
     renderCourses();
     initSemesterToggle();
+    initLevelFilter();
     
     // Initialize resources toggle when DOM is ready
     if (document.readyState === 'loading') {
