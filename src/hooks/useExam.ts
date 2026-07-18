@@ -88,7 +88,7 @@ export function useExam(config: ExamConfig, allQuestions: Question[]): UseExamRe
       timerRef.current = setInterval(() => {
         setState(s => {
           if (s.timeLeft <= 1) {
-            return s
+            return { ...s, timeLeft: 0 }
           }
           return { ...s, timeLeft: s.timeLeft - 1 }
         })
