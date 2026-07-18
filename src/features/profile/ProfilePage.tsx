@@ -6,6 +6,7 @@ import { Card } from '@/components/ui/Card'
 import { Avatar } from '@/components/ui/Avatar'
 import { Button } from '@/components/ui/Button'
 import { Badge } from '@/components/ui/Badge'
+import { AchievementsSection } from './AchievementsSection'
 import { useAuthStore } from '@/stores/authStore'
 import { useThemeStore } from '@/stores/themeStore'
 import { FACULTIES } from '@/data/faculties'
@@ -75,6 +76,9 @@ export function ProfilePage() {
           </span>
         </button>
       </Card>
+
+      {/* Achievements */}
+      <AchievementsSection earnedIds={user.achievements ?? []} />
 
       {/* Logout */}
       <Button variant="danger" fullWidth onClick={handleLogout} loading={loggingOut}>

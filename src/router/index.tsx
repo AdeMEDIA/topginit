@@ -11,6 +11,9 @@ import { CourseDetailPage } from '@/features/practice/CourseDetailPage'
 import { ExamPage } from '@/features/practice/ExamPage'
 import { ResultPage } from '@/features/practice/ResultPage'
 import { GamesPage } from '@/features/games/GamesPage'
+import { MillionairePage } from '@/features/games/MillionairePage'
+import { DailyChallengePage } from '@/features/games/DailyChallengePage'
+import { TimeAttackPage } from '@/features/games/TimeAttackPage'
 import { AnalyticsPage } from '@/features/analytics/AnalyticsPage'
 import { LeaderboardPage } from '@/features/leaderboard/LeaderboardPage'
 import { ProfilePage } from '@/features/profile/ProfilePage'
@@ -62,6 +65,9 @@ export const router = createBrowserRouter([
           { path: 'practice',          element: <PracticePage /> },
           { path: 'practice/:courseId', element: <CourseDetailPage /> },
           { path: 'games',             element: <GamesPage /> },
+          { path: 'games/millionaire', element: <MillionairePage /> },
+          { path: 'games/daily',       element: <DailyChallengePage /> },
+          { path: 'games/timeattack',  element: <TimeAttackPage /> },
           { path: 'analytics',         element: <AnalyticsPage /> },
           { path: 'leaderboard',       element: <LeaderboardPage /> },
           { path: 'profile',           element: <ProfilePage /> },
