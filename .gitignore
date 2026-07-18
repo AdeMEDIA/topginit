@@ -1,7 +1,9 @@
-v2/node_modules/
-v2/dist/
-v2/.env
-v2/.env.local
-v2/dist-ssr/
+node_modules/
+dist/
+dist-ssr/
 *.local
 .DS_Store
+.env
+.env.local
+v2/node_modules/
+v2/dist/
