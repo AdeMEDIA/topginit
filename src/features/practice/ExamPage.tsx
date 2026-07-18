@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { useParams, useSearchParams, useNavigate } from 'react-router-dom'
 import { Flag, ChevronLeft, ChevronRight, Clock, CheckCircle, XCircle, Grid3X3 } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -25,7 +25,7 @@ export function ExamPage() {
     const course = getCourseById(courseId ?? '')
     if (!course) { navigate('/app/practice'); return }
 
-    const topicIds = searchParams.get('topics')?.split(',') ?? []
+    const topicIds = searchParams.get('topics')?.split(',').filter(Boolean) ?? []
     const count = Number(searchParams.get('count') ?? 20)
     const time = Number(searchParams.get('time') ?? 20)
     const mode = (searchParams.get('mode') ?? 'exam') as 'exam' | 'practice'
@@ -54,6 +54,15 @@ export function ExamPage() {
     })
   }, [courseId, searchParams, navigate])
 
+  const onFinish = useCallback((result: NonNullable<ReturnType<typeof useExam>['result']>) => {
+    saveResult(result)
+    updateUser({
+      xp: (user?.xp ?? 0) + result.correct * 10 + 50,
+      coins: (user?.coins ?? 0) + 5,
+    })
+    navigate(`/app/result/${result.id}`, { state: { result, questions } })
+  }, [user, updateUser, navigate, questions])
+
   if (!questions || !config) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -66,14 +75,7 @@ export function ExamPage() {
     <ExamRunner
       questions={questions}
       config={config}
-      onFinish={(result) => {
-        saveResult(result)
-        updateUser({
-          xp: (user?.xp ?? 0) + result.correct * 10 + 50,
-          coins: (user?.coins ?? 0) + 5,
-        })
-        navigate(`/app/result/${result.id}`, { state: { result, questions } })
-      }}
+      onFinish={onFinish}
     />
   )
 }
@@ -87,6 +89,7 @@ function ExamRunner({ questions, config, onFinish }: {
   const [showGrid, setShowGrid] = useState(false)
   const [showSubmit, setShowSubmit] = useState(false)
   const [direction, setDirection] = useState(1)
+  const finishedRef = useRef(false)
 
   const isPractice = config.mode === 'practice'
   const currentAnswer = exam.answers[exam.currentIndex]
@@ -94,7 +97,8 @@ function ExamRunner({ questions, config, onFinish }: {
   const answered = Object.keys(exam.answers).length
 
   useEffect(() => {
-    if (exam.status === 'finished' && exam.result) {
+    if (exam.status === 'finished' && exam.result && !finishedRef.current) {
+      finishedRef.current = true
       onFinish(exam.result as NonNullable<typeof exam.result>)
     }
   }, [exam.status, exam.result, onFinish])
